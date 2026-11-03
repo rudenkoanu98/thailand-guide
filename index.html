@@ -1,379 +1,263 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Мамулечка и Толюшка — Таиланд: конструктор путешествия</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f5f0">
+<title>Викусик в Таиланде — путеводитель-конструктор</title>
 <style>
-:root{--ink:#17212b;--muted:#667085;--bg:#f7f7f5;--paper:#fff;--accent:#0f766e;--accent2:#115e59;--gold:#b88332;--line:#e7e7e2;--soft:#eef7f5;--warm:#fbf4e8;--radius:16px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif;line-height:1.5}a{color:inherit;text-decoration:none}.wrap{max-width:1100px;margin:auto;padding:0 16px}
-.hero{padding:48px 0 36px;background:linear-gradient(135deg,#f2f5f2,#fff)}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800}.hero h1{font-size:clamp(32px,8vw,56px);line-height:1.05;margin:8px 0 10px;letter-spacing:-.03em}.hero p{font-size:16px;max-width:760px;color:#4b5563;margin:0}.flight{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border:1px solid var(--line);background:#fff;border-radius:999px;font-size:12px;font-weight:700}
-.nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav .wrap{display:flex;gap:4px;overflow-x:auto;padding:8px 16px;scrollbar-width:none}.nav .wrap::-webkit-scrollbar{display:none}.nav a{white-space:nowrap;font-size:11px;font-weight:800;padding:7px 10px;border-radius:8px}.nav a:hover{background:var(--soft)}
-.section{margin:48px 0}.section h2{font-size:24px;margin:0 0 8px;letter-spacing:-.02em}.section-sub{font-size:14px;color:var(--muted);margin:0 0 18px}
-.slider{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;scrollbar-width:thin}.slider::-webkit-scrollbar{height:4px}.slider::-webkit-scrollbar-thumb{background:#ccc;border-radius:4px}.slide{flex:0 0 82%;max-width:320px;scroll-snap-align:start;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04)}
-.slide-img{width:100%;height:160px;object-fit:cover;display:block;background:#eee}.slide-body{padding:14px}.slide-body h3{margin:0 0 4px;font-size:16px;line-height:1.25}.slide-meta{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}.slide-body p{margin:4px 0;font-size:13px}
-.card-grid{display:grid;grid-template-columns:1fr;gap:12px}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04)}.card-img{width:100%;height:180px;object-fit:cover;display:block;background:#eee}.card-body{padding:16px}.card-body h3{margin:0 0 4px;font-size:18px;line-height:1.25}.card-body .meta{font-size:10px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}.card-body p{margin:6px 0;font-size:13px}.card-body ul{margin:6px 0;padding-left:18px;font-size:13px}.card-body li{margin:2px 0}
-.why{background:var(--soft);padding:8px 12px;border-radius:10px;margin-top:10px;font-size:12px}
-.buttons{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.btn{display:inline-block;border-radius:8px;padding:8px 12px;font-size:11px;font-weight:800;border:1px solid #d9dedb;background:#fff;cursor:pointer;font-family:inherit}.btn.route{background:#111827;color:#fff;border-color:#111827}.btn.placebtn{color:var(--accent2);border-color:#b9d8d3}
-.randomizer{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:20px 0;box-shadow:0 2px 12px rgba(0,0,0,.04)}.randomizer h3{margin:0 0 6px;font-size:20px;color:var(--accent2)}.randomizer > p{margin:0 0 16px;font-size:13px;color:var(--muted)}
-.filter-group{margin-bottom:14px}.filter-group label{display:block;font-size:11px;font-weight:800;text-transform:uppercase;color:var(--muted);margin-bottom:6px;letter-spacing:.06em}.filter-buttons{display:flex;flex-wrap:wrap;gap:6px}.filter-buttons button{font-family:inherit;font-size:11px;font-weight:700;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink);transition:all .15s}.filter-buttons button.active{background:var(--accent);color:#fff;border-color:var(--accent)}.filter-buttons button:hover:not(.active){border-color:var(--accent);color:var(--accent2)}
-.random-btn{display:block;width:100%;margin:16px 0 8px;padding:14px;font-family:inherit;font-size:16px;font-weight:800;background:var(--accent);color:#fff;border:none;border-radius:12px;cursor:pointer;box-shadow:0 2px 8px rgba(15,118,110,.25)}.random-btn:active{transform:scale(.98)}
-.random-result{display:grid;grid-template-columns:1fr;gap:10px;margin-top:16px}.rand-block{background:var(--soft);border:1px solid #b9d8d3;border-radius:12px;padding:14px}.rand-block.empty{background:#f5f5f5;border-color:#ddd;color:var(--muted)}.rand-slot{font-size:11px;font-weight:800;text-transform:uppercase;color:var(--accent);letter-spacing:.06em;margin-bottom:4px}.rand-block h4{margin:0 0 4px;font-size:16px}.rand-meta{font-size:11px;color:var(--muted);font-weight:700;margin-bottom:6px}.rand-block p{font-size:13px;margin:4px 0}
-.map-svg{width:100%;height:auto;display:block;border-radius:var(--radius);border:1px solid var(--line);background:#d4ecf5;box-shadow:0 2px 8px rgba(0,0,0,.04)}.map-svg a{cursor:pointer}.map-svg a:hover path,.map-svg a:hover ellipse{fill-opacity:.45}.map-svg text{user-select:none;-webkit-user-select:none;pointer-events:none}
-.practical{display:grid;grid-template-columns:1fr;gap:10px}.check{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px}.check h3{margin:0 0 4px;font-size:15px}.check p{margin:2px 0;font-size:13px}
-footer{margin-top:60px;background:#111827;color:#d1d5db;padding:28px 0}.footer-links{display:flex;flex-wrap:wrap;gap:10px;font-size:13px}.footer-links a{color:#fff}.small{font-size:11px;color:var(--muted)}
-@media(min-width:701px){.wrap{padding:0 22px}.card-grid{grid-template-columns:repeat(2,1fr)}.random-result{grid-template-columns:repeat(3,1fr)}.section h2{font-size:30px}.slide{flex:0 0 300px}}
+:root{--ink:#202a27;--muted:#68736d;--bg:#f6f5f0;--paper:#fffefa;--green:#23685d;--green2:#174d45;--sage:#eaf1eb;--sand:#f2e7d5;--line:#e4e4dc;--gold:#b9823b;--shadow:0 8px 28px #253c2b0c;--r:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,100% - 32px);margin:auto}
+.hero{padding:54px 0 38px;background:radial-gradient(circle at 85% 10%,#dce9dc 0,transparent 30%),linear-gradient(135deg,#f0eee5,#fbfaf6 65%)}.eyebrow{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;color:var(--green)}h1{font-size:clamp(34px,7vw,62px);line-height:1.02;letter-spacing:-.045em;margin:12px 0}.hero p{max-width:760px;color:#59655e;font-size:16px;margin:0}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.chip{border:1px solid #dce3da;background:#ffffffc9;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:750}
+nav{position:sticky;top:0;z-index:20;background:#fffefaed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav .wrap{display:flex;gap:4px;overflow:auto;padding:9px 0;scrollbar-width:none}nav a{white-space:nowrap;padding:8px 11px;border-radius:9px;font-size:11px;font-weight:800;color:#42524a}nav a:hover{background:var(--sage)}
+section{margin:48px 0}.section-head{margin-bottom:18px}.section-head h2{font-size:clamp(24px,4vw,32px);letter-spacing:-.03em;margin:0 0 5px}.section-head p{color:var(--muted);margin:0;font-size:14px;max-width:800px}.district-slider{display:flex;gap:13px;overflow:auto;padding:3px 3px 14px;scroll-snap-type:x mandatory}.district-card{position:relative;flex:0 0 260px;min-height:168px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#dce8df;scroll-snap-align:start;cursor:pointer;box-shadow:var(--shadow);text-align:left;padding:0}.district-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.72);transition:transform .3s}.district-card:hover img{transform:scale(1.05)}.district-card .dtext{position:absolute;left:16px;right:12px;bottom:14px;color:white}.district-card strong{display:block;font-size:20px;line-height:1.15}.district-card span{font-size:11px;opacity:.92}.district-card.active{outline:3px solid var(--green);outline-offset:2px}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.filter{border:1px solid var(--line);background:white;border-radius:99px;padding:8px 13px;font-size:12px;font-weight:800;cursor:pointer}.filter.active{background:var(--green);border-color:var(--green);color:white}.area-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:30px 0 12px}.area-title h3{margin:0;font-size:22px}.area-title small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.place{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.place .photo{height:150px;width:100%;object-fit:cover;background:#e5e8e1}.place-body{padding:14px;display:flex;flex-direction:column;flex:1}.tag{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--green);font-weight:850}.place h4{font-size:17px;line-height:1.25;margin:5px 0}.rating{font-size:12px;font-weight:800;color:#8b652b;margin:2px 0 7px}.place p{font-size:12px;color:#536058;margin:4px 0}.place .address{color:#657168;font-size:11px;margin-top:7px}.place .hours{font-size:11px;color:#46574d;margin-top:5px}.price{font-weight:800;letter-spacing:1px;color:#a36d27}.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:12px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #dce2da;background:white;color:#294d40;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:850;cursor:pointer}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn:hover{filter:brightness(.96)}
+.constructor{background:#fffefa;border:1px solid var(--line);border-radius:24px;padding:clamp(16px,3vw,28px);box-shadow:var(--shadow)}.constructor-top{display:flex;justify-content:space-between;align-items:start;gap:20px;flex-wrap:wrap}.constructor h3{font-size:22px;margin:0 0 4px}.constructor-top p{margin:0;color:var(--muted);font-size:13px}.day-controls{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}.day-controls select{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;font-weight:750;color:var(--ink)}.make{border:0;background:var(--green);color:white;border-radius:11px;padding:12px 17px;font-weight:850;cursor:pointer}.slots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.slot{background:var(--sage);border:1px solid #d8e5da;border-radius:15px;padding:14px;min-height:180px}.slot .when{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}.slot h4{font-size:16px;margin:6px 0}.slot p{font-size:12px;margin:5px 0;color:#526057}.slot .actions{padding-top:8px}
+.practical-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.info{padding:16px;background:white;border:1px solid var(--line);border-radius:15px}.info h3{font-size:15px;margin:0 0 5px}.info p{font-size:12px;color:#58645c;margin:0}.notice{background:var(--sand);border-radius:13px;padding:13px 15px;font-size:12px;color:#66543a;margin-top:14px}.sources{font-size:11px;color:#7b837c;margin-top:22px}footer{background:#1e302b;color:#e8eee8;padding:34px 0;margin-top:60px}footer p{font-size:12px;color:#c1cdc3}footer a{text-decoration:underline}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.practical-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.wrap{width:min(100% - 24px,1160px)}.hero{padding:38px 0 30px}.grid,.slots,.practical-grid{grid-template-columns:1fr}.place .photo{height:180px}.district-card{flex-basis:78%;min-height:160px}.area-title{align-items:start;flex-direction:column}}
+
+.event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.event{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow)}
+.event h3{font-size:18px;line-height:1.25;margin:7px 0}.event p{font-size:13px;color:#536058}
+.phrase-tools{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}
+.phrase-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.phrase{background:white;border:1px solid var(--line);border-radius:14px;padding:14px}
+.phrase .thai{font-size:19px;font-weight:800;color:var(--green);margin:4px 0}
+.phrase .phonetic{font-size:13px;color:#795a2b;font-weight:750}
+.phrase .english{font-size:13px;color:#536058}
+.phrase .meaning{font-size:13px;margin-top:5px}
+.phrase .copyline{margin-top:9px}
+.slots{grid-template-columns:repeat(3,minmax(0,1fr))}
+.slot{min-height:0}
+.slot-part{padding:10px 0;border-top:1px solid #d6e2d8;margin-top:9px}
+.slot-part:first-of-type{border-top:0;margin-top:0}
+.slot-part .part-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:900}
+.slot-part h5{font-size:14px;margin:4px 0}
+.slot-part p{font-size:12px;margin:4px 0;color:#526057}
+.replace-btn{border:1px solid #cad8ce;background:white;border-radius:8px;padding:6px 9px;font-size:11px;font-weight:800;color:#294d40;cursor:pointer;margin-top:5px}
+.day-controls select:disabled{opacity:.55}
+@media(max-width:850px){.event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.event-grid,.phrase-list{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
-<!-- HERO -->
-<header class="hero" id="top"><div class="wrap">
-<div class="eyebrow">Thailand · Pattaya & Around</div>
-<h1>Мамулечка и Толюшка<br>в Таиланде 🇹🇭</h1>
-<p>Путеводитель-конструктор: выбираем красивые места, лучшие рестораны, пляжи и острова — и собираем свой идеальный день. Без спешки и суеты.</p>
-<div class="flight">
-<span class="pill">🇹🇭 Таиланд</span><span class="pill">📍 Паттайя</span><span class="pill">🌴 Острова</span><span class="pill">🍜 Еда</span><span class="pill">🏝️ Пляжи</span><span class="pill">🛕 Культура</span><span class="pill">🚤 Экскурсии</span><span class="pill">❤️ Спокойный отдых</span>
-</div>
-</div></header>
-
-<!-- NAV -->
-<nav class="nav"><div class="wrap">
-<a href="#districts">🏘 РАЙОНЫ</a><a href="#constructor">🗺 КОНСТРУКТОР</a><a href="#beaches">🏖 ПЛЯЖИ</a><a href="#islands">🏝 ОСТРОВА</a><a href="#places">🏛 МЕСТА</a><a href="#food">🍜 ЕДА</a><a href="#transport">🚕 ТРАНСПОРТ</a><a href="#important">🧳 ВАЖНОЕ</a><a href="#map">📍 КАРТА</a>
-</div></nav>
-
-<!-- РАЙОНЫ (слайдер) -->
-<section class="section" id="districts">
-<div class="wrap">
-<h2>🏘 Районы Паттайи</h2>
-<p class="section-sub">Листайте вправо — у каждого района свой характер, свои пляжи и рестораны.</p>
-<div class="slider">
-<div class="slide"><img class="slide-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/The_Sancturay_of_Truth%2C_Pattaya%2C_Thailand.JPG/960px-The_Sancturay_of_Truth%2C_Pattaya%2C_Thailand.JPG" alt="Sanctuary of Truth"><div class="slide-body"><div class="slide-meta">Север · тихо</div><h3>Наклуа (Naklua)</h3><p>Спокойный район, пляж Вонгамат, Храм Истины. Для размеренного отдыха.</p></div></div>
-<div class="slide"><img class="slide-img" src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80" alt="Central Pattaya"><div class="slide-body"><div class="slide-meta">Центр · жизнь</div><h3>Центральная Паттайя</h3><p>Всё под рукой: Terminal 21, центральный пляж, множество кафе и баров.</p></div></div>
-<div class="slide"><img class="slide-img" src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&q=80" alt="Pratumnak Hill"><div class="slide-body"><div class="slide-meta">Холм · виды</div><h3>Пратамнак (Pratumnak)</h3><p>Зелёный холм с Большим Буддой, смотровыми площадками и тихими пляжами.</p></div></div>
-<div class="slide"><img class="slide-img" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80" alt="Jomtien Beach"><div class="slide-body"><div class="slide-meta">Пляж · тишина</div><h3>Джомтьен (Jomtien)</h3><p>6 км пляжа, спокойная атмосфера, много ресторанов у моря.</p></div></div>
-<div class="slide"><img class="slide-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Koh Larn"><div class="slide-body"><div class="slide-meta">Остров · море</div><h3>Ко Лан (Koh Larn)</h3><p>Белый песок, прозрачная вода. Идеально для однодневной поездки.</p></div></div>
-</div>
-</div>
+<header class="hero" id="top"><div class="wrap"><div class="eyebrow">Thailand · Bangkok · Pattaya · Koh Larn</div><h1>Викусик<br>в Таиланде 🇹🇭</h1><p>Путеводитель-конструктор для красивых, вкусных и комфортных дней. Выбирай город, затем район — смотри места поблизости и собирай маршрут с завтраком, прогулками, интересными местами, кофе и ужином. Без лишней гонки и переездов через весь город.</p></div></header>
+<nav><div class="wrap"><a href="#districts">РАЙОНЫ</a><a href="#constructor">КОНСТРУКТОР ДНЯ</a><a href="#directory">ВСЕ МЕСТА</a><a href="#events">СОБЫТИЯ</a><a href="#phrases">РАЗГОВОРНИК</a><a href="#transport">ТРАНСПОРТ</a><a href="#important">ВАЖНОЕ</a></div></nav>
+<main class="wrap">
+<section id="districts">
+<div class="section-head"><h2>Сначала выбери город, потом район</h2><p>Районы показываются только для выбранного города или острова. Нажми на карточку района, чтобы увидеть все места поблизости.</p></div>
+<div class="toolbar" id="cityFilters"></div><div class="district-slider" id="districtSlider"></div>
 </section>
-
-<!-- КАРТА (SVG) -->
-<section class="section" id="map-section">
-<div class="wrap">
-<h2>📍 Карта районов</h2>
-<p class="section-sub">Нажмите на район, чтобы посмотреть места.</p>
-<div class="map-svg">
-<svg viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
-<defs><linearGradient id="sea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d4ecf5"/><stop offset="1" stop-color="#b0d4e3"/></linearGradient></defs>
-<rect width="600" height="700" fill="url(#sea)"/>
-<path d="M 280,20 Q 272,60 268,120 Q 258,200 240,280 Q 230,320 225,360 Q 200,400 190,440 Q 195,480 215,510 Q 240,545 255,590 Q 270,650 285,690 L 580,690 L 580,20 Z" fill="#f2f1e6" stroke="#d4d3c2" stroke-width="2"/>
-<text x="30" y="680" fill="#4a7a8c" font-size="14" font-style="italic">Сиамский залив</text>
-<a href="#district-naklua"><path d="M 268,40 Q 264,90 262,145 L 560,145 L 560,40 Z" fill="#0f766e" fill-opacity="0.22" stroke="#0f766e" stroke-width="2"/><text x="410" y="95" text-anchor="middle" font-size="17" font-weight="800" fill="#115e59">НАКЛУА</text></a>
-<a href="#district-central"><path d="M 262,148 Q 254,220 240,285 L 560,285 L 560,148 Z" fill="#b88332" fill-opacity="0.22" stroke="#b88332" stroke-width="2"/><text x="410" y="220" text-anchor="middle" font-size="17" font-weight="800" fill="#8a5f1e">ЦЕНТР</text></a>
-<a href="#district-pratumnak"><path d="M 240,288 Q 232,325 225,358 Q 202,398 192,438 Q 198,478 218,508 L 560,508 L 560,288 Z" fill="#8b5cf6" fill-opacity="0.22" stroke="#8b5cf6" stroke-width="2"/><text x="420" y="400" text-anchor="middle" font-size="17" font-weight="800" fill="#6d3fc9">ПРАТАМНАК</text></a>
-<a href="#district-jomtien"><path d="M 220,510 Q 240,548 255,592 Q 268,646 282,690 L 560,690 L 560,510 Z" fill="#0284c7" fill-opacity="0.22" stroke="#0284c7" stroke-width="2"/><text x="410" y="600" text-anchor="middle" font-size="17" font-weight="800" fill="#0369a1">ДЖОМТЬЕН</text></a>
-<a href="#district-kohlarn"><ellipse cx="120" cy="350" rx="55" ry="75" fill="#16a34a" fill-opacity="0.25" stroke="#16a34a" stroke-width="2"/><text x="120" y="350" text-anchor="middle" font-size="15" font-weight="800" fill="#15803d">КО ЛАН</text></a>
-</svg>
+<section id="constructor">
+<div class="section-head"><h2>🗺 Конструктор идеального дня</h2><p>Каждый временной блок состоит из двух частей: где поесть или выпить кофе и куда сходить рядом. Можно заменить любую остановку отдельно. Маршрут старается оставаться в одном районе.</p></div>
+<div class="constructor">
+<div class="constructor-top"><div><h3>Собираем день для Викусика</h3><p>Сначала город, затем район и настроение дня.</p></div><button class="make" id="makeDay">🎲 Собрать день</button></div>
+<div class="day-controls">
+<select id="citySelect"><option value="">Сначала выбери город</option><option value="bangkok">Бангкок</option><option value="pattaya">Паттайя</option><option value="koh-larn">Ко Лан</option></select>
+<select id="districtSelect" disabled><option value="">Сначала выбери город</option></select>
+<select id="dayType"><option value="any">Любой день</option><option value="calm">🌿 Спокойный</option><option value="active">⚡ Активный</option><option value="culture">🏛 Культурный</option><option value="foodie">🍜 Вкусный</option><option value="scenic">🌅 Красивые виды</option><option value="shopping">🛍 Шопинг</option></select>
 </div>
+<div class="slots" id="daySlots"><div class="slot"><div class="when">🌅 Утро</div><p>Завтрак + прогулка или интересное место.</p></div><div class="slot"><div class="when">☀️ День</div><p>Кофейня + достопримечательность, музей, пляж или активность.</p></div><div class="slot"><div class="when">🌇 Вечер</div><p>Ужин + вечерняя прогулка, рынок, шоу или красивый вид.</p></div></div>
+<div class="notice" id="dayNote">Выбери город, район и настроение, затем нажми «Собрать день». В каждом блоке можно заменить еду и активность отдельно.</div>
+</div></section>
+<section id="directory"><div class="section-head"><h2>📍 Все места по районам</h2><p>Оценку, свежие отзывы и актуальные часы работы открывай в карточке Google Maps каждого места. 💰 — бюджетно, 💰💰 — средний чек, 💰💰💰 — выше среднего, 💰💰💰💰 — дорого. Данные Google могут обновляться, поэтому перед выездом проверяй карточку заведения.</p></div><div id="placesByArea"></div><p class="sources">Кнопка Google Maps ведёт к поиску конкретного места, где доступны актуальные рейтинг, отзывы, часы работы, фотографии и загруженность. Встроить живые данные Google Maps непосредственно в автономный HTML без Google Places API и ключа нельзя.</p></section>
+<section id="events">
+<div class="section-head"><h2>🎟️ Что интересного будет во время поездки</h2><p>17 ноября — 17 декабря 2026. События, фестивали, выставки и сезонные огни, которые попадают в даты поездки. Перед покупкой билетов проверь расписание и доступность у организатора.</p></div>
+<div class="event-grid">
+<article class="event"><div class="tag">Бангкок · 17–29 ноября</div><h3>Golden Mount Temple Fair</h3><p>Большая храмовая ярмарка у Wat Saket: уличная еда, торговые ряды, аттракционы и праздничная атмосфера. Особенно интересна вечером.</p><p><b>📅 17–29 ноября 2026</b></p><a class="btn" href="https://thailandwhatson.com/regions/bangkok/" target="_blank" rel="noopener">Программа и детали</a></article>
+<article class="event"><div class="tag">Бангкок · 13 ноября — 13 декабря</div><h3>Vijit Chao Phraya 2026</h3><p>Вечерние световые инсталляции и шоу вдоль реки Чао Прайя. Отличный вариант для прогулки набережной или речного круиза.</p><p><b>📅 До 13 декабря 2026</b></p><a class="btn" href="https://thailand.go.th/events" target="_blank" rel="noopener">Календарь Thailand.go.th</a></article>
+<article class="event"><div class="tag">Бангкок · 29 октября — 28 февраля</div><h3>Bangkok Art Biennale 2026</h3><p>Большая городская биеннале современного искусства на нескольких площадках, включая храмы, музеи и общественные пространства.</p><p><b>📅 Весь период поездки</b></p><a class="btn" href="https://www.timeout.com/bangkok/things-to-do/events-this-month" target="_blank" rel="noopener">Площадки и обзор</a></article>
+<article class="event"><div class="tag">Паттайя · 24 ноября</div><h3>Loy Krathong</h3><p>Традиционный праздник света: тайцы запускают по воде украшенные корзинки-кратонги. В Паттайе смотри городскую программу и локации у воды ближе к дате.</p><p><b>📅 24 ноября 2026</b></p><a class="btn" href="https://experiencepattayacity.com/events/" target="_blank" rel="noopener">Календарь Паттайи</a></article>
+<article class="event"><div class="tag">Паттайя · 27–28 ноября</div><h3>Pattaya International Fireworks Festival</h3><p>Большой фестиваль фейерверков над Pattaya Beach. Лучше приезжать заранее: набережная и дороги могут быть очень загружены.</p><p><b>📅 27–28 ноября 2026</b></p><a class="btn" href="https://www.tatnews.org/2026/10/november-event-and-calendar/" target="_blank" rel="noopener">Подтверждение TAT</a></article>
+<article class="event"><div class="tag">Чонбури · 3–7 декабря</div><h3>Wonderfruit</h3><p>Многодневный фестиваль музыки, искусства, еды и устойчивой культуры на открытом воздухе. Площадка The Fields, Siam Country Club, рядом с Паттайей. Билеты платные.</p><p><b>📅 3–7 декабря 2026</b></p><a class="btn" href="https://wonderfruit.co/" target="_blank" rel="noopener">Сайт фестиваля</a></article>
+<article class="event"><div class="tag">Чонбури · 11–13 декабря</div><h3>Tomorrowland Thailand</h3><p>Крупный электронный музыкальный фестиваль в Wisdom Valley, Bang Lamung. По данным календаря, билеты могут быть распроданы — проверь только официальные каналы и не покупай с рук.</p><p><b>📅 11–13 декабря 2026</b></p><a class="btn" href="https://thailand.go.th/events" target="_blank" rel="noopener">Календарь Thailand.go.th</a></article>
+<article class="event"><div class="tag">Бангкок · 17 ноября — 15 января</div><h3>Праздничные огни Siam / CentralWorld / ICONSIAM</h3><p>Рождественские инсталляции, большие ёлки, фотозоны и вечерняя подсветка. Можно устроить красивую прогулку по торговым кварталам.</p><p><b>📅 Весь период поездки</b></p><a class="btn" href="https://thailandwhatson.com/regions/bangkok/" target="_blank" rel="noopener">Афиша Бангкока</a></article>
 </div>
+<div class="notice">Важно: Pattaya International Jazz Festival проходит 6–7 ноября, то есть до начала поездки; я не включала его в основную подборку. Wonderfruit и Tomorrowland — не в самом центре Паттайи, дорогу туда и обратно лучше планировать заранее.</div>
 </section>
-
-<!-- КОНСТРУКТОР -->
-<section class="section" id="constructor">
-<div class="wrap">
-<h2>🗺 Конструктор идеального дня</h2>
-<p class="section-sub">Выберите район и тип дня — нажмите «Собрать день». Не понравился вариант? Перекрутите отдельный блок. Если уже были — нажмите «Убрать».</p>
-
-<div class="randomizer">
-<div class="filter-group">
-<label>📍 Район</label>
-<div class="filter-buttons" id="districtFilter">
-<button data-district="all" class="active">Все</button>
-<button data-district="naklua">Наклуа</button>
-<button data-district="central">Центральная</button>
-<button data-district="pratumnak">Пратамнак</button>
-<button data-district="jomtien">Джомтьен</button>
-<button data-district="kohlarn">Ко Лан</button>
-</div>
-</div>
-<div class="filter-group">
-<label>🎯 Тип дня</label>
-<div class="filter-buttons" id="typeFilter">
-<button data-type="any" class="active">Любой</button>
-<button data-type="relaxed">🧘 Спокойный</button>
-<button data-type="cultural">🏛 Культурный</button>
-<button data-type="gastronomic">🍜 Гастрономический</button>
-<button data-type="beach">🏖 Пляжный</button>
-</div>
-</div>
-<button class="random-btn" id="randomizeBtn">🎲 Собрать день</button>
-<button class="btn" id="resetExcludedBtn" style="display:none;margin-top:8px;font-size:12px">↺ Сбросить все «убрать»</button>
-<div id="randomizerResult" class="random-result"></div>
-</div>
-</div>
+<section id="phrases">
+<div class="section-head"><h2>💬 Разговорник: тайский и английский</h2><p>Фразы для повседневных ситуаций. Для тайского добавила русскую приблизительную транскрипцию. Вежливая частица «ค่ะ» (кха) обычно используется женщинами в конце фразы.</p></div>
+<div class="phrase-tools"><button class="filter active" data-phrase="restaurant">🍽 В ресторане</button><button class="filter" data-phrase="cafe">☕ В кафе</button><button class="filter" data-phrase="transport">🚕 Такси</button><button class="filter" data-phrase="shopping">🛍 Покупки</button><button class="filter" data-phrase="basic">🙏 Базовые фразы</button></div>
+<div id="phraseList" class="phrase-list"></div>
 </section>
-
-<!-- ПЛЯЖИ -->
-<section class="section" id="beaches">
-<div class="wrap">
-<h2>🏖 Лучшие пляжи</h2>
-<p class="section-sub">Только проверенные варианты. Цены ориентировочные.</p>
-<div class="card-grid">
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80" alt="Jomtien Beach"><div class="card-body"><div class="meta">🏖 Пляж · Джомтьен</div><h3>Jomtien Beach</h3><p>Широкий, спокойный, 6 км. Лежаки 40–60 THB, кафе и туалеты.</p><div class="why">❤️❤️❤️ — идеально для родителей</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Jomtien+Beach+Pattaya" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8800&dropOffLongitude=100.8750&dropOffAddress=Jomtien+Beach" target="_blank">🚕 Grab</a></div></div></div>
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Tawaen Beach"><div class="card-body"><div class="meta">🏖 Пляж · Ко Лан</div><h3>Tawaen Beach</h3><p>Белый песок, прозрачная вода. Вход 100–150 THB, лежаки 50–100 THB.</p><div class="why">❤️❤️❤️ — всё есть на месте</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Tawaen+Beach+Koh+Larn" target="_blank">📍 Карты</a></div></div></div>
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=600&q=80" alt="Wong Amat"><div class="card-body"><div class="meta">🏖 Пляж · Наклуа</div><h3>Wong Amat Beach</h3><p>Самый чистый городской пляж. Широкая полоса, прозрачная вода.</p><div class="why">❤️❤️❤️ — тихо и красиво</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Wong+Amat+Beach+Pattaya" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9570&dropOffLongitude=100.8860&dropOffAddress=Wong+Amat+Beach" target="_blank">🚕 Grab</a></div></div></div>
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=600&q=80" alt="Samae Beach"><div class="card-body"><div class="meta">🏖 Пляж · Ко Лан</div><h3>Samae Beach</h3><p>Спокойнее Tawaen, пологий вход. Много зелени и кафе.</p><div class="why">❤️❤️❤️ — комфортно</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Samae+Beach+Koh+Larn" target="_blank">📍 Карты</a></div></div></div>
-</div>
-</div>
-</section>
-
-<!-- ОСТРОВА -->
-<section class="section" id="islands">
-<div class="wrap">
-<h2>🏝 Острова</h2>
-<p class="section-sub">Главные острова рядом с Паттайей.</p>
-<div class="card-grid">
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&q=80" alt="Koh Larn"><div class="card-body"><div class="meta">🏝 Остров</div><h3>Koh Larn (Ко Лан)</h3><p><strong>Как добраться:</strong> паром с Bali Hai Pier (30–45 мин, 30 THB) или speedboat (15–20 мин, 200–300 THB).</p><p><strong>Бюджет:</strong> 200–500 THB с человека.</p><div class="why">❤️❤️❤️ — короткий трансфер, всё есть</div><div class="buttons"><a class="btn route" href="https://www.google.com/maps/dir/?api=1&origin=Bali+Hai+Pier+Pattaya&destination=Koh+Larn" target="_blank">🗺 Маршрут</a><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Koh+Larn" target="_blank">📍 Место</a></div></div></div>
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=600&q=80" alt="Koh Samet"><div class="card-body"><div class="meta">🏝 Остров</div><h3>Koh Samet (Ко Самет)</h3><p><strong>Как добраться:</strong> такси до Ban Phe (1.5 ч), паром (30–40 мин, 50–100 THB).</p><p><strong>Бюджет:</strong> 1000–1500 THB с человека.</p><div class="why">❤️❤️❤️ — лучше с ночёвкой</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Koh+Samet" target="_blank">📍 Место</a></div></div></div>
-</div>
-</div>
-</section>
-
-<!-- МЕСТА -->
-<section class="section" id="places">
-<div class="wrap">
-<h2>🏛 Достопримечательности</h2>
-<p class="section-sub">Только самые интересные и красивые места.</p>
-<div class="card-grid">
-<div class="card"><img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/The_Sancturay_of_Truth%2C_Pattaya%2C_Thailand.JPG/960px-The_Sancturay_of_Truth%2C_Pattaya%2C_Thailand.JPG" alt="Sanctuary of Truth"><div class="card-body"><div class="meta">🛕 Храм · Наклуа</div><h3>Sanctuary of Truth</h3><p>Деревянный храм у моря, потрясающая резьба. 1.5–2 ч, 500 THB.</p><div class="why">❤️❤️❤️ — ровные дорожки, кафе</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Sanctuary+of+Truth+Pattaya" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9722&dropOffLongitude=100.8900&dropOffAddress=Sanctuary+of+Truth+Pattaya" target="_blank">🚕 Grab</a></div></div></div>
-<div class="card"><img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Wat_Khao_Phra_Yai_%28Pattaya%29_02.JPG/800px-Wat_Khao_Phra_Yai_%28Pattaya%29_02.JPG" alt="Big Buddha"><div class="card-body"><div class="meta">🛕 Храм · Пратамнак</div><h3>Wat Phra Yai (Big Buddha)</h3><p>Большая статуя Будды на холме, панорама города. 45 мин, бесплатно.</p><div class="why">❤️❤️❤️ — можно совместить с видом</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Wat+Phra+Yai+Pattaya" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9186&dropOffLongitude=100.8518&dropOffAddress=Wat+Phra+Yai+Pattaya" target="_blank">🚕 Grab</a></div></div></div>
-<div class="card"><img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Nong_Nooch-01.JPG/800px-Nong_Nooch-01.JPG" alt="Nong Nooch"><div class="card-body"><div class="meta">🌴 Сад · Джомтьен</div><h3>Nong Nooch Tropical Garden</h3><p>Огромный ботанический сад, шоу слонов. 2–3 ч, 500–800 THB.</p><div class="why">❤️❤️❤️ — есть транспорт по парку</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Nong+Nooch+Tropical+Garden+Pattaya" target="_blank">📍 Карты</a></div></div></div>
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?w=600&q=80" alt="Viewpoint"><div class="card-body"><div class="meta">🌅 Смотровая · Пратамнак</div><h3>Khao Pattaya Viewpoint</h3><p>Знаменитый вид на бухту. 30 мин, бесплатно.</p><div class="why">❤️❤️❤️ — легко добраться</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Khao+Pattaya+Viewpoint" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9240&dropOffLongitude=100.8620&dropOffAddress=Khao+Pattaya+Viewpoint" target="_blank">🚕 Grab</a></div></div></div>
-</div>
-</div>
-</section>
-
-<!-- ЕДА -->
-<section class="section" id="food">
-<div class="wrap">
-<h2>🍜 Рестораны</h2>
-<p class="section-sub">Лучшие места поесть — от уличной еды до видовых ресторанов.</p>
-<div class="card-grid">
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80" alt="The Glass House"><div class="card-body"><div class="meta">🍜 Тайская · Джомтьен</div><h3>The Glass House</h3><p><strong>Что попробовать:</strong> креветки, крабовый карри, коктейли. 💰💰💰</p><div class="why">❤️❤️❤️ — у моря, sunset</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=The+Glass+House+Pattaya" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8487&dropOffLongitude=100.8932&dropOffAddress=The+Glass+House+Pattaya" target="_blank">🚕 Grab</a></div></div></div>
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Mum Aroi"><div class="card-body"><div class="meta">🦐 Морепродукты · Наклуа</div><h3>Mum Aroi</h3><p><strong>Что попробовать:</strong> краб, креветки, устрицы. 💰💰</p><div class="why">❤️❤️❤️ — местная классика</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Mum+Aroi+Pattaya" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9512&dropOffLongitude=100.8850&dropOffAddress=Mum+Aroi+Pattaya" target="_blank">🚕 Grab</a></div></div></div>
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Cabbages and Condoms"><div class="card-body"><div class="meta">🍜 Тайская · Пратамнак</div><h3>Cabbages & Condoms</h3><p><strong>Что попробовать:</strong> спринг-роллы, карри. 💰💰</p><div class="why">❤️❤️❤️ — красивый сад</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Cabbages+and+Condoms+Pattaya" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9151&dropOffLongitude=100.8573&dropOffAddress=Cabbages+%26+Condoms+Pattaya" target="_blank">🚕 Grab</a></div></div></div>
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80" alt="Rimpa Lapin"><div class="card-body"><div class="meta">🌅 Вид · Джомтьен</div><h3>Rimpa Lapin</h3><p><strong>Что попробовать:</strong> том ям, жареный рис. 💰💰</p><div class="why">❤️❤️❤️ — вид со скалы</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Rimpa+Lapin+Pattaya" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8055&dropOffLongitude=100.9139&dropOffAddress=Rimpa+Lapin+Pattaya" target="_blank">🚕 Grab</a></div></div></div>
-<div class="card"><img class="card-img" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=600&q=80" alt="Horizon Rooftop"><div class="card-body"><div class="meta">🍸 Rooftop · Центр</div><h3>Horizon Rooftop</h3><p><strong>Что попробовать:</strong> коктейли, тапас. 💰💰💰</p><div class="why">❤️❤️❤️ — панорама города</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Horizon+Rooftop+Pattaya" target="_blank">📍 Карты</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9366&dropOffLongitude=100.8850&dropOffAddress=Horizon+Rooftop+Pattaya" target="_blank">🚕 Grab</a></div></div></div>
-</div>
-</div>
-</section>
-
-<!-- ТРАНСПОРТ -->
-<section class="section" id="transport">
-<div class="wrap">
-<h2>🚕 Транспорт</h2>
-<div class="practical">
-<div class="check"><h3>Grab / Bolt</h3><p>Основное такси. Цены фиксированы. От 60–80 THB за короткую поездку.</p></div>
-<div class="check"><h3>Songthaew</h3><p>Открытые маршрутки, 10–30 THB. Дёшево, но медленно и жарко.</p></div>
-<div class="check"><h3>Мототакси</h3><p>НЕ рекомендуется родителям: опасно и некомфортно.</p></div>
-<div class="check"><h3>Паромы</h3><p>С Bali Hai Pier на Ко Лан: 30 THB, каждые 30–60 мин.</p></div>
-</div>
-</div>
-</section>
-
-<!-- ВАЖНОЕ -->
-<section class="section" id="important">
-<div class="wrap">
-<h2>🧳 Важное</h2>
-<div class="practical">
-<div class="check"><h3>🚑 Экстренные телефоны</h3><p>Полиция: 191 · Туристическая полиция: 1155 · Скорая: 1669 · Пожарные: 199</p></div>
-<div class="check"><h3>🏥 Больницы</h3><p><strong>Bangkok Hospital Pattaya</strong> — +66 38 259 999<br><strong>Pattaya Memorial Hospital</strong> — +66 38 488 777</p></div>
-<div class="check"><h3>🇷🇺 Посольство</h3><p>Посольство РФ в Бангкоке: +66 2 234 9824, 78 Sap Rd, Bang Rak.</p></div>
-<div class="check"><h3>💳 Деньги</h3><p>Тайский бат (THB). Наличные для рынков. ATM: комиссия 200–250 THB.</p></div>
-<div class="check"><h3>📱 Интернет</h3><p>SIM-карты AIS/True/DTAC в аэропорту или 7-Eleven. eSIM для современных телефонов.</p></div>
-<div class="check"><h3>💧 Вода</h3><p>Пейте только бутилированную воду. Лёд в приличных заведениях безопасен.</p></div>
-<div class="check"><h3>☀️ Жара</h3><p>SPF 50+, головной убор, перерывы в тени с 12 до 15.</p></div>
-<div class="check"><h3>🆘 Потеря паспорта</h3><p>1. Полиция. 2. Консульство РФ. 3. Иммиграционная служба.</p></div>
-</div>
-</div>
-</section>
-
-<!-- КАРТА ССЫЛКИ -->
-<section class="section" id="map">
-<div class="wrap">
-<h2>📍 Все на карте</h2>
-<div class="buttons">
-<a class="btn placebtn" href="https://www.google.com/maps/search/Pattaya+beaches" target="_blank">Все пляжи ↗</a>
-<a class="btn placebtn" href="https://www.google.com/maps/search/Pattaya+restaurants" target="_blank">Рестораны ↗</a>
-<a class="btn placebtn" href="https://www.google.com/maps/search/Pattaya+attractions" target="_blank">Достопримечательности ↗</a>
-<a class="btn placebtn" href="https://www.google.com/maps/search/Pattaya+islands" target="_blank">Острова ↗</a>
-</div>
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer><div class="wrap">
-<h2>Мамулечка и Толюшка ❤️</h2>
-<p>Путеводитель-конструктор по Таиланду</p>
-<div class="footer-links">
-<a href="https://www.tourismthailand.org" target="_blank">Thailand Tourism</a>
-<a href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank">Online-Pattaya</a>
-<a href="https://www.google.com/maps" target="_blank">Google Maps</a>
-</div>
-<p class="small">Цены, расписания и часы работы могут меняться. Перед поездкой проверяйте актуальную информацию.</p>
-</div></footer>
-
+<section id="transport"><div class="section-head"><h2>🚕 Как передвигаться</h2><p>В карточках мест есть кнопка «Grab»: она открывает приложение, если оно установлено, и кнопка «Скопировать адрес» на случай, если адрес удобнее вставить вручную.</p></div><div class="practical-grid">
+<div class="info"><h3>🏠 Дом Викусика · Pattaya</h3><p>City Garden Tropicana Condominium, Na Kluea 16/1, Pattaya. <a href="https://maps.app.goo.gl/woqaSNt4SyM1BbGv7?g_st=ic" target="_blank" rel="noopener">Открыть дом в Google Maps</a>. Можно выбрать его как точку отправления в Grab.</p></div>
+<div class="info"><h3>✈️ Аэропорт · Suvarnabhumi (BKK)</h3><p>999, Suvarnabhumi Airport, Nong Prue, Bang Phli District, Samut Prakan 10540. <a href="https://maps.app.goo.gl/MxXS5YdWMx3YvxFf7?g_st=ic" target="_blank" rel="noopener">Открыть аэропорт в Google Maps</a>. Для поездки в аэропорт укажи Suvarnabhumi Airport (BKK) в Grab.</p></div>
+<div class="info"><h3>🚕 Grab / Bolt</h3><p>Основной вариант такси в Бангкоке и Паттайе. Сравнивайте цену и время подачи в обоих приложениях. В час пик в Бангкоке закладывайте запас.</p></div><div class="info"><h3>🚆 BTS / MRT — Бангкок</h3><p>Для центра часто быстрее такси. BTS удобен для Siam, Asok, Phrom Phong, Silom; MRT — для Chinatown, Old Town и пересадок.</p></div><div class="info"><h3>🚤 Паром — Ко Лан</h3><p>Отправление с Bali Hai Pier в Паттайе. Обычный паром идёт примерно 30–45 минут; расписание и последний рейс обязательно уточняйте на месте в день поездки.</p></div><div class="info"><h3>🛵 На Ко Лане</h3><p>По острову ездят местные songthaew/такси и мотобайки напрокат. Если нет уверенного опыта вождения, выбирайте местное такси, особенно на крутых дорогах.</p></div><div class="info"><h3>🚶 Пешком</h3><p>В Бангкоке планируйте прогулки внутри одного квартала или района: жара и расстояния обманчивы. В старом городе удобнее сочетать храмовый кластер с речным транспортом.</p></div><div class="info"><h3>📲 Адрес для водителя</h3><p>Адрес в карточке можно скопировать одной кнопкой. Покажите его водителю или вставьте в Grab/Bolt — особенно полезно для заведений в переулках.</p></div></div></section>
+<section id="important"><div class="section-head"><h2>🧳 Полезное перед поездкой</h2></div><div class="practical-grid"><div class="info"><h3>☀️ Жара</h3><p>SPF 50+, вода, головные уборы. Для храмов и прогулок лучше утро; в середине дня делайте перерыв в помещении.</p></div><div class="info"><h3>🛕 Храмы</h3><p>Закрытые плечи и колени. В Королевском дворце и Wat Phra Kaew дресс-код строгий; проверяйте актуальные правила на официальном сайте.</p></div><div class="info"><h3>💵 Наличные</h3><p>Небольшая сумма наличными пригодится на рынках, паромах и в маленьких кафе. Для крупных заведений обычно доступна оплата картой, но лучше уточнить.</p></div><div class="info"><h3>📞 Экстренные номера</h3><p>Полиция 191 · Туристическая полиция 1155 · Скорая 1669 · Пожарные 199.</p></div><div class="info"><h3>🚢 Ко Лан</h3><p>Не планируйте остров «впритык» к последнему парому. Проверяйте обратное расписание у перевозчика в порту; море и погода могут влиять на рейсы.</p></div><div class="info"><h3>🍽 Рестораны</h3><p>Для ужина с видом, rooftop и fine dining бронируйте заранее. Просите уровень остроты mai pet (не остро) или pet nit noi (немного остро).</p></div></div></section>
+</main>
+<footer><div class="wrap"><h2>Викусик в Таиланде ❤️</h2><p>Путеводитель-конструктор по Бангкоку, Паттайе и Ко Лану · 17 ноября — 17 декабря 2026.</p><p>Цены и часы — ориентир на момент подготовки. Перед выездом проверяйте свежие отзывы, график работы и доступность столиков.</p><p><a href="https://www.tourismthailand.org/" target="_blank" rel="noopener">Tourism Authority of Thailand</a> · <a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a> · <a href="https://www.grab.com/th/" target="_blank" rel="noopener">Grab Thailand</a></p></div></footer>
 <script>
-(function(){
-  // База мест для рандомайзера
-  const PLACES = [
-    // Наклуа
-    {district:'naklua',slot:'morning',types:['relaxed','beach'],cat:'🏖 пляж',name:'Wong Amat Beach',desc:'Тихий пляж на севере. Спокойная прогулка с утра.',maps:'https://www.google.com/maps/search/?api=1&query=Wong+Amat+Beach+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9570&dropOffLongitude=100.8860&dropOffAddress=Wong+Amat+Beach'},
-    {district:'naklua',slot:'morning',types:['relaxed'],cat:'🏊 бассейн',name:'Бассейн + медленное утро',desc:'Никуда не спешим. Плаваем, завтракаем на террасе.',maps:'https://www.google.com/maps/search/?api=1&query=Pullman+Pattaya+Hotel+G',grab:null},
-    {district:'naklua',slot:'day',types:['cultural'],cat:'🛕 храм',name:'Sanctuary of Truth',desc:'Деревянный храм у моря, потрясающая резьба. 1.5–2 ч, 500 THB.',maps:'https://www.google.com/maps/search/?api=1&query=Sanctuary+of+Truth+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9722&dropOffLongitude=100.8900&dropOffAddress=Sanctuary+of+Truth+Pattaya'},
-    {district:'naklua',slot:'evening',types:['gastronomic'],cat:'🍜 ресторан',name:'Mum Aroi',desc:'Морепродукты, местная классика. Свежо. 💰💰',maps:'https://www.google.com/maps/search/?api=1&query=Mum+Aroi+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9512&dropOffLongitude=100.8850&dropOffAddress=Mum+Aroi+Pattaya'},
-    // Центр
-    {district:'central',slot:'morning',types:['gastronomic','relaxed'],cat:'☕ завтрак',name:'La Baguette',desc:'Французская выпечка, круассаны, кофе. 💰💰',maps:'https://www.google.com/maps/search/?api=1&query=La+Baguette+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9512&dropOffLongitude=100.9041&dropOffAddress=La+Baguette+Pattaya'},
-    {district:'central',slot:'day',types:['cultural'],cat:'🏙 ТЦ',name:'Terminal 21',desc:'Самолёт на крыше, тематические этажи. 1–2 ч.',maps:'https://www.google.com/maps/search/?api=1&query=Terminal+21+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9345&dropOffLongitude=100.8830&dropOffAddress=Terminal+21+Pattaya'},
-    {district:'central',slot:'evening',types:['gastronomic'],cat:'🍸 rooftop',name:'Horizon Rooftop',desc:'Rooftop в Hilton, коктейли, вид на город. 💰💰💰',maps:'https://www.google.com/maps/search/?api=1&query=Horizon+Rooftop+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9366&dropOffLongitude=100.8850&dropOffAddress=Horizon+Rooftop+Pattaya'},
-    // Пратамнак
-    {district:'pratumnak',slot:'morning',types:['cultural'],cat:'🛕 храм',name:'Big Buddha Hill',desc:'Прохладно, мало людей, красивый вид. 45 мин.',maps:'https://www.google.com/maps/search/?api=1&query=Wat+Phra+Yai+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9186&dropOffLongitude=100.8518&dropOffAddress=Wat+Phra+Yai+Pattaya'},
-    {district:'pratumnak',slot:'day',types:['cultural'],cat:'🌅 вид',name:'Khao Pattaya Viewpoint',desc:'Знаменитый вид на бухту. 30 мин. Бесплатно.',maps:'https://www.google.com/maps/search/?api=1&query=Khao+Pattaya+Viewpoint',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9240&dropOffLongitude=100.8620&dropOffAddress=Khao+Pattaya+Viewpoint'},
-    {district:'pratumnak',slot:'evening',types:['gastronomic'],cat:'🍜 ресторан',name:'Cabbages & Condoms',desc:'Тайская кухня в красивом саду. 💰💰',maps:'https://www.google.com/maps/search/?api=1&query=Cabbages+and+Condoms+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9151&dropOffLongitude=100.8573&dropOffAddress=Cabbages+%26+Condoms+Pattaya'},
-    // Джомтьен
-    {district:'jomtien',slot:'morning',types:['beach','relaxed'],cat:'🏖 пляж',name:'Jomtien Beach утром',desc:'Широкий пляж, спокойная прогулка.',maps:'https://www.google.com/maps/search/?api=1&query=Jomtien+Beach+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.8800&dropOffLongitude=100.8750&dropOffAddress=Jomtien+Beach'},
-    {district:'jomtien',slot:'day',types:['beach','relaxed'],cat:'🏖 пляж',name:'Jomtien Beach',desc:'Широкий пляж, лежаки, кафе.',maps:'https://www.google.com/maps/search/?api=1&query=Jomtien+Beach+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.8800&dropOffLongitude=100.8750&dropOffAddress=Jomtien+Beach'},
-    {district:'jomtien',slot:'evening',types:['gastronomic'],cat:'🍜 ресторан',name:'The Glass House',desc:'Ужин у моря, закат. 💰💰💰',maps:'https://www.google.com/maps/search/?api=1&query=The+Glass+House+Pattaya',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.8487&dropOffLongitude=100.8932&dropOffAddress=The+Glass+House+Pattaya'},
-    // Ко Лан
-    {district:'kohlarn',slot:'morning',types:['beach'],cat:'🚤 паром',name:'Паром на Ко Лан',desc:'30–45 мин. Выехать с утра, пока не жарко.',maps:'https://www.google.com/maps/dir/?api=1&origin=Pattaya&destination=Bali+Hai+Pier',grab:'grab://open?screenType=BOOKING&dropOffLatitude=12.9270&dropOffLongitude=100.8700&dropOffAddress=Bali+Hai+Pier+Pattaya'},
-    {district:'kohlarn',slot:'day',types:['beach'],cat:'🏖 пляж',name:'Tawaen Beach',desc:'Самый популярный пляж острова. Всё есть.',maps:'https://www.google.com/maps/search/?api=1&query=Tawaen+Beach+Koh+Larn',grab:null},
-    {district:'kohlarn',slot:'evening',types:['relaxed'],cat:'🏖 возвращение',name:'Возвращение в Паттайю',desc:'Последний паром ~18:00. Ужин в Джомтьене.',maps:'https://www.google.com/maps/search/?api=1&query=Jomtien+Beach+Pattaya',grab:null}
-  ];
+const AREAS=[
+{id:'bkk-old',city:'bangkok',cityName:'Бангкок',name:'Старый город · Rattanakosin & Banglamphu',short:'Старый город',desc:'Королевский дворец, храмы, Khao San, река и атмосферные кофейни.',img:'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=900&q=85'},
+{id:'bkk-china',city:'bangkok',cityName:'Бангкок',name:'Chinatown · Talat Noi · Song Wat',short:'Чайнатаун',desc:'Уличная еда, старые шопхаусы, кофейные обжарщики и вечерний Yaowarat.',img:'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=900&q=85'},
+{id:'bkk-silom',city:'bangkok',cityName:'Бангкок',name:'Silom · Sathorn · Bang Rak',short:'Силом и Сатхорн',desc:'Зелёные дворики, хорошие завтраки, specialty coffee и сильные тайские рестораны.',img:'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=900&q=85'},
+{id:'bkk-sukhumvit',city:'bangkok',cityName:'Бангкок',name:'Sukhumvit · Asok · Phrom Phong',short:'Сукхумвит',desc:'Бранчи, современные кафе, торговые центры и рестораны на любой вкус.',img:'https://images.unsplash.com/photo-1555921015-5532091f6026?w=900&q=85'},
+{id:'bkk-siam',city:'bangkok',cityName:'Бангкок',name:'Siam · Pathum Wan',short:'Сиам',desc:'Центр города, музеи, шопинг и современная тайская гастрономия.',img:'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=900&q=85'},
+{id:'pat-naklua',city:'pattaya',cityName:'Паттайя',name:'Наклуа · Wongamat',short:'Наклуа',desc:'Более спокойный север, Храм Истины, рыбацкие рынки и морепродукты.',img:'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900&q=85'},
+{id:'pat-central',city:'pattaya',cityName:'Паттайя',name:'Центральная Паттайя',short:'Центр',desc:'Пляжная дорога, кофейные обжарщики, торговые центры и rooftop.',img:'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&q=85'},
+{id:'pat-prat',city:'pattaya',cityName:'Паттайя',name:'Пратамнак · Cozy Beach',short:'Пратамнак',desc:'Холмы, смотровые площадки, закаты и рестораны с видом на залив.',img:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=85'},
+{id:'pat-jomtien',city:'pattaya',cityName:'Паттайя',name:'Джомтьен · Na Jomtien',short:'Джомтьен',desc:'Длинный пляж, спокойный ритм, brunch-кафе и морепродукты у воды.',img:'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=900&q=85'},
+{id:'lan-na',city:'koh-larn',cityName:'Ко Лан',name:'Na Ban · главный пирс',short:'Na Ban',desc:'Удобная база острова: кафе, прогулка по набережной, близко к пирсу.',img:'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=900&q=85'},
+{id:'lan-tayai',city:'koh-larn',cityName:'Ко Лан',name:'Ta Yai · север острова',short:'Ta Yai',desc:'Пляжные виды, кафе на склоне и более расслабленная атмосфера.',img:'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900&q=85'},
+{id:'lan-samae',city:'koh-larn',cityName:'Ко Лан',name:'Samae · Tien · юго-запад',short:'Samae и Tien',desc:'Пляжи, прозрачная вода и точки для долгого отдыха у моря.',img:'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=900&q=85'}
+];
+const P=[
+// Bangkok Old Town
+{id:'onlok',area:'bkk-old',kind:'breakfast',name:'On Lok Yun',rating:'4.3★ · культовое место старого города',price:1,hours:'Обычно рано утром — до 14:30; проверьте день поездки.',address:'72 Charoen Krung Road, Wang Burapha Phirom, Phra Nakhon, Bangkok',desc:'Историческая тайско-китайская кофейня: тосты с маслом и сгущёнкой, яйца всмятку, старомодный завтрак. Идти ради атмосферы, а не модного бранча.',maps:'On Lok Yun Bangkok',grab:'On Lok Yun, 72 Charoen Krung Road Bangkok',photo:'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=700&q=80'},
+{id:'snooze',area:'bkk-old',kind:'breakfast',name:'Snooze Coffee House',rating:'4.7★ · 648 отзывов',price:2,hours:'Ежедневно 07:00–17:00',address:'170/4 Samsen Road, Ban Phan Thom, Phra Nakhon, Bangkok',desc:'Уютное кафе недалеко от Khao San: панкейки, вафли, яйца, тосты и кофе. В отзывах часто хвалят порции и соотношение цены и качества.',maps:'Snooze Coffee House Bangkok',grab:'Snooze Coffee House, 170/4 Samsen Road Bangkok',photo:'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=700&q=80'},
+{id:'bakies',area:'bkk-old',kind:'breakfast',name:'BAKIES ROASTERS',rating:'5.0★ · 402 отзыва',price:2,hours:'Пн–Пт 08:00–13:00 · Сб–Вс 07:30–13:00',address:'182/2 Rimklongbanglumpoo, Soi Lamphu, Phra Nakhon, Bangkok',desc:'Небольшое место у канала с хлебом, яйцами и завтраками-конструкторами. Рейтинг высокий и отзывов достаточно; важно не опаздывать — закрывается рано.',maps:'BAKIES ROASTERS Bangkok',grab:'BAKIES ROASTERS, 182/2 Soi Lamphu Bangkok',photo:'https://images.unsplash.com/photo-1495214783159-3503fd1b572d?w=700&q=80'},
+{id:'klaire',area:'bkk-old',kind:'breakfast',name:'KLAIRE · Coffee & Brunch',rating:'5.0★ · 7 отзывов (пока небольшая выборка)',price:2,hours:'Ежедневно 07:00–15:00',address:'589 Phra Sumen Road, Wat Bowon Niwet, Phra Nakhon, Bangkok',desc:'Современный brunch и specialty coffee в старом городе. Отлично подходит для спокойного завтрака в кондиционируемом помещении.',maps:'KLAIRE Coffee Brunch Bangkok',grab:'KLAIRE Coffee & Brunch, 589 Phra Sumen Road Bangkok',photo:'https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=700&q=80'},
+{id:'craftsman',area:'bkk-old',kind:'cafe',name:'Craftsman Roastery at Old Town',rating:'4.8★ · около 430 отзывов',price:1,hours:'Открывается примерно с 07:30; часы лучше перепроверить.',address:'Старый город, район Giant Swing, Bangkok',desc:'Кофейная обжарка в старом шопхаусе. Удобно совместить с храмовым маршрутом; хороший выбор для фильтра и specialty coffee.',maps:'Craftsman Roastery at Old Town Bangkok',grab:'Craftsman Roastery at Old Town Bangkok',photo:'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700&q=80'},
+{id:'island',area:'bkk-old',kind:'dinner',name:'The Island Bangkok',rating:'4.9★ · 436 отзывов в карточке места',price:2,hours:'Ежедневно 07:00–02:00',address:'49 Samsen 4 Alley, Ban Phan Thom, Phra Nakhon, Bangkok',desc:'Тайская кухня, коктейли и тропическая атмосфера рядом с Khao San. Гости хвалят дружелюбный сервис, большие порции и выбор; качество отдельных блюд может быть неодинаковым.',maps:'The Island Bangkok Restaurant',grab:'The Island Bangkok, 49 Samsen 4 Alley Bangkok',photo:'https://images.unsplash.com/photo-1552566626-52f8b828add9?w=700&q=80'},
+{id:'grandpalace',area:'bkk-old',kind:'sight',name:'Grand Palace & Wat Phra Kaew',rating:'Главная культурная достопримечательность',price:3,hours:'Обычно 08:30–15:30; проверяйте официальный сайт перед визитом.',address:'Na Phra Lan Road, Phra Nakhon, Bangkok',desc:'Королевский дворец и Храм Изумрудного Будды. Закладывайте 2–3 часа, приходите к открытию и соблюдайте строгий дресс-код.',maps:'Grand Palace Bangkok',grab:'Grand Palace, Na Phra Lan Road Bangkok',photo:'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=700&q=80'},
+{id:'watpho',area:'bkk-old',kind:'sight',name:'Wat Pho',rating:'Один из главных храмов Бангкока',price:2,hours:'Обычно 08:00–18:30; уточнить перед поездкой.',address:'2 Sanam Chai Road, Phra Nakhon, Bangkok',desc:'Храм Лежащего Будды и традиционная тайская архитектура. Удобно объединить с Королевским дворцом и переправой через реку.',maps:'Wat Pho Bangkok',grab:'Wat Pho, 2 Sanam Chai Road Bangkok',photo:'https://images.unsplash.com/photo-1540611025311-01df3cef54b5?w=700&q=80'},
+{id:'watArun',area:'bkk-old',kind:'sight',name:'Wat Arun',rating:'Знаковый храм на берегу Чао Прайя',price:2,hours:'Обычно 08:00–18:00; перепроверьте.',address:'158 Wang Doem Road, Wat Arun, Bangkok Yai, Bangkok',desc:'Башня-пранг с керамической отделкой. Особенно красиво на закате с противоположного берега или с речной лодки.',maps:'Wat Arun Bangkok',grab:'Wat Arun, 158 Wang Doem Road Bangkok',photo:'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=700&q=80'},
+{id:'rongros',area:'bkk-old',kind:'dinner',name:'RONGROS',rating:'4.7★ · около 4,957 отзывов',price:2,hours:'Ежедневно 11:00–15:00 и 17:00–22:00',address:'392/16 Maha Rat Road, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok',desc:'Тайская кухня и открытка с видом на Wat Arun через реку. В Michelin Guide. В отзывах часто отмечают виды, атмосферу и классические тайские вкусы. На террасу к закату бронировать заранее.',maps:'RONGROS Bangkok',grab:'RONGROS, 392/16 Maha Rat Road Bangkok',photo:'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80'},
+{id:'nusara',area:'bkk-old',kind:'dinner',name:'Nusara',rating:'4.5★ · около 770 отзывов',price:4,hours:'Ежедневно 18:00–23:00 · бронь обязательна',address:'336 Maha Rat Road, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok',desc:'Современная тайская кухня и камерный rooftop с видом на Wat Pho. Michelin; дорогой tasting-menu формат для особенного вечера. Бронируйте заранее.',maps:'Nusara Bangkok',grab:'Nusara, 336 Maha Rat Road Bangkok',photo:'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80'},
+// Bangkok Chinatown
+{id:'bright',area:'bkk-china',kind:'breakfast',name:'Bright Side Brunch Bar',rating:'Новая точка · рейтинг пока по малой выборке',price:2,hours:'Ежедневно 07:00–21:00 (проверьте перед визитом)',address:'G Floor, I’m Chinatown Mall, 531 Charoen Krung Road, Bangkok',desc:'Большие завтраки, вафли, сэндвичи и кофе прямо в Chinatown. Удобный вариант перед прогулкой по старым улицам.',maps:'Bright Side Brunch Bar Im Chinatown Bangkok',grab:'Bright Side Brunch Bar, I’m Chinatown Bangkok',photo:'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=700&q=80'},
+{id:'imgood',area:'bkk-china',kind:'cafe',name:'Imgoodbkk · Specialty Coffee',rating:'5.0★ · 292 отзыва',price:1,hours:'Пн, Ср–Вс 07:30–16:30 (вт — выходной по карточке)',address:'15 Thanon Phat Sai, Samphanthawong, Bangkok',desc:'Небольшая specialty-точка с сильным эспрессо и фильтром. В отзывах отмечают качество напитков и внимательную работу бариста.',maps:'Imgoodbkk Specialty Coffee Bangkok',grab:'Imgoodbkk Specialty Coffee, 15 Thanon Phat Sai Bangkok',photo:'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700&q=80'},
+{id:'mother',area:'bkk-china',kind:'cafe',name:'Mother Roaster · Talat Noi',rating:'4.4★ · около 1,780 отзывов',price:2,hours:'Дневное кафе; уточните актуальный график.',address:'Talat Noi, Charoen Krung แนว, Samphanthawong, Bangkok',desc:'Знаковая кофейня в старом квартале Talat Noi, известная фильтр-кофе и атмосферой мастерской. Хорошая остановка между уличным искусством и старинными домами.',maps:'Mother Roaster Talat Noi Bangkok',grab:'Mother Roaster Talat Noi Bangkok',photo:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80'},
+{id:'songwat',area:'bkk-china',kind:'cafe',name:'Song Wat Coffee Roasters',rating:'4.5★ · около 940 отзывов',price:1,hours:'Дневные часы; проверьте текущий график.',address:'Song Wat Road, Samphanthawong, Bangkok',desc:'Обжарка и кофейня в двух старых шопхаусах. Подходит для медленной кофейной паузы во время прогулки по Song Wat.',maps:'Song Wat Coffee Roasters Bangkok',grab:'Song Wat Coffee Roasters, Song Wat Road Bangkok',photo:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80'},
+{id:'tkseafood',area:'bkk-china',kind:'dinner',name:'T&K Seafood',rating:'4.1★ · тысячи отзывов',price:2,hours:'Обычно с вечера до поздней ночи; проверьте конкретный день.',address:'49–51 Phadung Dao Road, Samphanthawong, Bangkok',desc:'Легендарная шумная морская еда на Yaowarat: гриль, креветки, кальмары и краб. Идти за атмосферой Chinatown и уличным ужином, а не за тихой обстановкой.',maps:'T&K Seafood Yaowarat Bangkok',grab:'T&K Seafood, 49 Phadung Dao Road Bangkok',photo:'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=700&q=80'},
+{id:'jayfai',area:'bkk-china',kind:'dinner',name:'Raan Jay Fai',rating:'Оценки неоднозначные; известность — Michelin',price:4,hours:'Обычно Ср–Сб 09:00–19:30; закрыто Вс–Вт — перепроверить',address:'327 Maha Chai Road, Samran Rat, Phra Nakhon, Bangkok',desc:'Легендарная уличная кухня с крабовым омлетом. Очень дорого для street food и возможны длинные очереди; идти только если это гастрономическая цель дня.',maps:'Raan Jay Fai Bangkok',grab:'Raan Jay Fai, 327 Maha Chai Road Bangkok',photo:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80'},
+{id:'talatnoi',area:'bkk-china',kind:'sight',name:'Talat Noi & Song Wat walk',rating:'Атмосферный исторический квартал',price:0,hours:'Лучше утром или ближе к вечеру',address:'Talat Noi / Song Wat Road, Bangkok',desc:'Старые шопхаусы, граффити, мастерские, маленькие галереи и кафе. Отлично подходит для неспешной прогулки и фотографий.',maps:'Talat Noi Bangkok',grab:'Talat Noi Bangkok',photo:'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=700&q=80'},
+// Bangkok Silom
+{id:'luka',area:'bkk-silom',kind:'breakfast',name:'Luka Cafe',rating:'4.5★ · около 2,700 отзывов',price:2,hours:'Открывается с 08:00; проверьте выходные и праздничные часы.',address:'Local community mall / Pan Road, Silom, Bang Rak, Bangkok',desc:'Популярный бранч в отреставрированном шопхаусе: яйца, шакшука, сэндвичи, кофе. В выходные бывает очередь — лучше приходить пораньше.',maps:'Luka Cafe Bangkok Pan Road',grab:'Luka Cafe, Pan Road Silom Bangkok',photo:'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=700&q=80'},
+{id:'gattta',area:'bkk-silom',kind:'cafe',name:'GATTA CAfe · Park Silom',rating:'4.9★ · 975 отзывов',price:2,hours:'Пн–Пт 08:00–17:00 · Сб–Вс 08:00–16:30/17:00',address:'Park Silom, Silom Road, Bang Rak, Bangkok',desc:'Specialty coffee, эспрессо и авторские напитки. Высокий рейтинг на большой выборке; хорошая остановка в середине дня в районе Silom.',maps:'GATTA Cafe Park Silom Bangkok',grab:'GATTA Cafe Park Silom, Silom Road Bangkok',photo:'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700&q=80'},
+{id:'roots',area:'bkk-silom',kind:'cafe',name:'Roots at Sathon',rating:'4.6★ · около 970 отзывов',price:1,hours:'Открывается рано; график лучше проверить перед поездкой.',address:'Sathon area, near BTS Surasak, Bangkok',desc:'Обжарщик, который делает акцент на тайских кофейных зёрнах. Для тех, кто хочет попробовать кофе местного происхождения.',maps:'Roots at Sathon Bangkok',grab:'Roots at Sathon Bangkok',photo:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80'},
+{id:'baansomtum',area:'bkk-silom',kind:'dinner',name:'Baan Somtum Sathorn',rating:'4.4★ · около 3,785 отзывов Google',price:2,hours:'Ежедневно 11:00–22:00',address:'9/1 Thanon Si Wiang, Si Lom, Bang Rak, Bangkok',desc:'Isan-кухня и десятки вариантов сом-там. В отзывах хвалят вкус, выбор и быстрое обслуживание; просите mai pet, если не любите острое. Есть Bib Gourmand в прошлых выпусках Michelin.',maps:'Baan Somtum Sathorn Bangkok',grab:'Baan Somtum Sathorn, 9/1 Si Wiang Bangkok',photo:'https://images.unsplash.com/photo-1547592180-85f173990554?w=700&q=80'},
+{id:'somboon',area:'bkk-silom',kind:'dinner',name:'Somboon Seafood · Surawong',rating:'4.2★ · более 6,600 отзывов',price:3,hours:'Ежедневно примерно 11:00–22:00',address:'169/7–12 Surawong Road, Bang Rak, Bangkok',desc:'Известен крабом с карри-порошком (ปูผัดผงกะหรี่), морепродуктами и тайскими блюдами. Большой ресторан с высокой проходимостью.',maps:'Somboon Seafood Surawong Bangkok',grab:'Somboon Seafood Surawong, 169 Surawong Road Bangkok',photo:'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=700&q=80'},
+{id:'lumpini',area:'bkk-silom',kind:'sight',name:'Lumphini Park',rating:'Главный зелёный парк центра',price:0,hours:'Обычно 04:30–21:00',address:'Rama IV Road, Pathum Wan, Bangkok',desc:'Озеро, дорожки, большие деревья и вараны. Отличная пауза от городского шума; лучше рано утром или ближе к закату.',maps:'Lumphini Park Bangkok',grab:'Lumphini Park Bangkok',photo:'https://images.unsplash.com/photo-1511497584788-876760111969?w=700&q=80'},
+// Bangkok Sukhumvit
+{id:'breakfaststory',area:'bkk-sukhumvit',kind:'breakfast',name:'Breakfast Story · Phrom Phong',rating:'4.4★ · 196 отзывов',price:2,hours:'Ежедневно 07:00–23:00',address:'593/27 Sukhumvit Road, Khlong Tan Nuea, Watthana, Bangkok',desc:'Американско-канадский завтрак: панкейки, яйца, French toast и большие порции. Удобно, если хочется привычный плотный brunch.',maps:'Breakfast Story Phrom Phong Bangkok',grab:'Breakfast Story, 593/27 Sukhumvit Road Bangkok',photo:'https://images.unsplash.com/photo-1495214783159-3503fd1b572d?w=700&q=80'},
+{id:'sarnies',area:'bkk-sukhumvit',kind:'breakfast',name:'Sarnies Bangkok',rating:'4.4★ · около 3,100 отзывов',price:2,hours:'Утренний и дневной график; уточните перед визитом.',address:'Charoen Krung Soi 44, Bang Rak, Bangkok',desc:'Известный brunch и собственная обжарка кофе, большие завтраки, хлеб и сэндвичи. Формально это соседний Bang Rak — лучше сочетать с прогулкой по реке, а не с дальним переездом.',maps:'Sarnies Bangkok Charoenkrung',grab:'Sarnies Bangkok Charoenkrung Bangkok',photo:'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=700&q=80'},
+{id:'hiccup',area:'bkk-sukhumvit',kind:'cafe',name:'Hiccup · Local Specialty Coffee',rating:'5.0★ · 201 отзыв',price:1,hours:'Вт–Вс 10:00–18:00 (пн — выходной по карточке)',address:'2888 Rama IV Road, Khlong Toei, Bangkok',desc:'Небольшой локальный specialty-бар: эспрессо и фильтр по адекватной цене. Для кофейных энтузиастов, которым важнее чашка, чем интерьер.',maps:'Hiccup Local Specialty Coffee Bangkok',grab:'Hiccup Local Specialty Coffee, 2888 Rama IV Road Bangkok',photo:'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700&q=80'},
+{id:'singlelane',area:'bkk-sukhumvit',kind:'cafe',name:'SINGLE LANE Specialty Coffee',rating:'4.7★ · 555 отзывов',price:2,hours:'Пн–Пт 07:30–16:30 · Сб–Вс 08:30–17:30',address:'26/9 Sukhumvit 69 Alley, Phra Khanong Nuea, Watthana, Bangkok',desc:'Компактное кафе, где фокус на качестве эспрессо и flat white. Скорее точка для хорошего кофе, чем место для долгого обеда.',maps:'SINGLE LANE Specialty Coffee Bangkok',grab:'SINGLE LANE Specialty Coffee, Sukhumvit 69 Bangkok',photo:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80'},
+{id:'sukhumvitdinner',area:'bkk-sukhumvit',kind:'dinner',name:'Baan Somtum Sukhumvit',rating:'4.3★ · Tripadvisor выборка небольшая',price:2,hours:'Ежедневно 11:00–22:00',address:'15 Soi Suk Chai, Khlong Toei, Bangkok',desc:'Тайская и Isan-кухня, сом-там и блюда на компанию. Удобный ужин в зоне Sukhumvit; просите умеренную остроту.',maps:'Baan Somtum Sukhumvit Bangkok',grab:'Baan Somtum Sukhumvit, 15 Soi Suk Chai Bangkok',photo:'https://images.unsplash.com/photo-1547592180-85f173990554?w=700&q=80'},
+{id:'sorn',area:'bkk-sukhumvit',kind:'dinner',name:'Sorn',rating:'4.6★ · около 615 отзывов',price:4,hours:'Ужин по бронированию; актуальные дни и слоты — на официальном сайте.',address:'56 Sukhumvit Soi 26, Khlong Tan Nuea, Khlong Toei, Bangkok',desc:'Трёхзвёздочный Michelin, южнотайский дегустационный сет. Очень дорогой и сложный для бронирования ресторан — только для отдельного гастрономического события.',maps:'Sorn Bangkok restaurant',grab:'Sorn, 56 Sukhumvit Soi 26 Bangkok',photo:'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80'},
+{id:'benjakitti',area:'bkk-sukhumvit',kind:'sight',name:'Benjakitti Forest Park',rating:'Большой городской парк',price:0,hours:'Обычно 05:00–21:00',address:'Ratchadaphisek Road, Khlong Toei, Bangkok',desc:'Современный парк с деревянными дорожками над водно-болотными участками, мостами и видами на skyline. Особенно хорош утром и на закате.',maps:'Benjakitti Forest Park Bangkok',grab:'Benjakitti Forest Park Bangkok',photo:'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=700&q=80'},
+// Bangkok Siam
+{id:'craft',area:'bkk-siam',kind:'breakfast',name:'CRAFT · Kimpton Maa-Lai',rating:'Отмечено Time Out как один из лучших завтраков',price:3,hours:'All-day breakfast; уточните часы ресторана отеля.',address:'Kimpton Maa-Lai Bangkok, 78 Soi Ton Son, Lumphini, Pathum Wan',desc:'Зелёная терраса, specialty coffee, avocado toast и шакшука. Красивое место для неспешного завтрака в центре.',maps:'CRAFT Kimpton Maa Lai Bangkok',grab:'CRAFT Kimpton Maa-Lai Bangkok',photo:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80'},
+{id:'rise',area:'bkk-siam',kind:'cafe',name:'RISE COFFEE · Flagship',rating:'4.7★ · пока 3 отзыва в бизнес-карточке',price:1,hours:'Ежедневно 08:00–17:00',address:'Mahatun Plaza, 888 Ploen Chit Road, Pathum Wan, Bangkok',desc:'Specialty-кофе и микроростерия в центре. В отзывах отмечают кофе и выпечку; рейтинг хороший, но число оценок в карточке пока небольшое.',maps:'RISE COFFEE Flagship Bangkok',grab:'RISE COFFEE Mahatun Plaza Bangkok',photo:'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700&q=80'},
+{id:'gallerydrip',area:'bkk-siam',kind:'cafe',name:'Gallery Drip Coffee',rating:'4.6★ · около 950 отзывов',price:1,hours:'Дневные часы; понедельник часто выходной.',address:'Bangkok Art and Culture Centre, Pathum Wan, Bangkok',desc:'Кофейня с фильтр-кофе внутри BACC. Идеально соединить с выставками современного искусства и прогулкой по Siam.',maps:'Gallery Drip Coffee Bangkok',grab:'Gallery Drip Coffee BACC Bangkok',photo:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80'},
+{id:'srabua',area:'bkk-siam',kind:'dinner',name:'Sra Bua by Kiin Kiin',rating:'4.7★ · около 1,734 отзывов',price:4,hours:'Обед Ср–Вс 12:00–15:00 · ужин ежедневно с 18:00; проверить актуальный график',address:'Siam Kempinski Hotel, 991/9 Rama I Road, Pathum Wan, Bangkok',desc:'Современная тайская fine dining кухня, дегустационные меню и эффектная подача. Дорого, для особого вечера; бронирование рекомендуется.',maps:'Sra Bua Siam Kempinski Bangkok',grab:'Sra Bua Siam Kempinski Hotel Bangkok',photo:'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80'},
+{id:'bacc',area:'bkk-siam',kind:'sight',name:'Bangkok Art & Culture Centre',rating:'Главный центр современного искусства',price:0,hours:'Обычно Вт–Вс 10:00–20:00; понедельник закрыт.',address:'939 Rama I Road, Wang Mai, Pathum Wan, Bangkok',desc:'Выставки, дизайн, фотография, книжные и небольшие кафе. Удобно совместить с Siam и MBK.',maps:'Bangkok Art and Culture Centre',grab:'Bangkok Art and Culture Centre, 939 Rama I Road Bangkok',photo:'https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=700&q=80'},
+// Pattaya Naklua
+{id:'toast',area:'pat-naklua',kind:'breakfast',name:'Toast Brunch & Brew',rating:'4.6★ · 346 отзывов',price:2,hours:'Ежедневно 07:30–23:00',address:'183/6, Muang Pattaya, Bang Lamung, Chon Buri',desc:'Популярное место для полноценного западного завтрака и кофе. В отзывах отмечают brunch-классику и приятную посадку; в часы пик возможна очередь.',maps:'Toast Brunch and Brew Pattaya',grab:'Toast Brunch & Brew, 183/6 Pattaya',photo:'https://images.unsplash.com/photo-1495214783159-3503fd1b572d?w=700&q=80'},
+{id:'xin',area:'pat-naklua',kind:'cafe',name:'XIN Coffee and Co.',rating:'Оценка в доступной карточке не отображалась',price:1,hours:'Ежедневно примерно 08:00–17:00',address:'Напротив Lanpho Naklua Market, Na Kluea, Pattaya',desc:'Кофейня в необычном китайском интерьере напротив рынка. В отзывах упоминают латте, американо и внимательное приготовление; удобно совместить с рынком.',maps:'XIN Coffee and Co Pattaya Naklua',grab:'XIN Coffee and Co, Naklua Market Pattaya',photo:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80'},
+{id:'sanctuary',area:'pat-naklua',kind:'sight',name:'Sanctuary of Truth',rating:'4.7★ · более 46,000 оценок в актуальной подборке',price:3,hours:'Обычно 08:00–20:30; расписание шоу отдельно.',address:'ปราสาทสัจธรรม, Soi Naklua 12, Pattaya, Chon Buri',desc:'Грандиозный деревянный храм-музей с резьбой ручной работы. Закладывайте 1,5–2,5 часа; есть экскурсионные слоты и вечерняя подсветка.',maps:'Sanctuary of Truth Pattaya',grab:'Sanctuary of Truth, Soi Naklua 12 Pattaya',photo:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/The_Sancturay_of_Truth%2C_Pattaya%2C_Thailand.JPG/960px-The_Sancturay_of_Truth%2C_Pattaya%2C_Thailand.JPG'},
+{id:'mum',area:'pat-naklua',kind:'dinner',name:'Mum Aroi · Naklua',rating:'Популярный ресторан; сверяйте свежую оценку на карте',price:3,hours:'Вечерние часы; проверьте конкретный филиал.',address:'Naklua, Pattaya, Chon Buri',desc:'Известный ресторан морепродуктов у моря. Подойдёт для рыбы, краба и креветок; уточняйте весовые цены на морепродукты до заказа.',maps:'Mum Aroi Naklua Pattaya',grab:'Mum Aroi Naklua Pattaya',photo:'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=700&q=80'},
+// Pattaya Central
+{id:'flavorhouse',area:'pat-central',kind:'breakfast',name:'The Flavor House',rating:'5.0★ · 187 отзывов',price:2,hours:'Ежедневно 08:00–19:00',address:'View Talay 6, 243/4, Pattaya, Chon Buri',desc:'Небольшое место для завтрака и brunch в центре. В отзывах отмечают быстрый сервис, дружелюбную атмосферу и сытные завтраки.',maps:'The Flavor House View Talay 6 Pattaya',grab:'The Flavor House, View Talay 6 Pattaya',photo:'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=700&q=80'},
+{id:'sunsetcoffee',area:'pat-central',kind:'cafe',name:'Sunset Coffee Roaster · Beach Road',rating:'4.7★ · около 1,900 отзывов',price:2,hours:'Пн–Пт 07:30–18:00 · Сб–Вс 07:30–18:30',address:'137 Moo 9, Beach Road, Pattaya, Chon Buri',desc:'Specialty coffee и собственная обжарка напротив пляжа. Гости хвалят кофе, flat white и выбор зёрен. Хорошая дневная остановка с видом на море.',maps:'Sunset Coffee Roaster Pattaya Beach Road',grab:'Sunset Coffee Roaster, 137 Beach Road Pattaya',photo:'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700&q=80'},
+{id:'se78',area:'pat-central',kind:'cafe',name:'se78.coffee',rating:'4.9★ · 319 отзывов',price:1,hours:'Обычно 10:30–22:00; вторник может быть выходным.',address:'78/14 Moo 9, Pattaya Sai Song Road, Pattaya',desc:'Specialty-кофейня на Second Road, недалеко от Alcazar. В отзывах отмечают V60, выбор зерна и компетентных бариста.',maps:'se78 coffee Pattaya',grab:'se78.coffee, 78/14 Pattaya Sai Song Road',photo:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80'},
+{id:'horizon',area:'pat-central',kind:'dinner',name:'Horizon Rooftop · Hilton Pattaya',rating:'4.7★ · 1,790 отзывов',price:4,hours:'Ежедневно 16:00–01:00',address:'Level 34, Hilton Pattaya, 333/101 Moo 9, Pattaya',desc:'Панорама залива, коктейли и rooftop на закате. Отзывы особенно хвалят виды и сервис; еда по отзывам бывает неровной относительно цены. Бронируйте столик на террасе.',maps:'Horizon Rooftop Restaurant Hilton Pattaya',grab:'Hilton Pattaya, 333/101 Moo 9 Pattaya',photo:'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=700&q=80'},
+{id:'terminal21',area:'pat-central',kind:'sight',name:'Terminal 21 Pattaya',rating:'Популярный тематический торговый центр',price:0,hours:'Обычно 11:00–22:00',address:' ถนนสุขุมวิท North Pattaya Road, Pattaya',desc:'Тематические этажи в стиле разных городов, фудкорт, магазины и кондиционер. Хороший план на жаркий день или дождь.',maps:'Terminal 21 Pattaya',grab:'Terminal 21 Pattaya',photo:'https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?w=700&q=80'},
+// Pattaya Pratumnak
+{id:'lunchbox',area:'pat-prat',kind:'breakfast',name:'The Lunch Box Café',rating:'Хорошие отзывы о завтраках; число отзывов в карточке малое',price:2,hours:'Ежедневно 08:00–18:30',address:'338/6 Nongprue, Pratumnak area, Pattaya',desc:'Завтраки в западном стиле, яйца, тосты, свежие соки и лёгкие блюда. Удобно совместить с Big Buddha.',maps:'The Lunch Box Cafe Pattaya Pratumnak',grab:'The Lunch Box Cafe, 338/6 Nongprue Pattaya',photo:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80'},
+{id:'sunflour',area:'pat-prat',kind:'breakfast',name:'SunFlour Village Eatery',rating:'5.0★ · 2 отзыва (малая выборка)',price:2,hours:'Ежедневно 09:00–17:00',address:'352/554 Moo 12, Phra Tam Nak 4 Alley, Pattaya',desc:'Камерное кафе с западными завтраками, кофе и комфортной едой. Высокая оценка пока основана на небольшом числе отзывов — учитывайте это.',maps:'SunFlour Village Eatery Pattaya',grab:'SunFlour Village Eatery, Phra Tam Nak 4 Alley Pattaya',photo:'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=700&q=80'},
+{id:'benjamit',area:'pat-prat',kind:'cafe',name:'Benjamit Coffee Roasters',rating:'4.7★ · 73 отзыва',price:1,hours:'Обычно 06:00–16:00; воскресенье может быть выходным.',address:'111/106–107 Pattaya Tai 20 Alley, Pattaya',desc:'Небольшая ростерия с собственной обжаркой и хорошим эспрессо. Кофейная остановка для тех, кто любит specialty без пафоса.',maps:'Benjamit Coffee Roasters Pattaya',grab:'Benjamit Coffee Roasters, Pattaya Tai 20 Alley',photo:'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=700&q=80'},
+{id:'sky',area:'pat-prat',kind:'dinner',name:'The Sky Gallery',rating:'4.3★ · около 10,700 отзывов',price:3,hours:'Пн–Пт 11:00–23:00 · Сб–Вс 10:00–23:00',address:'400 Moo 12, Phra Tamnak, Pattaya, Chon Buri',desc:'Террасы над морем и эффектный закат. В отзывах вид — главный плюс; впечатления от еды и сервиса смешанные. Выбирайте ради атмосферы и панорамы, лучше бронировать к sunset.',maps:'The Sky Gallery Pattaya',grab:'The Sky Gallery, 400 Moo 12 Phra Tamnak Pattaya',photo:'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=700&q=80'},
+{id:'cafedesamis',area:'pat-prat',kind:'dinner',name:'Cafe des Amis Fine Dining',rating:'4.8★ · 1,827 отзывов',price:4,hours:'Ежедневно 17:00–23:00',address:'391/6 Moo 10, Soi 11 off Thap Phraya Road, Pattaya',desc:'Один из сильных вариантов для особенного ужина: французская кухня, стейки, морепродукты и Beef Wellington. В отзывах часто хвалят сервис и атмосферу; столик лучше бронировать.',maps:'Cafe des Amis Fine Dining Pattaya',grab:'Cafe des Amis, 391/6 Moo 10 Pattaya',photo:'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80'},
+{id:'bigbuddha',area:'pat-prat',kind:'sight',name:'Wat Phra Yai · Big Buddha',rating:'Одна из главных святынь Паттайи',price:0,hours:'Днём; лучше утром или ближе к закату.',address:'เขาพระใหญ่, Pratumnak Hill, Pattaya',desc:'Большая статуя Будды, храмовый комплекс и виды с холма. Уважительная одежда; удобно объединить со смотровой площадкой.',maps:'Wat Phra Yai Big Buddha Pattaya',grab:'Wat Phra Yai Big Buddha, Pratumnak Hill Pattaya',photo:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Wat_Khao_Phra_Yai_%28Pattaya%29_02.JPG/800px-Wat_Khao_Phra_Yai_%28Pattaya%29_02.JPG'},
+{id:'viewpoint',area:'pat-prat',kind:'sight',name:'Khao Pattaya Viewpoint',rating:'4.6★ · более 10,000 оценок в подборке',price:0,hours:'Обычно 07:00–22:00',address:'Phra Tamnak Mountain, Pattaya',desc:'Панорама бухты и знаменитые буквы PATTAYA. Приезжайте ближе к закату, но учитывайте толпу и парковку.',maps:'Khao Pattaya Viewpoint',grab:'Khao Pattaya Viewpoint Pattaya',photo:'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700&q=80'},
+// Pattaya Jomtien
+{id:'tribe',area:'pat-jomtien',kind:'breakfast',name:'Tribe Cafe Pattaya',rating:'4.9★ · 27 отзывов (небольшая выборка)',price:2,hours:'Ежедневно 08:00–17:00',address:'321/14 Chom Thian 11 Alley, Jomtien, Pattaya',desc:'Современный brunch с французскими тостами, avocado toast и кофе. В отзывах особенно выделяют завтрак и приятную атмосферу.',maps:'Tribe Cafe Pattaya Jomtien',grab:'Tribe Cafe Pattaya, Chom Thian 11 Alley',photo:'https://images.unsplash.com/photo-1495214783159-3503fd1b572d?w=700&q=80'},
+{id:'folks',area:'pat-jomtien',kind:'breakfast',name:'Folks On The Beach',rating:'4.8★ · около 600 отзывов',price:2,hours:'Дневной график; проверьте перед выездом.',address:'Pattaya / Jomtien beachfront area, Chon Buri',desc:'Кафе прямо у песка с завтраками, выпечкой и хорошим кофе. В свежем локальном обзоре отмечают качество завтрака и кофе; уточните точный адрес филиала на карте.',maps:'Folks On The Beach Pattaya',grab:'Folks On The Beach Pattaya',photo:'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=700&q=80'},
+{id:'sunsetcoffeej',area:'pat-jomtien',kind:'cafe',name:'Tribe Cafe / Coffee stop',rating:'4.9★ · 27 отзывов',price:2,hours:'Ежедневно 08:00–17:00',address:'Chom Thian 11 Alley, Jomtien, Pattaya',desc:'Если хочется остаться в районе, можно задержаться в Tribe на кофе и десерт; для отдельной кофейной остановки выбирайте место по пути к пляжу.',maps:'Tribe Cafe Pattaya',grab:'Tribe Cafe Pattaya Jomtien',photo:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80'},
+{id:'glasshouse',area:'pat-jomtien',kind:'dinner',name:'The Glass House Boho',rating:'4.2★ · около 6,988 отзывов',price:3,hours:'Обычно 11:00–00:00',address:'Na Jomtien Beach, Sattahip, Chon Buri',desc:'Ресторан прямо у песка, тайская кухня, морепродукты и международное меню. Идти ради моря и заката; бронируйте столик у воды.',maps:'The Glass House Boho Pattaya',grab:'The Glass House Boho, Na Jomtien Beach',photo:'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=700&q=80'},
+{id:'pupen',area:'pat-jomtien',kind:'dinner',name:'Pupen Seafood',rating:'4.3★ · более 19,000 отзывов',price:3,hours:'Ежедневно 10:00–22:00',address:'62 Chai Talay Road, Na Jomtien, Sattahip, Chon Buri',desc:'Большой морской ресторан у пляжа. Часто хвалят краба в карри, свежие морепродукты и большие порции; может быть шумно и многолюдно. Уточняйте цену морепродуктов на вес.',maps:'Pupen Seafood Na Jomtien',grab:'Pupen Seafood, 62 Chai Talay Road Na Jomtien',photo:'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=700&q=80'},
+{id:'jomtienbeach',area:'pat-jomtien',kind:'sight',name:'Jomtien Beach',rating:'Главный длинный пляж южной Паттайи',price:0,hours:'Круглосуточно; пляжная инфраструктура зависит от участка.',address:'Jomtien Beach Road, Pattaya, Chon Buri',desc:'Широкий пляж для прогулок, лежаков и спокойного дня у моря. Для более приятного купания выбирайте участок и время по погоде и состоянию воды.',maps:'Jomtien Beach Pattaya',grab:'Jomtien Beach, Pattaya',photo:'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=700&q=80'},
+{id:'nongnooch',area:'pat-jomtien',kind:'sight',name:'Nong Nooch Tropical Garden',rating:'Крупный ботанический парк',price:3,hours:'Обычно 08:00–18:00; шоу по отдельному расписанию.',address:'34 Na Chom Thian, Sattahip, Chon Buri',desc:'Большой тропический сад с тематическими ландшафтами, коллекциями растений и внутренним транспортом. На осмотр закладывайте 2–4 часа.',maps:'Nong Nooch Tropical Garden',grab:'Nong Nooch Tropical Garden, Na Chom Thian',photo:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Nong_Nooch-01.JPG/800px-Nong_Nooch-01.JPG'},
+// Koh Larn
+{id:'fat',area:'lan-na',kind:'breakfast',name:'Fat Submarine Cafe',rating:'Позитивно упоминается в локальном обзоре; рейтинг не подтверждён',price:1,hours:'Обычно 09:00–19:00',address:'Na Ban Market waterfront, Koh Larn, Chon Buri',desc:'Кафе у воды рядом с главным пирсом, терраса и тропический интерьер. Хорошо подходит для позднего завтрака после утреннего парома; без кондиционера.',maps:'Fat Submarine Cafe Koh Larn',grab:'Fat Submarine Cafe, Na Ban Market Koh Larn',photo:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80'},
+{id:'maharak',area:'lan-na',kind:'breakfast',name:'Maharak Cafe',rating:'Около 150+ отзывов Wongnai; Google score уточнить',price:2,hours:'10:00–23:00 · среда может быть выходным',address:'Na Ban Beach, Koh Larn, около 400 м от главного пирса',desc:'Кафе у моря с балконом, домашней выпечкой и вечерней музыкой. Подходит для позднего завтрака/бранча и заката.',maps:'Maharak Cafe Koh Larn',grab:'Maharak Cafe, Na Ban Beach Koh Larn',photo:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80'},
+{id:'pizzacoffee',area:'lan-na',kind:'cafe',name:'Pizza and Coffee Koh Larn',rating:'4.8★ · 17 отзывов Tripadvisor (небольшая выборка)',price:2,hours:'Проверьте актуальный график на карте',address:'Koh Larn, Chon Buri',desc:'Кофейная пауза и лёгкая еда. Высокая оценка, но выборка отзывов небольшая; используйте как запасной вариант.',maps:'Pizza and Coffee Koh Larn',grab:'Pizza and Coffee Koh Larn',photo:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80'},
+{id:'myth',area:'lan-na',kind:'dinner',name:'Myth Kohlarn Resort Bar and Bistro',rating:'4.8★ · пока 4 отзыва Tripadvisor',price:2,hours:'Часы уточнить у заведения / на карте',address:'Koh Larn, Chon Buri',desc:'Вариант для ужина, если остаетесь на острове с ночёвкой. Рейтинг высокий, но отзывов пока очень мало — лучше проверить последние комментарии.',maps:'Myth Kohlarn Resort Bar and Bistro',grab:'Myth Kohlarn Resort Bar and Bistro Koh Larn',photo:'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=700&q=80'},
+{id:'naBan',area:'lan-na',kind:'sight',name:'Na Ban Pier & village',rating:'Главная точка прибытия на остров',price:0,hours:'Паромы — по расписанию перевозчика',address:'Na Ban Pier, Koh Larn, Chon Buri',desc:'Главный пирс, деревня, кафе, магазины и отправная точка для поездок к пляжам. Сразу уточните обратный паром.',maps:'Na Ban Pier Koh Larn',grab:'Na Ban Pier Koh Larn',photo:'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=700&q=80'},
+{id:'matata',area:'lan-tayai',kind:'cafe',name:'Matata Bay Cafe',rating:'Много упоминаний в подборках; рейтинг уточняйте на карте',price:3,hours:'Обычно 09:00–19:00',address:'Дорога к Ta Yai Beach, Koh Larn, Chon Buri',desc:'Bali-style кафе на склоне с видом на море, зонами у воды и на террасе. Хорошо для кофе, прохладительных напитков и фотографий; цены выше материковых.',maps:'Matata Bay Cafe Koh Larn',grab:'Matata Bay Cafe, road to Ta Yai Beach Koh Larn',photo:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80'},
+{id:'seayou',area:'lan-tayai',kind:'dinner',name:'Sea You Again Cafe & Eatery',rating:'Рекомендуется локальными гидами; свежую оценку проверить',price:2,hours:'Проверьте часы и сезонный график',address:'Koh Larn, Chon Buri',desc:'Кафе-ресторан для позднего обеда или раннего ужина с более спокойной атмосферой. Подходит тем, кто ночует на острове.',maps:'Sea You Again Cafe Eatery Koh Larn',grab:'Sea You Again Cafe & Eatery Koh Larn',photo:'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=700&q=80'},
+{id:'tayaibeach',area:'lan-tayai',kind:'sight',name:'Ta Yai Beach',rating:'Один из небольших пляжей острова',price:0,hours:'Дневное время',address:'Ta Yai Beach, Koh Larn, Chon Buri',desc:'Небольшой пляж с живописными видами. Уточняйте состояние моря, лежаки и доступность транспорта на месте.',maps:'Ta Yai Beach Koh Larn',grab:'Ta Yai Beach Koh Larn',photo:'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=700&q=80'},
+{id:'samae',area:'lan-samae',kind:'breakfast',name:'Island breakfast by Samae',rating:'Выборка точек меняется; смотрите открытые кафе на карте',price:2,hours:'Утренние часы зависят от кафе',address:'Samae Beach area, Koh Larn, Chon Buri',desc:'В районе пляжа лучше выбирать завтрак по ближайшей открытой точке на карте: часть кафе начинает работу позже, чем материковые кофейни.',maps:'Breakfast cafe Samae Beach Koh Larn',grab:'Samae Beach Koh Larn',photo:'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=700&q=80'},
+{id:'pause',area:'lan-samae',kind:'cafe',name:'Ma Ha Rank Cafe',rating:'4.2★ · 57 отзывов Tripadvisor',price:2,hours:'Проверьте актуальный график',address:'Koh Larn, Chon Buri',desc:'Кафе на острове с тайскими блюдами и напитками. Оценка умеренная, но выборка больше, чем у многих маленьких точек; удобно как запасной кофе-стоп.',maps:'Ma Ha Rank Cafe Koh Larn',grab:'Ma Ha Rank Cafe Koh Larn',photo:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80'},
+{id:'sunsetrest',area:'lan-samae',kind:'dinner',name:'Sunset Restaurant · Koh Larn',rating:'4.6★ · 9 отзывов Tripadvisor (малая выборка)',price:2,hours:'Проверьте часы; планируйте ранний ужин',address:'Koh Larn, Chon Buri',desc:'Небольшой вариант морепродуктов и тайской кухни на острове. Отзывы положительные, но их мало. Удобнее при ночёвке или если подтверждён поздний обратный рейс.',maps:'Sunset Restaurant Koh Larn',grab:'Sunset Restaurant Koh Larn',photo:'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=700&q=80'},
+{id:'samaebeach',area:'lan-samae',kind:'sight',name:'Samae Beach',rating:'Популярный пляж с инфраструктурой',price:0,hours:'Дневное время',address:'Samae Beach, Koh Larn, Chon Buri',desc:'Просторный пляж, лежаки, кафе и красивый цвет воды. Можно провести здесь большую часть дня.',maps:'Samae Beach Koh Larn',grab:'Samae Beach Koh Larn',photo:'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=700&q=80'},
+{id:'tienbeach',area:'lan-samae',kind:'sight',name:'Tien Beach',rating:'Живописный пляж острова',price:0,hours:'Дневное время; доступ зависит от сезона и моря',address:'Tien Beach, Koh Larn, Chon Buri',desc:'Красивый пляж с прозрачной водой и деревянным мостиком/подходом. Проверяйте доступность дороги и лодок на месте.',maps:'Tien Beach Koh Larn',grab:'Tien Beach Koh Larn',photo:'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=700&q=80'}
+];
 
-  const state = {
-    district: 'all',
-    type: 'any',
-    excluded: new Set(JSON.parse(localStorage.getItem('thai_excluded') || '[]')),
-    result: { morning: null, day: null, evening: null }
-  };
-
-  const SLOTS = { morning: '🌅 Утро', day: '☀️ День', evening: '🌇 Вечер' };
-  const DISTRICTS = { naklua:'Наклуа', central:'Центральная', pratumnak:'Пратамнак', jomtien:'Джомтьен', kohlarn:'Ко Лан' };
-  const REMOTE = ['kohlarn'];
-
-  function getPool(slot){
-    return PLACES.filter(p => {
-      if (p.slot !== slot) return false;
-      if (state.excluded.has(p.name)) return false;
-      if (state.district === 'all') {
-        if (REMOTE.includes(p.district)) return false;
-      } else if (p.district !== state.district) return false;
-      if (state.type !== 'any' && !p.types.includes(state.type)) return false;
-      return true;
-    });
-  }
-
-  function pickRandom(arr, avoid){
-    if (!arr.length) return null;
-    const candidates = avoid ? arr.filter(p => p.name !== avoid) : arr;
-    return candidates.length ? candidates[Math.floor(Math.random() * candidates.length)] : arr[0];
-  }
-
-  function randomizeAll(){
-    ['morning','day','evening'].forEach(slot => {
-      const cur = state.result[slot];
-      state.result[slot] = pickRandom(getPool(slot), cur ? cur.name : null);
-    });
-    saveExcluded();
-    render();
-  }
-
-  function rerollSlot(slot){
-    const cur = state.result[slot];
-    state.result[slot] = pickRandom(getPool(slot), cur ? cur.name : null);
-    render();
-  }
-
-  function excludeSlot(slot){
-    const cur = state.result[slot];
-    if (!cur) return;
-    state.excluded.add(cur.name);
-    saveExcluded();
-    rerollSlot(slot);
-  }
-
-  function resetExcluded(){
-    state.excluded.clear();
-    saveExcluded();
-    randomizeAll();
-  }
-
-  function saveExcluded(){
-    localStorage.setItem('thai_excluded', JSON.stringify([...state.excluded]));
-  }
-
-  function escapeHtml(s){
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-
-  function render(){
-    const box = document.getElementById('randomizerResult');
-    if (!box) return;
-    box.innerHTML = ['morning','day','evening'].map(slot => {
-      const p = state.result[slot];
-      if (!p) {
-        return '<div class="rand-block empty"><div class="rand-slot">' + SLOTS[slot] + '</div><p>Нет вариантов под выбранные фильтры.</p><div class="buttons"><button class="btn" data-reset>↺ Сбросить «убрать»</button></div></div>';
-      }
-      const grab = p.grab ? '<a class="btn route" href="' + escapeHtml(p.grab) + '" target="_blank" rel="noopener">🚕 Grab</a>' : '';
-      return '<div class="rand-block"><div class="rand-slot">' + SLOTS[slot] + '</div><h4>' + escapeHtml(p.name) + '</h4><div class="rand-meta">' + escapeHtml(p.cat) + ' · ' + escapeHtml(DISTRICTS[p.district] || p.district) + '</div><p>' + escapeHtml(p.desc) + '</p><div class="buttons"><a class="btn placebtn" href="' + escapeHtml(p.maps) + '" target="_blank" rel="noopener">📍 Карты</a>' + grab + '<button class="btn" data-reroll="' + slot + '">🔄 Другой</button><button class="btn" data-exclude="' + slot + '">🚫 Убрать</button></div></div>';
-    }).join('');
-
-    const resetBtn = document.getElementById('resetExcludedBtn');
-    if (resetBtn) resetBtn.style.display = state.excluded.size ? 'inline-block' : 'none';
-  }
-
-  document.addEventListener('click', function(e){
-    const rerollBtn = e.target.closest('[data-reroll]');
-    if (rerollBtn) { e.preventDefault(); rerollSlot(rerollBtn.getAttribute('data-reroll')); return; }
-    const excludeBtn = e.target.closest('[data-exclude]');
-    if (excludeBtn) { e.preventDefault(); excludeSlot(excludeBtn.getAttribute('data-exclude')); return; }
-    if (e.target.closest('[data-reset]')) { e.preventDefault(); resetExcluded(); return; }
-  });
-
-  const districtWrap = document.getElementById('districtFilter');
-  if (districtWrap) {
-    districtWrap.addEventListener('click', function(e){
-      const btn = e.target.closest('button[data-district]');
-      if (!btn) return;
-      districtWrap.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      state.district = btn.getAttribute('data-district');
-      if (state.result.morning || state.result.day || state.result.evening) randomizeAll();
-    });
-  }
-
-  const typeWrap = document.getElementById('typeFilter');
-  if (typeWrap) {
-    typeWrap.addEventListener('click', function(e){
-      const btn = e.target.closest('button[data-type]');
-      if (!btn) return;
-      typeWrap.querySelectorAll('button').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      state.type = btn.getAttribute('data-type');
-      if (state.result.morning || state.result.day || state.result.evening) randomizeAll();
-    });
-  }
-
-  const randomizeBtn = document.getElementById('randomizeBtn');
-  if (randomizeBtn) randomizeBtn.addEventListener('click', randomizeAll);
-
-  const resetBtn = document.getElementById('resetExcludedBtn');
-  if (resetBtn) resetBtn.addEventListener('click', resetExcluded);
-
-  // Автозапуск при загрузке
-  window.addEventListener('load', randomizeAll);
-})();
+const cityNames={bangkok:'Бангкок',pattaya:'Паттайя','koh-larn':'Ко Лан'};
+const kindNames={breakfast:'🥐 Завтрак',cafe:'☕ Кофейня',dinner:'🍽 Ужин',sight:'✨ Место / активность'};
+let selectedCity='',selectedArea='all',dayPlan=[],phraseCategory='restaurant';
+const $=s=>document.querySelector(s);
+const mapsUrl=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+const grabUrl=q=>'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(q)+'&travelmode=driving';
+const HOME_MAP='https://maps.app.goo.gl/woqaSNt4SyM1BbGv7?g_st=ic';
+const AIRPORT_MAP='https://maps.app.goo.gl/MxXS5YdWMx3YvxFf7?g_st=ic';
+const HOME_ADDRESS='City Garden Tropicana Condominium, Na Kluea 16/1, Pattaya City, Bang Lamung, Chon Buri 20150';
+const AIRPORT_ADDRESS='Suvarnabhumi Airport (BKK), 999, Nong Prue, Bang Phli District, Samut Prakan 10540';
+function price(n){return n===0?'Бесплатно':'💰'.repeat(n)}
+function mapsQuery(p){return p.name+' '+(AREAS.find(a=>a.id===p.area)?.name||'')+' Thailand'}
+function card(p){const q=mapsQuery(p);return `<article class="place"><img class="photo" src="${p.photo}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'"><div class="place-body"><div class="tag">${kindNames[p.kind]||'✨ Место'} · ${AREAS.find(a=>a.id===p.area)?.short||''}</div><h4>${p.name}</h4><div class="rating">⭐ Актуальная оценка и отзывы — в Google Maps</div><div class="price">${price(p.price)}</div><p>${p.desc}</p><div class="hours">🕒 Актуальные часы работы — в Google Maps</div><div class="address">📍 ${p.address}</div><div class="actions"><a class="btn" href="${mapsUrl(q)}" target="_blank" rel="noopener">📍 Google Maps · отзывы и часы</a><a class="btn primary" href="${grabUrl(p.grab||p.address)}" target="_blank" rel="noopener">🚕 Маршрут / Grab</a><button class="btn" onclick="copyAddress('${(p.grab||p.address).replace(/'/g,"\\'")}')">Копировать адрес</button></div></div></article>`}
+function copyAddress(t){if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(()=>alert('Адрес скопирован. Вставь его в Grab.')).catch(()=>prompt('Скопируй адрес:',t))}else prompt('Скопируй адрес:',t)}
+function renderDistricts(){const slider=$('#districtSlider');if(!selectedCity){slider.innerHTML='<div class="notice">Сначала выбери город выше — появятся только его районы.</div>';return}slider.innerHTML=AREAS.filter(a=>a.city===selectedCity).map(a=>`<button class="district-card ${selectedArea===a.id?'active':''}" data-area="${a.id}"><img src="${a.img}" alt=""><span class="dtext"><strong>${a.name}</strong><span>${a.desc}</span></span></button>`).join('');slider.querySelectorAll('[data-area]').forEach(b=>b.addEventListener('click',()=>{selectedArea=b.dataset.area;$('#districtSelect').value=selectedArea;renderDistricts();renderPlaces();$('#directory').scrollIntoView({behavior:'smooth'})}))}
+function renderCityFilters(){$('#cityFilters').innerHTML=[['bangkok','Бангкок'],['pattaya','Паттайя'],['koh-larn','Ко Лан']].map(([v,n])=>`<button class="filter ${selectedCity===v?'active':''}" data-city="${v}">${n}</button>`).join('');$('#cityFilters').querySelectorAll('[data-city]').forEach(b=>b.addEventListener('click',()=>setCity(b.dataset.city)))}
+function renderPlaces(){if(!selectedCity){$('#placesByArea').innerHTML='<p>Выбери город выше, чтобы увидеть его районы и места.</p>';return}let areas=AREAS.filter(a=>a.city===selectedCity&&(selectedArea==='all'||a.id===selectedArea));$('#placesByArea').innerHTML=areas.map(a=>{let items=P.filter(p=>p.area===a.id);return `<div class="area-title"><div><h3>${a.name}</h3><small>${a.desc}</small></div><small>${items.length} мест</small></div><div class="grid">${items.map(card).join('')}</div>`}).join('')||'<p>В этом районе пока нет добавленных мест.</p>'}
+function updateDistrictSelect(){const sel=$('#districtSelect');if(!selectedCity){sel.disabled=true;sel.innerHTML='<option value="">Сначала выбери город</option>';return}sel.disabled=false;let opts=AREAS.filter(a=>a.city===selectedCity);sel.innerHTML='<option value="all">Все районы города</option>'+opts.map(a=>`<option value="${a.id}">${a.name}</option>`).join('');sel.value=selectedArea}
+function setCity(city){selectedCity=city;selectedArea='all';$('#citySelect').value=city;updateDistrictSelect();renderCityFilters();renderDistricts();renderPlaces();$('#daySlots').innerHTML='<div class="slot"><div class="when">🌅 Утро</div><p>Завтрак + прогулка.</p></div><div class="slot"><div class="when">☀️ День</div><p>Кофейня + интересное место.</p></div><div class="slot"><div class="when">🌇 Вечер</div><p>Ужин + вечерняя активность.</p></div>'}
+function randomPick(arr){return arr.length?arr[Math.floor(Math.random()*arr.length)]:null}
+function activityScore(p,type){const s=(p.name+' '+p.desc+' '+(p.maps||'')).toLowerCase();if(type==='culture')return /temple|wat |museum|palace|art|gallery|sanctuary|culture|истор|храм|музе|дворец|искусств/.test(s)?3:0;if(type==='active')return /beach|island|viewpoint|sanctuary|park|walk|market|пляж|остров|парк|смотров|рынок|актив/.test(s)?3:0;if(type==='calm')return /park|garden|beach|cafe|view|quiet|пляж|сад|парк|вид|спокой/.test(s)?3:0;if(type==='foodie')return /market|food|street|night|market|рынок|еда|гастроном/.test(s)?3:0;if(type==='scenic')return /view|beach|river|sunset|sky|bay|парк|вид|пляж|река|закат/.test(s)?3:0;if(type==='shopping')return /mall|market|shopping|market|торгов|рынок|шоп/.test(s)?3:0;return 1}
+function pickActivity(pool,type,used){let choices=pool.filter(p=>!used.has(p.id));if(!choices.length)choices=pool;choices=choices.map(p=>({p,score:activityScore(p,type)})).sort((a,b)=>b.score-a.score);let top=choices.filter(x=>x.score===choices[0]?.score).map(x=>x.p);let p=randomPick(top);if(p)used.add(p.id);return p}
+function slotPart(label,p,kind,areaId,slotIndex,partIndex){if(!p)return `<div class="slot-part"><div class="part-label">${label}</div><p>В этой зоне пока нет подходящей точки — выбери другой район.</p></div>`;const area=AREAS.find(a=>a.id===areaId);const q=mapsQuery(p);return `<div class="slot-part"><div class="part-label">${label}</div><h5>${p.name}</h5><div class="rating">⭐ Отзывы и рейтинг смотри в Google Maps</div><div class="price">${price(p.price)}</div><p>${p.desc}</p><p>🕒 Часы работы — открыть Google Maps</p><p>📍 ${p.address}</p><div class="actions"><a class="btn" href="${mapsUrl(q)}" target="_blank" rel="noopener">Google Maps</a><a class="btn primary" href="${grabUrl(p.grab||p.address)}" target="_blank" rel="noopener">Маршрут / Grab</a></div><button class="replace-btn" onclick="replacePart(${slotIndex},${partIndex})">↻ Заменить ${partIndex===0?'место':'активность'}</button></div>`}
+function renderPlan(){const labels=[['🌅 УТРО · 08:00–11:30','Завтрак','Прогулка / парк / достопримечательность'],['☀️ ДЕНЬ · 12:00–16:30','Кофейня','Музей / пляж / активность'],['🌇 ВЕЧЕР · 17:00–21:00','Ужин','Вечернее место / рынок / прогулка']];$('#daySlots').innerHTML=dayPlan.map((s,i)=>`<div class="slot"><div class="when">${labels[i][0]}</div>${slotPart(labels[i][1],s.food,'food',s.area,i,0)}${slotPart(labels[i][2],s.activity,'activity',s.area,i,1)}</div>`).join('')}
+function replacePart(slotIndex,partIndex){if(!dayPlan[slotIndex])return;const area=dayPlan[slotIndex].area;const kind=partIndex===0?['breakfast','cafe','dinner'][slotIndex]:'sight';let candidates=P.filter(p=>p.area===area&&p.kind===kind);if(partIndex===1){const used=new Set(dayPlan.map(s=>s.activity?.id).filter(Boolean));candidates=candidates.filter(p=>!used.has(p.id));}const replacement=randomPick(candidates);if(!replacement){alert('В этой зоне пока нет других вариантов. Попробуй выбрать другой район.');return}if(partIndex===0)dayPlan[slotIndex].food=replacement;else dayPlan[slotIndex].activity=replacement;renderPlan()}
+function makeDay(){const city=$('#citySelect').value,area=$('#districtSelect').value,type=$('#dayType').value;if(!city){alert('Сначала выбери город.');return}let candidateAreas=AREAS.filter(a=>a.city===city&&(area==='all'||a.id===area));candidateAreas=candidateAreas.filter(a=>['breakfast','cafe','dinner'].every(k=>P.some(p=>p.area===a.id&&p.kind===k))&&P.some(p=>p.area===a.id&&p.kind==='sight'));let chosen=randomPick(candidateAreas);if(!chosen){$('#dayNote').textContent='В выбранной зоне пока недостаточно точек для полного маршрута. Выбери другой район или «Все районы города».';$('#daySlots').innerHTML='<div class="notice">Не хватает мест для полного дня в этой зоне.</div>';return}const used=new Set(),activityPool=P.filter(p=>p.area===chosen.id&&p.kind==='sight');dayPlan=['breakfast','cafe','dinner'].map((kind,i)=>({area:chosen.id,food:randomPick(P.filter(p=>p.area===chosen.id&&p.kind===kind)),activity:pickActivity(activityPool,type,used)}));renderPlan();let typeText={any:'разнообразный',calm:'спокойный',active:'активный',culture:'культурный',foodie:'вкусный',scenic:'с красивыми видами',shopping:'с шопингом'}[type];let note=`Готово: ${typeText} день в районе «${chosen.name}». В каждом блоке — еда и отдельная активность. Замени любую остановку кнопкой под ней.`;if(chosen.city==='koh-larn')note+=' Для однодневной поездки на Ко Лан проверь обратный паром заранее; ужин на острове удобнее при ночёвке.';$('#dayNote').textContent=note}
+$('#makeDay').addEventListener('click',makeDay);
+$('#citySelect').addEventListener('change',e=>{setCity(e.target.value)});
+$('#districtSelect').addEventListener('change',e=>{selectedArea=e.target.value;renderDistricts();renderPlaces()});
+const PHRASES={
+restaurant:[
+['ขอสั่งไข่เจียวไส้กรอก อเมริกาโน่ใส่นม และน้ำส้มค่ะ','кхо-санг кхай-тиао сай-крок, американо сай ном, лэ нам-сом кха','I’d like to order an omelette with sausage, an Americano with milk, and orange juice.','Я хочу заказать омлет с сосиской, американо с молоком и апельсиновый сок.'],
+['ขอเมนูหน่อยค่ะ','кхо мэ-ну ной кха','Could I have the menu, please?','Можно меню, пожалуйста?'],
+['ไม่เผ็ดค่ะ','май пхет кха','Not spicy, please.','Не остро, пожалуйста.'],
+['เผ็ดนิดหน่อยค่ะ','пхет нит ной кха','A little spicy, please.','Немного остро, пожалуйста.'],
+['ไม่ใส่น้ำตาลค่ะ','май сай нам-тан кха','No sugar, please.','Без сахара, пожалуйста.'],
+['ขอน้ำเปล่าหนึ่งขวดค่ะ','кхо нам-плао нынг куат кха','A bottle of water, please.','Бутылку обычной воды, пожалуйста.'],
+['คิดเงินด้วยค่ะ','кхит нгэн дуай кха','The bill, please.','Счёт, пожалуйста.'],
+['รับบัตรเครดิตไหมคะ','рап бат кредит май кха','Do you accept credit cards?','Вы принимаете банковские карты?']
+],
+cafe:[
+['ขอกาแฟเย็นหนึ่งแก้วค่ะ','кхо ка-фэ йен нынг кэу кха','An iced coffee, please.','Один холодный кофе, пожалуйста.'],
+['ขอนมวัวค่ะ','кхо ном ууа кха','With cow’s milk, please.','С обычным молоком, пожалуйста.'],
+['หวานน้อยค่ะ','уан ной кха','Less sweet, please.','Не очень сладко, пожалуйста.'],
+['ทานที่ร้านค่ะ','тхан тхи ран кха','For here, please.','Здесь, пожалуйста.'],
+['กลับบ้านค่ะ','клап бан кха','Takeaway, please.','С собой, пожалуйста.']
+],
+transport:[
+['ไปที่นี่ค่ะ','пай тхи ни кха','Please go here.','Отвезите, пожалуйста, сюда.'],
+['ช่วยเปิดแอร์หน่อยได้ไหมคะ','чуай пёт эа ной дай май кха','Could you turn on the air conditioning?','Можно включить кондиционер?'],
+['จอดตรงนี้ได้ไหมคะ','чот тронг ни дай май кха','Can you stop here?','Можно остановиться здесь?'],
+['ราคาเท่าไหร่คะ','ра-ка тхау-рай кха','How much is it?','Сколько это стоит?'],
+['สนามบินสุวรรณภูมิค่ะ','са-нам-бин су-ван-на-пхум кха','Suvarnabhumi Airport, please.','В аэропорт Суварнабхуми, пожалуйста.']
+],
+shopping:[
+['อันนี้ราคาเท่าไหร่คะ','ан-ни ра-ка тхау-рай кха','How much is this?','Сколько это стоит?'],
+['ลดได้ไหมคะ','лот дай май кха','Can you give me a discount?','Можно скидку?'],
+['ขอดูอันนี้หน่อยค่ะ','кхо ду ан-ни ной кха','May I see this one?','Можно посмотреть вот это?'],
+['มีไซซ์ใหญ่กว่านี้ไหมคะ','ми сай йай куа ни май кха','Do you have a bigger size?','Есть размер побольше?'],
+['ไม่เอาค่ะ ขอบคุณค่ะ','май ау кха, кхоп-кхун кха','No, thank you.','Нет, спасибо.']
+],
+basic:[
+['สวัสดีค่ะ','са-ват-ди кха','Hello.','Здравствуйте.'],
+['ขอบคุณค่ะ','кхоп-кхун кха','Thank you.','Спасибо.'],
+['ขอโทษค่ะ','кхо-тхот кха','Excuse me / Sorry.','Извините.'],
+['ห้องน้ำอยู่ที่ไหนคะ','хонг-нам ю тхи най кха','Where is the restroom?','Где туалет?'],
+['พูดภาษาอังกฤษได้ไหมคะ','пхут пха-са анг-крит дай май кха','Do you speak English?','Вы говорите по-английски?'],
+['ช่วยด้วยค่ะ','чуай дуай кха','Please help me.','Помогите, пожалуйста.']
+]};
+function renderPhrases(){const list=PHRASES[phraseCategory]||[];$('#phraseList').innerHTML=list.map((p,i)=>`<article class="phrase"><div class="tag">ТАЙСКИЙ</div><div class="thai">${p[0]}</div><div class="phonetic">🔊 ${p[1]}</div><div class="english">${p[2]}</div><div class="meaning">${p[3]}</div><button class="replace-btn copyline" onclick="copyAddress('${p[0].replace(/'/g,"\\'")}')">Скопировать тайскую фразу</button></article>`).join('')}
+document.querySelectorAll('[data-phrase]').forEach(b=>b.addEventListener('click',()=>{phraseCategory=b.dataset.phrase;document.querySelectorAll('[data-phrase]').forEach(x=>x.classList.toggle('active',x===b));renderPhrases()}));
+renderPhrases();renderCityFilters();renderDistricts();renderPlaces();
 </script>
-</body>
-</html>
+</body></html>
