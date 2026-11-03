@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Мамулечка и Толюшка — Таиланд: конструктор путешествия</title>
+<style>
+:root{--ink:#17212b;--muted:#667085;--bg:#f7f7f5;--paper:#fff;--accent:#0f766e;--accent2:#115e59;--gold:#b88332;--line:#e7e7e2;--soft:#eef7f5;--warm:#fbf4e8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif;line-height:1.5}a{color:inherit}.wrap{max-width:1040px;margin:auto;padding:0 16px}
+.hero{padding:40px 0 32px;background:linear-gradient(135deg,#f2f5f2,#fff)}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800}.hero h1{font-size:clamp(32px,8vw,56px);line-height:1.05;margin:8px 0 10px;letter-spacing:-.03em}.hero p{font-size:16px;max-width:760px;color:#4b5563;margin:0}.hello{margin-top:18px;font-size:20px;font-weight:700}.flight{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border:1px solid var(--line);background:#fff;border-radius:999px;font-size:12px;font-weight:700}.buy{background:#111827;color:#fff;border-color:#111827;text-decoration:none}
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:8px;padding-bottom:8px}.nav a{white-space:nowrap;text-decoration:none;font-size:11px;font-weight:800;padding:7px 10px;border-radius:8px}.nav a:hover{background:var(--soft)}
+.intro{margin:22px 0 36px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 18px}.intro strong{color:var(--accent2)}.note{background:var(--warm);border-left:4px solid var(--gold);padding:11px 13px;border-radius:8px;margin-top:14px;font-size:13px}
+.section{margin:40px 0}.section h2{font-size:22px;margin:0 0 12px}.grid{display:grid;grid-template-columns:1fr;gap:8px}.mini{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px}.mini h3{margin:0 0 4px;font-size:16px}.mini p{margin:4px 0;font-size:13px}.price{font-weight:800;color:var(--accent2)}.rating{font-size:11px;color:#6b7280}
+.restaurant{background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin-bottom:7px}.restaurant h3{margin:0 0 3px;font-size:15px}.restaurant p{font-size:12px;margin:2px 0}.restaurant .buttons{margin-top:6px}.restaurant .price-ind{font-size:13px;font-weight:700;margin-top:3px}
+.rest-map-link{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:10px 14px;text-decoration:none;font-size:13px;font-weight:800;margin-bottom:12px;color:var(--accent2)}
+.place{background:#fff;border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin-bottom:6px}.place h3{margin:0 0 4px;font-size:17px;line-height:1.25}.meta{font-size:10px;color:var(--muted);font-weight:700;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}.place p{margin:5px 0;font-size:13px}.place ul{margin:6px 0 4px;padding-left:17px;font-size:13px}.place li{margin:2px 0}.why{background:var(--soft);padding:8px 10px;border-radius:7px;margin-top:8px;font-size:12px}.buttons{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.btn{display:inline-block;text-decoration:none;border-radius:8px;padding:7px 10px;font-size:11px;font-weight:800;border:1px solid #d9dedb;background:#fff;font-family:inherit;cursor:pointer}.btn.route{background:#111827;color:#fff;border-color:#111827}.btn.placebtn{color:var(--accent2);border-color:#b9d8d3}
+.practical{display:grid;grid-template-columns:1fr;gap:8px}.check{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px}.check h3{margin-top:0;font-size:15px}.small{font-size:11px;color:var(--muted)}
+footer{margin-top:50px;background:#111827;color:#d1d5db;padding:26px 0}.footer-links{display:flex;flex-wrap:wrap;gap:8px;font-size:13px}.footer-links a{color:#fff}
+.map-svg{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);background:#d4ecf5;box-shadow:0 2px 8px rgba(0,0,0,.04);margin-bottom:8px}
+.map-svg a{cursor:pointer;text-decoration:none}
+.map-svg a:hover path,.map-svg a:hover ellipse{fill-opacity:.4}
+.map-svg text{user-select:none;-webkit-user-select:none;pointer-events:none}
+.district-back{display:inline-block;margin-bottom:12px;font-size:12px;font-weight:800;color:var(--accent2);text-decoration:none;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.district-back:hover{background:var(--soft)}
+.district-sub{font-size:15px;font-weight:800;margin:22px 0 8px;color:var(--accent2);display:flex;align-items:center;gap:8px}
+.district-sub:first-of-type{margin-top:8px}
+.randomizer{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.randomizer h3{margin:0 0 6px;font-size:19px;color:var(--accent2)}
+.randomizer > p{margin:0 0 14px;font-size:13px;color:var(--muted)}
+.filters{margin:14px 0}
+.filter-group{margin-bottom:14px}
+.filter-group label{display:block;font-size:11px;font-weight:800;text-transform:uppercase;color:var(--muted);margin-bottom:6px;letter-spacing:.06em}
+.filter-buttons{display:flex;flex-wrap:wrap;gap:6px}
+.filter-buttons button{font-family:inherit;font-size:11px;font-weight:700;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink);transition:all .15s}
+.filter-buttons button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.filter-buttons button:hover:not(.active){border-color:var(--accent);color:var(--accent2)}
+.random-btn{display:block;width:100%;margin:14px 0 6px;padding:14px;font-family:inherit;font-size:15px;font-weight:800;background:var(--accent);color:#fff;border:none;border-radius:12px;cursor:pointer;box-shadow:0 2px 8px rgba(15,118,110,.25);transition:all .15s}
+.random-btn:hover{background:var(--accent2)}
+.random-btn:active{transform:scale(.98)}
+.random-result{display:grid;grid-template-columns:1fr;gap:10px;margin-top:16px}
+.rand-block{background:var(--soft);border:1px solid #b9d8d3;border-radius:12px;padding:14px}
+.rand-block.empty{background:#f5f5f5;border-color:#ddd;color:var(--muted)}
+.rand-slot{font-size:11px;font-weight:800;text-transform:uppercase;color:var(--accent);letter-spacing:.06em;margin-bottom:4px}
+.rand-block h4{margin:0 0 4px;font-size:16px;line-height:1.2}
+.rand-meta{font-size:11px;color:var(--muted);font-weight:700;margin-bottom:6px}
+.rand-block p{font-size:13px;margin:4px 0}
+.rand-block .buttons{margin-top:8px}
+.preset-btn{display:block;text-align:left;font-family:inherit;cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:10px;padding:12px;transition:all .15s;width:100%}
+.preset-btn:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(15,118,110,.1)}
+.preset-title{display:block;font-size:15px;font-weight:800;color:var(--ink);margin-bottom:2px;text-align:left}
+.preset-desc{display:block;font-size:12px;color:var(--muted);font-weight:400;text-align:left}
+.filter-note{grid-column:1/-1;font-size:11px;color:var(--muted);font-weight:700;margin-bottom:4px}
+@media(min-width:701px){.wrap{padding:0 22px}.grid,.practical{grid-template-columns:repeat(2,1fr)}.practical{grid-template-columns:repeat(3,1fr)}.section h2{font-size:28px}.restaurant h3{font-size:19px}.restaurant p{font-size:14px}.restaurant{border-radius:14px;padding:16px;margin-bottom:10px}.mini{border-radius:14px;padding:16px}.check{border-radius:14px;padding:16px}.random-result{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero" id="top"><div class="wrap">
+<div class="eyebrow">Thailand · Pattaya & Around · No dates</div>
+<h1>Мамулечка и Толюшка<br>в Таиланде 🇹🇭</h1>
+<div class="subtitle">Путеводитель-конструктор: выбираем красивые места, лучшие рестораны, пляжи, острова и экскурсии — и собираем свой идеальный день.</div>
+<div class="flight">
+<span class="pill">🇹🇭 Таиланд</span>
+<span class="pill">📍 Паттайя</span>
+<span class="pill">🌴 Острова</span>
+<span class="pill">🍜 Еда</span>
+<span class="pill">🏝️ Пляжи</span>
+<span class="pill">🛕 Культура</span>
+<span class="pill">🚤 Экскурсии</span>
+<span class="pill">❤️ Для спокойного отдыха</span>
+</div>
+<div class="intro"><strong>Как пользоваться:</strong> это не готовый маршрут. Выбирайте из разделов то, что нравится сегодня, и собирайте свой день. Никакой спешки, только комфорт.</div>
+</div></header>
+
+<!-- NAVIGATION -->
+<nav class="nav"><div class="wrap">
+<a href="#districts">🏘 РАЙОНЫ</a>
+<a href="#constructor">🗺 КОНСТРУКТОР</a>
+<a href="#beaches">🏖 ПЛЯЖИ</a>
+<a href="#islands">🏝 ОСТРОВА</a>
+<a href="#places">🏛 МЕСТА</a>
+<a href="#excursions">🚤 ЭКСКУРСИИ</a>
+<a href="#food">🍜 ЕДА</a>
+<a href="#bars">🍸 БАРЫ</a>
+<a href="#hotels">🏨 ОТЕЛИ</a>
+<a href="#transport">🚕 ТРАНСПОРТ</a>
+<a href="#important">🧳 ВАЖНОЕ</a>
+<a href="#map">📍 КАРТА</a>
+</div></nav>
+
+<!-- РАЙОНЫ -->
+<section class="section" id="districts">
+<h2>🏘 Районы Паттайи</h2>
+<div class="intro">
+<p>Нажмите на район на карте ниже — откроется подборка мест именно этого района по категориям: еда, пляжи, достопримечательности, бары и отели.</p>
+</div>
+
+<div class="map-svg">
+<svg viewBox="0 0 600 740" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="Схематическая карта районов Паттайи">
+<defs>
+<linearGradient id="seaGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#d4ecf5"/>
+<stop offset="1" stop-color="#b0d4e3"/>
+</linearGradient>
+</defs>
+<rect width="600" height="740" fill="url(#seaGrad)"/>
+<text x="28" y="710" fill="#4a7a8c" font-size="14" font-style="italic">Сиамский залив</text>
+<text x="28" y="732" fill="#4a7a8c" font-size="14">🌊</text>
+<path d="M 280,20 Q 272,60 268,120 Q 258,200 240,280 Q 230,320 225,360 Q 200,400 190,440 Q 195,480 215,510 Q 240,545 255,590 Q 270,650 285,700 L 585,700 L 585,20 Z" fill="#f2f1e6" stroke="#d4d3c2" stroke-width="2"/>
+<a href="#district-naklua" xlink:href="#district-naklua">
+<path d="M 268,40 Q 264,90 262,145 L 560,145 L 560,40 Z" fill="#0f766e" fill-opacity="0.22" stroke="#0f766e" stroke-width="2"/>
+<text x="410" y="88" text-anchor="middle" font-size="17" font-weight="800" fill="#115e59">НАКЛУА</text>
+<text x="410" y="110" text-anchor="middle" font-size="12" fill="#115e59">тихо · север</text>
+</a>
+<a href="#district-central" xlink:href="#district-central">
+<path d="M 262,148 Q 254,220 240,285 L 560,285 L 560,148 Z" fill="#b88332" fill-opacity="0.22" stroke="#b88332" stroke-width="2"/>
+<text x="410" y="208" text-anchor="middle" font-size="17" font-weight="800" fill="#8a5f1e">ЦЕНТРАЛЬНАЯ</text>
+<text x="410" y="230" text-anchor="middle" font-size="12" fill="#8a5f1e">жизнь · торговля</text>
+</a>
+<a href="#district-pratumnak" xlink:href="#district-pratumnak">
+<path d="M 240,288 Q 232,325 225,358 Q 202,398 192,438 Q 198,478 218,508 L 560,508 L 560,288 Z" fill="#8b5cf6" fill-opacity="0.22" stroke="#8b5cf6" stroke-width="2"/>
+<text x="420" y="390" text-anchor="middle" font-size="17" font-weight="800" fill="#6d3fc9">ПРАТАМНАК</text>
+<text x="420" y="412" text-anchor="middle" font-size="12" fill="#6d3fc9">холм · виды</text>
+</a>
+<a href="#district-jomtien" xlink:href="#district-jomtien">
+<path d="M 220,510 Q 240,548 255,592 Q 268,646 282,695 L 560,695 L 560,510 Z" fill="#0284c7" fill-opacity="0.22" stroke="#0284c7" stroke-width="2"/>
+<text x="410" y="590" text-anchor="middle" font-size="17" font-weight="800" fill="#0369a1">ДЖОМТЬЕН</text>
+<text x="410" y="612" text-anchor="middle" font-size="12" fill="#0369a1">пляж · тишина</text>
+</a>
+<a href="#district-kohlarn" xlink:href="#district-kohlarn">
+<ellipse cx="120" cy="360" rx="55" ry="75" fill="#16a34a" fill-opacity="0.25" stroke="#16a34a" stroke-width="2"/>
+<text x="120" y="355" text-anchor="middle" font-size="15" font-weight="800" fill="#15803d">КО ЛАН</text>
+<text x="120" y="375" text-anchor="middle" font-size="11" fill="#15803d">остров</text>
+</a>
+<g transform="translate(545,55)">
+<circle r="18" fill="#fff" stroke="#c9c8b9" stroke-width="1.5"/>
+<path d="M 0,-12 L 4,0 L 0,12 L -4,0 Z" fill="#0f766e"/>
+<text y="-22" text-anchor="middle" font-size="11" font-weight="800" fill="#666">N</text>
+</g>
+</svg>
+</div>
+
+<!-- НАКЛУА -->
+<section id="district-naklua" style="margin-top:36px">
+<h2 style="font-size:22px">🏘 Наклуа · Северная Паттайя</h2>
+<a href="#districts" class="district-back">← К карте районов</a>
+<div class="intro">
+<p>Спокойный северный район с местным колоритом. Здесь тише, чем в центре, и ближе к главным северным достопримечательностям.</p>
+<p><strong>❤️ Для родителей:</strong> тихо, зелено, размеренный отдых.</p>
+</div>
+<h3 class="district-sub">🍜 Еда</h3>
+<div class="grid">
+<div class="mini">
+<h3>Mum Aroi</h3>
+<p>Морепродукты, местная классика. 💰💰 · ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Mum+Aroi+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9512&dropOffLongitude=100.8850&dropOffAddress=Mum+Aroi+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🏖 Пляжи</h3>
+<div class="grid">
+<div class="mini">
+<h3>Wong Amat Beach</h3>
+<p>Тихий пляж на севере. Меньше туристов, чем в центре. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Wong+Amat+Beach+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9570&dropOffLongitude=100.8860&dropOffAddress=Wong+Amat+Beach" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🏛 Места</h3>
+<div class="grid">
+<div class="mini">
+<h3>Sanctuary of Truth</h3>
+<p>Деревянный храм у моря, потрясающая резьба. 1.5-2 часа. 500 THB. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Sanctuary+of+Truth+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9722&dropOffLongitude=100.8900&dropOffAddress=Sanctuary+of+Truth+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🏨 Отели</h3>
+<div class="grid">
+<div class="mini">
+<h3>Pullman Pattaya Hotel G</h3>
+<p>Прямой выход к пляжу Wong Amat, спокойно. 💰💰💰</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Pullman+Pattaya+Hotel+G" target="_blank">📍 Google Карты ↗</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ЦЕНТРАЛЬНАЯ -->
+<section id="district-central" style="margin-top:36px">
+<h2 style="font-size:22px">🏘 Центральная Паттайя</h2>
+<a href="#districts" class="district-back">← К карте районов</a>
+<div class="intro">
+<p>Сердце города: всё под рукой, много ресторанов, баров, магазинов и главный пляж.</p>
+<p><strong>❤️ Для родителей:</strong> удобная локация, но шумнее. Выбирайте отель с хорошей звукоизоляцией.</p>
+</div>
+<h3 class="district-sub">🍜 Еда</h3>
+<div class="grid">
+<div class="mini">
+<h3>Horizon Rooftop</h3>
+<p>Rooftop в Hilton, интернациональная кухня, коктейли. 💰💰💰 · ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Horizon+Rooftop+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9366&dropOffLongitude=100.8850&dropOffAddress=Horizon+Rooftop+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+<div class="mini">
+<h3>La Baguette</h3>
+<p>Французская выпечка, отличные завтраки. 💰💰 · ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=La+Baguette+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9512&dropOffLongitude=100.9041&dropOffAddress=La+Baguette+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🏖 Пляжи</h3>
+<div class="grid">
+<div class="mini">
+<h3>Pattaya Beach</h3>
+<p>Центральный пляж, шумный, но для прогулки хорош. ❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Pattaya+Beach" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9300&dropOffLongitude=100.8780&dropOffAddress=Pattaya+Beach" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🏛 Места</h3>
+<div class="grid">
+<div class="mini">
+<h3>Terminal 21</h3>
+<p>ТЦ с самолётом на крыше и тематическими этажами. 1-2 часа. Бесплатно. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Terminal+21+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9345&dropOffLongitude=100.8830&dropOffAddress=Terminal+21+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+<div class="mini">
+<h3>Art in Paradise</h3>
+<p>Музей 3D, весело для фото. 1-1.5 часа. 400 THB. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Art+in+Paradise+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9350&dropOffLongitude=100.8790&dropOffAddress=Art+in+Paradise+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🍸 Бары</h3>
+<div class="grid">
+<div class="mini"><h3>Grooving</h3><p>Коктейль-бар с живой музыкой. 💰💰</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Grooving+Pattaya" target="_blank">📍 Google Карты ↗</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9330&dropOffLongitude=100.8830&dropOffAddress=Grooving+Pattaya" target="_blank">🚕 Grab ↗</a></div></div>
+<div class="mini"><h3>Wine Connection</h3><p>Винный бар, хороший выбор по бокалам. 💰💰</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Wine+Connection+Pattaya" target="_blank">📍 Google Карты ↗</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9350&dropOffLongitude=100.8840&dropOffAddress=Wine+Connection+Pattaya" target="_blank">🚕 Grab ↗</a></div></div>
+<div class="mini"><h3>Hopf Addict</h3><p>Крафтовое пиво, спокойно. 💰💰</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Hopf+Addict+Pattaya" target="_blank">📍 Google Карты ↗</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9320&dropOffLongitude=100.8820&dropOffAddress=Hopf+Addict+Pattaya" target="_blank">🚕 Grab ↗</a></div></div>
+</div>
+<h3 class="district-sub">🏨 Отели</h3>
+<div class="grid">
+<div class="mini"><h3>Hilton Pattaya</h3><p>Центр, rooftop, бассейн, высокий сервис. 💰💰💰💰</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Hilton+Pattaya" target="_blank">📍 Google Карты ↗</a></div></div>
+</div>
+</section>
+
+<!-- ПРАТАМНАК -->
+<section id="district-pratumnak" style="margin-top:36px">
+<h2 style="font-size:22px">🏘 Пратамнак</h2>
+<a href="#districts" class="district-back">← К карте районов</a>
+<div class="intro">
+<p>Зелёный холм между Паттайей и Джомтьеном. Здесь красивые виды, тихие пляжи и рестораны на скале.</p>
+<p><strong>❤️ Для родителей:</strong> идеально — тихо, зелено, много хороших ресторанов с видом.</p>
+</div>
+<h3 class="district-sub">🍜 Еда</h3>
+<div class="grid">
+<div class="mini">
+<h3>Cabbages & Condoms</h3>
+<p>Тайская кухня в благотворительном ресторане с красивым садом. 💰💰 · ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Cabbages+and+Condoms+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9151&dropOffLongitude=100.8573&dropOffAddress=Cabbages+%26+Condoms+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🏖 Пляжи</h3>
+<div class="grid">
+<div class="mini">
+<h3>Cosy Beach (Pratumnak)</h3>
+<p>Тихий пляж у подножия холма. Меньше людей, чем в центре. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Cosy+Beach+Pratumnak+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9170&dropOffLongitude=100.8620&dropOffAddress=Cosy+Beach+Pratumnak" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🏛 Места</h3>
+<div class="grid">
+<div class="mini">
+<h3>Big Buddha Hill (Wat Phra Yai)</h3>
+<p>Большая статуя Будды, вид на город. 45 мин. Бесплатно. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Wat+Phra+Yai+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9186&dropOffLongitude=100.8518&dropOffAddress=Wat+Phra+Yai+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+<div class="mini">
+<h3>Khao Pattaya Viewpoint</h3>
+<p>Знаменитый вид на бухту Паттайи. 30 мин. Бесплатно. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Khao+Pattaya+Viewpoint" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9240&dropOffLongitude=100.8620&dropOffAddress=Khao+Pattaya+Viewpoint" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🍸 Бары</h3>
+<div class="grid">
+<div class="mini"><h3>The Sky Gallery</h3><p>Sunset bar на холме, панорамный вид. 💰💰💰</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=The+Sky+Gallery+Pattaya" target="_blank">📍 Google Карты ↗</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9140&dropOffLongitude=100.8620&dropOffAddress=The+Sky+Gallery+Pattaya" target="_blank">🚕 Grab ↗</a></div></div>
+</div>
+<h3 class="district-sub">🏨 Отели</h3>
+<div class="grid">
+<div class="mini"><h3>InterContinental Pattaya Resort</h3><p>Роскошный, тихо, свой пляж. 💰💰💰💰</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=InterContinental+Pattaya+Resort" target="_blank">📍 Google Карты ↗</a></div></div>
+<div class="mini"><h3>Cape Dara Resort</h3><p>Комфортный, красивый бассейн, море рядом. 💰💰💰</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Cape+Dara+Resort+Pattaya" target="_blank">📍 Google Карты ↗</a></div></div>
+</div>
+</section>
+
+<!-- ДЖОМТЬЕН -->
+<section id="district-jomtien" style="margin-top:36px">
+<h2 style="font-size:22px">🏘 Джомтьен</h2>
+<a href="#districts" class="district-back">← К карте районов</a>
+<div class="intro">
+<p>Длинный пляж, тишина, много ресторанов у моря. Идеально для спокойного отдыха.</p>
+<p><strong>❤️ Для родителей:</strong> очень комфортно — широкий пляж, кафе, тихие улочки.</p>
+</div>
+<h3 class="district-sub">🍜 Еда</h3>
+<div class="grid">
+<div class="mini">
+<h3>Sugar Hut Resort Restaurant</h3>
+<p>Тайская кухня в тропическом саду. 💰💰💰 · ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Sugar+Hut+Resort+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9099&dropOffLongitude=100.8711&dropOffAddress=Sugar+Hut+Resort+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+<div class="mini">
+<h3>The Glass House</h3>
+<p>Тайская, морепродукты, у моря. 💰💰💰 · ❤️❤️❤️ <em>(Na Jomtien, 10 мин южнее)</em></p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=The+Glass+House+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8487&dropOffLongitude=100.8932&dropOffAddress=The+Glass+House+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+<div class="mini">
+<h3>Rimpa Lapin</h3>
+<p>Тайская, красивый вид со скалы. 💰💰 · ❤️❤️❤️ <em>(Na Jomtien)</em></p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Rimpa+Lapin+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8055&dropOffLongitude=100.9139&dropOffAddress=Rimpa+Lapin+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🏖 Пляжи</h3>
+<div class="grid">
+<div class="mini">
+<h3>Jomtien Beach</h3>
+<p>Широкий пляж, спокойнее центрального. Лежаки 40-60 THB, кафе и туалеты. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Jomtien+Beach+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8800&dropOffLongitude=100.8750&dropOffAddress=Jomtien+Beach" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+<div class="mini">
+<h3>Nang Ram Beach</h3>
+<p>Тихое место, чисто, малолюдно. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Nang+Ram+Beach+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8700&dropOffLongitude=100.8800&dropOffAddress=Nang+Ram+Beach" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- КО ЛАН -->
+<section id="district-kohlarn" style="margin-top:36px">
+<h2 style="font-size:22px">🏘 Ко Лан</h2>
+<a href="#districts" class="district-back">← К карте районов</a>
+<div class="intro">
+<p>Остров в 7 км от Паттайи — идеален для однодневной поездки. Белый песок, чистая вода, кафе и лежаки.</p>
+<p><strong>❤️ Для родителей:</strong> ❤️❤️❤️ — комфортно, если выбрать правильный пляж и speedboat.</p>
+</div>
+<h3 class="district-sub">🏖 Пляжи</h3>
+<div class="grid">
+<div class="mini">
+<h3>Tawaen Beach</h3>
+<p>Самый популярный пляж острова. Белый песок, всё есть. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Tawaen+Beach+Koh+Larn" target="_blank">📍 Google Карты ↗</a>
+</div>
+</div>
+<div class="mini">
+<h3>Samae Beach</h3>
+<p>Спокойнее Tawaen, пологий вход. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Samae+Beach+Koh+Larn" target="_blank">📍 Google Карты ↗</a>
+</div>
+</div>
+</div>
+<h3 class="district-sub">🍜 Еда</h3>
+<div class="grid">
+<div class="mini">
+<h3>Пляжные кафе</h3>
+<p>На Tawaen и Samae много кафе с тайской едой и морепродуктами. Средний чек 200-400 THB. ❤️❤️❤️</p>
+</div>
+</div>
+<h3 class="district-sub">🚤 Как добраться</h3>
+<div class="grid">
+<div class="mini">
+<h3>Паром с Bali Hai Pier</h3>
+<p>30-45 мин, ~30 THB. Каждые 30-60 мин. ❤️❤️❤️</p>
+<div class="buttons">
+<a class="btn route" href="https://www.google.com/maps/dir/?api=1&origin=Pattaya&destination=Bali+Hai+Pier" target="_blank">🗺 Маршрут до пирса ↗</a>
+</div>
+</div>
+<div class="mini">
+<h3>Speedboat</h3>
+<p>15-20 мин, 200-300 THB с человека. Быстрее, но дороже. ❤️❤️</p>
+</div>
+</div>
+</section>
+</section>
+
+<!-- КОНСТРУКТОР -->
+<section class="section" id="constructor">
+<h2>🗺 Конструктор идеального дня</h2>
+<div class="intro"><p>Не нужно идти по маршруту строго по порядку. Выберите утром 1 место, днём 1–2 места, вечером ресторан или красивый бар. Между ними удобно перемещаться на Grab.</p></div>
+<div class="grid">
+<div class="mini"><h3>🌅 Утро</h3><p>Бассейн, красивый завтрак, пляж, храм, рынок, спокойная прогулка.</p></div>
+<div class="mini"><h3>☀️ День</h3><p>Достопримечательность, храм, парк, смотровая площадка, музей, красивый район, остров, пляж.</p></div>
+<div class="mini"><h3>🌇 Вечер</h3><p>Ресторан, rooftop, sunset, night market, массаж, прогулка, бар, шоу.</p></div>
+</div>
+
+<!-- RANDOMIZER -->
+<div class="randomizer" id="randomizer">
+<h3>🎲 Рандомайзер дня</h3>
+<p>Выберите район и тип дня — нажмите «Собрать день». Не понравился вариант? Перекрутите отдельный блок. Если уже были в каком-то месте — нажмите «Убрать», и оно больше не попадётся в этой сессии.</p>
+
+<div class="filters">
+<div class="filter-group">
+<label>📍 Район</label>
+<div class="filter-buttons" id="districtFilter">
+<button data-district="all" class="active">Все</button>
+<button data-district="naklua">Наклуа</button>
+<button data-district="central">Центральная</button>
+<button data-district="pratumnak">Пратамнак</button>
+<button data-district="jomtien">Джомтьен</button>
+<button data-district="kohlarn">Ко Лан</button>
+<button data-district="bangkok">Бангкок</button>
+</div>
+</div>
+<div class="filter-group">
+<label>🎯 Тип дня</label>
+<div class="filter-buttons" id="typeFilter">
+<button data-type="any" class="active">Любой</button>
+<button data-type="relaxed">🧘 Спокойный</button>
+<button data-type="cultural">🏛 Культурный</button>
+<button data-type="gastronomic">🍜 Гастрономический</button>
+<button data-type="active">⚡ Активный</button>
+<button data-type="beach">🏖 Пляжный</button>
+</div>
+</div>
+</div>
+
+<button class="random-btn" id="randomizeBtn" type="button">🎲 Собрать день</button>
+<button class="btn" id="resetExcludedBtn" type="button" style="display:none;margin-top:8px;font-size:12px">↺ Сбросить все «убрать»</button>
+
+<div id="randomizerResult" class="random-result"></div>
+</div>
+
+<!-- PRESETS -->
+<h3 style="margin-top:30px">Быстрые пресеты</h3>
+<p style="font-size:13px;color:var(--muted);margin:0 0 10px">Нажмите — фильтры выставятся и день соберётся автоматически.</p>
+<div class="grid">
+<button class="preset-btn" type="button" data-preset="relaxed"><span class="preset-title">🧘 Спокойный день</span><span class="preset-desc">Бассейн → пляж → ужин → бар</span></button>
+<button class="preset-btn" type="button" data-preset="beach"><span class="preset-title">🏝 Морской день</span><span class="preset-desc">Пляж → морепродукты → sunset</span></button>
+<button class="preset-btn" type="button" data-preset="cultural"><span class="preset-title">🛕 Культурный день</span><span class="preset-desc">Храмы → вид → ужин</span></button>
+<button class="preset-btn" type="button" data-preset="gastronomic"><span class="preset-title">🍜 Гастрономический день</span><span class="preset-desc">Завтрак → обед → ужин → rooftop</span></button>
+<button class="preset-btn" type="button" data-preset="active"><span class="preset-title">⚡ Активный день</span><span class="preset-desc">Экскурсия → природа → отдых</span></button>
+<button class="preset-btn" type="button" data-preset="kohlarn"><span class="preset-title">🏝 День на Ко Лане</span><span class="preset-desc">Паром → пляж → возвращение</span></button>
+<button class="preset-btn" type="button" data-preset="bangkok"><span class="preset-title">🏙 День в Бангкоке</span><span class="preset-desc">Храм → музей → rooftop</span></button>
+</div>
+</section>
+
+<!-- ПЛЯЖИ -->
+<section class="section" id="beaches">
+<h2>🏖 Лучшие пляжи</h2>
+<div class="intro">Только действительно хорошие варианты. Цены ориентировочные, могут меняться.</div>
+<div class="grid">
+<div class="mini"><h3>🏝 Jomtien Beach</h3><p><strong>Где:</strong> южнее Паттайи, 15 мин на Grab. Широкий пляж, спокойнее центрального.</p><p><strong>Лежаки:</strong> 40-60 THB, туалеты и кафе есть. ❤️❤️❤️</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Jomtien+Beach+Pattaya" target="_blank">📍 Google Карты ↗</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8800&dropOffLongitude=100.8750&dropOffAddress=Jomtien+Beach" target="_blank">🚕 Grab ↗</a></div></div>
+<div class="mini"><h3>🌴 Koh Larn — Tawaen Beach</h3><p>Самый популярный пляж острова. Белый песок, прозрачная вода. Многолюдно, но удобно. Вход 100-150 THB на пирсе, лежаки 50-100 THB. ❤️❤️❤️</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Tawaen+Beach+Koh+Larn" target="_blank">📍 Google Карты ↗</a></div></div>
+<div class="mini"><h3>🌊 Koh Larn — Samae Beach</h3><p>Красивее и спокойнее Tawaen. Пологий вход, много зелени. Есть кафе и туалеты. ❤️❤️❤️</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Samae+Beach+Koh+Larn" target="_blank">📍 Google Карты ↗</a></div></div>
+<div class="mini"><h3>🏖 Bang Saen Beach</h3><p>Около 45 мин от Паттайи на север. Популярен у тайцев, много ресторанов, тень. Для спокойного дня. ❤️❤️</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Bang+Saen+Beach" target="_blank">📍 Google Карты ↗</a></div></div>
+<div class="mini"><h3>🌅 Pattaya Beach</h3><p>Центральный пляж, шумный, но для вечерней прогулки хорош. Купаться лучше не здесь. ❤️❤️</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Pattaya+Beach" target="_blank">📍 Google Карты ↗</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9300&dropOffLongitude=100.8780&dropOffAddress=Pattaya+Beach" target="_blank">🚕 Grab ↗</a></div></div>
+<div class="mini"><h3>🏝 Koh Samet — Sai Kaew Beach</h3><p>Остров в 1,5-2 часах езды. Белый песок, бирюзовая вода, много кафе. Лучше с ночёвкой. ❤️❤️❤️</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Sai+Kaew+Beach+Koh+Samet" target="_blank">📍 Google Карты ↗</a></div></div>
+<div class="mini"><h3>🏖 Nang Ram Beach</h3><p>Тихое место около 40 мин от Паттайи. Чисто, малолюдно, есть кафе. ❤️❤️❤️</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Nang+Ram+Beach+Pattaya" target="_blank">📍 Google Карты ↗</a><a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8700&dropOffLongitude=100.8800&dropOffAddress=Nang+Ram+Beach" target="_blank">🚕 Grab ↗</a></div></div>
+<div class="mini"><h3>📸 Koh Krok</h3><p>Крошечный островок с песчаной косой, виден с Koh Larn. Фотогенично, приезжают на час. ❤️❤️</p><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Koh+Krok+Pattaya" target="_blank">📍 Google Карты ↗</a></div></div>
+</div>
+</section>
+
+<!-- ОСТРОВА -->
+<section class="section" id="islands">
+<h2>🏝 Острова рядом с Паттайей</h2>
+<div class="intro">Подробно о главных островах. Расписание и цены ориентировочные, проверяйте перед поездкой.</div>
+<div class="restaurant">
+<h3>Koh Larn (Ко Лан)</h3>
+<p><strong>📍 Где:</strong> 7 км от Паттайи, главный остров для однодневной поездки.</p>
+<p><strong>⭐ Почему ехать:</strong> чистая вода, белый песок, развитая инфраструктура.</p>
+<p><strong>🏖 Пляжи:</strong> Tawaen, Samae, Nual, Tien — на любой вкус.</p>
+<p><strong>🚤 Как добраться:</strong> паром с Bali Hai Pier (30-45 мин, 30 THB), speedboat (15-20 мин, 200-300 THB с человека).</p>
+<p><strong>💸 Бюджет:</strong> 200-500 THB на человека с трансфером, едой и лежаком.</p>
+<p><strong>⏱ Время:</strong> половина дня или целый день.</p>
+<div class="why"><strong>❤️ Для родителей:</strong> ❤️❤️❤️ — очень комфортно: короткий трансфер, есть туалеты, кафе, лежаки. Берите speedboat, если хотите меньше качки.</div>
+<div class="buttons"><a class="btn route" href="https://www.google.com/maps/dir/?api=1&origin=Bali+Hai+Pier+Pattaya&destination=Koh+Larn" target="_blank">🗺 Маршрут ↗</a><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Koh+Larn" target="_blank">📍 Место ↗</a></div>
+</div>
+<div class="restaurant">
+<h3>Koh Sak (Ко Сак)</h3>
+<p><strong>📍 Где:</strong> маленький остров к северу от Koh Larn.</p>
+<p><strong>⭐ Почему:</strong> дикий и тихий, отличный снорклинг.</p>
+<p><strong>🚤 Как добраться:</strong> только speedboat или аренда лодки с Koh Larn.</p>
+<p><strong>💸 Бюджет:</strong> 1500-2500 THB за лодку на группу.</p>
+<p><strong>⏱ Время:</strong> 3-4 часа.</p>
+<div class="why"><strong>❤️ Для родителей:</strong> ❤️❤️ — нужно организовать лодку, меньше удобств, но природа красивая.</div>
+<div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Koh+Sak+Pattaya" target="_blank">📍 Место ↗</a></div>
+</div>
+<div class="restaurant">
+<h3>Koh Krok (Ко Крок)</h3>
+<p><strong>📍 Где:</strong> совсем маленький островок с песчаной косой, виден с Koh Larn.</p>
+<p><strong>⭐ Почему:</strong> фото, чистая вода, уединение.</p>
+<p><strong>🚤 Как добраться:</strong> speedboat от Koh Larn за 15 мин.</p>
+<p><strong>💸 Бюджет:</strong> 500-1000 THB за лодку.</p>
+<p><strong>⏱ Время:</strong> 1-2 часа.</p>
+<div class="why"><strong>❤️ Для родителей:</strong> ❤️ — минимум удобств, но очень красиво. Можно совместить с Koh Larn.</div>
+<div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Koh+Krok+Pattaya" target="_blank">📍 Место ↗</a></div>
+</div>
+<div class="restaurant">
+<h3>Koh Phai (Ко Пхай)</h3>
+<p><strong>📍 Где:</strong> дальше от Паттайи, около 20 км.</p>
+<p><strong>⭐ Почему:</strong> почти нет туристов, чистейшая вода, снорклинг.</p>
+<p><strong>🚤 Как добраться:</strong> speedboat от Bali Hai Pier (45-60 мин).</p>
+<p><strong>💸 Бюджет:</strong> 2500-4000 THB за лодку на группу.</p>
+<p><strong>⏱ Время:</strong> целый день.</p>
+<div class="why"><strong>❤️ Для родителей:</strong> ❤️ — требует организации и хорошей погоды, удобств нет, но природа потрясающая.</div>
+<div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Koh+Phai+Pattaya" target="_blank">📍 Место ↗</a></div>
+</div>
+<div class="restaurant">
+<h3>Koh Samet (Ко Самет)</h3>
+<p><strong>📍 Где:</strong> 80 км от Паттайи, провинция Районг.</p>
+<p><strong>⭐ Почему:</strong> белоснежные пляжи, спокойная атмосфера, много отелей.</p>
+<p><strong>🏖 Что посмотреть:</strong> Sai Kaew, Ao Phai, Ao Wai — все красивые.</p>
+<p><strong>🚤 Как добраться:</strong> такси до Ban Phe (1.5 часа), паром на остров (30-40 мин, 50-100 THB).</p>
+<p><strong>💸 Бюджет:</strong> 1000-1500 THB на человека с трансфером и паромом.</p>
+<p><strong>⏱ Время:</strong> лучше с ночёвкой, минимум целый день.</p>
+<div class="why"><strong>❤️ Для родителей:</strong> ❤️❤️❤️ — очень комфортно, если остаться на ночь: хорошие отели, рестораны, чистое море.</div>
+<div class="buttons"><a class="btn route" href="https://www.google.com/maps/dir/?api=1&origin=Pattaya&destination=Ban+Phe+Pier" target="_blank">🗺 Маршрут до пирса ↗</a><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Koh+Samet" target="_blank">📍 Место ↗</a></div>
+</div>
+<div class="restaurant">
+<h3>Koh Chang (Ко Чанг)</h3>
+<p><strong>📍 Где:</strong> около 270 км от Паттайи, крупный остров у границы с Камбоджей.</p>
+<p><strong>⭐ Почему:</strong> национальный парк, водопады, дикие пляжи, атмосфера джунглей.</p>
+<p><strong>🚤 Как добраться:</strong> автобус/такси до пирса (4-5 часов), паром (30-45 мин).</p>
+<p><strong>💸 Бюджет:</strong> 2000-3000 THB на человека с дорогой.</p>
+<p><strong>⏱ Время:</strong> минимум 2-3 дня.</p>
+<div class="why"><strong>❤️ Для родителей:</strong> ❤️❤️ — дорога долгая, но если есть время, стоит поехать на несколько дней ради природы.</div>
+<div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Koh+Chang+Thailand" target="_blank">📍 Место ↗</a></div>
+</div>
+</section>
+
+<!-- МЕСТА -->
+<section class="section" id="places">
+<h2>🏛 Лучшие места Паттайи и окрестностей</h2>
+<div class="grid">
+<div class="mini"><h3>🌴 Nong Nooch Tropical Garden</h3><p><strong>Категория:</strong> природа/сады. Огромный ботанический сад с шоу слонов и тайской культуры.</p><p><strong>Время:</strong> 2-3 часа. <strong>Цена:</strong> 500-800 THB.</p><div class="why">❤️❤️❤️ — очень удобно, есть транспорт по парку.</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Nong+Nooch+Tropical+Garden+Pattaya" target="_blank">📍 Google Карты ↗</a><a class="btn" href="https://www.nongnoochgarden.com" target="_blank">🌐 Сайт ↗</a></div></div>
+<div class="mini"><h3>🛕 Sanctuary of Truth</h3><p><strong>Категория:</strong> храм/архитектура. Деревянный храм у моря, потрясающая резьба.</p><p><strong>Время:</strong> 1.5-2 часа. <strong>Цена:</strong> 500 THB.</p><div class="why">❤️❤️❤️ — ровные дорожки, есть кафе.</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Sanctuary+of+Truth+Pattaya" target="_blank">📍 Google Карты ↗</a><a class="btn" href="https://www.sanctuaryoftruth.com" target="_blank">🌐 Сайт ↗</a></div></div>
+<div class="mini"><h3>🌅 Khao Pattaya Viewpoint</h3><p><strong>Категория:</strong> смотровая площадка. Знаменитый вид на бухту Паттайи.</p><p><strong>Время:</strong> 30 мин. <strong>Цена:</strong> бесплатно.</p><div class="why">❤️❤️❤️ — легко добраться, отличные фото.</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Khao+Pattaya+Viewpoint" target="_blank">📍 Google Карты ↗</a></div></div>
+<div class="mini"><h3>🛕 Wat Phra Yai (Big Buddha Hill)</h3><p><strong>Категория:</strong> храм. Большая статуя Будды на холме, вид на город.</p><p><strong>Время:</strong> 45 мин. <strong>Цена:</strong> бесплатно.</p><div class="why">❤️❤️❤️ — можно совместить с viewpoint.</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Wat+Phra+Yai+Pattaya" target="_blank">📍 Google Карты ↗</a></div></div>
+<div class="mini"><h3>🏙 Terminal 21 Pattaya</h3><p><strong>Категория:</strong> архитектура/шопинг. ТЦ с самолётом на крыше и тематическими этажами.</p><p><strong>Время:</strong> 1-2 часа. <strong>Цена:</strong> бесплатно.</p><div class="why">❤️❤️❤️ — кондиционер, рестораны.</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Terminal+21+Pattaya" target="_blank">📍 Google Карты ↗</a></div></div>
+<div class="mini"><h3>🌊 Pattaya Floating Market</h3><p><strong>Категория:</strong> рынок/культура. Лодки, сувениры, еда. Туристично, но атмосферно.</p><p><strong>Время:</strong> 1.5-2 часа. <strong>Цена:</strong> 200 THB вход.</p><div class="why">❤️❤️ — много ходьбы, но интересно.</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Pattaya+Floating+Market" target="_blank">📍 Google Карты ↗</a></div></div>
+<div class="mini"><h3>🌳 Ramayana Water Park</h3><p><strong>Категория:</strong> активный отдых. Один из лучших аквапарков Азии.</p><p><strong>Время:</strong> целый день. <strong>Цена:</strong> 1000-1500 THB.</p><div class="why">❤️❤️ — много ходьбы, но есть зоны отдыха.</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Ramayana+Water+Park+Pattaya" target="_blank">📍 Google Карты ↗</a><a class="btn" href="https://www.ramayanawaterpark.com" target="_blank">🌐 Сайт ↗</a></div></div>
+<div class="mini"><h3>📸 Art in Paradise</h3><p><strong>Категория:</strong> музей 3D. Интерактивные картины, весело для фото.</p><p><strong>Время:</strong> 1-1.5 часа. <strong>Цена:</strong> 400 THB.</p><div class="why">❤️❤️❤️ — в помещении, прохладно.</div><div class="buttons"><a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Art+in+Paradise+Pattaya" target="_blank">📍 Google Карты ↗</a></div></div>
+</div>
+</section>
+
+<!-- ЭКСКУРСИИ -->
+<section class="section" id="excursions">
+<h2>🚤 Экскурсии из Паттайи</h2>
+<div class="intro">Подборка с сайта <a href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank" rel="noopener">Online-Pattaya</a>. Цены и программы ориентировочные, проверяйте при бронировании.</div>
+<div class="rest-map-link"><a href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank" rel="noopener">Все экскурсии на Online-Pattaya ↗</a></div>
+<div class="grid">
+<div class="mini"><h3>🏝 Остров Ко Лан</h3><p>Морская прогулка, пляжи, снорклинг. Длительность: 5-6 часов. Цена: от 800 THB.</p><p>❤️❤️❤️ — комфортно, недалеко.</p><div class="buttons"><a class="btn placebtn" href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank">🚤 Подробнее ↗</a></div></div>
+<div class="mini"><h3>🛕 Храмы Паттайи</h3><p>Обзорная экскурсия по главным храмам. Длительность: 4-5 часов. Цена: от 600 THB.</p><p>❤️❤️❤️ — минимум ходьбы.</p><div class="buttons"><a class="btn placebtn" href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank">🚤 Подробнее ↗</a></div></div>
+<div class="mini"><h3>🌴 Нонг Нуч</h3><p>Сад, шоу слонов, культура. Длительность: полдня. Цена: от 700 THB.</p><p>❤️❤️❤️ — очень удобно.</p><div class="buttons"><a class="btn placebtn" href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank">🚤 Подробнее ↗</a></div></div>
+<div class="mini"><h3>🐘 Слоновья деревня</h3><p>Кормление, купание слонов. Длительность: 3-4 часа. Цена: от 900 THB.</p><p>❤️❤️ — немного ходьбы.</p><div class="buttons"><a class="btn placebtn" href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank">🚤 Подробнее ↗</a></div></div>
+<div class="mini"><h3>🌅 Закат на яхте</h3><p>Вечерняя прогулка, ужин, музыка. Длительность: 3 часа. Цена: от 1500 THB.</p><p>❤️❤️❤️ — романтично и спокойно.</p><div class="buttons"><a class="btn placebtn" href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank">🚤 Подробнее ↗</a></div></div>
+<div class="mini"><h3>🏙 Паттайя сити-тур</h3><p>Обзорная по городу, смотровые, рынки. Длительность: 4 часа. Цена: от 500 THB.</p><p>❤️❤️ — умеренная ходьба.</p><div class="buttons"><a class="btn placebtn" href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank">🚤 Подробнее ↗</a></div></div>
+</div>
+</section>
+
+<!-- ЕДА -->
+<section class="section" id="food">
+<h2>🍜 Лучшие места поесть</h2>
+<div class="intro">Только проверенные и действительно вкусные варианты. Уровень цен: 💰 до 200 THB, 💰💰 200-500 THB, 💰💰💰 500-1000 THB, 💰💰💰💰 1000+ THB на человека.</div>
+
+<div class="restaurant">
+<h3>The Glass House</h3>
+<p><strong>Кухня:</strong> тайская, морепродукты. <strong>Что попробовать:</strong> креветки, крабовый карри, коктейли.</p>
+<p>💰💰💰 · У моря, sunset. ❤️❤️❤️. Район: Jomtien. Бронь желательна.</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=The+Glass+House+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8487&dropOffLongitude=100.8932&dropOffAddress=The+Glass+House+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+
+<div class="restaurant">
+<h3>Rimpa Lapin</h3>
+<p><strong>Кухня:</strong> тайская. <strong>Что попробовать:</strong> жареный рис с ананасом, том ям.</p>
+<p>💰💰 · Красивый вид со скалы. ❤️❤️❤️. Район: Jomtien.</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Rimpa+Lapin+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.8055&dropOffLongitude=100.9139&dropOffAddress=Rimpa+Lapin+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+
+<div class="restaurant">
+<h3>Mum Aroi</h3>
+<p><strong>Кухня:</strong> морепродукты. <strong>Что попробовать:</strong> краб, креветки, устрицы.</p>
+<p>💰💰 · Местная популярность, свежо. ❤️❤️❤️. Район: Naklua.</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://www.google.com/maps/search/?api=1&query=Mum+Aroi+Pattaya" target="_blank">📍 Google Карты ↗</a>
+<a class="btn route" href="grab://open?screenType=BOOKING&dropOffLatitude=12.9512&dropOffLongitude=100.8850&dropOffAddress=Mum+Aroi+Pattaya" target="_blank">🚕 Grab ↗</a>
+</div>
+</div>
+
+<div class="restaurant">
+<h3>Cabbages & Condoms</h3>
+<p><strong>Кухня:</strong> тайская. <strong>Что попробовать:</strong> спринг-роллы, карри.</p>
+<p>💰💰 · Благотворительный ресторан, красивый сад. ❤️❤️❤️. Район: Pratumnak.</p>
+<div class="buttons">
+<a class="btn placebtn" href="https://
