@@ -569,7 +569,10 @@ basic:[
 let selectedCity='pattaya',selectedArea='all',selectedCat='all',dayPlan=[],phraseCategory='restaurant';
 const $=s=>document.querySelector(s);
 const mapsUrl=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
-const grabUrl=p=>'grab://open?screenType=BOOKING&pickup=my_location&dropoff%5Bname%5D='+encodeURIComponent(String(p.name||''))+'&dropoff%5Baddress%5D='+encodeURIComponent(String(p.address||''));
+const grabUrl = p => {
+  const dest = p.address || p.name || '';
+  return 'grab://open?dropOffAddress=' + encodeURIComponent(dest) + '&screenType=BOOKING';
+};
 const ratingLabel=p=>p.rating?`⭐️ ${String(p.rating.value).replace('.',',')}`:'';
 const price=n=>n===0?'Бесплатно':'💰'.repeat(n);
 const areaName=id=>AREAS.find(a=>a.id===id)?.name||'';
