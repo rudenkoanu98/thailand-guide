@@ -570,8 +570,15 @@ let selectedCity='pattaya',selectedArea='all',selectedCat='all',dayPlan=[],phras
 const $=s=>document.querySelector(s);
 const mapsUrl=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
 const grabUrl = p => {
-  const dest = p.address || p.name || '';
-  return 'grab://open?dropOffAddress=' + encodeURIComponent(dest) + '&screenType=BOOKING';
+  const address = (p.address || p.name || '');
+  // Пробелы Grab ожидает в виде '+', а не '%20'
+  const encodedAddress = encodeURIComponent(address).replace(/%20/g, '+');
+
+  // Если у места есть координаты — добавляем их (это сильно повышает шансы, что Grab откроется)
+  const lat = p.lat ? `&dropOffLatitude=${p.lat}` : '';
+  const lng = p.lng ? `&dropOffLongitude=${p.lng}` : '';
+
+  return `grab://open?dropOffAddress=${encodedAddress}${lat}${lng}&screenType=BOOKING`;
 };
 const ratingLabel=p=>p.rating?`⭐️ ${String(p.rating.value).replace('.',',')}`:'';
 const price=n=>n===0?'Бесплатно':'💰'.repeat(n);
