@@ -571,13 +571,18 @@ const $=s=>document.querySelector(s);
 const mapsUrl=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
 const grabUrl = p => {
   const address = (p.address || p.name || '');
-  // Кодируем адрес: пробелы как '+'
   const encodedAddress = encodeURIComponent(address).replace(/%20/g, '+');
   
-  // Создаём «внутреннюю» ссылку для Grab
-  const grabAppLink = `grab://open?dropOffAddress=${encodedAddress}&screenType=BOOKING`;
+  // Собираем внутреннюю ссылку для Grab
+  let grabAppLink = `grab://open?dropOffAddress=${encodedAddress}`;
   
-  // Оборачиваем её в универсальную ссылку Grab
+  // Если у места есть координаты — добавляем их, это повышает надёжность
+  if (p.lat && p.lng) {
+    grabAppLink += `&dropOffLatitude=${p.lat}&dropOffLongitude=${p.lng}`;
+  }
+  grabAppLink += `&screenType=BOOKING`;
+  
+  // Оборачиваем в универсальную ссылку Grab
   return `https://grab.onelink.me/2695613898?af_dp=${encodeURIComponent(grabAppLink)}`;
 };
 const ratingLabel=p=>p.rating?`⭐️ ${String(p.rating.value).replace('.',',')}`:'';
