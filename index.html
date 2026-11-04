@@ -11,10 +11,10 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,100% - 32px);margin:auto}
 .hero{padding:44px 0 30px;background:radial-gradient(circle at 85% 10%,#dce9dc 0,transparent 30%),linear-gradient(135deg,#f0eee5,#fbfaf6 65%)}.eyebrow{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;color:var(--green)}h1{font-size:clamp(24px,7vw,54px);line-height:1.05;letter-spacing:-.035em;margin:10px 0 0;white-space:nowrap}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.chip{border:1px solid #dce3da;background:#ffffffc9;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:750}
 nav{position:sticky;top:0;z-index:20;background:#fffefaed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav .wrap{display:flex;gap:4px;overflow:auto;padding:9px 0;scrollbar-width:none}nav a{white-space:nowrap;padding:8px 11px;border-radius:9px;font-size:11px;font-weight:800;color:#42524a}nav a:hover{background:var(--sage)}
-section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-size:clamp(24px,4vw,32px);letter-spacing:-.03em;margin:0}.district-slider{display:flex;gap:13px;overflow:auto;padding:3px 3px 14px;scroll-snap-type:x mandatory}.district-card{position:relative;flex:0 0 260px;min-height:168px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#dce8df;scroll-snap-align:start;cursor:pointer;box-shadow:var(--shadow);text-align:left;padding:0}.district-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.72);transition:transform .3s}.district-card:hover img{transform:scale(1.05)}.district-card .dtext{position:absolute;left:16px;right:12px;bottom:14px;color:white}.district-card strong{display:block;font-size:20px;line-height:1.15}.district-card span{font-size:11px;opacity:.92}.district-card.active{outline:3px solid var(--green);outline-offset:2px}
+section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-size:clamp(24px,4vw,32px);letter-spacing:-.03em;margin:0}.district-slider{display:flex;gap:13px;overflow:auto;padding:3px 3px 14px;scroll-snap-type:x mandatory}.district-card{position:relative;flex:0 0 260px;min-height:168px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#dce8df;scroll-snap-align:start;cursor:pointer;box-shadow:var(--shadow);text-align:left;padding:0}.district-card img{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.72);transition:transform .3s}.district-card:hover img{transform:scale(1.05)}.district-card .dtext{position:absolute;left:16px;right:12px;bottom:14px;color:white}.district-card strong{display:block;font-size:20px;line-height:1.15}.district-card span{font-size:11px;opacity:.92}.district-card.active{outline:3px solid var(--green);outline-offset:2px}
 .toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.filter{border:1px solid var(--line);background:white;border-radius:99px;padding:8px 13px;font-size:12px;font-weight:800;cursor:pointer}.filter.active{background:var(--green);border-color:var(--green);color:white}.area-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:26px 0 12px}.area-title h3{margin:0;font-size:21px}.area-title small{color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.place{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.place .photo{height:124px;width:100%;object-fit:cover;background:#e5e8e1}.place-body{padding:13px;display:flex;flex-direction:column;flex:1}.tag{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);font-weight:850}.place h4{font-size:16px;line-height:1.25;margin:5px 0}.place p{font-size:12px;color:#536058;margin:4px 0}.place .address{color:#657168;font-size:11px;margin-top:6px}.price{font-weight:800;letter-spacing:1px;color:#a36d27;margin:2px 0}.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:10px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #dce2da;background:white;color:#294d40;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:850;cursor:pointer}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn:hover{filter:brightness(.96)}
-.constructor{background:#fffefa;border:1px solid var(--line);border-radius:24px;padding:clamp(16px,3vw,28px);box-shadow:var(--shadow)}.constructor-top{display:flex;justify-content:space-between;align-items:start;gap:20px;flex-wrap:wrap}.constructor h3{font-size:22px;margin:0}.day-controls{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0;align-items:center}.day-controls select{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;font-weight:750;color:var(--ink)}.fav-toggle{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;font-weight:800;font-size:13px;cursor:pointer;user-select:none}.fav-toggle input{accent-color:var(--green)}.make{border:0;background:var(--green);color:white;border-radius:11px;padding:12px 17px;font-weight:850;cursor:pointer}.slots{display:flex;flex-direction:column;gap:14px}.slot{background:var(--sage);border:1px solid #d8e5da;border-radius:15px;padding:16px;width:100%}.slot .when{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}.slot-part{padding:12px 0;border-top:1px solid #d6e2d8;margin-top:10px}.slot-part:first-of-type{border-top:0;margin-top:0}.slot-part .part-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:900}.slot-part h5{font-size:15px;margin:4px 0}.slot-part p{font-size:12px;margin:4px 0;color:#526057}.replace-btn{border:1px solid #cad8ce;background:white;border-radius:8px;padding:6px 9px;font-size:11px;font-weight:800;color:#294d40;cursor:pointer;margin-top:5px}
+.constructor{background:#fffefa;border:1px solid var(--line);border-radius:24px;padding:clamp(16px,3vw,28px);box-shadow:var(--shadow)}.constructor-top{display:flex;justify-content:space-between;align-items:start;gap:20px;flex-wrap:wrap}.constructor h3{font-size:22px;margin:0}.day-controls{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0;align-items:center}.day-controls select{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;font-weight:750;color:var(--ink)}.make{border:0;background:var(--green);color:white;border-radius:11px;padding:12px 17px;font-weight:850;cursor:pointer}.slots{display:flex;flex-direction:column;gap:14px}.slot{background:var(--sage);border:1px solid #d8e5da;border-radius:15px;padding:16px;width:100%}.slot .when{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}.slot-part{padding:12px 0;border-top:1px solid #d6e2d8;margin-top:10px}.slot-part:first-of-type{border-top:0;margin-top:0}.slot-part .part-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:900}.slot-part h5{font-size:15px;margin:4px 0}.slot-part p{font-size:12px;margin:4px 0;color:#526057}.replace-btn{border:1px solid #cad8ce;background:white;border-radius:8px;padding:6px 9px;font-size:11px;font-weight:800;color:#294d40;cursor:pointer;margin-top:5px}
 .practical-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.info{padding:16px;background:white;border:1px solid var(--line);border-radius:15px}.info h3{font-size:15px;margin:0 0 5px}.info p{font-size:12px;color:#58645c;margin:0 0 4px}.info a{text-decoration:underline}.notice{background:var(--sand);border-radius:13px;padding:13px 15px;font-size:12px;color:#66543a;margin-top:14px}footer{background:#1e302b;color:#e8eee8;padding:34px 0;margin-top:60px}footer p{font-size:12px;color:#c1cdc3;margin:4px 0}footer a{text-decoration:underline}
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.practical-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.wrap{width:min(100% - 24px,1160px)}.hero{padding:30px 0 24px}.grid,.slots,.practical-grid{grid-template-columns:1fr}.place .photo{height:110px}.district-card{flex-basis:78%;min-height:160px}.area-title{align-items:start;flex-direction:column}}
 .event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.event{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow)}.event h3{font-size:18px;line-height:1.25;margin:7px 0}.event p{font-size:13px;color:#536058}
@@ -23,11 +23,13 @@ section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-siz
 @media(max-width:560px){.event-grid,.phrase-list{grid-template-columns:1fr}}
 .cat-bar{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}.cat-bar .filter{padding:6px 10px;font-size:11px}
 .tr-input{width:100%;min-height:90px;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;resize:vertical;background:white}.tr-card{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:10px}.tr-text{font-size:17px;font-weight:700;margin:6px 0;line-height:1.4}
+
+.tour-slider{display:flex;gap:14px;overflow-x:auto;padding:3px 3px 15px;scroll-snap-type:x mandatory;align-items:stretch}.tour-card{flex:0 0 320px;max-width:86vw;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);scroll-snap-align:start;display:flex;flex-direction:column}.tour-card>img{display:none}.tour-body{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1}.tour-body h3{font-size:19px;line-height:1.2;margin:0}.tour-body p{font-size:12px;color:#536058;margin:0}.tour-meta{display:flex;flex-direction:column;gap:3px;font-size:12px;color:#536058}.tour-meta b{font-size:15px;color:var(--green)}.tour-body .btn{margin-top:auto;align-self:flex-start}.rating-line{font-size:12px;color:#795a2b;margin:7px 0}.rating-line a{text-decoration:none}.place .actions{flex-wrap:wrap}.place-photo{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;margin:0 0 12px}.photo-credit{font-size:10px;color:var(--muted);margin:-6px 0 10px}
 </style>
 </head>
 <body>
 <header class="hero" id="top"><div class="wrap"><div class="eyebrow">Thailand · Bangkok · Pattaya · Koh Larn</div><h1>Викусик в Таиланде 🇹🇭</h1></div></header>
-<nav><div class="wrap"><a href="#constructor">КОНСТРУКТОР</a><a href="#districts">РАЙОНЫ</a><a href="#directory">ВСЕ МЕСТА</a><a href="#events">СОБЫТИЯ</a><a href="#phrases">РАЗГОВОРНИК</a><a href="#translator">ПЕРЕВОДЧИК</a><a href="#important">ВАЖНОЕ</a></div></nav>
+<nav><div class="wrap"><a href="#constructor">КОНСТРУКТОР</a><a href="#districts">РАЙОНЫ</a><a href="#directory">ВСЕ МЕСТА</a><a href="#tours">ЭКСКУРСИИ</a><a href="#events">СОБЫТИЯ</a><a href="#phrases">РАЗГОВОРНИК</a><a href="#translator">ПЕРЕВОДЧИК</a><a href="#important">ВАЖНОЕ</a></div></nav>
 <main class="wrap"><!-- ================= КОНСТРУКТОР ================= --><section id="constructor">
 <div class="section-head"><h2>🗺 Конструктор идеального дня</h2></div>
 <div class="constructor">
@@ -36,8 +38,7 @@ section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-siz
 <select id="citySelect"><option value="bangkok">Бангкок</option><option value="pattaya" selected>Паттайя</option><option value="koh-larn">Ко Лан</option></select>
 <select id="districtSelect"><option value="all">Все районы города</option></select>
 <select id="dayType"><option value="any">Любой день</option><option value="calm">🌿 Спокойный</option><option value="active">⚡ Активный</option><option value="culture">🏛 Культурный</option><option value="foodie">🍜 Вкусный</option><option value="scenic">🌅 Красивые виды</option><option value="shopping">🛍 Шопинг</option><option value="beach">🏖 Пляжный</option><option value="relax">🧘 Релакс и SPA</option><option value="nature">🐘 Животные и природа</option></select>
-<label class="fav-toggle"><input type="checkbox" id="favOnly"> ❤️ Только избранное</label>
-<select id="replaceCat"><option value="auto">Замена: как в дне</option></select>
+<select id="replaceCat" aria-label="Из чего выбирать замену"><option value="day">Замена из: как в дне</option><option value="favorites">Замена из: только любимые ❤️</option></select>
 </div>
 <div class="slots" id="daySlots"><div class="slot"><div class="when">🌅 Утро</div><p>Завтрак + прогулка.</p></div><div class="slot"><div class="when">☀️ День</div><p>Кофейня + активность.</p></div><div class="slot"><div class="when">🌇 Вечер</div><p>Ужин + вечернее место.</p></div></div>
 <div class="notice" id="dayNote">Выбери город, район и настроение — и нажми «Собрать день».</div>
@@ -46,7 +47,23 @@ section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-siz
 <div class="toolbar" id="cityFilters"></div>
 <div class="cat-bar" id="catFilters"></div>
 <div class="district-slider" id="districtSlider"></div>
-</section><!-- ================= ВСЕ МЕСТА ================= --><section id="directory"><div class="section-head"><h2>📍 Все места</h2></div><div id="placesByArea"></div></section><!-- ================= СОБЫТИЯ ================= --><section id="events">
+</section><!-- ================= ВСЕ МЕСТА ================= --><section id="directory"><div class="section-head"><h2>📍 Все места</h2></div><div id="placesByArea"></div></section><!-- ================= ЭКСКУРСИИ ================= --><section id="tours">
+<div class="section-head"><h2>🧭 Экскурсии из Паттайи</h2><p style="color:var(--muted);margin:6px 0 0">Подобранные экскурсии: цены за одного взрослого участника групповой программы, если не указано иное.</p></div>
+<div class="tour-slider" id="tourSlider">
+<article class="tour-card"><div class="tour-body"><div class="tag">Природа · храмы · водопады</div><h3>«Следы Будды»</h3><div class="tour-meta"><b>2 299 ฿ / взрослый</b><span>≈ 12,5 часа · 1 день</span><span>Вт · Чт · Вс</span></div><p>Водопады, пещеры, необычные храмы и священные следы Будды; купание в природных бассейнах и знакомство с тайской кухней.</p><p><b>Интересное:</b> национальный парк Кхао Чимао, многоуровневый водопад, пещеры Prathun, подземный тоннель, храм Чёрного Нага и смотровые площадки.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/sledy-buddy" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
+<article class="tour-card"><div class="tour-body"><div class="tag">Культура · рынки · река</div><h3>«Тайский экспресс и река обезьян»</h3><div class="tour-meta"><b>2 389 ฿ / взрослый</b><span>≈ 16 часов · 1 день</span><span>Ср · Пт · Вс</span></div><p>Большое путешествие по пяти историческим провинциям, необычным храмам, рынкам и старинной тайской Венеции.</p><p><b>Интересное:</b> пещерный храм Ват Кхао Йой, соляные поля, рынок раскрывающихся зонтиков, Ват Бан Кунг, плавучий рынок Ампхава, лодка и светлячки.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/tajskij-jekspress" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
+<article class="tour-card"><div class="tour-body"><div class="tag">Активный отдых · природа</div><h3>Катание на лошадях по природным тропам</h3><div class="tour-meta"><b>3 449 ฿ / взрослый</b><span>2 часа</span><span>Ежедневно · 08:00 или 16:00</span></div><p>Конная прогулка по живописным природным маршрутам Паттайи — около 10 км с сопровождением гида.</p><p><b>Интересное:</b> природные тропы, остановка у водопада, возможность галопа для опытных наездников. Возраст от 14 лет, вес до 85 кг; трансфер не включён.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/katanie-na-loshadyah-v-pattaye" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
+<article class="tour-card"><div class="tour-body"><div class="tag">Экстрим · джунгли</div><h3>Зиплайн «Полёт Тарзана»</h3><div class="tour-meta"><b>1 599–4 600 ฿ / взрослый</b><span>20 минут — несколько часов</span><span>Ежедневно</span></div><p>Несколько групповых маршрутов разной сложности — от короткой программы до большого приключения над джунглями.</p><p><b>Цены:</b> 25 платформ — 1 599 ฿; 15 станций / 19 платформ — 1 699 ฿; 26 / 32 — 1 999 ฿; 32 / 36 — 3 200 ฿; 58 / 68 — 4 600 ฿. Инструктор, инструктаж, страховка и снаряжение включены; трансфер — в некоторых программах.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/polet-tarzana-v-pattaye" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
+<article class="tour-card"><div class="tour-body"><div class="tag">Животные · сафари · шоу</div><h3>Сафари-парк Бангкок (Safari World)</h3><div class="tour-meta"><b>2 099 ฿ / взрослый</b><span>≈ 11,5 часа · 1 день</span><span>Пятница · группа</span></div><p>Групповая поездка с трансфером, обедом и посещением двух парков. Животные в просторных зонах, сафари на автобусе и шоу.</p><p><b>Интересное:</b> львы, тигры, жирафы, зебры, слоны, кормление жирафов, шоу дельфинов и морских котиков. Отдельные билеты без трансфера доступны дополнительно.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/safari-world" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
+<article class="tour-card"><div class="tour-body"><div class="tag">Горы · рассвет · храмы</div><h3>«Над облаками»</h3><div class="tour-meta"><b>4 849 ฿ / взрослый</b><span>≈ 41 час · 2 дня</span><span>Пн · Чт</span></div><p>Двухдневное путешествие в горный регион с панорамами, необычными храмами и встречей рассвета над облаками.</p><p><b>Интересное:</b> Wat Phrathat Pha Sorn Kaew, Стеклянная гора, Кхао Кхо, королевская резиденция, парк цветов, швейцарские сосны, клубничные поля и радоновые источники. Включены 2 обеда, завтрак и ужин.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/nad-oblakami-2-dnya" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
+<article class="tour-card"><div class="tour-body"><div class="tag">Природа · пещеры · SPA</div><h3>«Долина Аватар»</h3><div class="tour-meta"><b>6 200 ฿ / взрослый</b><span>≈ 38,5 часа · 2 дня</span><span>Воскресенье</span></div><p>Маршрут по менее туристическим уголкам центрального Таиланда: горы, пещеры, храмы, парки животных и отдых в SPA-отеле.</p><p><b>Интересное:</b> Sri Ayutthaya Lion Park, Chainat Bird Park, зеркальный храм Wat Tha Sung, Золотой замок, Wat Tham Khao Wong, Phu Wai Cave, гигантское дерево и Лопбури с макаками. Ночёвка в Avatar Spa Mountain Suites, бассейн и соляное SPA.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/dolina-avatar" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
+<article class="tour-card"><div class="tour-body"><div class="tag">Море · дикая природа</div><h3>«Встреча с китами Брайда»</h3><div class="tour-meta"><b>4 399 ฿ / взрослый</b><span>≈ 14,5 часа · 1 день</span><span>Ежедневно по запросу</span></div><p>Морская экспедиция в Сиамский залив с поиском китов Брайда в естественной среде. Минимум 2 человека.</p><p><b>Интересное:</b> наблюдение за китами и другими морскими обитателями; завтрак и обед на корабле. Англоязычный гид.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/vstrecha-c-kitami" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
+<article class="tour-card"><div class="tour-body"><div class="tag">Достопримечательности · животные</div><h3>«Сокровища Чонбури»</h3><div class="tour-meta"><b>1 999 ฿ / взрослый</b><span>≈ 10,5 часа · 1 день</span><span>Пн · Ср · Сб</span></div><p>Однодневная поездка по провинции Чонбури: буддийские достопримечательности, морские виды, животные, шоу и дворец.</p><p><b>Интересное:</b> Сирача, Ко Лои, фиолетовый плавучий мост, статуя Гуаньинь, Animal Paradise, минипиги, крокодиловая ферма, парк миллионных камней и дворец Бан Сукхавади. Ужин с тайским шоу — дополнительно.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/sokrovishha-chonburi" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
+</div>
+<div class="notice">Все цены указаны за одного взрослого участника групповой экскурсии в батах. Продолжительность однодневных программ приблизительная и рассчитана по времени выезда и возвращения; для двухдневных программ указано общее время поездки. Расписание и условия перепроверяйте перед оплатой.</div>
+<p style="margin-top:14px"><a class="btn" href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank" rel="noopener">Посмотреть другие экскурсии на Online Pattaya ↗</a></p>
+</section>
+<!-- ================= СОБЫТИЯ ================= --><section id="events">
 <div class="section-head"><h2>🎟️ События во время поездки</h2></div>
 <div class="event-grid">
 <article class="event"><div class="tag">Бангкок · 17–29 ноября</div><h3>Golden Mount Temple Fair</h3><p>Храмовая ярмарка у Wat Saket: уличная еда, торговые ряды и праздничная атмосфера.</p><p><b>📅 17–29 ноября 2026</b></p><a class="btn" href="https://thailandwhatson.com/regions/bangkok/" target="_blank" rel="noopener">Программа</a></article>
@@ -146,6 +163,13 @@ nightmarket:['photo-1504214208698-ea1916a2195a','photo-1555396273-367ea4eb4db5',
 photo:['photo-1519501025264-65ba15a82390','photo-1500530855697-b586d89ba3ee','photo-1470229722913-7c0e2dbbafd3'],
 tour:['photo-1518509562904-e7ef99cdcc86','photo-1544551763-46a013bb70d5','photo-1530053969600-caed2596d242'],
 pool:['photo-1571896349842-33c89424de2d','photo-1576013551627-0cc20b96c2a7','photo-1540541338287-41700207dee6']
+};
+
+// Только проверенные фотографии конкретных объектов; неизвестным местам фото не подставляем.
+const VERIFIED_PLACE_PHOTOS={
+  grandpalace:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/202307%20Grand%20Palace%20of%20Bangkok%2001.jpg?width=1000',credit:'Wikimedia Commons · Grand Palace, Bangkok',page:'https://commons.wikimedia.org/wiki/Category:Grand_Palace,_Bangkok'},
+  watpho:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/Buddhist%20statue%2C%20Wat%20Pho%20(Temple%20of%20the%20reclining%20Buddha)%2C%20Bangkok%2C%20Thailand%20-%20%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%82%E0%B8%9E%E0%B8%98%E0%B8%B4%E0%B9%8C%2C%20%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%AF%2C%20%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%AD%E0%B8%B2%E0%B8%93%E0%B8%B2%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B9%84%E0%B8%97%E0%B8%A2%20(10226214265).jpg?width=1000',credit:'Wikimedia Commons · Wat Pho',page:'https://commons.wikimedia.org/wiki/Category:Wat_Pho'},
+  watarun:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/20160727%20Wat%20Arun%205532.jpg?width=1000',credit:'Wikimedia Commons · Wat Arun',page:'https://commons.wikimedia.org/wiki/Category:Wat_Arun'}
 };
 
 let P=[];
@@ -297,7 +321,7 @@ P.push(
 
 /* ===== ПАТТАЙЯ · НАКЛУА ===== */
 P.push(
-{id:'toast',area:'pat-naklua',kind:'breakfast',name:'Toast Brunch & Brew',price:2,address:'183/6, Muang Pattaya, Bang Lamung, Chon Buri',desc:'Популярное место для полноценного западного завтрака и кофе.'},
+{id:'toast',area:'pat-naklua',kind:'breakfast',name:'Toast Brunch & Brew',price:2,address:'183/6, Muang Pattaya, Bang Lamung, Chon Buri',desc:'Популярное место для полноценного западного завтрака и кофе.',rating:{value:4.6}},
 {id:'nitan',area:'pat-naklua',kind:'cafe',name:"Nitan Coffee's Tale",price:2,address:'Naklua, Pattaya, Chon Buri',desc:'Кофейня с авторскими напитками и сезонными десертами.'},
 {id:'gimbrew',area:'pat-naklua',kind:'cafe',name:'GIM Brewing Room',price:2,address:'Naklua, Pattaya',desc:'Локальная обжарка и фильтр-кофе.'},
 {id:'gallerysea',area:'pat-naklua',kind:'cafe',name:'Gallery by the Sea',price:2,address:'Wongamat, Pattaya',desc:'Кофейня с арт-пространством и видом на море.'},
@@ -470,17 +494,14 @@ P.push(
 {id:'glassbottom',area:'lan-nual',kind:'tour',name:'Glass-bottom boat trips',price:3,address:'Koh Larn',desc:'Прогулки на лодке со стеклянным дном — рифы и рыбы без погружения.'}
 );
 
-/* ===== НАЗНАЧЕНИЕ ФОТО ===== */
-const photoCounters={};
-P.forEach(p=>{
-  if(p.photo&&p.photo.startsWith('photo-')){p.photo='https://images.unsplash.com/'+p.photo+'?w=700&q=80';}
-  if(!p.photo){
-    const set=PHOTO_SETS[p.kind]||PHOTO_SETS.photo;
-    const i=(photoCounters[p.kind]||0);
-    p.photo='https://images.unsplash.com/'+set[i%set.length]+'?w=700&q=80';
-    photoCounters[p.kind]=i+1;
-  }
-});
+/* ===== ДОБАВЛЕННЫЕ ИЗБРАННЫЕ МЕСТА ===== */
+P.push(
+{id:'dreamworld',area:'bkk-chatuchak',kind:'entertainment',love:true,name:'Dream World',rating:{value:4.1,count:912,source:'Google Maps'},price:3,address:'62 Moo 1, Rangsit–Ongkharak Road (Km 7), Bueng Yitho, Thanyaburi, Pathum Thani 12130',desc:'❤️ Любимое место. Большой парк аттракционов к северу от Бангкока: тематические зоны, американские горки, семейные аттракционы и Snow Town. Лучше планировать отдельный день.'},
+{id:'cher-massage',area:'pat-naklua',kind:'spa',love:true,name:'cheR massage',rating:{value:4.5,count:9,source:'Yandex Maps',url:'https://yandex.com/maps/org/cher_massage/220964272501/'},price:1,address:'Nakluea 18 Soi, Pattaya, Chon Buri',desc:'❤️ Любимый массажный салон в районе Наклуа. В справочниках встречается также адрес Soi Na Kluea 16/2; перед поездкой откройте карту и проверьте актуальную точку.'}
+);
+// Rajadamnern Stadium уже присутствует в исходном списке как love:true — сохраняем единственную запись.
+
+/* Фотографии не подставляются автоматически: в предыдущей версии использовались общие стоковые изображения, не подтверждённые для конкретных мест. */
 
 const PHRASES={
 restaurant:[
@@ -548,12 +569,13 @@ basic:[
 let selectedCity='pattaya',selectedArea='all',selectedCat='all',dayPlan=[],phraseCategory='restaurant';
 const $=s=>document.querySelector(s);
 const mapsUrl=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
-const grabUrl=q=>'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(q)+'&travelmode=driving';
+const grabUrl=p=>'grab://open?screenType=BOOKING&pickup=my_location&dropoff%5Bname%5D='+encodeURIComponent(String(p.name||''))+'&dropoff%5Baddress%5D='+encodeURIComponent(String(p.address||''));
+const ratingLabel=p=>p.rating?`⭐️ ${String(p.rating.value).replace('.',',')}`:'';
 const price=n=>n===0?'Бесплатно':'💰'.repeat(n);
 const areaName=id=>AREAS.find(a=>a.id===id)?.name||'';
 const areaShort=id=>AREAS.find(a=>a.id===id)?.short||'';
 const mapsQuery=p=>p.name+' '+(areaName(p.area)||'')+' Thailand';
-const grabDest=p=>p.grab||(p.name+', '+p.address);
+const grabDest=p=>(p.name||'')+', '+(p.address||'');
 
 function copyText(t){if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(()=>toast('Скопировано!')).catch(()=>fallbackCopy(t))}else fallbackCopy(t)}
 function fallbackCopy(t){const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Скопировано!')}catch(e){alert('Не удалось скопировать. Выдели текст вручную.')}document.body.removeChild(ta)}
@@ -561,7 +583,8 @@ function toast(msg){let el=document.getElementById('toast');if(!el){el=document.
 
 function card(p){
   const q=mapsQuery(p);const isLove=p.love;
-  return `<article class="place"><img class="photo" src="${p.photo}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'"><div class="place-body"><div class="tag">${KIND_LABELS[p.kind]||'✨'} · ${areaShort(p.area)}${isLove?' · ❤️':''}</div><h4>${p.name} ${isLove?'❤️':''}</h4><div class="price">${price(p.price)}</div><p>${p.desc}</p><div class="address">📍 ${p.address}</div><div class="actions"><a class="btn" href="${mapsUrl(q)}" target="_blank" rel="noopener">📍 Google Maps</a><a class="btn primary" href="${grabUrl(grabDest(p))}" target="_blank" rel="noopener">🚕 Grab</a><button class="btn" onclick="copyText('${(grabDest(p)).replace(/'/g,"\\'")}')">Копировать адрес</button></div></div></article>`;
+  const photo=VERIFIED_PLACE_PHOTOS[p.id];
+  return `<article class="place"><div class="place-body">${photo?`<img class="place-photo" src="${photo.src}" alt="${p.name}" loading="lazy"><div class="photo-credit"><a href="${photo.page}" target="_blank" rel="noopener">${photo.credit}</a></div>`:''}<div class="tag">${KIND_LABELS[p.kind]||'✨'} · ${areaShort(p.area)}${isLove?' · ❤️':''}</div><h4>${p.name} ${isLove?'❤️':''}</h4><div class="price">${price(p.price)}</div>${p.rating?`<div class="rating-line">${ratingLabel(p)}</div>`:''}<p>${p.desc}</p><div class="address">📍 ${p.address}</div><div class="actions"><a class="btn" href="${mapsUrl(q)}" target="_blank" rel="noopener">📍 Google Maps</a><a class="btn primary" href="${grabUrl(p)}" target="_blank" rel="noopener">🚕 Grab</a><button class="btn" onclick="copyText('${(grabDest(p)).replace(/'/g,"\\'")}')">Копировать адрес</button></div></div></article>`;
 }
 
 function matchCat(p,cat){
@@ -587,7 +610,7 @@ function renderDistricts(){
   const slider=$('#districtSlider');
   if(!selectedCity){slider.innerHTML='<div class="notice">Сначала выбери город выше — появятся только его районы.</div>';return}
   const list=AREAS.filter(a=>a.city===selectedCity);
-  slider.innerHTML=list.map(a=>`<button class="district-card ${selectedArea===a.id?'active':''}" data-area="${a.id}"><img src="${a.img}" alt=""><span class="dtext"><strong>${a.name}</strong><span>${a.desc}</span></span></button>`).join('');
+  slider.innerHTML=list.map(a=>`<button class="district-card ${selectedArea===a.id?'active':''}" data-area="${a.id}"><span class="dtext"><strong>${a.name}</strong><span>${a.desc}</span></span></button>`).join('');
   slider.querySelectorAll('[data-area]').forEach(b=>b.addEventListener('click',()=>{selectedArea=b.dataset.area;$('#districtSelect').value=selectedArea;renderDistricts();renderPlaces();$('#directory').scrollIntoView({behavior:'smooth'})}));
 }
 function renderPlaces(){
@@ -638,7 +661,6 @@ const dayTypePrefs={
 function pickActivityForSlot(pool,slot,type,used){
   const allowed=activityKindsBySlot[slot];
   let candidates=pool.filter(p=>allowed.includes(p.kind)&&!used.has(p.id));
-  if(!candidates.length)candidates=pool.filter(p=>allowed.includes(p.kind));
   if(!candidates.length)return null;
   const prefs=dayTypePrefs[type]||[];
   const scored=candidates.map(p=>({p,score:(prefs.includes(p.kind)?3:0)+(p.love?1:0)}));
@@ -653,7 +675,6 @@ function pickActivityForSlot(pool,slot,type,used){
 function pickFood(pool,slot,used){
   let kinds=foodKindsBySlot[slot];
   let candidates=pool.filter(p=>kinds.includes(p.kind)&&!used.has(p.id));
-  if(!candidates.length)candidates=pool.filter(p=>kinds.includes(p.kind));
   if(!candidates.length)return null;
   const pick=randomPick(candidates);
   if(pick)used.add(pick.id);
@@ -663,7 +684,7 @@ function pickFood(pool,slot,used){
 function slotPartHTML(label,p,partIndex,slotIndex){
   if(!p)return `<div class="slot-part"><div class="part-label">${label}</div><p>В этой зоне пока нет подходящей точки — выбери другой район.</p></div>`;
   const q=mapsQuery(p);
-  return `<div class="slot-part"><div class="part-label">${label}</div><h5>${p.name} ${p.love?'❤️':''}</h5><div class="price">${price(p.price)}</div><p>${p.desc}</p><p>📍 ${p.address}</p><div class="actions"><a class="btn" href="${mapsUrl(q)}" target="_blank" rel="noopener">📍 Google Maps</a><a class="btn primary" href="${grabUrl(grabDest(p))}" target="_blank" rel="noopener">🚕 Grab</a></div><button class="replace-btn" onclick="replacePart(${slotIndex},${partIndex})">↻ Заменить ${partIndex===0?'заведение':'активность'}</button></div>`;
+  return `<div class="slot-part"><div class="part-label">${label}</div><h5>${p.name} ${p.love?'❤️':''}</h5><div class="price">${price(p.price)}</div>${p.rating?`<div class="rating-line">${ratingLabel(p)}</div>`:''}<p>${p.desc}</p><p>📍 ${p.address}</p><div class="actions"><a class="btn" href="${mapsUrl(q)}" target="_blank" rel="noopener">📍 Google Maps</a><a class="btn primary" href="${grabUrl(p)}" target="_blank" rel="noopener">🚕 Grab</a></div><button class="replace-btn" onclick="replacePart(${slotIndex},${partIndex})">↻ Заменить ${partIndex===0?'заведение':'активность'}</button></div>`;
 }
 
 function renderPlan(){
@@ -679,32 +700,25 @@ function replacePart(slotIndex,partIndex){
   if(!dayPlan[slotIndex])return;
   const area=dayPlan[slotIndex].area;
   const slotName=['morning','day','evening'][slotIndex];
+  const favoritesOnly=$('#replaceCat').value==='favorites';
   const used=new Set();
   dayPlan.forEach((s,i)=>{if(i!==slotIndex){s.food&&used.add(s.food.id);s.activity&&used.add(s.activity.id)}});
+  const current=partIndex===0?dayPlan[slotIndex].food:dayPlan[slotIndex].activity;
+  if(current)used.add(current.id);
+  let pool;
   if(partIndex===0){
     const kinds=foodKindsBySlot[slotName];
-    const pool=P.filter(p=>p.area===area&&kinds.includes(p.kind)&&p.id!==dayPlan[slotIndex].food?.id&&!used.has(p.id));
+    pool=P.filter(p=>p.area===area&&kinds.includes(p.kind)&&!used.has(p.id)&&(!favoritesOnly||p.love));
+    if(!pool.length)pool=P.filter(p=>{const a=AREAS.find(x=>x.id===p.area);return a&&a.city===selectedCity&&kinds.includes(p.kind)&&!used.has(p.id)&&(!favoritesOnly||p.love)});
     const alt=randomPick(pool);
-    if(!alt){toast('В этой зоне пока нет других вариантов.');return}
+    if(!alt){toast(favoritesOnly?'Среди любимых мест пока нет подходящей замены.':'В этой зоне больше нет подходящих вариантов.');return}
     dayPlan[slotIndex].food=alt;
   }else{
-    const cat=$('#replaceCat').value;
-    let allowed;
-    if(cat!=='auto'){
-      const g=KIND_GROUPS.find(x=>x.id===cat);
-      allowed=g?g.kinds:activityKindsBySlot[slotName];
-    }else{
-      allowed=activityKindsBySlot[slotName];
-    }
-    let pool=P.filter(p=>p.area===area&&allowed.includes(p.kind)&&p.id!==dayPlan[slotIndex].activity?.id&&!used.has(p.id));
-    if(!pool.length){
-      pool=P.filter(p=>{
-        const a=AREAS.find(x=>x.id===p.area);
-        return a&&a.city===selectedCity&&allowed.includes(p.kind)&&p.id!==dayPlan[slotIndex].activity?.id&&!used.has(p.id);
-      });
-    }
+    const allowed=activityKindsBySlot[slotName];
+    pool=P.filter(p=>p.area===area&&allowed.includes(p.kind)&&!used.has(p.id)&&(!favoritesOnly||p.love));
+    if(!pool.length)pool=P.filter(p=>{const a=AREAS.find(x=>x.id===p.area);return a&&a.city===selectedCity&&allowed.includes(p.kind)&&!used.has(p.id)&&(!favoritesOnly||p.love)});
     const alt=randomPick(pool);
-    if(!alt){toast('Нет подходящих вариантов в этом городе.');return}
+    if(!alt){toast(favoritesOnly?'Среди любимых мест нет подходящей замены для этого блока.':'Нет подходящих вариантов в этом городе.');return}
     dayPlan[slotIndex].activity=alt;
   }
   renderPlan();
@@ -712,12 +726,13 @@ function replacePart(slotIndex,partIndex){
 
 function makeDay(){
   const city=$('#citySelect').value,area=$('#districtSelect').value,type=$('#dayType').value;
-  const favOnly=$('#favOnly').checked;
   if(!city){alert('Сначала выбери город.');return}
   let candidateAreas=AREAS.filter(a=>a.city===city&&(area==='all'||a.id===area));
   candidateAreas=candidateAreas.filter(a=>{
-    const inArea=P.filter(p=>p.area===a.id&&(!favOnly||p.love));
-    return ['breakfast','cafe','dinner'].every(k=>inArea.some(p=>p.kind===k))
+    const inArea=P.filter(p=>p.area===a.id&&true);
+    return inArea.some(p=>foodKindsBySlot.morning.includes(p.kind))
+      &&inArea.some(p=>foodKindsBySlot.day.includes(p.kind))
+      &&inArea.some(p=>foodKindsBySlot.evening.includes(p.kind))
       &&inArea.some(p=>activityKindsBySlot.morning.includes(p.kind))
       &&inArea.some(p=>activityKindsBySlot.day.includes(p.kind))
       &&inArea.some(p=>activityKindsBySlot.evening.includes(p.kind));
@@ -725,11 +740,11 @@ function makeDay(){
   let chosen=randomPick(candidateAreas);
   if(!chosen){
     $('#dayNote').style.display='block';
-    $('#dayNote').textContent=favOnly?'В этой зоне недостаточно избранных мест для полного дня. Выбери другой район или снимите галочку «Только избранное».':'В выбранной зоне недостаточно мест для полного маршрута. Выбери другой район или «Все районы города».';
+    $('#dayNote').textContent='В выбранной зоне недостаточно мест для полного маршрута. Выбери другой район или «Все районы города». ';
     $('#daySlots').innerHTML='<div class="notice">Не хватает мест для полного дня в этой зоне.</div>';
     return;
   }
-  const pool=P.filter(p=>p.area===chosen.id&&(!favOnly||p.love));
+  const pool=P.filter(p=>p.area===chosen.id&&true);
   const used=new Set();
   const morning={area:chosen.id,food:pickFood(pool,'morning',used),activity:pickActivityForSlot(pool,'morning',type,used)};
   const day={area:chosen.id,food:pickFood(pool,'day',used),activity:pickActivityForSlot(pool,'day',type,used)};
