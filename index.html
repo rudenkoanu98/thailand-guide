@@ -1,5 +1,4 @@
 <!doctype html>
- 
 <html lang="ru">
 <head>
 <meta charset="utf-8">
@@ -23,14 +22,14 @@ section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-siz
 @media(max-width:560px){.event-grid,.phrase-list{grid-template-columns:1fr}}
 .cat-bar{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}.cat-bar .filter{padding:6px 10px;font-size:11px}
 .tr-input{width:100%;min-height:90px;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;resize:vertical;background:white}.tr-card{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:10px}.tr-text{font-size:17px;font-weight:700;margin:6px 0;line-height:1.4}
-
 .tour-slider{display:flex;gap:14px;overflow-x:auto;padding:3px 3px 15px;scroll-snap-type:x mandatory;align-items:stretch}.tour-card{flex:0 0 320px;max-width:86vw;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);scroll-snap-align:start;display:flex;flex-direction:column}.tour-card>img{display:none}.tour-body{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1}.tour-body h3{font-size:19px;line-height:1.2;margin:0}.tour-body p{font-size:12px;color:#536058;margin:0}.tour-meta{display:flex;flex-direction:column;gap:3px;font-size:12px;color:#536058}.tour-meta b{font-size:15px;color:var(--green)}.tour-body .btn{margin-top:auto;align-self:flex-start}.rating-line{font-size:12px;color:#795a2b;margin:7px 0}.rating-line a{text-decoration:none}.place .actions{flex-wrap:wrap}.place-photo{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;margin:0 0 12px}.photo-credit{font-size:10px;color:var(--muted);margin:-6px 0 10px}
 </style>
 </head>
 <body>
 <header class="hero" id="top"><div class="wrap"><div class="eyebrow">Thailand · Bangkok · Pattaya · Koh Larn</div><h1>Викусик в Таиланде 🇹🇭</h1></div></header>
 <nav><div class="wrap"><a href="#constructor">КОНСТРУКТОР</a><a href="#districts">РАЙОНЫ</a><a href="#directory">ВСЕ МЕСТА</a><a href="#tours">ЭКСКУРСИИ</a><a href="#events">СОБЫТИЯ</a><a href="#phrases">РАЗГОВОРНИК</a><a href="#translator">ПЕРЕВОДЧИК</a><a href="#important">ВАЖНОЕ</a></div></nav>
-<main class="wrap"><!-- ================= КОНСТРУКТОР ================= --><section id="constructor">
+<main class="wrap">
+<section id="constructor">
 <div class="section-head"><h2>🗺 Конструктор идеального дня</h2></div>
 <div class="constructor">
 <div class="constructor-top"><div><h3>Собираем день для Викусика</h3></div><button class="make" id="makeDay">🎲 Собрать день</button></div>
@@ -38,16 +37,19 @@ section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-siz
 <select id="citySelect"><option value="bangkok">Бангкок</option><option value="pattaya" selected>Паттайя</option><option value="koh-larn">Ко Лан</option></select>
 <select id="districtSelect"><option value="all">Все районы города</option></select>
 <select id="dayType"><option value="any">Любой день</option><option value="calm">🌿 Спокойный</option><option value="active">⚡ Активный</option><option value="culture">🏛 Культурный</option><option value="foodie">🍜 Вкусный</option><option value="scenic">🌅 Красивые виды</option><option value="shopping">🛍 Шопинг</option><option value="beach">🏖 Пляжный</option><option value="relax">🧘 Релакс и SPA</option><option value="nature">🐘 Животные и природа</option></select>
-<select id="replaceCat" aria-label="Из чего выбирать замену"><option value="day">Замена из: как в дне</option><option value="favorites">Замена из: только любимые ❤️</option></select>
+<select id="replaceCat"><option value="day">Замена из: как в дне</option><option value="favorites">Замена из: только любимые ❤️</option></select>
 </div>
 <div class="slots" id="daySlots"><div class="slot"><div class="when">🌅 Утро</div><p>Завтрак + прогулка.</p></div><div class="slot"><div class="when">☀️ День</div><p>Кофейня + активность.</p></div><div class="slot"><div class="when">🌇 Вечер</div><p>Ужин + вечернее место.</p></div></div>
 <div class="notice" id="dayNote">Выбери город, район и настроение — и нажми «Собрать день».</div>
-</div></section><!-- ================= РАЙОНЫ ================= --><section id="districts">
+</div></section>
+<section id="districts">
 <div class="section-head"><h2>Районы</h2></div>
 <div class="toolbar" id="cityFilters"></div>
 <div class="cat-bar" id="catFilters"></div>
 <div class="district-slider" id="districtSlider"></div>
-</section><!-- ================= ВСЕ МЕСТА ================= --><section id="directory"><div class="section-head"><h2>📍 Все места</h2></div><div id="placesByArea"></div></section><!-- ================= ЭКСКУРСИИ ================= --><section id="tours">
+</section>
+<section id="directory"><div class="section-head"><h2>📍 Все места</h2></div><div id="placesByArea"></div></section>
+<section id="tours">
 <div class="section-head"><h2>🧭 Экскурсии из Паттайи</h2><p style="color:var(--muted);margin:6px 0 0">Подобранные экскурсии: цены за одного взрослого участника групповой программы, если не указано иное.</p></div>
 <div class="tour-slider" id="tourSlider">
 <article class="tour-card"><div class="tour-body"><div class="tag">Природа · храмы · водопады</div><h3>«Следы Будды»</h3><div class="tour-meta"><b>2 299 ฿ / взрослый</b><span>≈ 12,5 часа · 1 день</span><span>Вт · Чт · Вс</span></div><p>Водопады, пещеры, необычные храмы и священные следы Будды; купание в природных бассейнах и знакомство с тайской кухней.</p><p><b>Интересное:</b> национальный парк Кхао Чимао, многоуровневый водопад, пещеры Prathun, подземный тоннель, храм Чёрного Нага и смотровые площадки.</p><a class="btn primary" href="https://online-pattaya.ru/ekskursii-v-pattaye/sledy-buddy" target="_blank" rel="noopener">Подробнее и бронирование ↗</a></div></article>
@@ -63,7 +65,7 @@ section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-siz
 <div class="notice">Все цены указаны за одного взрослого участника групповой экскурсии в батах. Продолжительность однодневных программ приблизительная и рассчитана по времени выезда и возвращения; для двухдневных программ указано общее время поездки. Расписание и условия перепроверяйте перед оплатой.</div>
 <p style="margin-top:14px"><a class="btn" href="https://online-pattaya.ru/ekskursii-v-pattaye" target="_blank" rel="noopener">Посмотреть другие экскурсии на Online Pattaya ↗</a></p>
 </section>
-<!-- ================= СОБЫТИЯ ================= --><section id="events">
+<section id="events">
 <div class="section-head"><h2>🎟️ События во время поездки</h2></div>
 <div class="event-grid">
 <article class="event"><div class="tag">Бангкок · 17–29 ноября</div><h3>Golden Mount Temple Fair</h3><p>Храмовая ярмарка у Wat Saket: уличная еда, торговые ряды и праздничная атмосфера.</p><p><b>📅 17–29 ноября 2026</b></p><a class="btn" href="https://thailandwhatson.com/regions/bangkok/" target="_blank" rel="noopener">Программа</a></article>
@@ -76,18 +78,21 @@ section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-siz
 <article class="event"><div class="tag">Бангкок · 17 ноября — 15 января</div><h3>Праздничные огни Siam / CentralWorld / ICONSIAM</h3><p>Рождественские инсталляции, ёлки, фотозоны и вечерняя подсветка.</p><p><b>📅 Весь период поездки</b></p><a class="btn" href="https://thailandwhatson.com/regions/bangkok/" target="_blank" rel="noopener">Афиша</a></article>
 </div>
 <div class="notice">Pattaya International Jazz Festival проходит 6–7 ноября, до начала поездки. Wonderfruit и Tomorrowland — не в центре Паттайи, дорогу планируйте заранее.</div>
-</section><!-- ================= РАЗГОВОРНИК ================= --><section id="phrases">
+</section>
+<section id="phrases">
 <div class="section-head"><h2>💬 Разговорник</h2></div>
 <div class="phrase-tools"><button class="filter active" data-phrase="restaurant">🍽 В ресторане</button><button class="filter" data-phrase="cafe">☕ В кафе</button><button class="filter" data-phrase="transport">🚕 Такси</button><button class="filter" data-phrase="shopping">🛍 Покупки</button><button class="filter" data-phrase="spa">💆 Массаж и SPA</button><button class="filter" data-phrase="beach">🏖 На пляже и острове</button><button class="filter" data-phrase="basic">🙏 Базовые фразы</button></div>
 <div id="phraseList" class="phrase-list"></div>
-</section><!-- ================= ПЕРЕВОДЧИК ================= --><section id="translator">
+</section>
+<section id="translator">
 <div class="section-head"><h2>🌐 Переводчик</h2></div>
 <div class="constructor">
 <textarea id="trInput" class="tr-input" placeholder="Напиши фразу на русском…"></textarea>
 <div style="margin-top:10px"><button class="make" id="trBtn">Перевести</button></div>
 <div id="trResult"></div>
 </div>
-</section><!-- ================= ВАЖНОЕ ================= --><section id="important"><div class="section-head"><h2>🧳 Важное</h2></div><div class="practical-grid">
+</section>
+<section id="important"><div class="section-head"><h2>🧳 Важное</h2></div><div class="practical-grid">
 <div class="info"><h3>🏠 Дом Викусика</h3><p>City Garden Tropicana Condominium, Na Kluea 16/1, Pattaya.</p><p><a href="https://maps.app.goo.gl/woqaSNt4SyM1BbGv7?g_st=ic" target="_blank" rel="noopener">Google Maps</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=City+Garden+Tropicana+Condominium+Pattaya" target="_blank" rel="noopener">Grab</a> · <button class="btn" onclick="copyText('City Garden Tropicana Condominium, Na Kluea 16/1, Pattaya')">Скопировать адрес</button></p></div>
 <div class="info"><h3>✈️ Аэропорт Суварнабхуми (BKK)</h3><p>999, Nong Prue, Bang Phli District, Samut Prakan 10540.</p><p><a href="https://maps.app.goo.gl/MxXS5YdWMx3YvxFf7?g_st=ic" target="_blank" rel="noopener">Google Maps</a> · <a href="https://www.google.com/maps/dir/?api=1&destination=Suvarnabhumi+Airport+BKK" target="_blank" rel="noopener">Grab</a> · <button class="btn" onclick="copyText('Suvarnabhumi Airport (BKK), 999, Nong Prue, Bang Phli District, Samut Prakan 10540')">Скопировать адрес</button></p></div>
 <div class="info"><h3>🏥 Больницы</h3><p><b>Bangkok Hospital Pattaya</b> — Soi 5, Pattaya 2nd Road. <a href="https://www.google.com/maps/search/?api=1&query=Bangkok+Hospital+Pattaya" target="_blank" rel="noopener">Карта</a></p><p><b>Pattaya Memorial Hospital</b> — 328/1 Moo 9, Central Pattaya. <a href="https://www.google.com/maps/search/?api=1&query=Pattaya+Memorial+Hospital" target="_blank" rel="noopener">Карта</a></p><p><b>Bumrungrad International Hospital</b> — 33 Sukhumvit 3, Bangkok. <a href="https://www.google.com/maps/search/?api=1&query=Bumrungrad+International+Hospital+Bangkok" target="_blank" rel="noopener">Карта</a></p></div>
@@ -98,30 +103,28 @@ section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-siz
 <div class="info"><h3>💵 Наличные</h3><p>Небольшая сумма пригодится на рынках, паромах и в маленьких кафе.</p></div>
 </div></section>
 </main>
-<footer><div class="wrap"><h2>Викусик в Таиланде ❤️</h2><p>17 ноября — 17 декабря 2026 · Бангкок · Паттайя · Ко Лан</p><p><a href="https://www.tourismthailand.org/" target="_blank" rel="noopener">Tourism Authority of Thailand</a> · <a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a> · <a href="https://www.grab.com/th/" target="_blank" rel="noopener">Grab Thailand</a></p></div></footer><script>
-/* =========================== ДАННЫЕ =========================== */
+<footer><div class="wrap"><h2>Викусик в Таиланде ❤️</h2><p>17 ноября — 17 декабря 2026 · Бангкок · Паттайя · Ко Лан</p><p><a href="https://www.tourismthailand.org/" target="_blank" rel="noopener">Tourism Authority of Thailand</a> · <a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a> · <a href="https://www.grab.com/th/" target="_blank" rel="noopener">Grab Thailand</a></p></div></footer>
+<script>
 const AREAS=[
-{id:'bkk-old',city:'bangkok',cityName:'Бангкок',name:'Старый город · Rattanakosin & Banglamphu',short:'Старый город',desc:'Королевский дворец, храмы, Khao San, река и атмосферные кофейни.',img:'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=900&q=85'},
-{id:'bkk-china',city:'bangkok',cityName:'Бангкок',name:'Chinatown · Talat Noi · Song Wat',short:'Чайнатаун',desc:'Уличная еда, старые шопхаусы, кофейные обжарщики и вечерний Yaowarat.',img:'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=900&q=85'},
-{id:'bkk-silom',city:'bangkok',cityName:'Бангкок',name:'Silom · Sathorn · Bang Rak',short:'Силом и Сатхорн',desc:'Зелёные дворики, завтраки, specialty coffee и сильные тайские рестораны.',img:'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=900&q=85'},
-{id:'bkk-sukhumvit',city:'bangkok',cityName:'Бангкок',name:'Sukhumvit · Asok · Phrom Phong',short:'Сукхумвит',desc:'Бранчи, современные кафе, торговые центры и рестораны на любой вкус.',img:'https://images.unsplash.com/photo-1555921015-5532091f6026?w=900&q=85'},
-{id:'bkk-siam',city:'bangkok',cityName:'Бангкок',name:'Siam · Pathum Wan',short:'Сиам',desc:'Центр, музеи, шопинг и современная тайская гастрономия.',img:'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=900&q=85'},
-{id:'bkk-riverside',city:'bangkok',cityName:'Бангкок',name:'Riverside · Thonburi',short:'Riverside',desc:'Набережная Чао Прайя, старые храмы, Asiatique и речные прогулки.',img:'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=900&q=85'},
-{id:'bkk-ari',city:'bangkok',cityName:'Бангкок',name:'Ari · Phaya Thai',short:'Ari',desc:'Тихий район с кофейнями, пекарнями и локальными ресторанами.',img:'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=900&q=85'},
-{id:'bkk-chatuchak',city:'bangkok',cityName:'Бангкок',name:'Chatuchak · Mo Chit · Север',short:'Чатучак',desc:'Большой рынок выходного дня, парки и современное искусство.',img:'https://images.unsplash.com/photo-1511497584788-876760111969?w=900&q=85'},
-{id:'pat-naklua',city:'pattaya',cityName:'Паттайя',name:'Наклуа · Wongamat',short:'Наклуа',desc:'Спокойный север, Храм Истины, рыбные рынки и морепродукты.',img:'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900&q=85'},
-{id:'pat-central',city:'pattaya',cityName:'Паттайя',name:'Центральная Паттайя',short:'Центр',desc:'Пляжная дорога, кофейные обжарщики, моллы, шоу и rooftop.',img:'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&q=85'},
-{id:'pat-prat',city:'pattaya',cityName:'Паттайя',name:'Пратамнак · Cozy Beach',short:'Пратамнак',desc:'Холмы, смотровые, закаты и рестораны с видом на залив.',img:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=85'},
-{id:'pat-jomtien',city:'pattaya',cityName:'Паттайя',name:'Джомтьен · Na Jomtien · Sattahip',short:'Джомтьен',desc:'Длинный пляж, brunch-кафе, животные, аквапарки и выезды к Bang Saray.',img:'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=900&q=85'},
-{id:'lan-naban',city:'koh-larn',cityName:'Ко Лан',name:'Na Baan · главный пирс',short:'Na Baan',desc:'Удобная база острова: кафе, прогулка по набережной, близко к пирсу.',img:'https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?w=900&q=85'},
-{id:'lan-tawaen',city:'koh-larn',cityName:'Ко Лан',name:'Tawaen · север',short:'Tawaen',desc:'Оживлённый пляж, активности на воде и ветряк со смотровой.',img:'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=900&q=85'},
-{id:'lan-tayai',city:'koh-larn',cityName:'Ко Лан',name:'Ta Yai · Thong Lang',short:'Ta Yai',desc:'Кафе на склоне, тихие пляжи и смотровая Luang Pu Thuat.',img:'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=900&q=85'},
-{id:'lan-samae',city:'koh-larn',cityName:'Ко Лан',name:'Samae · Tien',short:'Samae и Tien',desc:'Просторные пляжи, прозрачная вода и точки для долгого отдыха.',img:'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=900&q=85'},
-{id:'lan-nual',city:'koh-larn',cityName:'Ко Лан',name:'Nual · Monkey Beach',short:'Nual',desc:'Южная часть острова с более тихими пляжами и снорклингом.',img:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=85'}
+{id:'bkk-old',city:'bangkok',cityName:'Бангкок',name:'Старый город · Rattanakosin & Banglamphu',short:'Старый город',desc:'Королевский дворец, храмы, Khao San, река и атмосферные кофейни.',img:''},
+{id:'bkk-china',city:'bangkok',cityName:'Бангкок',name:'Chinatown · Talat Noi · Song Wat',short:'Чайнатаун',desc:'Уличная еда, старые шопхаусы, кофейные обжарщики и вечерний Yaowarat.',img:''},
+{id:'bkk-silom',city:'bangkok',cityName:'Бангкок',name:'Silom · Sathorn · Bang Rak',short:'Силом и Сатхорн',desc:'Зелёные дворики, завтраки, specialty coffee и сильные тайские рестораны.',img:''},
+{id:'bkk-sukhumvit',city:'bangkok',cityName:'Бангкок',name:'Sukhumvit · Asok · Phrom Phong',short:'Сукхумвит',desc:'Бранчи, современные кафе, торговые центры и рестораны на любой вкус.',img:''},
+{id:'bkk-siam',city:'bangkok',cityName:'Бангкок',name:'Siam · Pathum Wan',short:'Сиам',desc:'Центр, музеи, шопинг и современная тайская гастрономия.',img:''},
+{id:'bkk-riverside',city:'bangkok',cityName:'Бангкок',name:'Riverside · Thonburi',short:'Riverside',desc:'Набережная Чао Прайя, старые храмы, Asiatique и речные прогулки.',img:''},
+{id:'bkk-ari',city:'bangkok',cityName:'Бангкок',name:'Ari · Phaya Thai',short:'Ari',desc:'Тихий район с кофейнями, пекарнями и локальными ресторанами.',img:''},
+{id:'bkk-chatuchak',city:'bangkok',cityName:'Бангкок',name:'Chatuchak · Mo Chit · Север',short:'Чатучак',desc:'Большой рынок выходного дня, парки и современное искусство.',img:''},
+{id:'pat-naklua',city:'pattaya',cityName:'Паттайя',name:'Наклуа · Wongamat',short:'Наклуа',desc:'Спокойный север, Храм Истины, рыбные рынки и морепродукты.',img:''},
+{id:'pat-central',city:'pattaya',cityName:'Паттайя',name:'Центральная Паттайя',short:'Центр',desc:'Пляжная дорога, кофейные обжарщики, моллы, шоу и rooftop.',img:''},
+{id:'pat-prat',city:'pattaya',cityName:'Паттайя',name:'Пратамнак · Cozy Beach',short:'Пратамнак',desc:'Холмы, смотровые, закаты и рестораны с видом на залив.',img:''},
+{id:'pat-jomtien',city:'pattaya',cityName:'Паттайя',name:'Джомтьен · Na Jomtien · Sattahip',short:'Джомтьен',desc:'Длинный пляж, brunch-кафе, животные, аквапарки и выезды к Bang Saray.',img:''},
+{id:'lan-naban',city:'koh-larn',cityName:'Ко Лан',name:'Na Baan · главный пирс',short:'Na Baan',desc:'Удобная база острова: кафе, прогулка по набережной, близко к пирсу.',img:''},
+{id:'lan-tawaen',city:'koh-larn',cityName:'Ко Лан',name:'Tawaen · север',short:'Tawaen',desc:'Оживлённый пляж, активности на воде и ветряк со смотровой.',img:''},
+{id:'lan-tayai',city:'koh-larn',cityName:'Ко Лан',name:'Ta Yai · Thong Lang',short:'Ta Yai',desc:'Кафе на склоне, тихие пляжи и смотровая Luang Pu Thuat.',img:''},
+{id:'lan-samae',city:'koh-larn',cityName:'Ко Лан',name:'Samae · Tien',short:'Samae и Tien',desc:'Просторные пляжи, прозрачная вода и точки для долгого отдыха.',img:''},
+{id:'lan-nual',city:'koh-larn',cityName:'Ко Лан',name:'Nual · Monkey Beach',short:'Nual',desc:'Южная часть острова с более тихими пляжами и снорклингом.',img:''}
 ];
-
 const KIND_LABELS={breakfast:'🥐 Завтрак',cafe:'☕ Кофейня',dinner:'🍜 Ресторан',rooftop:'🌅 Rooftop',beachclub:'🌊 Beach Club',temple:'🛕 Храм',park:'🌳 Парк',beach:'🏖 Пляж',viewpoint:'🔭 Смотровая',museum:'🏛 Музей',animals:'🐘 Животные',entertainment:'🎡 Развлечения',spa:'💆 SPA',shopping:'🛍 Шопинг',nightmarket:'🌃 Ночной рынок',photo:'📸 Фотолокация',tour:'🚤 Экскурсия',pool:'🏊 Бассейн'};
-
 const KIND_GROUPS=[
 {id:'food',label:'🍽 Еда',kinds:['breakfast','cafe','dinner','rooftop','beachclub']},
 {id:'breakfast',label:'🥐 Завтраки',kinds:['breakfast']},
@@ -143,691 +146,468 @@ const KIND_GROUPS=[
 {id:'tour',label:'🚤 Экскурсии',kinds:['tour']},
 {id:'pool',label:'🏊 Бассейн',kinds:['pool']}
 ];
-
-const PHOTO_SETS={
-breakfast:['photo-1533089860892-a7c6f0a88666','photo-1525351484163-7529414344d8','photo-1495214783159-3503fd1b572d','photo-1528207776546-365bb710ee93','photo-1484723091739-30a097e8f929'],
-cafe:['photo-1442512595331-e89e73853f31','photo-1495474472287-4d71bcdd2085','photo-1501339847302-ac426a4a7cbb','photo-1509042239860-f550ce710b93','photo-1461023058943-07fcbe16d735'],
-dinner:['photo-1552566626-52f8b828add9','photo-1414235077428-338989a2e8c0','photo-1517248135467-4c7edcad34c4','photo-1559339352-11d035aa65de','photo-1547592180-85f173990554'],
-rooftop:['photo-1514933651103-005eec06c04b','photo-1566073771259-6a8506099945','photo-1571003123894-1f0594d2b5d9'],
-beachclub:['photo-1519046904884-53103b34b206','photo-1533105079780-92b9be482077','photo-1507525428034-b723cf961d3e'],
-temple:['photo-1540611025311-01df3cef54b5','photo-1508009603885-50cf7c579365','photo-1563492065599-3520f775eeed','photo-1528181304800-259b08848526','photo-1534008897995-27a23e859048'],
-park:['photo-1511497584788-876760111969','photo-1470252649378-9c29740c9fa8','photo-1441974231531-c6227db76b6e'],
-beach:['photo-1507525428034-b723cf961d3e','photo-1519046904884-53103b34b206','photo-1506953823976-52e1fdc0149a','photo-1510414842594-a61c69b5ae57','photo-1500375592092-40eb2168fd21'],
-viewpoint:['photo-1500530855697-b586d89ba3ee','photo-1519681393784-d120267933ba','photo-1470071459604-3b5ec3a7fe05'],
-museum:['photo-1577083552431-6e5fd01aa342','photo-1554907984-15263bfd63bd','photo-1566127444979-b3d2b654e3d7'],
-animals:['photo-1564349683136-77e08dba1ef7','photo-1511497584788-876760111969','photo-1549366021-9f761d450615'],
-entertainment:['photo-1519567241046-7f570eee3ce6','photo-1560439514-4e9645039924','photo-1513151233558-d860c5398176'],
-spa:['photo-1540555700478-4be289fbecef','photo-1544161515-4ab6ce6db874','photo-1600334129128-685c5582fd35'],
-shopping:['photo-1519567241046-7f570eee3ce6','photo-1441986300917-64674bd600d8','photo-1481437156560-3205f6a55735'],
-nightmarket:['photo-1504214208698-ea1916a2195a','photo-1555396273-367ea4eb4db5','photo-1516214104703-d870798883c5'],
-photo:['photo-1519501025264-65ba15a82390','photo-1500530855697-b586d89ba3ee','photo-1470229722913-7c0e2dbbafd3'],
-tour:['photo-1518509562904-e7ef99cdcc86','photo-1544551763-46a013bb70d5','photo-1530053969600-caed2596d242'],
-pool:['photo-1571896349842-33c89424de2d','photo-1576013551627-0cc20b96c2a7','photo-1540541338287-41700207dee6']
-};
-
-// Только проверенные фотографии конкретных объектов; неизвестным местам фото не подставляем.
 const VERIFIED_PLACE_PHOTOS={
-  grandpalace:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/202307%20Grand%20Palace%20of%20Bangkok%2001.jpg?width=1000',credit:'Wikimedia Commons · Grand Palace, Bangkok',page:'https://commons.wikimedia.org/wiki/Category:Grand_Palace,_Bangkok'},
-  watpho:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/Buddhist%20statue%2C%20Wat%20Pho%20(Temple%20of%20the%20reclining%20Buddha)%2C%20Bangkok%2C%20Thailand%20-%20%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%82%E0%B8%9E%E0%B8%98%E0%B8%B4%E0%B9%8C%2C%20%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%AF%2C%20%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%AD%E0%B8%B2%E0%B8%93%E0%B8%B2%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3%E0%B9%84%E0%B8%97%E0%B8%A2%20(10226214265).jpg?width=1000',credit:'Wikimedia Commons · Wat Pho',page:'https://commons.wikimedia.org/wiki/Category:Wat_Pho'},
-  watarun:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/20160727%20Wat%20Arun%205532.jpg?width=1000',credit:'Wikimedia Commons · Wat Arun',page:'https://commons.wikimedia.org/wiki/Category:Wat_Arun'}
+grandpalace:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/202307%20Grand%20Palace%20of%20Bangkok%2001.jpg?width=1000',credit:'Wikimedia Commons · Grand Palace, Bangkok',page:'https://commons.wikimedia.org/wiki/Category:Grand_Palace,_Bangkok'},
+watpho:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/20160727%20Wat%20Pho%205532.jpg?width=1000',credit:'Wikimedia Commons · Wat Pho',page:'https://commons.wikimedia.org/wiki/Category:Wat_Pho'},
+watarun:{src:'https://commons.wikimedia.org/wiki/Special:FilePath/20160727%20Wat%20Arun%205532.jpg?width=1000',credit:'Wikimedia Commons · Wat Arun',page:'https://commons.wikimedia.org/wiki/Category:Wat_Arun'}
 };
-
 let P=[];
-
-/* ===== БАНГКОК · СТАРЫЙ ГОРОД ===== */
 P.push(
-{id:'grandpalace',area:'bkk-old',kind:'temple',name:'Grand Palace & Wat Phra Kaew',price:3,address:'Na Phra Lan Road, Phra Nakhon, Bangkok',desc:'Королевский дворец и Храм Изумрудного Будды. Приходите к открытию, строгий дресс-код.',photo:'photo-1528181304800-259b08848526'},
-{id:'watpho',area:'bkk-old',kind:'temple',name:'Wat Pho',price:2,address:'2 Sanam Chai Road, Phra Nakhon, Bangkok',desc:'Храм Лежащего Будды и традиционная тайская архитектура.',photo:'photo-1540611025311-01df3cef54b5'},
-{id:'watarun',area:'bkk-old',kind:'temple',name:'Wat Arun (Храм Рассвета)',price:2,address:'158 Wang Doem Road, Bangkok Yai, Bangkok',desc:'Башня-пранг с керамической отделкой. Красиво на закате с противоположного берега.',photo:'photo-1563492065599-3520f775eeed'},
-{id:'watsaket',area:'bkk-old',kind:'temple',name:'Wat Saket · Golden Mount',price:1,address:'344 Chakkraphatdiphong Road, Pom Prap, Bangkok',desc:'Золотая гора и панорама старого города.'},
-{id:'watsuthat',area:'bkk-old',kind:'temple',name:'Wat Suthat & Giant Swing',price:1,address:'146 Bamrung Mueang Road, Phra Nakhon, Bangkok',desc:'Классический храм с гигантскими качелями перед входом.'},
-{id:'lohaprasat',area:'bkk-old',kind:'temple',name:'Loha Prasat · Wat Ratchanatdaram',price:1,address:'2 Maha Chai Road, Phra Nakhon, Bangkok',desc:'Металлическая многоярусная пагода с каменной резьбой.'},
-{id:'museumsiam',area:'bkk-old',kind:'museum',name:'Museum Siam',price:1,address:'4 Sanam Chai Road, Phra Nakhon, Bangkok',desc:'Современный музей истории Таиланда с интерактивными экспонатами.'},
-{id:'nationalmuseum',area:'bkk-old',kind:'museum',name:'Bangkok National Museum',price:1,address:'4 Na Phra That Road, Phra Nakhon, Bangkok',desc:'Большая коллекция тайского искусства и артефактов.'},
-{id:'rattanakosin',area:'bkk-old',kind:'museum',name:'Rattanakosin Exhibition Hall',price:1,address:'100 Ratchadamnoen Klang Avenue, Bangkok',desc:'Мультимедийный музей об истории Бангкока.'},
-{id:'khaosan',area:'bkk-old',kind:'nightmarket',name:'Khao San Road',price:1,address:'Khao San Road, Talat Yot, Phra Nakhon, Bangkok',desc:'Улица с едой, барами и музыкой. Вечером многолюдно.'},
-{id:'pakkhlong',area:'bkk-old',kind:'shopping',name:'Pak Khlong Talat',price:1,address:'Chakkraphatdi Phong Road, Wang Burapha Phirom, Bangkok',desc:'Крупнейший цветочный рынок города. Красиво ранним утром.'},
-{id:'thamaharaj',area:'bkk-old',kind:'shopping',name:'Tha Maharaj',price:2,address:'1/11 Trok Mahathat, Maha Rat Road, Bangkok',desc:'Прибрежный комплекс с кафе, магазинами и видом на Wat Arun.'},
-{id:'onlok',area:'bkk-old',kind:'breakfast',name:'On Lok Yun',price:1,address:'72 Charoen Krung Road, Phra Nakhon, Bangkok',desc:'Историческая тайско-китайская кофейня: тосты, яйца всмятку, старомодный завтрак.'},
-{id:'snooze',area:'bkk-old',kind:'breakfast',name:'Snooze Coffee House',price:2,address:'170/4 Samsen Road, Phra Nakhon, Bangkok',desc:'Уютное кафе недалеко от Khao San: панкейки, вафли, яйца, тосты и кофе.'},
-{id:'islandbkk',area:'bkk-old',kind:'dinner',name:'The Island Bangkok',price:2,address:'49 Samsen 4 Alley, Phra Nakhon, Bangkok',desc:'Тайская кухня, коктейли и тропическая атмосфера рядом с Khao San.'},
-{id:'rongros',area:'bkk-old',kind:'dinner',name:'RONGROS',price:2,address:'392/16 Maha Rat Road, Phra Nakhon, Bangkok',desc:'Тайская кухня и вид на Wat Arun через реку. Бронировать заранее.'},
-{id:'nusara',area:'bkk-old',kind:'dinner',name:'Nusara',price:4,address:'336 Maha Rat Road, Phra Nakhon, Bangkok',desc:'Современная тайская кухня и камерный rooftop с видом на Wat Pho.'},
-{id:'thipsamai',area:'bkk-old',kind:'dinner',name:'Thipsamai Pad Thai',price:1,address:'313–315 Maha Chai Road, Samran Rat, Phra Nakhon, Bangkok',desc:'Историческая пад-тай с креветками и яйцом.'},
-{id:'jokprince',area:'bkk-old',kind:'breakfast',name:'Jok Prince',price:1,address:'1391 Charoen Krung Soi 44, Bang Rak, Bangkok',desc:'Знаменитый рисовый суп-конджи с имбирём и яйцом.'},
-{id:'watwelu',area:'bkk-old',kind:'temple',love:true,name:'Wat Weluwanaram',price:0,address:'449 Thanon Wat Weru Wanaram, Don Mueang, Bangkok',desc:'❤️ Любимое место Анны. Храм с необычной архитектурой и атмосферой.'},
-{id:'sumeru',area:'bkk-old',kind:'temple',love:true,name:'Sumeru Mountain (Ancient City)',price:2,address:'GJXH+X8Q, Phraeksa, Mueang Samut Prakan',desc:'❤️ Любимое место Анны. Гора Сумеру в Ancient City.'},
-{id:'watsamphran',area:'bkk-old',kind:'temple',love:true,name:'Wat Sam Phran',price:0,address:'92 Sam Phran, Nakhon Pathom 73110',desc:'❤️ Любимое место Анны. Храм с гигантским драконом вокруг башни.'},
-{id:'erawanmuseum',area:'bkk-old',kind:'museum',love:true,name:'The Erawan Museum',price:2,address:'99/9 Moo 1, Bang Mueang Mai, Samut Prakan',desc:'❤️ Любимое место Анны. Музей с гигантской трёхголовой слоновой статуей.'},
-{id:'rajadamnern',area:'bkk-old',kind:'entertainment',love:true,name:'Rajadamnern Stadium',price:3,address:'8 Rajadamnern Nok Road, Bangkok',desc:'❤️ Любимое место Анны. Стадион тайского бокса — вечерние бои.'}
+{id:'grandpalace',area:'bkk-old',kind:'temple',name:'Grand Palace & Wat Phra Kaew',price:3,address:'Na Phra Lan Road, Phra Nakhon, Bangkok',desc:'Королевский дворец и Храм Изумрудного Будды. Приходите к открытию, строгий дресс-код.',lat:13.7500,lng:100.4915},
+{id:'watpho',area:'bkk-old',kind:'temple',name:'Wat Pho',price:2,address:'2 Sanam Chai Road, Phra Nakhon, Bangkok',desc:'Храм Лежащего Будды и традиционная тайская архитектура.',lat:13.7465,lng:100.4927},
+{id:'watarun',area:'bkk-old',kind:'temple',name:'Wat Arun (Храм Рассвета)',price:2,address:'158 Wang Doem Road, Bangkok Yai, Bangkok',desc:'Башня-пранг с керамической отделкой. Красиво на закате с противоположного берега.',lat:13.7437,lng:100.4889},
+{id:'watsaket',area:'bkk-old',kind:'temple',name:'Wat Saket · Golden Mount',price:1,address:'344 Chakkraphatdiphong Road, Pom Prap, Bangkok',desc:'Золотая гора и панорама старого города.',lat:13.7539,lng:100.5083},
+{id:'watsuthat',area:'bkk-old',kind:'temple',name:'Wat Suthat & Giant Swing',price:1,address:'146 Bamrung Mueang Road, Phra Nakhon, Bangkok',desc:'Классический храм с гигантскими качелями перед входом.',lat:13.7500,lng:100.5010},
+{id:'lohaprasat',area:'bkk-old',kind:'temple',name:'Loha Prasat',price:1,address:'2 Maha Chai Road, Phra Nakhon, Bangkok',desc:'Металлическая многоярусная пагода с каменной резьбой.',lat:13.7530,lng:100.5040},
+{id:'museumsiam',area:'bkk-old',kind:'museum',name:'Museum Siam',price:1,address:'4 Sanam Chai Road, Phra Nakhon, Bangkok',desc:'Современный музей истории Таиланда с интерактивными экспонатами.',lat:13.7440,lng:100.4940},
+{id:'nationalmuseum',area:'bkk-old',kind:'museum',name:'Bangkok National Museum',price:1,address:'4 Na Phra That Road, Phra Nakhon, Bangkok',desc:'Большая коллекция тайского искусства и артефактов.',lat:13.7570,lng:100.4920},
+{id:'rattanakosin',area:'bkk-old',kind:'museum',name:'Rattanakosin Exhibition Hall',price:1,address:'100 Ratchadamnoen Klang Avenue, Bangkok',desc:'Мультимедийный музей об истории Бангкока.',lat:13.7560,lng:100.5040},
+{id:'khaosan',area:'bkk-old',kind:'nightmarket',name:'Khao San Road',price:1,address:'Khao San Road, Talat Yot, Phra Nakhon, Bangkok',desc:'Улица с едой, барами и музыкой. Вечером многолюдно.',lat:13.7590,lng:100.4970},
+{id:'pakkhlong',area:'bkk-old',kind:'shopping',name:'Pak Khlong Talat',price:1,address:'Chakkraphatdi Phong Road, Wang Burapha Phirom, Bangkok',desc:'Крупнейший цветочный рынок города. Красиво ранним утром.',lat:13.7400,lng:100.4960},
+{id:'thamaharaj',area:'bkk-old',kind:'shopping',name:'Tha Maharaj',price:2,address:'1/11 Trok Mahathat, Maha Rat Road, Bangkok',desc:'Прибрежный комплекс с кафе, магазинами и видом на Wat Arun.',lat:13.7550,lng:100.4870},
+{id:'onlok',area:'bkk-old',kind:'breakfast',name:'On Lok Yun',price:1,address:'72 Charoen Krung Road, Phra Nakhon, Bangkok',desc:'Историческая тайско-китайская кофейня.',lat:13.7480,lng:100.5030},
+{id:'snooze',area:'bkk-old',kind:'breakfast',name:'Snooze Coffee House',price:2,address:'170/4 Samsen Road, Phra Nakhon, Bangkok',desc:'Уютное кафе недалеко от Khao San.',lat:13.7610,lng:100.5000},
+{id:'islandbkk',area:'bkk-old',kind:'dinner',name:'The Island Bangkok',price:2,address:'49 Samsen 4 Alley, Phra Nakhon, Bangkok',desc:'Тайская кухня, коктейли и тропическая атмосфера рядом с Khao San.',lat:13.7600,lng:100.4990},
+{id:'rongros',area:'bkk-old',kind:'dinner',name:'RONGROS',price:2,address:'392/16 Maha Rat Road, Phra Nakhon, Bangkok',desc:'Тайская кухня и вид на Wat Arun через реку.',lat:13.7460,lng:100.4890},
+{id:'nusara',area:'bkk-old',kind:'dinner',name:'Nusara',price:4,address:'336 Maha Rat Road, Phra Nakhon, Bangkok',desc:'Современная тайская кухня и камерный rooftop.',lat:13.7450,lng:100.4900},
+{id:'thipsamai',area:'bkk-old',kind:'dinner',name:'Thipsamai Pad Thai',price:1,address:'313–315 Maha Chai Road, Bangkok',desc:'Историческая пад-тай с креветками и яйцом.',lat:13.7510,lng:100.5040},
+{id:'jokprince',area:'bkk-old',kind:'breakfast',name:'Jok Prince',price:1,address:'1391 Charoen Krung Soi 44, Bang Rak, Bangkok',desc:'Знаменитый рисовый суп-конджи.',lat:13.7230,lng:100.5140},
+{id:'watwelu',area:'bkk-old',kind:'temple',love:true,name:'Wat Weluwanaram',price:0,address:'449 Thanon Wat Weru Wanaram, Don Mueang, Bangkok',desc:'❤️ Любимое место Анны. Храм с необычной архитектурой.',lat:13.9150,lng:100.5900},
+{id:'sumeru',area:'bkk-old',kind:'temple',love:true,name:'Sumeru Mountain (Ancient City)',price:2,address:'Phraeksa, Mueang Samut Prakan',desc:'❤️ Любимое место Анны. Гора Сумеру в Ancient City.',lat:13.5400,lng:100.6200},
+{id:'watsamphran',area:'bkk-old',kind:'temple',love:true,name:'Wat Sam Phran',price:0,address:'92 Sam Phran, Nakhon Pathom 73110',desc:'❤️ Любимое место Анны. Храм с гигантским драконом.',lat:13.7230,lng:100.2150},
+{id:'erawanmuseum',area:'bkk-old',kind:'museum',love:true,name:'The Erawan Museum',price:2,address:'99/9 Moo 1, Bang Mueang Mai, Samut Prakan',desc:'❤️ Любимое место Анны. Музей со слоном.',lat:13.5780,lng:100.5980},
+{id:'rajadamnern',area:'bkk-old',kind:'entertainment',love:true,name:'Rajadamnern Stadium',price:3,address:'8 Rajadamnern Nok Road, Bangkok',desc:'❤️ Любимое место Анны. Стадион тайского бокса.',lat:13.7580,lng:100.5080}
 );
-
-/* ===== БАНГКОК · ЧАЙНАТАУН ===== */
 P.push(
-{id:'bright',area:'bkk-china',kind:'breakfast',name:'Bright Side Brunch Bar',price:2,address:'I’m Chinatown Mall, 531 Charoen Krung Road, Bangkok',desc:'Большие завтраки, вафли, сэндвичи и кофе прямо в Chinatown.'},
-{id:'imgood',area:'bkk-china',kind:'cafe',name:'Imgoodbkk · Specialty Coffee',price:1,address:'15 Thanon Phat Sai, Samphanthawong, Bangkok',desc:'Небольшая specialty-точка с сильным эспрессо и фильтром.'},
-{id:'motherroaster',area:'bkk-china',kind:'cafe',name:'Mother Roaster · Talat Noi',price:2,address:'Talat Noi, Charoen Krung, Bangkok',desc:'Знаковая кофейня в старом квартале Talat Noi, известная фильтр-кофе.'},
-{id:'hongsieng',area:'bkk-china',kind:'cafe',name:'Hong Sieng Kong',price:2,address:'734, 736 Soi Wanit 2, Talat Noi, Bangkok',desc:'Кафе в старом китайском особняке у реки, артефакты и кофе.'},
-{id:'wallflowers',area:'bkk-china',kind:'cafe',name:'Wallflowers Cafe',price:2,address:'31–33 Soi Nana, Pom Prap, Bangkok',desc:'Атмосферная кофейня с растениями и десертами в старом доме.'},
-{id:'lacabra',area:'bkk-china',kind:'cafe',name:'La Cabra Bangkok',price:2,address:'Talat Noi, Bangkok',desc:'Скандинавская обжарка, фильтр и сезонные напитки.'},
-{id:'chata',area:'bkk-china',kind:'cafe',name:'Chata Specialty Coffee',price:2,address:'Talat Noi, Bangkok',desc:'Небольшая specialty-кофейня с авторскими напитками.'},
-{id:'tkseafood',area:'bkk-china',kind:'dinner',name:'T&K Seafood',price:2,address:'49–51 Phadung Dao Road, Samphanthawong, Bangkok',desc:'Легендарная шумная морская еда на Yaowarat: гриль, креветки, кальмары и краб.'},
-{id:'naiek',area:'bkk-china',kind:'dinner',name:'Nai Ek Roll Noodle',price:1,address:'442 Soi Yaowarat 9, Samphanthawong, Bangkok',desc:'Рулеты из рисовой лапши и суп с перцем — местная классика.'},
-{id:'kuayjab',area:'bkk-china',kind:'dinner',name:'Kuay Jab Mr Joe',price:1,address:'313 Yaowarat Road, Samphanthawong, Bangkok',desc:'Суп с рулетиками из рисовой лапши и хрустящей свининой.'},
-{id:'jehochula',area:'bkk-china',kind:'dinner',name:'Jeh O Chula',price:2,address:'113 Soi Charat Mueang, Wang Mai, Pathum Wan, Bangkok',desc:'Знаменитая том-ям с лапшой и крабом. Очередь — бронируйте заранее.'},
-{id:'talatnoi',area:'bkk-china',kind:'photo',name:'Talat Noi & Song Wat walk',price:0,address:'Talat Noi / Song Wat Road, Bangkok',desc:'Старые шопхаусы, граффити, мастерские и маленькие галереи.'},
-{id:'holyrosary',area:'bkk-china',kind:'temple',name:'Holy Rosary Church',price:0,address:'1318 Soi Wanit 2, Talat Noi, Bangkok',desc:'Неоготическая церковь на берегу реки среди китайских кварталов.'},
-{id:'chowsuekong',area:'bkk-china',kind:'temple',name:'Chow Sue Kong Shrine',price:0,address:'Talat Noi, Bangkok',desc:'Старое китайское святилище с резьбой и благовониями.'},
-{id:'sampeng',area:'bkk-china',kind:'shopping',name:'Sampeng Market',price:0,address:'Sampeng Lane, Samphanthawong, Bangkok',desc:'Узкий рынок с тканями, игрушками, аксессуарами и снеками.'},
-{id:'yaowarat',area:'bkk-china',kind:'nightmarket',name:'Yaowarat Road',price:0,address:'Yaowarat Road, Samphanthawong, Bangkok',desc:'Главный ночной стритфуд-квартал Чайнатауна.'}
+{id:'bright',area:'bkk-china',kind:'breakfast',name:'Bright Side Brunch Bar',price:2,address:'Chinatown Mall, 531 Charoen Krung Road, Bangkok',desc:'Большие завтраки, вафли, сэндвичи.',lat:13.7409,lng:100.5090},
+{id:'motherroaster',area:'bkk-china',kind:'cafe',name:'Mother Roaster',price:2,address:'Talat Noi, Bangkok',desc:'Знаковая кофейня в Talat Noi.',lat:13.7370,lng:100.5120},
+{id:'hongsieng',area:'bkk-china',kind:'cafe',name:'Hong Sieng Kong',price:2,address:'Soi Wanit 2, Talat Noi, Bangkok',desc:'Кафе в старом особняке у реки.',lat:13.7360,lng:100.5130},
+{id:'wallflowers',area:'bkk-china',kind:'cafe',name:'Wallflowers Cafe',price:2,address:'Soi Nana, Pom Prap, Bangkok',desc:'Атмосферная кофейня.',lat:13.7420,lng:100.5140},
+{id:'tkseafood',area:'bkk-china',kind:'dinner',name:'T&K Seafood',price:2,address:'Phadung Dao Road, Bangkok',desc:'Легендарная шумная морская еда.',lat:13.7400,lng:100.5090},
+{id:'naiek',area:'bkk-china',kind:'dinner',name:'Nai Ek Roll Noodle',price:1,address:'Soi Yaowarat 9, Bangkok',desc:'Рулеты из рисовой лапши.',lat:13.7400,lng:100.5090},
+{id:'kuayjab',area:'bkk-china',kind:'dinner',name:'Kuay Jab Mr Joe',price:1,address:'313 Yaowarat Road, Bangkok',desc:'Суп с рулетиками и хрустящей свининой.',lat:13.7400,lng:100.5090},
+{id:'jehochula',area:'bkk-china',kind:'dinner',name:'Jeh O Chula',price:2,address:'Soi Charat Mueang, Bangkok',desc:'Знаменитая том-ям с лапшой.',lat:13.7390,lng:100.5230},
+{id:'talatnoi',area:'bkk-china',kind:'photo',name:'Talat Noi walk',price:0,address:'Talat Noi, Bangkok',desc:'Старые шопхаусы, граффити.',lat:13.7370,lng:100.5120},
+{id:'holyrosary',area:'bkk-china',kind:'temple',name:'Holy Rosary Church',price:0,address:'Soi Wanit 2, Talat Noi, Bangkok',desc:'Неоготическая церковь.',lat:13.7360,lng:100.5130},
+{id:'chowsuekong',area:'bkk-china',kind:'temple',name:'Chow Sue Kong Shrine',price:0,address:'Talat Noi, Bangkok',desc:'Старое китайское святилище.',lat:13.7370,lng:100.5120},
+{id:'sampeng',area:'bkk-china',kind:'shopping',name:'Sampeng Market',price:0,address:'Sampeng Lane, Bangkok',desc:'Узкий рынок.',lat:13.7420,lng:100.5060},
+{id:'yaowarat',area:'bkk-china',kind:'nightmarket',name:'Yaowarat Road',price:0,address:'Yaowarat Road, Bangkok',desc:'Главный ночной стритфуд-квартал.',lat:13.7409,lng:100.5090}
 );
-
-/* ===== БАНГКОК · СИЛОМ ===== */
 P.push(
-{id:'luka',area:'bkk-silom',kind:'breakfast',name:'Luka Cafe',price:2,address:'Pan Road, Silom, Bang Rak, Bangkok',desc:'Популярный бранч в отреставрированном шопхаусе: яйца, шакшука, сэндвичи.'},
-{id:'gattta',area:'bkk-silom',kind:'cafe',name:'GATTA CAfe · Park Silom',price:2,address:'Park Silom, Silom Road, Bang Rak, Bangkok',desc:'Specialty coffee, эспрессо и авторские напитки.'},
-{id:'baansomtum',area:'bkk-silom',kind:'dinner',name:'Baan Somtum Sathorn',price:2,address:'9/1 Thanon Si Wiang, Bang Rak, Bangkok',desc:'Isan-кухня и десятки вариантов сом-там. Просите mai pet.'},
-{id:'somboon',area:'bkk-silom',kind:'dinner',name:'Somboon Seafood · Surawong',price:3,address:'169/7–12 Surawong Road, Bang Rak, Bangkok',desc:'Известен крабом с карри-порошком и морепродуктами.'},
-{id:'blueelephant',area:'bkk-silom',kind:'dinner',name:'Blue Elephant Bangkok',price:4,address:'233 S Sathorn Road, Yan Nawa, Bangkok',desc:'Тайская королевская кухня в исторической вилле.'},
-{id:'ledu',area:'bkk-silom',kind:'dinner',name:'Le Du',price:4,address:'399/3 Silom Soi 7, Bang Rak, Bangkok',desc:'Современная тайская fine dining кухня. Бронировать заранее.'},
-{id:'supanniga',area:'bkk-silom',kind:'dinner',name:'Supanniga Eating Room Tha Tien',price:3,address:'392/14 Soi Somdet Phra Pin Klao 6, Bangkok',desc:'Тайская домашняя кухня с видом на Wat Arun.'},
-{id:'baryard',area:'bkk-silom',kind:'rooftop',name:'Bar.Yard',price:3,address:'Kimpton Maa-Lai Bangkok, 78 Soi Ton Son, Bangkok',desc:'Rooftop с видом на парк и город, коктейли и лёгкая еда.'},
-{id:'speakeasy',area:'bkk-silom',kind:'rooftop',name:'The Speakeasy Rooftop Bar',price:4,address:'Hotel Muse, 55/555 Lang Suan Road, Bangkok',desc:'Rooftop в стиле 1920-х, коктейли и вид на город.'},
-{id:'lumpini',area:'bkk-silom',kind:'park',love:true,name:'Lumphini Park',price:0,address:'192 Wireless Road, Lumphini, Pathum Wan, Bangkok',desc:'❤️ Любимое место Анны. Озеро, дорожки, большие деревья и вараны.'},
-{id:'mahanakhon',area:'bkk-silom',kind:'viewpoint',love:true,name:'MahaNakhon SkyWalk',price:3,address:'114 Narathiwas Road, Silom, Bang Rak, Bangkok',desc:'❤️ Любимое место Анны. Смотровая площадка на 314 м с видом на Бангкок.'},
-{id:'iconsiam',area:'bkk-silom',kind:'shopping',love:true,name:'ICONSIAM',price:0,address:'299 Charoen Nakhon Road, Khlong San, Bangkok',desc:'❤️ Любимое место Анны. Роскошный торговый центр на берегу реки.'},
-{id:'silomcomplex',area:'bkk-silom',kind:'shopping',love:true,name:'Silom Complex',price:0,address:'191 Silom Road, Bang Rak, Bangkok',desc:'❤️ Любимое место Анны. Торговый центр в центре Silom.'},
-{id:'erawanshrine',area:'bkk-silom',kind:'temple',name:'Erawan Shrine',price:0,address:'494 Ratchadamri Road, Lumphini, Bangkok',desc:'Популярное святилище с статуей Ганеши у CentralWorld.'},
-{id:'srimaha',area:'bkk-silom',kind:'temple',name:'Sri Maha Mariamman Temple',price:0,address:'Silom Road, Suriyawong, Bang Rak, Bangkok',desc:'Индуистский храм с яркой архитектурой на Силоме.'},
-{id:'poolbkk',area:'bkk-silom',kind:'pool',name:'Let’s Relax Onsen & Spa',price:3,address:'Siam Square, Bangkok',desc:'Онсэн и спа — водные процедуры в центре.'}
+{id:'luka',area:'bkk-silom',kind:'breakfast',name:'Luka Cafe',price:2,address:'Pan Road, Bang Rak, Bangkok',desc:'Популярный бранч.',lat:13.7250,lng:100.5250},
+{id:'baansomtum',area:'bkk-silom',kind:'dinner',name:'Baan Somtum Sathorn',price:2,address:'Thanon Si Wiang, Bang Rak, Bangkok',desc:'Isan-кухня и сом-там.',lat:13.7220,lng:100.5230},
+{id:'somboon',area:'bkk-silom',kind:'dinner',name:'Somboon Seafood',price:3,address:'Surawong Road, Bangkok',desc:'Краб с карри-порошком.',lat:13.7290,lng:100.5290},
+{id:'ledu',area:'bkk-silom',kind:'dinner',name:'Le Du',price:4,address:'Silom Soi 7, Bangkok',desc:'Современная тайская fine dining.',lat:13.7280,lng:100.5270},
+{id:'baryard',area:'bkk-silom',kind:'rooftop',name:'Bar.Yard',price:3,address:'Kimpton Maa-Lai, Bangkok',desc:'Rooftop с видом на парк.',lat:13.7390,lng:100.5450},
+{id:'speakeasy',area:'bkk-silom',kind:'rooftop',name:'The Speakeasy Rooftop Bar',price:4,address:'Hotel Muse, Bangkok',desc:'Rooftop в стиле 1920-х.',lat:13.7400,lng:100.5440},
+{id:'lumpini',area:'bkk-silom',kind:'park',love:true,name:'Lumphini Park',price:0,address:'Wireless Road, Bangkok',desc:'❤️ Любимое место Анны. Озеро, деревья, вараны.',lat:13.73459,lng:100.54713},
+{id:'mahanakhon',area:'bkk-silom',kind:'viewpoint',love:true,name:'MahaNakhon SkyWalk',price:3,address:'Narathiwas Road, Bangkok',desc:'❤️ Любимое место Анны. Смотровая на 314 м.',lat:13.7230,lng:100.5280},
+{id:'iconsiam',area:'bkk-silom',kind:'shopping',love:true,name:'ICONSIAM',price:0,address:'Charoen Nakhon Road, Bangkok',desc:'❤️ Любимое место Анны. ТЦ у реки.',lat:13.7260,lng:100.5100},
+{id:'silomcomplex',area:'bkk-silom',kind:'shopping',love:true,name:'Silom Complex',price:0,address:'Silom Road, Bangkok',desc:'❤️ Любимое место Анны.',lat:13.7290,lng:100.5340},
+{id:'erawanshrine',area:'bkk-silom',kind:'temple',name:'Erawan Shrine',price:0,address:'Ratchadamri Road, Bangkok',desc:'Популярное святилище.',lat:13.7440,lng:100.5400},
+{id:'srimaha',area:'bkk-silom',kind:'temple',name:'Sri Maha Mariamman Temple',price:0,address:'Silom Road, Bangkok',desc:'Индуистский храм.',lat:13.7280,lng:100.5230}
 );
-
-/* ===== БАНГКОК · СУКХУМВИТ ===== */
 P.push(
-{id:'breakfaststory',area:'bkk-sukhumvit',kind:'breakfast',name:'Breakfast Story · Phrom Phong',price:2,address:'593/27 Sukhumvit Road, Watthana, Bangkok',desc:'Американско-канадский завтрак: панкейки, яйца, French toast и большие порции.'},
-{id:'factory',area:'bkk-sukhumvit',kind:'cafe',name:'Factory Coffee',price:2,address:'35/18 Phaya Thai Road, Phaya Thai, Bangkok',desc:'Один из лучших specialty coffee баров Бангкока.'},
-{id:'roastcommons',area:'bkk-sukhumvit',kind:'cafe',name:'Roast · The Commons',price:2,address:'The Commons Thonglor, 335 Soi Thonglor 17, Bangkok',desc:'Популярная кофейня и бранч в The Commons.'},
-{id:'roots',area:'bkk-sukhumvit',kind:'cafe',name:'Roots · The Commons',price:2,address:'The Commons Thonglor, 335 Soi Thonglor 17, Bangkok',desc:'Локальная обжарка, отличные фильтры.'},
-{id:'tobys',area:'bkk-sukhumvit',kind:'breakfast',name:"Toby's",price:2,address:'Sukhumvit Soi 38, Phra Khanong, Bangkok',desc:'Австралийский бранч-стиль, яйца бенедикт и specialty coffee.'},
-{id:'casalapin',area:'bkk-sukhumvit',kind:'cafe',name:'Casa Lapin',price:2,address:'Soi Sukhumvit 49, Khlong Tan Nuea, Bangkok',desc:'Уютная сеть кофеен с хорошим кофе и завтраками.'},
-{id:'karo',area:'bkk-sukhumvit',kind:'cafe',name:'Karo Coffee Roasters',price:2,address:'Sukhumvit Road, Bangkok',desc:'Локальные обжарки и фильтр-кофе.'},
-{id:'hiccup',area:'bkk-sukhumvit',kind:'cafe',name:'Hiccup · Local Specialty Coffee',price:1,address:'2888 Rama IV Road, Khlong Toei, Bangkok',desc:'Небольшой specialty-бар: эспрессо и фильтр по адекватной цене.'},
-{id:'baansomtumsuk',area:'bkk-sukhumvit',kind:'dinner',name:'Baan Somtum Sukhumvit',price:2,address:'15 Soi Suk Chai, Khlong Toei, Bangkok',desc:'Тайская и Isan-кухня, сом-там и блюда на компанию.'},
-{id:'suhring',area:'bkk-sukhumvit',kind:'dinner',name:'Sühring',price:4,address:'10 Yen Akat Soi 3, Chong Nonsi, Bangkok',desc:'Современная немецкая fine dining кухня, два звёздных шефа.'},
-{id:'gaa',area:'bkk-sukhumvit',kind:'dinner',name:'Gaa',price:4,address:'68/4 Soi Langsuan, Lumphini, Bangkok',desc:'Современная индийская кухня, дегустационное меню.'},
-{id:'charmgang',area:'bkk-sukhumvit',kind:'dinner',name:'Charmgang',price:3,address:'Sukhumvit Road, Bangkok',desc:'Современная тайская кухня от команды Err.'},
-{id:'benjakitti',area:'bkk-sukhumvit',kind:'park',love:true,name:'Benjakitti Forest Park',price:0,address:'Ratchadaphisek Road, Khlong Toei, Bangkok',desc:'❤️ Любимое место Анны. Современный парк с деревянными дорожками над водно-болотными участками.'},
-{id:'suanluang',area:'bkk-sukhumvit',kind:'park',love:true,name:'Suan Luang Rama IX',price:0,address:'Chaloem Phra Kiat Rama 9 Road, Prawet, Bangkok',desc:'❤️ Любимое место Анны. Огромный парк с ботаническим садом.'},
-{id:'safari',area:'bkk-sukhumvit',kind:'animals',love:true,name:'Safari World',price:3,address:'99 Panya Indra Rd, Sam Wa Tawan Tok, Bangkok',desc:'❤️ Любимое место Анны. Открытый зоопарк и морской парк.'},
-{id:'emquartier',area:'bkk-sukhumvit',kind:'shopping',name:'EmQuartier',price:0,address:'637 Sukhumvit Road, Watthana, Bangkok',desc:'Торговый центр с садом на крыше и фудкортом.'},
-{id:'emsphere',area:'bkk-sukhumvit',kind:'shopping',name:'Emsphere',price:0,address:'628 Sukhumvit Road, Khlong Tan, Bangkok',desc:'Новый большой молл с арт-пространствами и ресторанами.'},
-{id:'benjasiri',area:'bkk-sukhumvit',kind:'park',name:'Benjasiri Park',price:0,address:'Sukhumvit Road, Khlong Tan, Bangkok',desc:'Небольшой парк с озером и скульптурами рядом с Emporium.'},
-{id:'poolmarriott',area:'bkk-sukhumvit',kind:'pool',name:'Marriott Marquis Pool Bar',price:3,address:'199 Sukhumvit Soi 22, Bangkok',desc:'Бассейн и бар на крыше отеля.'}
+{id:'breakfaststory',area:'bkk-sukhumvit',kind:'breakfast',name:'Breakfast Story',price:2,address:'Sukhumvit Road, Bangkok',desc:'Американско-канадский завтрак.',lat:13.7300,lng:100.5690},
+{id:'factory',area:'bkk-sukhumvit',kind:'cafe',name:'Factory Coffee',price:2,address:'Phaya Thai Road, Bangkok',desc:'Один из лучших specialty баров.',lat:13.7500,lng:100.5400},
+{id:'roastcommons',area:'bkk-sukhumvit',kind:'cafe',name:'Roast · The Commons',price:2,address:'Thonglor 17, Bangkok',desc:'Популярная кофейня и бранч.',lat:13.7300,lng:100.5800},
+{id:'roots',area:'bkk-sukhumvit',kind:'cafe',name:'Roots',price:2,address:'The Commons Thonglor, Bangkok',desc:'Локальная обжарка.',lat:13.7300,lng:100.5800},
+{id:'tobys',area:'bkk-sukhumvit',kind:'breakfast',name:"Toby's",price:2,address:'Sukhumvit Soi 38, Bangkok',desc:'Австралийский бранч.',lat:13.7200,lng:100.5700},
+{id:'casalapin',area:'bkk-sukhumvit',kind:'cafe',name:'Casa Lapin',price:2,address:'Sukhumvit Soi 49, Bangkok',desc:'Уютная сеть кофеен.',lat:13.7300,lng:100.5750},
+{id:'baansomtumsuk',area:'bkk-sukhumvit',kind:'dinner',name:'Baan Somtum',price:2,address:'Soi Suk Chai, Bangkok',desc:'Isan-кухня.',lat:13.7200,lng:100.5650},
+{id:'suhring',area:'bkk-sukhumvit',kind:'dinner',name:'Sühring',price:4,address:'Yen Akat Soi 3, Bangkok',desc:'Немецкая fine dining.',lat:13.7150,lng:100.5400},
+{id:'benjakitti',area:'bkk-sukhumvit',kind:'park',love:true,name:'Benjakitti Forest Park',price:0,address:'Ratchadaphisek Road, Bangkok',desc:'❤️ Любимое место Анны. Парк с деревянными дорожками.',lat:13.7300,lng:100.5550},
+{id:'suanluang',area:'bkk-sukhumvit',kind:'park',love:true,name:'Suan Luang Rama IX',price:0,address:'Chaloem Phra Kiat Rama 9, Bangkok',desc:'❤️ Любимое место Анны. Огромный парк.',lat:13.6900,lng:100.6600},
+{id:'safari',area:'bkk-sukhumvit',kind:'animals',love:true,name:'Safari World',price:3,address:'Panya Indra Rd, Bangkok',desc:'❤️ Любимое место Анны. Открытый зоопарк.',lat:13.8600,lng:100.6800},
+{id:'emquartier',area:'bkk-sukhumvit',kind:'shopping',name:'EmQuartier',price:0,address:'Sukhumvit Road, Bangkok',desc:'ТЦ с садом на крыше.',lat:13.73113,lng:100.56967},
+{id:'emsphere',area:'bkk-sukhumvit',kind:'shopping',name:'Emsphere',price:0,address:'Sukhumvit Road, Bangkok',desc:'Новый большой молл.',lat:13.7300,lng:100.5700},
+{id:'benjasiri',area:'bkk-sukhumvit',kind:'park',name:'Benjasiri Park',price:0,address:'Sukhumvit Road, Bangkok',desc:'Небольшой парк у Emporium.',lat:13.7300,lng:100.5680}
 );
-
-/* ===== БАНГКОК · СИАМ ===== */
 P.push(
-{id:'craft',area:'bkk-siam',kind:'breakfast',name:'CRAFT · Kimpton Maa-Lai',price:3,address:'Kimpton Maa-Lai Bangkok, 78 Soi Ton Son, Lumphini, Pathum Wan',desc:'Зелёная терраса, specialty coffee, avocado toast и шакшука.'},
-{id:'gallerydrip',area:'bkk-siam',kind:'cafe',name:'Gallery Drip Coffee',price:1,address:'Bangkok Art and Culture Centre, Pathum Wan, Bangkok',desc:'Кофейня с фильтр-кофе внутри BACC.'},
-{id:'afteryou',area:'bkk-siam',kind:'cafe',name:'After You Dessert Cafe',price:1,address:'Siam Square Soi 7, Pathum Wan, Bangkok',desc:'Знаменитый kakigori, тосты и десерты.'},
-{id:'somtamnua',area:'bkk-siam',kind:'dinner',name:'Som Tam Nua',price:1,address:'392/14 Siam Square Soi 5, Pathum Wan, Bangkok',desc:'Isan-кухня, сом-там и куриные крылышки.'},
-{id:'kubkao',area:'bkk-siam',kind:'dinner',name:'Kub Kao Kub Pla',price:2,address:'Siam Paragon, Bangkok',desc:'Сеть тайской домашней кухни — карри, салаты и супы.'},
-{id:'goang',area:'bkk-siam',kind:'dinner',name:'Go-Ang Pratunam Chicken Rice',price:1,address:'960–962 Phetchaburi Road, Ratchathewi, Bangkok',desc:'Куриный рис по-хайнаньски — простой и легендарный.'},
-{id:'srabua',area:'bkk-siam',kind:'dinner',name:'Sra Bua by Kiin Kiin',price:4,address:'Siam Kempinski Hotel, 991/9 Rama I Road, Pathum Wan, Bangkok',desc:'Современная тайская fine dining кухня.'},
-{id:'bacc',area:'bkk-siam',kind:'museum',name:'Bangkok Art & Culture Centre',price:0,address:'939 Rama I Road, Wang Mai, Pathum Wan, Bangkok',desc:'Выставки, дизайн, фотография, книжные и небольшие кафе.'},
-{id:'jimthompson',area:'bkk-siam',kind:'museum',name:'Jim Thompson House',price:2,address:'6 Soi Kasemsan 2, Rama I Road, Bangkok',desc:'Дом-музей шёлкового предпринимателя с тайской архитектурой.'},
-{id:'sealife',area:'bkk-siam',kind:'animals',name:'SEA LIFE Bangkok Ocean World',price:3,address:'Siam Paragon, 991 Rama I Road, Bangkok',desc:'Большой океанариум в подземелье Siam Paragon.'},
-{id:'madame',area:'bkk-siam',kind:'entertainment',name:'Madame Tussauds Bangkok',price:3,address:'Siam Discovery 6th floor, 989 Rama I Road, Bangkok',desc:'Музей восковых фигур в Siam Discovery.'},
-{id:'siamparagon',area:'bkk-siam',kind:'shopping',name:'Siam Paragon',price:0,address:'991/1 Rama I Road, Pathum Wan, Bangkok',desc:'Один из крупнейших моллов города, океанариум и рестораны.'},
-{id:'mbk',area:'bkk-siam',kind:'shopping',name:'MBK Center',price:0,address:'444 Phaya Thai Road, Wang Mai, Pathum Wan, Bangkok',desc:'Бюджетный шопинг, электроника, сувениры и фудкорт.'},
-{id:'samyan',area:'bkk-siam',kind:'shopping',name:'Samyan Mitrtown',price:0,address:'944 Rama IV Road, Wang Mai, Pathum Wan, Bangkok',desc:'Современный молл с читальными зонами и кафе.'}
+{id:'craft',area:'bkk-siam',kind:'breakfast',name:'CRAFT · Kimpton',price:3,address:'Kimpton Maa-Lai, Bangkok',desc:'Зелёная терраса и бранч.',lat:13.7390,lng:100.5450},
+{id:'gallerydrip',area:'bkk-siam',kind:'cafe',name:'Gallery Drip Coffee',price:1,address:'BACC, Bangkok',desc:'Кофейня внутри BACC.',lat:13.7460,lng:100.5300},
+{id:'afteryou',area:'bkk-siam',kind:'cafe',name:'After You',price:1,address:'Siam Square Soi 7, Bangkok',desc:'kakigori и десерты.',lat:13.7440,lng:100.5330},
+{id:'somtamnua',area:'bkk-siam',kind:'dinner',name:'Som Tam Nua',price:1,address:'Siam Square Soi 5, Bangkok',desc:'Isan-кухня.',lat:13.7440,lng:100.5330},
+{id:'kubkao',area:'bkk-siam',kind:'dinner',name:'Kub Kao Kub Pla',price:2,address:'Siam Paragon, Bangkok',desc:'Тайская домашняя кухня.',lat:13.7460,lng:100.5350},
+{id:'goang',area:'bkk-siam',kind:'dinner',name:'Go-Ang Chicken Rice',price:1,address:'Phetchaburi Road, Bangkok',desc:'Куриный рис по-хайнаньски.',lat:13.7500,lng:100.5400},
+{id:'srabua',area:'bkk-siam',kind:'dinner',name:'Sra Bua',price:4,address:'Siam Kempinski, Bangkok',desc:'Современная тайская fine dining.',lat:13.7460,lng:100.5350},
+{id:'bacc',area:'bkk-siam',kind:'museum',name:'BACC',price:0,address:'Rama I Road, Bangkok',desc:'Выставки, дизайн, книжные.',lat:13.7460,lng:100.5300},
+{id:'jimthompson',area:'bkk-siam',kind:'museum',name:'Jim Thompson House',price:2,address:'Soi Kasemsan 2, Bangkok',desc:'Дом-музей шёлкового предпринимателя.',lat:13.7490,lng:100.5280},
+{id:'sealife',area:'bkk-siam',kind:'animals',name:'SEA LIFE',price:3,address:'Siam Paragon, Bangkok',desc:'Океанариум.',lat:13.7460,lng:100.5350},
+{id:'madame',area:'bkk-siam',kind:'entertainment',name:'Madame Tussauds',price:3,address:'Siam Discovery, Bangkok',desc:'Музей восковых фигур.',lat:13.7460,lng:100.5310},
+{id:'siamparagon',area:'bkk-siam',kind:'shopping',name:'Siam Paragon',price:0,address:'Rama I Road, Bangkok',desc:'Один из крупнейших моллов.',lat:13.7460,lng:100.5350},
+{id:'mbk',area:'bkk-siam',kind:'shopping',name:'MBK Center',price:0,address:'Phaya Thai Road, Bangkok',desc:'Бюджетный шопинг.',lat:13.7440,lng:100.5300},
+{id:'samyan',area:'bkk-siam',kind:'shopping',name:'Samyan Mitrtown',price:0,address:'Rama IV Road, Bangkok',desc:'Современный молл.',lat:13.7330,lng:100.5290}
 );
-
-/* ===== БАНГКОК · RIVERSIDE ===== */
 P.push(
-{id:'neverending',area:'bkk-riverside',kind:'dinner',name:'The Never Ending Summer',price:3,address:'41/5 Charoen Nakhon Road, Khlong San, Bangkok',desc:'Тайская кухня в индустриальном пространстве Jam Factory.'},
-{id:'baanrimnaam',area:'bkk-riverside',kind:'dinner',name:'Baan Rim Naam',price:3,address:'Thonburi riverside, Bangkok',desc:'Ресторан на берегу с видом на реку и мост.'},
-{id:'deckarun',area:'bkk-riverside',kind:'dinner',name:'The Deck by Arun Residence',price:3,address:'36–38 Soi Pratu Nok Yoong, Maha Rat Road, Bangkok',desc:'Rooftop с прямым видом на Wat Arun.'},
-{id:'jamfactory',area:'bkk-riverside',kind:'cafe',name:'The Jam Factory',price:2,address:'41/1–41/5 Charoen Nakhon Road, Khlong San, Bangkok',desc:'Творческое пространство с кафе, книжным и магазинами.'},
-{id:'asiatique',area:'bkk-riverside',kind:'nightmarket',name:'Asiatique The Riverfront',price:2,address:'2194 Charoen Krung Road, Wat Phraya Krai, Bang Kho Laem, Bangkok',desc:'Большой ночной рынок-набережная с колесом обозрения.'},
-{id:'watkalaya',area:'bkk-riverside',kind:'temple',name:'Wat Kalayanamit',price:0,address:'Soi Wat Kalaya, Thanon Thetsaban Sai 1, Bangkok',desc:'Крупный храм на западном берегу реки с большим Буддой.'},
-{id:'watpaknam',area:'bkk-riverside',kind:'temple',name:'Wat Paknam Phasi Charoen',price:0,address:'Soi Pak Nam, Phasi Charoen, Bangkok',desc:'Храм с гигантской статуей Будды и зелёной пагодой.'},
-{id:'royalbarges',area:'bkk-riverside',kind:'museum',name:'Royal Barges National Museum',price:1,address:'80/1 Arun Amarin Road, Bangkok Noi, Bangkok',desc:'Королевские лодки с резьбой и позолотой.'},
-{id:'wanglang',area:'bkk-riverside',kind:'shopping',name:'Wang Lang Market',price:1,address:'Wang Lang Road, Siriraj, Bangkok Noi, Bangkok',desc:'Оживлённый рынок у реки: еда, сладости, одежда.'},
-{id:'changchui',area:'bkk-riverside',kind:'photo',name:'Chang Chui Creative Park',price:1,address:'460/8 Sirindhorn Road, Bang Phlat, Bangkok',desc:'Креативный парк с самолётом, стрит-артом и кафе.'},
-{id:'kudichin',area:'bkk-riverside',kind:'photo',name:'Kudi Chin',price:0,address:'Kudi Chin, Thonburi, Bangkok',desc:'Старый португальский квартал с храмом Santa Cruz.'}
+{id:'neverending',area:'bkk-riverside',kind:'dinner',name:'The Never Ending Summer',price:3,address:'Charoen Nakhon Road, Bangkok',desc:'Тайская кухня в Jam Factory.',lat:13.7260,lng:100.5100},
+{id:'deckarun',area:'bkk-riverside',kind:'dinner',name:'The Deck by Arun',price:3,address:'Maha Rat Road, Bangkok',desc:'Rooftop с видом на Wat Arun.',lat:13.7450,lng:100.4890},
+{id:'jamfactory',area:'bkk-riverside',kind:'cafe',name:'The Jam Factory',price:2,address:'Charoen Nakhon Road, Bangkok',desc:'Творческое пространство.',lat:13.7260,lng:100.5100},
+{id:'asiatique',area:'bkk-riverside',kind:'nightmarket',name:'Asiatique The Riverfront',price:2,address:'Charoen Krung Road, Bangkok',desc:'Ночной рынок-набережная.',lat:13.7040,lng:100.5100},
+{id:'watkalaya',area:'bkk-riverside',kind:'temple',name:'Wat Kalayanamit',price:0,address:'Thanon Thetsaban Sai 1, Bangkok',desc:'Крупный храм на берегу.',lat:13.7400,lng:100.4900},
+{id:'watpaknam',area:'bkk-riverside',kind:'temple',name:'Wat Paknam',price:0,address:'Phasi Charoen, Bangkok',desc:'Храм с гигантским Буддой.',lat:13.7200,lng:100.4700},
+{id:'royalbarges',area:'bkk-riverside',kind:'museum',name:'Royal Barges Museum',price:1,address:'Arun Amarin Road, Bangkok',desc:'Королевские лодки.',lat:13.7620,lng:100.4880},
+{id:'wanglang',area:'bkk-riverside',kind:'shopping',name:'Wang Lang Market',price:1,address:'Wang Lang Road, Bangkok',desc:'Рынок у реки.',lat:13.7600,lng:100.4850},
+{id:'changchui',area:'bkk-riverside',kind:'photo',name:'Chang Chui',price:1,address:'Sirindhorn Road, Bangkok',desc:'Креативный парк с самолётом.',lat:13.7800,lng:100.5100}
 );
-
-/* ===== БАНГКОК · ARI ===== */
 P.push(
-{id:'nanaari',area:'bkk-ari',kind:'cafe',name:'Nana Coffee Roasters Ari',price:2,address:'Ari Soi 4, Phahon Yothin, Bangkok',desc:'Знаменитая кофейня с цветущим садом и фотозонами.'},
-{id:'porcupine',area:'bkk-ari',kind:'cafe',name:'Porcupine Café',price:1,address:'Ari Soi 4, Bangkok',desc:'Минималистичная кофейня с фильтром.'},
-{id:'landhaus',area:'bkk-ari',kind:'breakfast',name:'Landhaus Bakery',price:1,address:'Ari Soi 1, Bangkok',desc:'Немецкая пекарня с выпечкой, сэндвичами и кофе.'},
-{id:'paperplane',area:'bkk-ari',kind:'cafe',name:'Paper Plane Project',price:1,address:'Ari Soi 2, Bangkok',desc:'Тихая кофейня с ноутбуками и хорошим кофе.'},
-{id:'sarnies',area:'bkk-ari',kind:'cafe',name:'Sarnies Roastery',price:2,address:'Ari Soi 4, Bangkok',desc:'Австралийский стиль и обжарка на месте.'},
-{id:'ariphoto',area:'bkk-ari',kind:'photo',name:'Ari Soi 1–4 walk',price:0,address:'Ari, Phaya Thai, Bangkok',desc:'Прогулка по тихим переулкам с кафе, бутиками и стрит-артом.'},
-{id:'phayathaipalace',area:'bkk-ari',kind:'museum',name:'Phaya Thai Palace',price:1,address:'315 Ratchawithi Road, Thung Phaya Thai, Bangkok',desc:'Королевский дворец начала XX века с садом.'}
+{id:'nanaari',area:'bkk-ari',kind:'cafe',name:'Nana Coffee Ari',price:2,address:'Ari Soi 4, Bangkok',desc:'Кофейня с цветущим садом.',lat:13.7790,lng:100.5440},
+{id:'landhaus',area:'bkk-ari',kind:'breakfast',name:'Landhaus Bakery',price:1,address:'Ari Soi 1, Bangkok',desc:'Немецкая пекарня.',lat:13.7790,lng:100.5440},
+{id:'sarnies',area:'bkk-ari',kind:'cafe',name:'Sarnies Roastery',price:2,address:'Ari Soi 4, Bangkok',desc:'Австралийский стиль.',lat:13.7790,lng:100.5440},
+{id:'ariphoto',area:'bkk-ari',kind:'photo',name:'Ari walk',price:0,address:'Ari, Bangkok',desc:'Прогулка по тихим переулкам.',lat:13.7790,lng:100.5440},
+{id:'phayathaipalace',area:'bkk-ari',kind:'museum',name:'Phaya Thai Palace',price:1,address:'Ratchawithi Road, Bangkok',desc:'Королевский дворец.',lat:13.7700,lng:100.5400}
 );
-
-/* ===== БАНГКОК · ЧАТУЧАК ===== */
 P.push(
-{id:'ortorkor',area:'bkk-chatuchak',kind:'breakfast',name:'Or Tor Kor Market',price:1,address:'101 Kamphaeng Phet Road, Chatuchak, Bangkok',desc:'Рынок свежих продуктов с готовой едой и фруктами.'},
-{id:'chatuchak',area:'bkk-chatuchak',kind:'shopping',name:'Chatuchak Weekend Market',price:0,address:'587/10 Kamphaeng Phet 2 Road, Chatuchak, Bangkok',desc:'Гигантский рынок выходного дня — одежда, ремёсла, еда.'},
-{id:'jjgreen',area:'bkk-chatuchak',kind:'nightmarket',name:'JJ Green',price:0,address:'Kamphaeng Phet 3 Road, Chatuchak, Bangkok',desc:'Вечерний рынок с винтажом, едой и музыкой.'},
-{id:'rodfai',area:'bkk-chatuchak',kind:'park',name:'Rot Fai Park',price:0,address:'Kamphaeng Phet 3 Road, Chatuchak, Bangkok',desc:'Большой парк с велодорожками и озёрами.'},
-{id:'moca',area:'bkk-chatuchak',kind:'museum',name:'MOCA Bangkok',price:2,address:'499 Kamphaeng Phet 6 Road, Lat Yao, Chatuchak, Bangkok',desc:'Музей современного искусства Таиланда.'},
-{id:'wachira',area:'bkk-chatuchak',kind:'park',name:'Wachirabenchathat Park',price:0,address:'Kamphaeng Phet 3 Road, Chatuchak, Bangkok',desc:'Тихий парк рядом с Chatuchak с большим озером.'}
+{id:'ortorkor',area:'bkk-chatuchak',kind:'breakfast',name:'Or Tor Kor Market',price:1,address:'Kamphaeng Phet Road, Bangkok',desc:'Рынок с готовой едой.',lat:13.7990,lng:100.5500},
+{id:'chatuchak',area:'bkk-chatuchak',kind:'shopping',name:'Chatuchak Weekend Market',price:0,address:'Kamphaeng Phet 2 Road, Bangkok',desc:'Гигантский рынок выходного дня.',lat:13.7999,lng:100.5502},
+{id:'jjgreen',area:'bkk-chatuchak',kind:'nightmarket',name:'JJ Green',price:0,address:'Kamphaeng Phet 3 Road, Bangkok',desc:'Вечерний рынок с винтажом.',lat:13.7999,lng:100.5502},
+{id:'moca',area:'bkk-chatuchak',kind:'museum',name:'MOCA Bangkok',price:2,address:'Kamphaeng Phet 6 Road, Bangkok',desc:'Музей современного искусства.',lat:13.8200,lng:100.5600},
+{id:'wachira',area:'bkk-chatuchak',kind:'park',name:'Wachirabenchathat Park',price:0,address:'Kamphaeng Phet 3 Road, Bangkok',desc:'Тихий парк с озером.',lat:13.8100,lng:100.5550}
 );
-
-/* ===== ПАТТАЙЯ · НАКЛУА ===== */
 P.push(
-{id:'toast',area:'pat-naklua',kind:'breakfast',name:'Toast Brunch & Brew',price:2,address:'183/6, Muang Pattaya, Bang Lamung, Chon Buri',desc:'Популярное место для полноценного западного завтрака и кофе.',rating:{value:4.6}},
-{id:'nitan',area:'pat-naklua',kind:'cafe',name:"Nitan Coffee's Tale",price:2,address:'Naklua, Pattaya, Chon Buri',desc:'Кофейня с авторскими напитками и сезонными десертами.'},
-{id:'gimbrew',area:'pat-naklua',kind:'cafe',name:'GIM Brewing Room',price:2,address:'Naklua, Pattaya',desc:'Локальная обжарка и фильтр-кофе.'},
-{id:'gallerysea',area:'pat-naklua',kind:'cafe',name:'Gallery by the Sea',price:2,address:'Wongamat, Pattaya',desc:'Кофейня с арт-пространством и видом на море.'},
-{id:'calendar',area:'pat-naklua',kind:'cafe',name:'The Calendar Cafe',price:2,address:'Naklua, Pattaya',desc:'Тихая кофейня с завтраками и десертами.'},
-{id:'treetales',area:'pat-naklua',kind:'cafe',name:'Tree Tales Cafe Pattaya',price:2,address:'Naklua, Pattaya',desc:'Зелёная кофейня среди деревьев.'},
-{id:'sunnybrew',area:'pat-naklua',kind:'cafe',name:'Sunny Brew Cafe Pattaya',price:2,address:'Wongamat, Pattaya',desc:'Кофейня с завтраками и террасой.'},
-{id:'mum',area:'pat-naklua',kind:'dinner',name:'Mum Aroi · Naklua',price:3,address:'Naklua, Pattaya, Chon Buri',desc:'Известный ресторан морепродуктов у моря.'},
-{id:'mantra',area:'pat-naklua',kind:'dinner',name:'Mantra Restaurant',price:4,address:'Amari Pattaya, 240/2 Pattaya Beach Road, Chon Buri',desc:'Fine dining с несколькими кухнями и эффектным интерьером.'},
-{id:'surfturf',area:'pat-naklua',kind:'beachclub',name:'Surf & Turf Beach Club',price:3,address:'Wongamat Beach, Pattaya',desc:'Пляжный клуб с европейской и тайской кухней.'},
-{id:'rimtalay',area:'pat-naklua',kind:'dinner',name:'Rim Talay Seafood',price:2,address:'Naklua, Pattaya',desc:'Морепродукты с видом на море.'},
-{id:'labaguette',area:'pat-naklua',kind:'breakfast',name:'La Baguette North Pattaya',price:2,address:'Naklua, Pattaya',desc:'Французская пекарня с круассанами и завтраками.'},
-{id:'sanctuary',area:'pat-naklua',kind:'temple',name:'Sanctuary of Truth',price:3,address:'Soi Naklua 12, Pattaya, Chon Buri',desc:'Грандиозный деревянный храм-музей с резьбой ручной работы.'},
-{id:'lanpho',area:'pat-naklua',kind:'shopping',name:'Lan Pho Naklua Market',price:1,address:'Naklua, Pattaya',desc:'Рыбацкий рынок со свежими морепродуктами.'},
-{id:'wongamat',area:'pat-naklua',kind:'beach',name:'Wong Amat Beach',price:0,address:'Wongamat, Pattaya',desc:'Тихий пляж на севере с видом на город.'},
-{id:'nakluafish',area:'pat-naklua',kind:'shopping',name:'Naklua Fish Market',price:0,address:'Naklua, Pattaya',desc:'Старый рыбный рынок с утренним уловом.'},
-{id:'watchonglom',area:'pat-naklua',kind:'temple',name:'Wat Chong Lom Na Kluea',price:0,address:'Naklua, Pattaya',desc:'Китайско-тайский храм с прудом и черепахами.'},
-{id:'millionyears',area:'pat-naklua',kind:'park',name:'The Million Years Stone Park',price:2,address:'Naklua, Pattaya',desc:'Парк с окаменевшими деревьями и крокодиловой фермой.'},
-{id:'frost',area:'pat-naklua',kind:'entertainment',love:true,name:'FROST Magical Ice of Siam',price:2,address:'75/6 Moo 3, Nong Pla Lai, Banglamung, Chonburi',desc:'❤️ Любимое место Анны. Ледяной купол со скульптурами.'},
-{id:'poolcity',area:'pat-naklua',kind:'pool',name:'Бассейн City Garden Tropicana',price:0,address:'Na Kluea 16/1, Pattaya',desc:'Домашний бассейн в кондоминиуме — спокойный вариант для расслабленного дня.'}
+{id:'toast',area:'pat-naklua',kind:'breakfast',name:'Toast Brunch & Brew',price:2,address:'Muang Pattaya, Chon Buri',desc:'Западный завтрак и кофе.',lat:12.9679,lng:100.8868},
+{id:'nitan',area:'pat-naklua',kind:'cafe',name:"Nitan Coffee's Tale",price:2,address:'Naklua, Pattaya',desc:'Кофейня с авторскими напитками.',lat:12.9679,lng:100.8868},
+{id:'gimbrew',area:'pat-naklua',kind:'cafe',name:'GIM Brewing Room',price:2,address:'Naklua, Pattaya',desc:'Локальная обжарка.',lat:12.9679,lng:100.8868},
+{id:'gallerysea',area:'pat-naklua',kind:'cafe',name:'Gallery by the Sea',price:2,address:'Wongamat, Pattaya',desc:'Кофейня с видом на море.',lat:12.9679,lng:100.8868},
+{id:'calendar',area:'pat-naklua',kind:'cafe',name:'The Calendar Cafe',price:2,address:'Naklua, Pattaya',desc:'Тихая кофейня.',lat:12.9679,lng:100.8868},
+{id:'mum',area:'pat-naklua',kind:'dinner',name:'Mum Aroi',price:3,address:'Naklua, Pattaya',desc:'Известный ресторан морепродуктов.',lat:12.9679,lng:100.8868},
+{id:'mantra',area:'pat-naklua',kind:'dinner',name:'Mantra Restaurant',price:4,address:'Amari Pattaya, Chon Buri',desc:'Fine dining.',lat:12.9600,lng:100.8850},
+{id:'surfturf',area:'pat-naklua',kind:'beachclub',name:'Surf & Turf',price:3,address:'Wongamat Beach, Pattaya',desc:'Пляжный клуб.',lat:12.9679,lng:100.8868},
+{id:'labaguette',area:'pat-naklua',kind:'breakfast',name:'La Baguette North',price:2,address:'Naklua, Pattaya',desc:'Французская пекарня.',lat:12.9679,lng:100.8868},
+{id:'sanctuary',area:'pat-naklua',kind:'temple',name:'Sanctuary of Truth',price:3,address:'Soi Naklua 12, Pattaya',desc:'Грандиозный деревянный храм-музей.',lat:12.9727,lng:100.8891},
+{id:'lanpho',area:'pat-naklua',kind:'shopping',name:'Lan Pho Market',price:1,address:'Naklua, Pattaya',desc:'Рыбацкий рынок.',lat:12.9679,lng:100.8868},
+{id:'wongamat',area:'pat-naklua',kind:'beach',name:'Wong Amat Beach',price:0,address:'Wongamat, Pattaya',desc:'Тихий пляж на севере.',lat:12.9679,lng:100.8868},
+{id:'watchonglom',area:'pat-naklua',kind:'temple',name:'Wat Chong Lom',price:0,address:'Naklua, Pattaya',desc:'Китайско-тайский храм.',lat:12.9679,lng:100.8868},
+{id:'millionyears',area:'pat-naklua',kind:'park',name:'Million Years Stone Park',price:2,address:'Naklua, Pattaya',desc:'Парк с окаменевшими деревьями.',lat:12.9679,lng:100.8868},
+{id:'frost',area:'pat-naklua',kind:'entertainment',love:true,name:'FROST Magical Ice of Siam',price:2,address:'Nong Pla Lai, Banglamung, Chonburi',desc:'❤️ Любимое место Анны. Ледяной купол.',lat:12.9679,lng:100.8868},
+{id:'cher-massage',area:'pat-naklua',kind:'spa',love:true,name:'cheR massage',rating:{value:4.5,count:9,source:'Yandex Maps'},price:1,address:'Nakluea 18 Soi, Pattaya',desc:'❤️ Любимый массажный салон.',lat:12.9679,lng:100.8868}
 );
-
-/* ===== ПАТТАЙЯ · ЦЕНТР ===== */
 P.push(
-{id:'flavorhouse',area:'pat-central',kind:'breakfast',name:'The Flavor House',price:2,address:'View Talay 6, 243/4, Pattaya, Chon Buri',desc:'Небольшое место для завтрака и brunch в центре.'},
-{id:'bakenbrew',area:'pat-central',kind:'breakfast',name:"Bake n' Brew",price:2,address:'Central Pattaya, Chon Buri',desc:'Пекарня с завтраками, круассанами и кофе.'},
-{id:'jasmins',area:'pat-central',kind:'breakfast',name:"Jasmin's Café",price:2,address:'Central Pattaya, Chon Buri',desc:'Полноценные завтраки и европейская кухня.'},
-{id:'roast8ry',area:'pat-central',kind:'cafe',name:'Roast8ry Lab',price:2,address:'Central Pattaya, Chon Buri',desc:'Specialty-кофейня с авторскими напитками.'},
-{id:'albatross',area:'pat-central',kind:'cafe',name:'Albatross Coffee Roasters',price:2,address:'Central Pattaya, Chon Buri',desc:'Собственная обжарка и фильтр.'},
-{id:'benjamit',area:'pat-central',kind:'cafe',name:'Benjamit Coffee Roasters',price:1,address:'Central Pattaya, Chon Buri',desc:'Локальные обжарки по адекватной цене.'},
-{id:'backstreet',area:'pat-central',kind:'cafe',name:'Backstreet House Pattaya',price:2,address:'Central Pattaya, Chon Buri',desc:'Уютная кофейня с растениями и хорошим кофе.'},
-{id:'dripoly',area:'pat-central',kind:'cafe',name:'Dripoly Cafe Pattaya',price:2,address:'Central Pattaya, Chon Buri',desc:'Минималистичная кофейня с фильтр-кофе.'},
-{id:'banlay',area:'pat-central',kind:'cafe',name:'Banlay Home Cafe',price:2,address:'Central Pattaya, Chon Buri',desc:'Домашняя кофейня с выпечкой.'},
-{id:'xin',area:'pat-central',kind:'cafe',name:'XIN Coffee and Co.',price:2,address:'Central Pattaya, Chon Buri',desc:'Современная кофейня с авторскими напитками.'},
-{id:'sunsetroaster',area:'pat-central',kind:'cafe',name:'Sunset Coffee Roaster · Beach Road',price:2,address:'137 Moo 9, Beach Road, Pattaya',desc:'Specialty coffee и собственная обжарка напротив пляжа.'},
-{id:'casapascal',area:'pat-central',kind:'dinner',name:'Casa Pascal',price:4,address:'485 Moo 10, Pattaya 2nd Road, Chon Buri',desc:'Французская и средиземноморская кухня.'},
-{id:'chocolatefactory',area:'pat-central',kind:'dinner',name:'The Chocolate Factory Pattaya',price:3,address:'12 Moo 9, Pattaya, Chon Buri',desc:'Тайская и интернациональная кухня с видом на море.'},
-{id:'benihana',area:'pat-central',kind:'dinner',name:'Benihana Pattaya',price:3,address:'Anantara Pattaya, Beach Road, Chon Buri',desc:'Японский стейк-хаус с шоу на гриле.'},
-{id:'indiannature',area:'pat-central',kind:'dinner',name:'Indian By Nature',price:2,address:'306/64–65 Thappraya Road, Pattaya',desc:'Индийская кухня с большим выбором вегетарианских блюд.'},
-{id:'patricks',area:'pat-central',kind:'dinner',name:"Patrick's Steakhouse",price:3,address:'Central Pattaya, Chon Buri',desc:'Стейки, гриль и европейская классика.'},
-{id:'lengkee',area:'pat-central',kind:'dinner',name:'Leng Kee',price:2,address:'Central Pattaya, Chon Buri',desc:'Тайская и китайская кухня, морепродукты.'},
-{id:'ruentai',area:'pat-central',kind:'dinner',name:'Ruen Thai Restaurant',price:2,address:'485/3 Pattaya 2nd Road, Chon Buri',desc:'Тайская классика и традиционное шоу.'},
-{id:'horizon',area:'pat-central',kind:'rooftop',name:'Horizon Rooftop · Hilton Pattaya',price:4,address:'Level 34, Hilton Pattaya, 333/101 Moo 9, Pattaya',desc:'Панорама залива, коктейли и rooftop на закате.'},
-{id:'citycoffee',area:'pat-central',kind:'cafe',love:true,name:'City Coffee Pattaya',price:1,address:'WVF7+QX6, Unnamed Road, Pattaya City, Chon Buri',desc:'❤️ Любимое место Анны. Кафе на Пратамнаке с видом на залив и Bali Hai Pier.'},
-{id:'copperspoon',area:'pat-central',kind:'breakfast',love:true,name:'COPPER SPOON Breakfast Thai-European',price:2,address:'64 Chaloem Phrakiat 21 Alley, Pattaya',desc:'❤️ Любимое место Анны. Завтраки и тайско-европейская кухня.'},
-{id:'terminal21',area:'pat-central',kind:'shopping',name:'Terminal 21 Pattaya',price:0,address:'North Pattaya Road, Pattaya',desc:'Тематические этажи, фудкорт, магазины и кондиционер.'},
-{id:'centralpattaya',area:'pat-central',kind:'shopping',name:'Central Pattaya',price:0,address:'333/99 Moo 9, Beach Road, Pattaya',desc:'Большой молл у пляжа — бренды, фудкорт и кинотеатр.'},
-{id:'royalgarden',area:'pat-central',kind:'shopping',name:'Royal Garden Plaza',price:0,address:'218 Moo 10, Beach Road, Pattaya',desc:'Молл с Ripley’s и ресторанами.'},
-{id:'harbor',area:'pat-central',kind:'shopping',name:'Harbor Pattaya',price:0,address:'Pattaya 2nd Road, Chon Buri',desc:'Торговый центр с ресторанами и развлечениями.'},
-{id:'nightbazaar',area:'pat-central',kind:'nightmarket',name:'Pattaya Night Bazaar',price:0,address:'Pattaya 2nd Road, Chon Buri',desc:'Ночной рынок с одеждой, сувенирами и едой.'},
-{id:'walkingstreet',area:'pat-central',kind:'nightmarket',name:'Walking Street',price:0,address:'Walking Street, Pattaya',desc:'Главная ночная улица города с барами, клубами и едой.'},
-{id:'artinparadise',area:'pat-central',kind:'museum',name:'Art in Paradise',price:2,address:'78/34 Moo 9, Pattaya 2nd Road, Chon Buri',desc:'Музей 3D-иллюзий с фотозонами.'},
-{id:'ripleys',area:'pat-central',kind:'entertainment',name:"Ripley's Believe It or Not!",price:2,address:'Royal Garden Plaza, Pattaya',desc:'Музей странных фактов, восковых фигур и 4D.'},
-{id:'teddy',area:'pat-central',kind:'museum',name:'Teddy Bear Museum',price:2,address:'Pattaya Beach Road, Chon Buri',desc:'Музей мишек с тематическими зонами.'},
-{id:'bottlemuseum',area:'pat-central',kind:'museum',name:'Bottle Art Museum',price:2,address:'Pattaya, Chon Buri',desc:'Миниатюры внутри бутылок и корабли.'},
-{id:'minisiam',area:'pat-central',kind:'photo',name:'Mini Siam',price:2,address:'387 Sukhumvit Road, Pattaya',desc:'Парк миниатюр мировых и тайских достопримечательностей.'},
-{id:'poolhilton',area:'pat-central',kind:'pool',name:'Hilton Pattaya Rooftop Pool',price:3,address:'Hilton Pattaya, 333/101 Moo 9, Pattaya',desc:'Бассейн на крыше с панорамой залива.'}
+{id:'flavorhouse',area:'pat-central',kind:'breakfast',name:'The Flavor House',price:2,address:'View Talay 6, Pattaya',desc:'Завтраки и brunch.',lat:12.9344,lng:100.8839},
+{id:'bakenbrew',area:'pat-central',kind:'breakfast',name:"Bake n' Brew",price:2,address:'Central Pattaya',desc:'Пекарня с завтраками.',lat:12.9344,lng:100.8839},
+{id:'jasmins',area:'pat-central',kind:'breakfast',name:"Jasmin's Café",price:2,address:'Central Pattaya',desc:'Полноценные завтраки.',lat:12.9344,lng:100.8839},
+{id:'roast8ry',area:'pat-central',kind:'cafe',name:'Roast8ry Lab',price:2,address:'Central Pattaya',desc:'Specialty-кофейня.',lat:12.9344,lng:100.8839},
+{id:'albatross',area:'pat-central',kind:'cafe',name:'Albatross',price:2,address:'Central Pattaya',desc:'Обжарка и фильтр.',lat:12.9344,lng:100.8839},
+{id:'benjamit',area:'pat-central',kind:'cafe',name:'Benjamit',price:1,address:'Central Pattaya',desc:'Локальные обжарки.',lat:12.9344,lng:100.8839},
+{id:'backstreet',area:'pat-central',kind:'cafe',name:'Backstreet House',price:2,address:'Central Pattaya',desc:'Уютная кофейня.',lat:12.9344,lng:100.8839},
+{id:'sunsetroaster',area:'pat-central',kind:'cafe',name:'Sunset Coffee Roaster',price:2,address:'Beach Road, Pattaya',desc:'Specialty coffee напротив пляжа.',lat:12.9344,lng:100.8839},
+{id:'casapascal',area:'pat-central',kind:'dinner',name:'Casa Pascal',price:4,address:'Pattaya 2nd Road, Chon Buri',desc:'Французская кухня.',lat:12.9344,lng:100.8839},
+{id:'chocolatefactory',area:'pat-central',kind:'dinner',name:'The Chocolate Factory',price:3,address:'Moo 9, Pattaya',desc:'Тайская и интернациональная кухня.',lat:12.9344,lng:100.8839},
+{id:'benihana',area:'pat-central',kind:'dinner',name:'Benihana',price:3,address:'Anantara Pattaya',desc:'Японский стейк-хаус.',lat:12.9344,lng:100.8839},
+{id:'patricks',area:'pat-central',kind:'dinner',name:"Patrick's Steakhouse",price:3,address:'Central Pattaya',desc:'Стейки и гриль.',lat:12.9344,lng:100.8839},
+{id:'ruentai',area:'pat-central',kind:'dinner',name:'Ruen Thai',price:2,address:'Pattaya 2nd Road',desc:'Тайская классика и шоу.',lat:12.9344,lng:100.8839},
+{id:'horizon',area:'pat-central',kind:'rooftop',name:'Horizon Rooftop · Hilton',price:4,address:'Hilton Pattaya',desc:'Панорама залива, rooftop.',lat:12.9344,lng:100.8839},
+{id:'citycoffee',area:'pat-central',kind:'cafe',love:true,name:'City Coffee Pattaya',price:1,address:'Pratumnak, Pattaya',desc:'❤️ Любимое место Анны. Вид на залив.',lat:12.9344,lng:100.8839},
+{id:'copperspoon',area:'pat-central',kind:'breakfast',love:true,name:'COPPER SPOON',price:2,address:'Chaloem Phrakiat 21 Alley, Pattaya',desc:'❤️ Любимое место Анны. Завтраки.',lat:12.9344,lng:100.8839},
+{id:'terminal21',area:'pat-central',kind:'shopping',name:'Terminal 21 Pattaya',price:0,address:'North Pattaya Road',desc:'Тематические этажи.',lat:12.9500,lng:100.8895},
+{id:'centralpattaya',area:'pat-central',kind:'shopping',name:'Central Pattaya',price:0,address:'Beach Road, Pattaya',desc:'Большой молл у пляжа.',lat:12.9344,lng:100.8839},
+{id:'royalgarden',area:'pat-central',kind:'shopping',name:'Royal Garden Plaza',price:0,address:'Beach Road, Pattaya',desc:'Молл с Ripley’s.',lat:12.9344,lng:100.8839},
+{id:'walkingstreet',area:'pat-central',kind:'nightmarket',name:'Walking Street',price:0,address:'Walking Street, Pattaya',desc:'Главная ночная улица.',lat:12.9276,lng:100.8771},
+{id:'artinparadise',area:'pat-central',kind:'museum',name:'Art in Paradise',price:2,address:'Pattaya 2nd Road',desc:'Музей 3D.',lat:12.9344,lng:100.8839},
+{id:'ripleys',area:'pat-central',kind:'entertainment',name:"Ripley's",price:2,address:'Royal Garden Plaza',desc:'Музей странных фактов.',lat:12.9344,lng:100.8839},
+{id:'minisiam',area:'pat-central',kind:'photo',name:'Mini Siam',price:2,address:'Sukhumvit Road, Pattaya',desc:'Парк миниатюр.',lat:12.9344,lng:100.8839}
 );
-
-/* ===== ПАТТАЙЯ · ПРАТАМНАК ===== */
 P.push(
-{id:'kingofcoffee',area:'pat-prat',kind:'cafe',name:'King of Coffee Pratumnak',price:2,address:'Pratumnak, Pattaya',desc:'Кофейня с хорошим кофе и видом.'},
-{id:'espressolove',area:'pat-prat',kind:'cafe',name:'Espresso Love',price:2,address:'Pratumnak, Pattaya',desc:'Маленькая кофейня с сильным эспрессо.'},
-{id:'sunnybeachhouse',area:'pat-prat',kind:'beachclub',name:'Sunny Beach House Pattaya',price:3,address:'Pratumnak, Pattaya',desc:'Пляжный клуб с европейской кухней.'},
-{id:'skoop',area:'pat-prat',kind:'cafe',name:'Skoop Beach Café',price:2,address:'Pratumnak, Pattaya',desc:'Пляжное кафе с десертами и видами.'},
-{id:'siris',area:'pat-prat',kind:'beachclub',name:"Siri's Beach Café",price:2,address:'Pratumnak, Pattaya',desc:'Кафе на пляже с простой едой и напитками.'},
-{id:'smore',area:'pat-prat',kind:'cafe',name:"S'more Beach Cafe",price:2,address:'Pratumnak, Pattaya',desc:'Кафе с десертами и видом на море.'},
-{id:'cave',area:'pat-prat',kind:'beachclub',name:'Cave Beach Club',price:3,address:'Pratumnak, Pattaya',desc:'Пляжный клуб с бассейном и коктейлями.'},
-{id:'bacco',area:'pat-prat',kind:'dinner',name:'Bacco Beach',price:3,address:'Na Jomtien, Pattaya',desc:'Итальянская кухня у моря.'},
-{id:'rimpalapin',area:'pat-prat',kind:'dinner',name:'Rimpa Lapin',price:3,address:'Na Jomtien, Pattaya',desc:'Ресторан на склоне с видом на море, тайская кухня.'},
-{id:'sky',area:'pat-prat',kind:'dinner',love:true,name:'The Sky Gallery',price:3,address:'400 Moo 12, Phra Tamnak, Pattaya',desc:'❤️ Любимое место Анны. Террасы над морем и эффектный закат.'},
-{id:'cafedesamis',area:'pat-prat',kind:'dinner',name:'Cafe des Amis Fine Dining',price:4,address:'391/6 Moo 10, Soi 11 off Thap Phraya Road, Pattaya',desc:'Французская кухня, стейки, морепродукты и Beef Wellington.'},
-{id:'bigbuddha',area:'pat-prat',kind:'temple',love:true,name:'Big Buddha / Wat Phra Yai',price:0,address:'Pratumnak Hill, Pattaya',desc:'❤️ Любимое место Анны. Большая статуя Будды и виды с холма.'},
-{id:'viewpoint',area:'pat-prat',kind:'viewpoint',love:true,name:'Khao Pattaya Viewpoint',price:0,address:'Phra Tamnak Mountain, Pattaya',desc:'❤️ Любимое место Анны. Панорама бухты и знаменитые буквы PATTAYA.'},
-{id:'cosybeach',area:'pat-prat',kind:'beach',name:'Cosy Beach',price:0,address:'Pratumnak, Pattaya',desc:'Небольшой тихий пляж под холмом.'},
-{id:'pratbeach',area:'pat-prat',kind:'beach',name:'Pratumnak Beach',price:0,address:'Pratumnak, Pattaya',desc:'Удобный пляж рядом с ресторанами.'},
-{id:'dongtan',area:'pat-prat',kind:'beach',name:'Dongtan Beach',price:0,address:'Jomtien, Pattaya',desc:'Широкая полоса песка с пальмами и кафе.'},
-{id:'parktower',area:'pat-prat',kind:'viewpoint',name:'Pattaya Park Tower',price:3,address:'345 Jomtien Beach Road, Pattaya',desc:'Смотровая площадка с панорамой залива.'},
-{id:'chaloem',area:'pat-prat',kind:'park',name:'Chaloem Phrakiat Park',price:0,address:'Pratumnak, Pattaya',desc:'Тихий парк на холме с видом на город.'},
-{id:'wangsamsien',area:'pat-prat',kind:'photo',name:'Wang Sam Sien',price:0,address:'Pratumnak, Pattaya',desc:'Китайский храмовый комплекс с большими статуями.'},
-{id:'pattsign',area:'pat-prat',kind:'photo',name:'Pattaya City Sign',price:0,address:'Pratumnak, Pattaya',desc:'Гигантские буквы PATTAYA на склоне — знаменитая фотолокация.'},
-{id:'watphothi',area:'pat-prat',kind:'temple',name:'Wat Phothisamphan',price:0,address:'Pratumnak, Pattaya',desc:'Крупный буддистский храм на юге города.'}
+{id:'kingofcoffee',area:'pat-prat',kind:'cafe',name:'King of Coffee',price:2,address:'Pratumnak, Pattaya',desc:'Кофейня с видом.',lat:12.9141,lng:100.8687},
+{id:'sunnybeachhouse',area:'pat-prat',kind:'beachclub',name:'Sunny Beach House',price:3,address:'Pratumnak, Pattaya',desc:'Пляжный клуб.',lat:12.9141,lng:100.8687},
+{id:'skoop',area:'pat-prat',kind:'cafe',name:'Skoop Beach Café',price:2,address:'Pratumnak, Pattaya',desc:'Пляжное кафе.',lat:12.9141,lng:100.8687},
+{id:'siris',area:'pat-prat',kind:'beachclub',name:"Siri's Beach Café",price:2,address:'Pratumnak, Pattaya',desc:'Кафе на пляже.',lat:12.9141,lng:100.8687},
+{id:'cave',area:'pat-prat',kind:'beachclub',name:'Cave Beach Club',price:3,address:'Pratumnak, Pattaya',desc:'Пляжный клуб с бассейном.',lat:12.9141,lng:100.8687},
+{id:'rimpalapin',area:'pat-prat',kind:'dinner',name:'Rimpa Lapin',price:3,address:'Na Jomtien, Pattaya',desc:'Ресторан на склоне.',lat:12.9000,lng:100.8800},
+{id:'sky',area:'pat-prat',kind:'dinner',love:true,name:'The Sky Gallery',price:3,address:'Phra Tamnak, Pattaya',desc:'❤️ Любимое место Анны. Террасы над морем.',lat:12.9141,lng:100.8687},
+{id:'cafedesamis',area:'pat-prat',kind:'dinner',name:'Cafe des Amis',price:4,address:'Thap Phraya Road, Pattaya',desc:'Французская кухня.',lat:12.9141,lng:100.8687},
+{id:'bigbuddha',area:'pat-prat',kind:'temple',love:true,name:'Big Buddha',price:0,address:'Pratumnak Hill, Pattaya',desc:'❤️ Любимое место Анны. Большая статуя Будды.',lat:12.9141,lng:100.8687},
+{id:'viewpoint',area:'pat-prat',kind:'viewpoint',love:true,name:'Khao Pattaya Viewpoint',price:0,address:'Phra Tamnak Mountain, Pattaya',desc:'❤️ Любимое место Анны. Панорама бухты.',lat:12.921124,lng:100.866723},
+{id:'cosybeach',area:'pat-prat',kind:'beach',name:'Cosy Beach',price:0,address:'Pratumnak, Pattaya',desc:'Тихий пляж под холмом.',lat:12.9141,lng:100.8687},
+{id:'pratbeach',area:'pat-prat',kind:'beach',name:'Pratumnak Beach',price:0,address:'Pratumnak, Pattaya',desc:'Удобный пляж.',lat:12.9141,lng:100.8687},
+{id:'dongtan',area:'pat-prat',kind:'beach',name:'Dongtan Beach',price:0,address:'Jomtien, Pattaya',desc:'Широкая полоса песка.',lat:12.9000,lng:100.8800},
+{id:'parktower',area:'pat-prat',kind:'viewpoint',name:'Pattaya Park Tower',price:3,address:'Jomtien Beach Road',desc:'Смотровая площадка.',lat:12.9000,lng:100.8800},
+{id:'chaloem',area:'pat-prat',kind:'park',name:'Chaloem Phrakiat Park',price:0,address:'Pratumnak, Pattaya',desc:'Тихий парк на холме.',lat:12.9141,lng:100.8687},
+{id:'wangsamsien',area:'pat-prat',kind:'photo',name:'Wang Sam Sien',price:0,address:'Pratumnak, Pattaya',desc:'Китайский храм.',lat:12.9141,lng:100.8687},
+{id:'pattsign',area:'pat-prat',kind:'photo',name:'Pattaya City Sign',price:0,address:'Pratumnak, Pattaya',desc:'Гигантские буквы PATTAYA.',lat:12.921124,lng:100.866723}
 );
-
-/* ===== ПАТТАЙЯ · ДЖОМТЬЕН + ВЫЕЗДЫ ===== */
 P.push(
-{id:'tribe',area:'pat-jomtien',kind:'breakfast',name:'Tribe Cafe Pattaya',price:2,address:'321/14 Chom Thian 11 Alley, Jomtien, Pattaya',desc:'Современный brunch с французскими тостами, avocado toast и кофе.'},
-{id:'gluck',area:'pat-jomtien',kind:'breakfast',name:'Glück',price:2,address:'Jomtien, Pattaya',desc:'Уютное место с завтраками и кофе.'},
-{id:'kanvela',area:'pat-jomtien',kind:'breakfast',name:'Kanvela House',price:2,address:'Jomtien, Pattaya',desc:'Завтраки и десерты в спокойном ритме.'},
-{id:'rockos',area:'pat-jomtien',kind:'cafe',name:"Rockos Coffee's World Pattaya",price:2,address:'Jomtien, Pattaya',desc:'Кофейня с обжаркой и завтраками.'},
-{id:'branchcoffee',area:'pat-jomtien',kind:'cafe',name:'Branch Coffee Beach',price:2,address:'Jomtien Beach, Pattaya',desc:'Кафе на пляже с видом на море.'},
-{id:'glasshouse',area:'pat-jomtien',kind:'dinner',name:'The Glass House Boho',price:3,address:'Na Jomtien Beach, Sattahip, Chon Buri',desc:'Ресторан прямо у песка, тайская кухня, морепродукты.'},
-{id:'pupen',area:'pat-jomtien',kind:'dinner',name:'Pupen Seafood',price:3,address:'62 Chai Talay Road, Na Jomtien, Sattahip',desc:'Большой морской ресторан у пляжа. Краб в карри и свежие морепродукты.'},
-{id:'lungsawai',area:'pat-jomtien',kind:'dinner',name:'Lung Sawai Seafood',price:2,address:'Na Jomtien, Sattahip, Chon Buri',desc:'Простое место с морепродуктами у воды.'},
-{id:'preecha',area:'pat-jomtien',kind:'dinner',name:'Preecha Seafood',price:2,address:'Na Jomtien, Sattahip, Chon Buri',desc:'Морепродукты с большим выбором блюд.'},
-{id:'chocona',area:'pat-jomtien',kind:'dinner',name:'The Chocolate Factory Na Jomtien',price:3,address:'Na Jomtien, Sattahip, Chon Buri',desc:'Тайская и интернациональная кухня с видом на море.'},
-{id:'papabeach',area:'pat-jomtien',kind:'beachclub',love:true,name:'Papa Beach Pattaya',price:2,address:'41 Moo 3, Na Chom Thian, Sattahip',desc:'❤️ Любимое место Анны. Пляжное кафе в балийском стиле с фотозонами.'},
-{id:'ovethemoon',area:'pat-jomtien',kind:'rooftop',love:true,name:'Over the Moon at Ana Anan',price:3,address:'Ana Anan Resort, Soi Na Jomtien 20, Sattahip',desc:'❤️ Любимое место Анны. Rooftop-бар с панорамным видом на океан и закат.'},
-{id:'jomtienbeach',area:'pat-jomtien',kind:'beach',name:'Jomtien Beach',price:0,address:'Jomtien Beach Road, Pattaya',desc:'Широкий пляж для прогулок, лежаков и спокойного дня у моря.'},
-{id:'nongnooch',area:'pat-jomtien',kind:'park',love:true,name:'Nong Nooch Tropical Garden',price:3,address:'34 Na Chom Thian, Sattahip, Chon Buri',desc:'❤️ Любимое место Анны. Большой тропический сад с тематическими ландшафтами.'},
-{id:'khaochichan',area:'pat-jomtien',kind:'temple',love:true,name:'Wat Khao Chi Chan',price:0,address:'Na Chom Thian, Sattahip, Chon Buri',desc:'❤️ Любимое место Анны. Будда, высеченный лазером на скале.'},
-{id:'khaotabaek',area:'pat-jomtien',kind:'temple',love:true,name:'Wat Khao Tabaek',price:1,address:'331 Nong Kham, Si Racha, Chon Buri',desc:'❤️ Любимое место Анны. Лесной храм со стеклянным мостом.'},
-{id:'elephantjungle',area:'pat-jomtien',kind:'animals',love:true,name:'Elephant Jungle Sanctuary Pattaya',price:3,address:'56/1-56/6 M.4, Khao Mai Kaeo, Bang Lamung, Chon Buri',desc:'❤️ Любимое место Анны. Этичный приют для слонов.'},
-{id:'khaokheow',area:'pat-jomtien',kind:'animals',love:true,name:'Khao Kheow Open Zoo',price:2,address:'235 Moo 7, Bang Phra, Si Racha, Chon Buri',desc:'❤️ Любимое место Анны. Большой открытый зоопарк.'},
-{id:'tigerpark',area:'pat-jomtien',kind:'animals',love:true,name:'Tiger Park Pattaya',price:3,address:'349/9 Sukhumvit Rd, Pattaya',desc:'❤️ Любимое место Анны. Парк тигров.'},
-{id:'dolphinarium',area:'pat-jomtien',kind:'animals',name:'Pattaya Dolphinarium',price:3,address:'Jomtien, Pattaya',desc:'Шоу с дельфинами и морскими котиками.'},
-{id:'underwater',area:'pat-jomtien',kind:'animals',name:'Underwater World Pattaya',price:2,address:'22/22 Moo 2, Sukhumvit Road, Pattaya',desc:'Океанариум с подводным туннелем.'},
-{id:'ramayana',area:'pat-jomtien',kind:'entertainment',name:'Ramayana Water Park',price:3,address:'9 Moo 7, Ban Yen Road, Sattahip, Chon Buri',desc:'Один из крупнейших аквапарков Таиланда.'},
-{id:'aquaverse',area:'pat-jomtien',kind:'entertainment',name:'Columbia Pictures Aquaverse',price:4,address:'888 Moo 8, Sukhumvit Road, Na Jomtien, Sattahip',desc:'Тематический аквапарк по фильмам Columbia Pictures.'},
-{id:'floating',area:'pat-jomtien',kind:'shopping',name:'Pattaya Floating Market',price:2,address:'451/304 Sukhumvit Road, Na Jomtien, Sattahip',desc:'Плавучий рынок с сувенирами и едой.'},
-{id:'jomtiennighmarket',area:'pat-jomtien',kind:'nightmarket',name:'Jomtien Night Market',price:0,address:'Jomtien, Pattaya',desc:'Ночной рынок с уличной едой и свежими морепродуктами.'},
-{id:'poolpark',area:'pat-jomtien',kind:'pool',name:'Pattaya Park Water Park',price:2,address:'345 Jomtien Beach Road, Pattaya',desc:'Водный парк с горками и бассейнами.'},
-{id:'bangsaraybeach',area:'pat-jomtien',kind:'beach',name:'Bang Saray Beach',price:0,address:'Bang Saray, Sattahip, Chon Buri',desc:'Тихий пляж с рыбацкими лодками и спокойным морем.'},
-{id:'bangsarayvillage',area:'pat-jomtien',kind:'photo',name:'Bang Saray Fishing Village',price:0,address:'Bang Saray, Sattahip, Chon Buri',desc:'Старая рыбацкая деревня с домами на сваях.'},
-{id:'saikaew',area:'pat-jomtien',kind:'beach',name:'Sai Kaew Beach',price:0,address:'Sattahip, Chon Buri',desc:'Длинный пляж с белым песком на территории военной базы.'},
-{id:'samaesan',area:'pat-jomtien',kind:'beach',name:'Samae San Island',price:1,address:'Samae San, Sattahip, Chon Buri',desc:'Остров с прозрачной водой, добираться с пирса Саттахипа.'},
-{id:'silverlake',area:'pat-jomtien',kind:'photo',name:'Silverlake Vineyard',price:2,address:'Sattahip, Chon Buri',desc:'Виноградники, винодельня и красивые виды для фото.'},
-{id:'bangsaraymarket',area:'pat-jomtien',kind:'nightmarket',name:'Bang Saray Night Market',price:0,address:'Bang Saray, Sattahip, Chon Buri',desc:'Маленький локальный рынок с едой и снеками.'}
+{id:'tribe',area:'pat-jomtien',kind:'breakfast',name:'Tribe Cafe',price:2,address:'Chom Thian 11 Alley, Jomtien',desc:'Современный brunch.',lat:12.89583,lng:100.87306},
+{id:'gluck',area:'pat-jomtien',kind:'breakfast',name:'Glück',price:2,address:'Jomtien, Pattaya',desc:'Завтраки и кофе.',lat:12.89583,lng:100.87306},
+{id:'kanvela',area:'pat-jomtien',kind:'breakfast',name:'Kanvela House',price:2,address:'Jomtien, Pattaya',desc:'Завтраки и десерты.',lat:12.89583,lng:100.87306},
+{id:'rockos',area:'pat-jomtien',kind:'cafe',name:'Rockos Coffee',price:2,address:'Jomtien, Pattaya',desc:'Обжарка и завтраки.',lat:12.89583,lng:100.87306},
+{id:'branchcoffee',area:'pat-jomtien',kind:'cafe',name:'Branch Coffee Beach',price:2,address:'Jomtien Beach, Pattaya',desc:'Кафе на пляже.',lat:12.89583,lng:100.87306},
+{id:'glasshouse',area:'pat-jomtien',kind:'dinner',name:'The Glass House Boho',price:3,address:'Na Jomtien Beach, Chon Buri',desc:'Ресторан у песка.',lat:12.89583,lng:100.87306},
+{id:'pupen',area:'pat-jomtien',kind:'dinner',name:'Pupen Seafood',price:3,address:'Na Jomtien, Sattahip',desc:'Морепродукты у пляжа.',lat:12.89583,lng:100.87306},
+{id:'chocona',area:'pat-jomtien',kind:'dinner',name:'The Chocolate Factory',price:3,address:'Na Jomtien, Sattahip',desc:'Тайская кухня с видом на море.',lat:12.89583,lng:100.87306},
+{id:'papabeach',area:'pat-jomtien',kind:'beachclub',love:true,name:'Papa Beach',price:2,address:'Na Chom Thian, Sattahip',desc:'❤️ Любимое место Анны. Пляжное кафе в балийском стиле.',lat:12.89583,lng:100.87306},
+{id:'ovethemoon',area:'pat-jomtien',kind:'rooftop',love:true,name:'Over the Moon at Ana Anan',price:3,address:'Soi Na Jomtien 20, Sattahip',desc:'❤️ Любимое место Анны. Rooftop-бар.',lat:12.89583,lng:100.87306},
+{id:'jomtienbeach',area:'pat-jomtien',kind:'beach',name:'Jomtien Beach',price:0,address:'Jomtien Beach Road, Pattaya',desc:'Широкий пляж.',lat:12.89583,lng:100.87306},
+{id:'nongnooch',area:'pat-jomtien',kind:'park',love:true,name:'Nong Nooch Tropical Garden',price:3,address:'Na Chom Thian, Sattahip',desc:'❤️ Любимое место Анны. Тропический сад.',lat:12.7647,lng:100.9358},
+{id:'khaochichan',area:'pat-jomtien',kind:'temple',love:true,name:'Wat Khao Chi Chan',price:0,address:'Na Chom Thian, Sattahip',desc:'❤️ Любимое место Анны. Будда на скале.',lat:12.89583,lng:100.87306},
+{id:'khaotabaek',area:'pat-jomtien',kind:'temple',love:true,name:'Wat Khao Tabaek',price:1,address:'Nong Kham, Si Racha',desc:'❤️ Любимое место Анны. Лесной храм.',lat:13.1000,lng:100.9500},
+{id:'elephantjungle',area:'pat-jomtien',kind:'animals',love:true,name:'Elephant Jungle Sanctuary',price:3,address:'Khao Mai Kaeo, Bang Lamung',desc:'❤️ Любимое место Анны. Приют слонов.',lat:12.89583,lng:100.87306},
+{id:'khaokheow',area:'pat-jomtien',kind:'animals',love:true,name:'Khao Kheow Open Zoo',price:2,address:'Bang Phra, Si Racha',desc:'❤️ Любимое место Анны. Открытый зоопарк.',lat:13.2000,lng:101.0500},
+{id:'tigerpark',area:'pat-jomtien',kind:'animals',love:true,name:'Tiger Park',price:3,address:'Sukhumvit Rd, Pattaya',desc:'❤️ Любимое место Анны. Парк тигров.',lat:12.89583,lng:100.87306},
+{id:'underwater',area:'pat-jomtien',kind:'animals',name:'Underwater World',price:2,address:'Sukhumvit Road, Pattaya',desc:'Океанариум.',lat:12.89583,lng:100.87306},
+{id:'ramayana',area:'pat-jomtien',kind:'entertainment',name:'Ramayana Water Park',price:3,address:'Ban Yen Road, Sattahip',desc:'Аквапарк.',lat:12.89583,lng:100.87306},
+{id:'aquaverse',area:'pat-jomtien',kind:'entertainment',name:'Columbia Pictures Aquaverse',price:4,address:'Na Jomtien, Sattahip',desc:'Тематический аквапарк.',lat:12.89583,lng:100.87306},
+{id:'floating',area:'pat-jomtien',kind:'shopping',name:'Floating Market',price:2,address:'Na Jomtien, Sattahip',desc:'Плавучий рынок.',lat:12.89583,lng:100.87306},
+{id:'jomtiennighmarket',area:'pat-jomtien',kind:'nightmarket',name:'Jomtien Night Market',price:0,address:'Jomtien, Pattaya',desc:'Ночной рынок.',lat:12.89583,lng:100.87306},
+{id:'bangsaraybeach',area:'pat-jomtien',kind:'beach',name:'Bang Saray Beach',price:0,address:'Bang Saray, Sattahip',desc:'Тихий пляж.',lat:12.7700,lng:100.9200}
 );
-
-/* ===== КО ЛАН · NA BAAN ===== */
 P.push(
-{id:'fat',area:'lan-naban',kind:'breakfast',name:'Fat Submarine Cafe',price:1,address:'Na Ban Market waterfront, Koh Larn',desc:'Кафе у воды рядом с главным пирсом, терраса и тропический интерьер.'},
-{id:'pookai',area:'lan-naban',kind:'dinner',name:'Pookai Cafe & Restaurant',price:2,address:'Na Ban, Koh Larn',desc:'Кафе-ресторан с тайской и европейской кухней.'},
-{id:'indigo',area:'lan-naban',kind:'cafe',name:'Indigo Cafe',price:2,address:'Na Ban, Koh Larn',desc:'Кофейня с авторскими напитками.'},
-{id:'nevertosmall',area:'lan-naban',kind:'cafe',name:'Never Too Small',price:2,address:'Na Ban, Koh Larn',desc:'Маленькая атмосферная кофейня.'},
-{id:'loveonsea',area:'lan-naban',kind:'dinner',name:'Love on Sea',price:2,address:'Na Ban, Koh Larn',desc:'Кафе у моря с видом и простой едой.'},
-{id:'onemillion',area:'lan-naban',kind:'cafe',name:'One Million Cafe & Eatery',price:2,address:'Na Ban, Koh Larn',desc:'Кафе и еда в одном месте.'},
-{id:'seaspace',area:'lan-naban',kind:'cafe',name:'Sea Space',price:2,address:'Na Ban, Koh Larn',desc:'Кафе с видом на воду.'},
-{id:'soulsweet',area:'lan-naban',kind:'cafe',name:'Soul Sweet Koh Larn',price:2,address:'Na Ban, Koh Larn',desc:'Десерты и кофе.'},
-{id:'lewave',area:'lan-naban',kind:'cafe',name:'Le Wave Koh Larn',price:2,address:'Na Ban, Koh Larn',desc:'Кафе с напитками и лёгкой едой.'},
-{id:'kamari',area:'lan-naban',kind:'cafe',name:'Kamari Cafe',price:2,address:'Na Ban, Koh Larn',desc:'Кофейня с видом на зелень.'},
-{id:'coffeecamp',area:'lan-naban',kind:'cafe',name:'Kohlarn Coffee Camp',price:2,address:'Na Ban, Koh Larn',desc:'Кофейня для отдыха после пляжа.'},
-{id:'vibebar',area:'lan-naban',kind:'cafe',name:'Vibe Bar Kohlarn',price:2,address:'Na Ban, Koh Larn',desc:'Пляжный кафе-бар с коктейлями.'},
-{id:'chalao',area:'lan-naban',kind:'cafe',name:'Chalao Cafe Koh Larn',price:2,address:'Na Ban, Koh Larn',desc:'Кафе с видом на залив.'},
-{id:'nabany',area:'lan-naban',kind:'photo',name:'Na Ban Pier & Village',price:0,address:'Na Ban Pier, Koh Larn',desc:'Главный пирс, деревня, кафе и отправная точка для поездок к пляжам.'}
+{id:'fat',area:'lan-naban',kind:'breakfast',name:'Fat Submarine Cafe',price:1,address:'Na Ban, Koh Larn',desc:'Кафе у воды.',lat:12.91583,lng:100.77750},
+{id:'pookai',area:'lan-naban',kind:'dinner',name:'Pookai Cafe',price:2,address:'Na Ban, Koh Larn',desc:'Тайская и европейская кухня.',lat:12.91583,lng:100.77750},
+{id:'indigo',area:'lan-naban',kind:'cafe',name:'Indigo Cafe',price:2,address:'Na Ban, Koh Larn',desc:'Авторские напитки.',lat:12.91583,lng:100.77750},
+{id:'nevertosmall',area:'lan-naban',kind:'cafe',name:'Never Too Small',price:2,address:'Na Ban, Koh Larn',desc:'Атмосферная кофейня.',lat:12.91583,lng:100.77750},
+{id:'loveonsea',area:'lan-naban',kind:'dinner',name:'Love on Sea',price:2,address:'Na Ban, Koh Larn',desc:'Кафе у моря.',lat:12.91583,lng:100.77750},
+{id:'onemillion',area:'lan-naban',kind:'cafe',name:'One Million Cafe',price:2,address:'Na Ban, Koh Larn',desc:'Кафе и еда.',lat:12.91583,lng:100.77750},
+{id:'seaspace',area:'lan-naban',kind:'cafe',name:'Sea Space',price:2,address:'Na Ban, Koh Larn',desc:'Кафе с видом.',lat:12.91583,lng:100.77750},
+{id:'soulsweet',area:'lan-naban',kind:'cafe',name:'Soul Sweet',price:2,address:'Na Ban, Koh Larn',desc:'Десерты и кофе.',lat:12.91583,lng:100.77750},
+{id:'vibebar',area:'lan-naban',kind:'cafe',name:'Vibe Bar',price:2,address:'Na Ban, Koh Larn',desc:'Пляжный кафе-бар.',lat:12.91583,lng:100.77750},
+{id:'nabany',area:'lan-naban',kind:'photo',name:'Na Ban Pier',price:0,address:'Na Ban Pier, Koh Larn',desc:'Главный пирс.',lat:12.91583,lng:100.77750}
 );
-
-/* ===== КО ЛАН · TAWAEN ===== */
 P.push(
-{id:'tasana',area:'lan-tawaen',kind:'dinner',name:'Tasana Bar and Restaurant',price:3,address:'Tawaen Beach, Koh Larn',desc:'Бар и ресторан с видом на море.'},
-{id:'tawaen',area:'lan-tawaen',kind:'beach',name:'Tawaen Beach',price:0,address:'Tawaen Beach, Koh Larn',desc:'Самый оживлённый пляж острова с лежаками и кафе.'},
-{id:'sangwan',area:'lan-tawaen',kind:'beach',name:'Sang Wan Beach',price:0,address:'Sang Wan Beach, Koh Larn',desc:'Небольшой тихий пляж рядом с Tawaen.'},
-{id:'windmill',area:'lan-tawaen',kind:'viewpoint',name:'Windmill Viewpoint',price:0,address:'Wind Turbine area, Koh Larn',desc:'Смотровая у ветряка с панорамой острова и моря.'},
-{id:'snorkeltour',area:'lan-tawaen',kind:'tour',name:'Koh Larn Snorkeling Tours',price:2,address:'Tawaen / Na Ban, Koh Larn',desc:'Групповые туры со снорклингом у островных рифов.'},
-{id:'parasail',area:'lan-tawaen',kind:'tour',name:'Koh Larn Parasailing',price:3,address:'Tawaen Beach, Koh Larn',desc:'Парасейлинг над заливом.'},
-{id:'seawalk',area:'lan-tawaen',kind:'tour',name:'Koh Larn Sea Walking',price:3,address:'Tawaen Beach, Koh Larn',desc:'Прогулка по дну с шлемом — без навыков дайвинга.'},
-{id:'tawaenpier',area:'lan-tawaen',kind:'photo',name:'Tawaen Pier',price:0,address:'Tawaen, Koh Larn',desc:'Небольшой пирс, откуда удобно добираться до пляжа.'}
+{id:'tasana',area:'lan-tawaen',kind:'dinner',name:'Tasana Bar and Restaurant',price:3,address:'Tawaen Beach, Koh Larn',desc:'Бар и ресторан с видом на море.',lat:12.921134,lng:100.787843},
+{id:'tawaen',area:'lan-tawaen',kind:'beach',name:'Tawaen Beach',price:0,address:'Tawaen Beach, Koh Larn',desc:'Самый оживлённый пляж.',lat:12.921134,lng:100.787843},
+{id:'windmill',area:'lan-tawaen',kind:'viewpoint',name:'Windmill Viewpoint',price:0,address:'Koh Larn',desc:'Смотровая у ветряка.',lat:12.921134,lng:100.787843},
+{id:'parasail',area:'lan-tawaen',kind:'tour',name:'Parasailing',price:3,address:'Tawaen Beach, Koh Larn',desc:'Парасейлинг.',lat:12.921134,lng:100.787843},
+{id:'seawalk',area:'lan-tawaen',kind:'tour',name:'Sea Walking',price:3,address:'Tawaen Beach, Koh Larn',desc:'Прогулка по дну.',lat:12.921134,lng:100.787843}
 );
-
-/* ===== КО ЛАН · TA YAI ===== */
 P.push(
-{id:'matata',area:'lan-tayai',kind:'cafe',name:'Matata Bay Cafe',price:3,address:'Road to Ta Yai Beach, Koh Larn',desc:'Bali-style кафе на склоне с видом на море.'},
-{id:'tayaibeach',area:'lan-tayai',kind:'beach',name:'Ta Yai Beach',price:0,address:'Ta Yai Beach, Koh Larn',desc:'Небольшой пляж с живописными видами.'},
-{id:'thonglang',area:'lan-tayai',kind:'beach',name:'Thong Lang Beach',price:0,address:'Thong Lang, Koh Larn',desc:'Тихий пляж на севере острова.'},
-{id:'luangpu',area:'lan-tayai',kind:'viewpoint',name:'Luang Pu Thuat Viewpoint',price:0,address:'Koh Larn',desc:'Смотровая с большой статуей Luang Pu Thuat и видом на залив.'}
+{id:'matata',area:'lan-tayai',kind:'cafe',name:'Matata Bay Cafe',price:3,address:'Ta Yai Beach, Koh Larn',desc:'Bali-style кафе.',lat:12.9100,lng:100.7800},
+{id:'tayaibeach',area:'lan-tayai',kind:'beach',name:'Ta Yai Beach',price:0,address:'Ta Yai Beach, Koh Larn',desc:'Небольшой пляж.',lat:12.9100,lng:100.7800},
+{id:'thonglang',area:'lan-tayai',kind:'beach',name:'Thong Lang Beach',price:0,address:'Koh Larn',desc:'Тихий пляж.',lat:12.9100,lng:100.7800},
+{id:'luangpu',area:'lan-tayai',kind:'viewpoint',name:'Luang Pu Thuat Viewpoint',price:0,address:'Koh Larn',desc:'Смотровая.',lat:12.9100,lng:100.7800}
 );
-
-/* ===== КО ЛАН · SAMAE / TIEN ===== */
 P.push(
-{id:'samaechompoo',area:'lan-samae',kind:'cafe',name:'SamaeChompoo',price:2,address:'Samae Beach, Koh Larn',desc:'Кафе у пляжа с видом и прохладными напитками.'},
-{id:'samaebeach',area:'lan-samae',kind:'beach',name:'Samae Beach',price:0,address:'Samae Beach, Koh Larn',desc:'Просторный пляж, лежаки, кафе и красивый цвет воды.'},
-{id:'tienbeach',area:'lan-samae',kind:'beach',name:'Tien Beach',price:0,address:'Tien Beach, Koh Larn',desc:'Красивый пляж с прозрачной водой.'},
-{id:'coralview',area:'lan-samae',kind:'viewpoint',name:'Coral Island Pattaya Beach View Point',price:0,address:'Koh Larn',desc:'Смотровая с видом на пляжи и залив.'}
+{id:'samaechompoo',area:'lan-samae',kind:'cafe',name:'SamaeChompoo',price:2,address:'Samae Beach, Koh Larn',desc:'Кафе у пляжа.',lat:12.9119,lng:100.7696},
+{id:'samaebeach',area:'lan-samae',kind:'beach',name:'Samae Beach',price:0,address:'Samae Beach, Koh Larn',desc:'Просторный пляж.',lat:12.9119,lng:100.7696},
+{id:'tienbeach',area:'lan-samae',kind:'beach',name:'Tien Beach',price:0,address:'Koh Larn',desc:'Красивый пляж.',lat:12.9119,lng:100.7696}
 );
-
-/* ===== КО ЛАН · NUAL ===== */
 P.push(
-{id:'nualbeach',area:'lan-nual',kind:'beach',name:'Nual Beach / Monkey Beach',price:0,address:'Nual Beach, Koh Larn',desc:'Южный пляж с обезьянами и снорклингом.'},
-{id:'kayak',area:'lan-nual',kind:'tour',name:'Kayaking & SUP на острове',price:2,address:'Koh Larn',desc:'Прокат каяков и SUP на пляжах острова.'},
-{id:'glassbottom',area:'lan-nual',kind:'tour',name:'Glass-bottom boat trips',price:3,address:'Koh Larn',desc:'Прогулки на лодке со стеклянным дном — рифы и рыбы без погружения.'}
+{id:'nualbeach',area:'lan-nual',kind:'beach',name:'Nual Beach / Monkey Beach',price:0,address:'Koh Larn',desc:'Южный пляж с обезьянами.',lat:12.9013,lng:100.7760},
+{id:'kayak',area:'lan-nual',kind:'tour',name:'Kayaking & SUP',price:2,address:'Koh Larn',desc:'Прокат каяков и SUP.',lat:12.9013,lng:100.7760}
 );
-
-/* ===== ДОБАВЛЕННЫЕ ИЗБРАННЫЕ МЕСТА ===== */
 P.push(
-{id:'dreamworld',area:'bkk-chatuchak',kind:'entertainment',love:true,name:'Dream World',rating:{value:4.1,count:912,source:'Google Maps'},price:3,address:'62 Moo 1, Rangsit–Ongkharak Road (Km 7), Bueng Yitho, Thanyaburi, Pathum Thani 12130',desc:'❤️ Любимое место. Большой парк аттракционов к северу от Бангкока: тематические зоны, американские горки, семейные аттракционы и Snow Town. Лучше планировать отдельный день.'},
-{id:'cher-massage',area:'pat-naklua',kind:'spa',love:true,name:'cheR massage',rating:{value:4.5,count:9,source:'Yandex Maps',url:'https://yandex.com/maps/org/cher_massage/220964272501/'},price:1,address:'Nakluea 18 Soi, Pattaya, Chon Buri',desc:'❤️ Любимый массажный салон в районе Наклуа. В справочниках встречается также адрес Soi Na Kluea 16/2; перед поездкой откройте карту и проверьте актуальную точку.'}
+{id:'dreamworld',area:'bkk-chatuchak',kind:'entertainment',love:true,name:'Dream World',rating:{value:4.1,count:912,source:'Google Maps'},price:3,address:'Bueng Yitho, Thanyaburi, Pathum Thani',desc:'❤️ Любимое место. Большой парк аттракционов.',lat:13.9900,lng:100.6800}
 );
-// Rajadamnern Stadium уже присутствует в исходном списке как love:true — сохраняем единственную запись.
-
-/* Фотографии не подставляются автоматически: в предыдущей версии использовались общие стоковые изображения, не подтверждённые для конкретных мест. */
-
 const PHRASES={
 restaurant:[
-['ขอสั่งไข่เจียวไส้กรอก อเมริกาโน่ใส่นม และน้ำส้มค่ะ','кхо-санг кхай-тиао сай-крок, американо сай ном, лэ нам-сом кха','I’d like to order an omelette with sausage, an Americano with milk, and orange juice.','Я хочу заказать омлет с сосиской, американо с молоком и апельсиновый сок.'],
-['ขอเมนูหน่อยค่ะ','кхо мэ-ну ной кха','Could I have the menu, please?','Можно меню, пожалуйста?'],
-['ไม่เผ็ดค่ะ','май пхет кха','Not spicy, please.','Не остро, пожалуйста.'],
-['เผ็ดนิดหน่อยค่ะ','пхет нит ной кха','A little spicy, please.','Немного остро, пожалуйста.'],
-['ไม่ใส่น้ำตาลค่ะ','май сай нам-тан кха','No sugar, please.','Без сахара, пожалуйста.'],
-['ขอน้ำเปล่าหนึ่งขวดค่ะ','кхо нам-плао нынг куат кха','A bottle of water, please.','Бутылку обычной воды, пожалуйста.'],
+['ขอสั่งไข่เจียวไส้กรอก อเมริกาโน่ใส่นม และน้ำส้มค่ะ','кхо-санг кхай-тиао сай-крок, американо сай ном, лэ нам-сом кха','I’d like an omelette with sausage, an Americano with milk, and orange juice.','Я хочу омлет с сосиской, американо с молоком и апельсиновый сок.'],
+['ขอเมนูหน่อยค่ะ','кхо мэ-ну ной кха','Menu, please.','Можно меню?'],
+['ไม่เผ็ดค่ะ','май пхет кха','Not spicy, please.','Не остро.'],
+['ไม่ใส่น้ำตาลค่ะ','май сай нам-тан кха','No sugar, please.','Без сахара.'],
+['ขอน้ำเปล่าหนึ่งขวดค่ะ','кхо нам-плао нынг куат кха','A bottle of water, please.','Бутылку воды.'],
 ['คิดเงินด้วยค่ะ','кхит нгэн дуай кха','The bill, please.','Счёт, пожалуйста.'],
-['รับบัตรเครดิตไหมคะ','рап бат кредит май кха','Do you accept credit cards?','Вы принимаете банковские карты?'],
-['ขอเพิ่มอีกหนึ่งที่ค่ะ','кхо пхэм ик нынг тхи кха','One more, please.','Ещё одну порцию, пожалуйста.'],
-['ขอซอสแยกค่ะ','кхо сот саек кха','Sauce on the side, please.','Соус отдельно, пожалуйста.']
+['รับบัตรเครดิตไหมคะ','рап бат кредит май кха','Do you accept cards?','Принимаете карты?']
 ],
 cafe:[
-['ขอกาแฟเย็นหนึ่งแก้วค่ะ','кхо ка-фэ йен нынг кэу кха','An iced coffee, please.','Один холодный кофе, пожалуйста.'],
-['ขอนมวัวค่ะ','кхо ном ууа кха','With cow’s milk, please.','С обычным молоком, пожалуйста.'],
-['หวานน้อยค่ะ','уан ной кха','Less sweet, please.','Не очень сладко, пожалуйста.'],
-['ทานที่ร้านค่ะ','тхан тхи ран кха','For here, please.','Здесь, пожалуйста.'],
-['กลับบ้านค่ะ','клап бан кха','Takeaway, please.','С собой, пожалуйста.'],
-['มีปลั๊กและไวไฟไหมคะ','ми плак лэ вай-фай май кха','Do you have a power outlet and Wi-Fi?','Есть ли розетка и Wi-Fi?']
+['ขอกาแฟเย็นหนึ่งแก้วค่ะ','кхо ка-фэ йен нынг кэу кха','An iced coffee, please.','Один холодный кофе.'],
+['หวานน้อยค่ะ','уан ной кха','Less sweet.','Не очень сладко.'],
+['กลับบ้านค่ะ','клап бан кха','Takeaway.','С собой.']
 ],
 transport:[
-['ไปที่นี่ค่ะ','пай тхи ни кха','Please go here.','Отвезите, пожалуйста, сюда.'],
-['ช่วยเปิดแอร์หน่อยได้ไหมคะ','чуай пёт эа ной дай май кха','Could you turn on the air conditioning?','Можно включить кондиционер?'],
-['จอดตรงนี้ได้ไหมคะ','чот тронг ни дай май кха','Can you stop here?','Можно остановиться здесь?'],
-['ราคาเท่าไหร่คะ','ра-ка тхау-рай кха','How much is it?','Сколько это стоит?'],
-['สนามบินสุวรรณภูมิค่ะ','са-нам-бин су-ван-на-пхум кха','Suvarnabhumi Airport, please.','В аэропорт Суварнабхуми, пожалуйста.'],
-['ไปซิตี้ การ์เดน ทรอปิคานาค่ะ','пай сити гарден тропикана кха','To City Garden Tropicana, please.','В City Garden Tropicana, пожалуйста.']
+['ไปที่นี่ค่ะ','пай тхи ни кха','Please go here.','Отвезите сюда.'],
+['ราคาเท่าไหร่คะ','ра-ка тхау-рай кха','How much?','Сколько стоит?'],
+['สนามบินสุวรรณภูมิค่ะ','са-нам-бин су-ван-на-пхум кха','Suvarnabhumi Airport.','В аэропорт Суварнабхуми.']
 ],
 shopping:[
-['อันนี้ราคาเท่าไหร่คะ','ан-ни ра-ка тхау-рай кха','How much is this?','Сколько это стоит?'],
-['ลดได้ไหมคะ','лот дай май кха','Can you give me a discount?','Можно скидку?'],
-['ขอดูอันนี้หน่อยค่ะ','кхо ду ан-ни ной кха','May I see this one?','Можно посмотреть вот это?'],
-['มีไซซ์ใหญ่กว่านี้ไหมคะ','ми сай йай куа ни май кха','Do you have a bigger size?','Есть размер побольше?'],
-['ไม่เอาค่ะ ขอบคุณค่ะ','май ау кха, кхоп-кхун кха','No, thank you.','Нет, спасибо.']
+['อันนี้ราคาเท่าไหร่คะ','ан-ни ра-ка тхау-рай кха','How much is this?','Сколько это?'],
+['ลดได้ไหมคะ','лот дай май кха','Discount?','Скидку можно?']
 ],
 spa:[
-['อยากนวดหนึ่งชั่วโมงค่ะ','як нуат нынг чуа-монг кха','I’d like a one-hour massage.','Я хочу массаж на один час.'],
-['นวดเท้าได้ไหมคะ','нуат тхао дай май кха','Can I have a foot massage?','Можно сделать массаж ног?'],
-['ไม่ต้องแรงมากค่ะ','май тонг рэнг мак кха','Not too strong, please.','Пожалуйста, не слишком сильно.'],
-['แรงกว่านี้ค่ะ','рэнг куа ни кха','Stronger, please.','Сильнее, пожалуйста.'],
-['เจ็บค่ะ','чеп кха','It hurts.','Мне больно.'],
-['มีเวลาว่างไหมคะ','ми ве-ла ванг май кха','Do you have availability?','Есть свободное время?']
+['อยากนวดหนึ่งชั่วโมงค่ะ','як нуат нынг чуа-монг кха','One-hour massage, please.','Массаж на час.'],
+['ไม่ต้องแรงมากค่ะ','май тонг рэнг мак кха','Not too strong.','Не слишком сильно.']
 ],
 beach:[
-['หาดอยู่ที่ไหนคะ','хат ю тхи най кха','Where is the beach?','Где находится пляж?'],
-['เช่าเตียงผ้าใบเท่าไหร่คะ','чау тианг пха-бай тхау-рай кха','How much is a sunbed rental?','Сколько стоит аренда лежака?'],
-['ท่าเรืออยู่ที่ไหนคะ','тха-рыа ю тхи най кха','Where is the pier?','Где находится пирс?'],
-['เรือเฟอร์รี่เที่ยวสุดท้ายกี่โมงคะ','рыа фо-ри тхиау сут тхай ки монг кха','When is the last ferry?','Когда последний паром?'],
-['ซื้อตั๋วเรือเฟอร์รี่ที่ไหนคะ','сыу туа рыа фо-ри тхи най кха','Where can I buy a ferry ticket?','Где купить билет на паром?']
+['หาดอยู่ที่ไหนคะ','хат ю тхи най кха','Where is the beach?','Где пляж?'],
+['ท่าเรืออยู่ที่ไหนคะ','тха-рыа ю тхи най кха','Where is the pier?','Где пирс?']
 ],
 basic:[
 ['สวัสดีค่ะ','са-ват-ди кха','Hello.','Здравствуйте.'],
 ['ขอบคุณค่ะ','кхоп-кхун кха','Thank you.','Спасибо.'],
-['ขอโทษค่ะ','кхо-тхот кха','Excuse me / Sorry.','Извините.'],
+['ขอโทษค่ะ','кхо-тхот кха','Excuse me.','Извините.'],
 ['ห้องน้ำอยู่ที่ไหนคะ','хонг-нам ю тхи най кха','Where is the restroom?','Где туалет?'],
-['พูดภาษาอังกฤษได้ไหมคะ','пхут пха-са анг-крит дай май кха','Do you speak English?','Вы говорите по-английски?'],
-['ช่วยด้วยค่ะ','чуай дуай кха','Please help me.','Помогите, пожалуйста.'],
-['พูดช้าลงหน่อยได้ไหมคะ','пхут ча кун ной дай май кха','Could you speak more slowly?','Говорите медленнее, пожалуйста.']
+['ช่วยด้วยค่ะ','чуай дуай кха','Please help me.','Помогите.']
 ]
 };
-
-/* =========================== ЛОГИКА =========================== */
 let selectedCity='pattaya',selectedArea='all',selectedCat='all',dayPlan=[],phraseCategory='restaurant';
 const $=s=>document.querySelector(s);
 const mapsUrl=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
-const grabUrl = p => {
-  const address = (p.address || p.name || '');
-  const encodedAddress = encodeURIComponent(address).replace(/%20/g, '+');
-  
-  // Собираем внутреннюю ссылку для Grab
-  let grabAppLink = `grab://open?dropOffAddress=${encodedAddress}`;
-  
-  // Если у места есть координаты — добавляем их, это повышает надёжность
-  if (p.lat && p.lng) {
-    grabAppLink += `&dropOffLatitude=${p.lat}&dropOffLongitude=${p.lng}`;
-  }
-  grabAppLink += `&screenType=BOOKING`;
-  
-  // Оборачиваем в универсальную ссылку Grab
-  return `https://grab.onelink.me/2695613898?af_dp=${encodeURIComponent(grabAppLink)}`;
+const grabUrl=p=>{
+  const address=(p.address||p.name||'');
+  const encodedAddress=encodeURIComponent(address).replace(/%20/g,'+');
+  let link='grab://open?dropOffAddress='+encodedAddress;
+  if(p.lat&&p.lng){link+='&dropOffLatitude='+p.lat+'&dropOffLongitude='+p.lng}
+  link+='&screenType=BOOKING';
+  return link;
 };
-const ratingLabel=p=>p.rating?`⭐️ ${String(p.rating.value).replace('.',',')}`:'';
+const ratingLabel=p=>p.rating?'⭐️ '+String(p.rating.value).replace('.',','):'';
 const price=n=>n===0?'Бесплатно':'💰'.repeat(n);
-const areaName=id=>AREAS.find(a=>a.id===id)?.name||'';
-const areaShort=id=>AREAS.find(a=>a.id===id)?.short||'';
+const areaName=id=>{const a=AREAS.find(x=>x.id===id);return a?a.name:''};
+const areaShort=id=>{const a=AREAS.find(x=>x.id===id);return a?a.short:''};
 const mapsQuery=p=>p.name+' '+(areaName(p.area)||'')+' Thailand';
 const grabDest=p=>(p.name||'')+', '+(p.address||'');
-
-function copyText(t){if(navigator.clipboard?.writeText){navigator.clipboard.writeText(t).then(()=>toast('Скопировано!')).catch(()=>fallbackCopy(t))}else fallbackCopy(t)}
-function fallbackCopy(t){const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Скопировано!')}catch(e){alert('Не удалось скопировать. Выдели текст вручную.')}document.body.removeChild(ta)}
-function toast(msg){let el=document.getElementById('toast');if(!el){el=document.createElement('div');el.id='toast';el.style.cssText='position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#23685d;color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700;z-index:999;box-shadow:0 4px 16px #0003;transition:opacity .3s';document.body.appendChild(el)}el.textContent=msg;el.style.opacity='1';clearTimeout(el._t);el._t=setTimeout(()=>{el.style.opacity='0'},1800)}
-
+function copyText(t){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(()=>toast('Скопировано!')).catch(()=>fallbackCopy(t))}else fallbackCopy(t)}
+function fallbackCopy(t){const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');toast('Скопировано!')}catch(e){alert('Не удалось скопировать')}document.body.removeChild(ta)}
+function toast(msg){let el=document.getElementById('toast');if(!el){el=document.createElement('div');el.id='toast';el.style.cssText='position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#23685d;color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:700;z-index:999;box-shadow:0 4px 16px #0003';document.body.appendChild(el)}el.textContent=msg;clearTimeout(el._t);el._t=setTimeout(()=>{el.style.opacity='0'},1800);el.style.opacity='1'}
 function card(p){
-  const q=mapsQuery(p);const isLove=p.love;
-  const photo=VERIFIED_PLACE_PHOTOS[p.id];
-  return `<article class="place"><div class="place-body">${photo?`<img class="place-photo" src="${photo.src}" alt="${p.name}" loading="lazy"><div class="photo-credit"><a href="${photo.page}" target="_blank" rel="noopener">${photo.credit}</a></div>`:''}<div class="tag">${KIND_LABELS[p.kind]||'✨'} · ${areaShort(p.area)}${isLove?' · ❤️':''}</div><h4>${p.name} ${isLove?'❤️':''}</h4><div class="price">${price(p.price)}</div>${p.rating?`<div class="rating-line">${ratingLabel(p)}</div>`:''}<p>${p.desc}</p><div class="address">📍 ${p.address}</div><div class="actions"><a class="btn" href="${mapsUrl(q)}" target="_blank" rel="noopener">📍 Google Maps</a><a class="btn primary" href="${grabUrl(p)}" target="_blank" rel="noopener">🚕 Grab</a><button class="btn" onclick="copyText('${(grabDest(p)).replace(/'/g,"\\'")}')">Копировать адрес</button></div></div></article>`;
+  const q=mapsQuery(p);const isLove=p.love;const photo=VERIFIED_PLACE_PHOTOS[p.id];
+  return '<article class="place"><div class="place-body">'+(photo?'<img class="place-photo" src="'+photo.src+'" alt="'+p.name+'" loading="lazy"><div class="photo-credit"><a href="'+photo.page+'" target="_blank" rel="noopener">'+photo.credit+'</a></div>':'')+'<div class="tag">'+(KIND_LABELS[p.kind]||'✨')+' · '+areaShort(p.area)+(isLove?' · ❤️':'')+'</div><h4>'+p.name+' '+(isLove?'❤️':'')+'</h4><div class="price">'+price(p.price)+'</div>'+(p.rating?'<div class="rating-line">'+ratingLabel(p)+'</div>':'')+'<p>'+p.desc+'</p><div class="address">📍 '+p.address+'</div><div class="actions"><a class="btn" href="'+mapsUrl(q)+'" target="_blank" rel="noopener">📍 Google Maps</a><a class="btn primary" href="'+grabUrl(p)+'" target="_blank" rel="noopener">🚕 Grab</a><button class="btn" onclick="copyText(\''+grabDest(p).replace(/'/g,"\\'")+'\')">Копировать адрес</button></div></div></article>';
 }
-
-function matchCat(p,cat){
-  if(cat==='all')return true;
-  if(cat==='fav')return !!p.love;
-  const g=KIND_GROUPS.find(x=>x.id===cat);
-  return g&&g.kinds.includes(p.kind);
-}
-
+function matchCat(p,cat){if(cat==='all')return true;if(cat==='fav')return !!p.love;const g=KIND_GROUPS.find(x=>x.id===cat);return g&&g.kinds.indexOf(p.kind)!==-1}
 function renderCityFilters(){
   const cities=[['bangkok','Бангкок'],['pattaya','Паттайя'],['koh-larn','Ко Лан']];
-  $('#cityFilters').innerHTML=cities.map(([v,n])=>`<button class="filter ${selectedCity===v?'active':''}" data-city="${v}">${n}</button>`).join('');
-  $('#cityFilters').querySelectorAll('[data-city]').forEach(b=>b.addEventListener('click',()=>setCity(b.dataset.city)));
+  $('#cityFilters').innerHTML=cities.map(function(c){return '<button class="filter '+(selectedCity===c[0]?'active':'')+'" data-city="'+c[0]+'">'+c[1]+'</button>'}).join('');
+  $('#cityFilters').querySelectorAll('[data-city]').forEach(function(b){b.addEventListener('click',function(){setCity(b.dataset.city)})});
 }
 function renderCatFilters(){
-  const chips=[`<button class="filter ${selectedCat==='all'?'active':''}" data-cat="all">Все</button>`,
-    `<button class="filter ${selectedCat==='fav'?'active':''}" data-cat="fav">❤️ Избранное</button>`]
-    .concat(KIND_GROUPS.map(g=>`<button class="filter ${selectedCat===g.id?'active':''}" data-cat="${g.id}">${g.label}</button>`));
+  const chips=['<button class="filter '+(selectedCat==='all'?'active':'')+'" data-cat="all">Все</button>','<button class="filter '+(selectedCat==='fav'?'active':'')+'" data-cat="fav">❤️ Избранное</button>'].concat(KIND_GROUPS.map(function(g){return '<button class="filter '+(selectedCat===g.id?'active':'')+'" data-cat="'+g.id+'">'+g.label+'</button>'}));
   $('#catFilters').innerHTML=chips.join('');
-  $('#catFilters').querySelectorAll('[data-cat]').forEach(b=>b.addEventListener('click',()=>{selectedCat=b.dataset.cat;renderCatFilters();renderPlaces()}));
+  $('#catFilters').querySelectorAll('[data-cat]').forEach(function(b){b.addEventListener('click',function(){selectedCat=b.dataset.cat;renderCatFilters();renderPlaces()})});
 }
 function renderDistricts(){
   const slider=$('#districtSlider');
-  if(!selectedCity){slider.innerHTML='<div class="notice">Сначала выбери город выше — появятся только его районы.</div>';return}
-  const list=AREAS.filter(a=>a.city===selectedCity);
-  slider.innerHTML=list.map(a=>`<button class="district-card ${selectedArea===a.id?'active':''}" data-area="${a.id}"><span class="dtext"><strong>${a.name}</strong><span>${a.desc}</span></span></button>`).join('');
-  slider.querySelectorAll('[data-area]').forEach(b=>b.addEventListener('click',()=>{selectedArea=b.dataset.area;$('#districtSelect').value=selectedArea;renderDistricts();renderPlaces();$('#directory').scrollIntoView({behavior:'smooth'})}));
+  if(!selectedCity){slider.innerHTML='<div class="notice">Сначала выбери город.</div>';return}
+  const list=AREAS.filter(function(a){return a.city===selectedCity});
+  slider.innerHTML=list.map(function(a){return '<button class="district-card '+(selectedArea===a.id?'active':'')+'" data-area="'+a.id+'"><span class="dtext"><strong>'+a.name+'</strong><span>'+a.desc+'</span></span></button>'}).join('');
+  slider.querySelectorAll('[data-area]').forEach(function(b){b.addEventListener('click',function(){selectedArea=b.dataset.area;$('#districtSelect').value=selectedArea;renderDistricts();renderPlaces();document.getElementById('directory').scrollIntoView({behavior:'smooth'})})});
 }
 function renderPlaces(){
-  if(!selectedCity){$('#placesByArea').innerHTML='<p>Выбери город выше, чтобы увидеть его районы и места.</p>';return}
-  let areas=AREAS.filter(a=>a.city===selectedCity&&(selectedArea==='all'||a.id===selectedArea));
+  if(!selectedCity){$('#placesByArea').innerHTML='<p>Выбери город.</p>';return}
+  const areas=AREAS.filter(function(a){return a.city===selectedCity&&(selectedArea==='all'||a.id===selectedArea)});
   const out=[];
-  areas.forEach(a=>{
-    let items=P.filter(p=>p.area===a.id&&matchCat(p,selectedCat));
+  areas.forEach(function(a){
+    const items=P.filter(function(p){return p.area===a.id&&matchCat(p,selectedCat)});
     if(items.length===0)return;
-    out.push(`<div class="area-title"><div><h3>${a.name}</h3><small>${a.desc}</small></div><small>${items.length} мест</small></div><div class="grid">${items.map(card).join('')}</div>`);
+    out.push('<div class="area-title"><div><h3>'+a.name+'</h3><small>'+a.desc+'</small></div><small>'+items.length+' мест</small></div><div class="grid">'+items.map(card).join('')+'</div>');
   });
-  $('#placesByArea').innerHTML=out.join('')||'<p>В этой комбинации района и категории пока нет мест.</p>';
+  $('#placesByArea').innerHTML=out.join('')||'<p>В этой комбинации пока нет мест.</p>';
 }
 function updateDistrictSelect(){
   const sel=$('#districtSelect');
-  if(!selectedCity){sel.innerHTML='<option value="">Сначала выбери город</option>';return}
-  let opts=AREAS.filter(a=>a.city===selectedCity);
-  sel.innerHTML='<option value="all">Все районы города</option>'+opts.map(a=>`<option value="${a.id}">${a.name}</option>`).join('');
+  if(!selectedCity){sel.innerHTML='<option value="">—</option>';return}
+  const opts=AREAS.filter(function(a){return a.city===selectedCity});
+  sel.innerHTML='<option value="all">Все районы города</option>'+opts.map(function(a){return '<option value="'+a.id+'">'+a.name+'</option>'}).join('');
   sel.value=selectedArea;
 }
 function setCity(city){
-  selectedCity=city;selectedArea='all';
-  $('#citySelect').value=city;
+  selectedCity=city;selectedArea='all';$('#citySelect').value=city;
   updateDistrictSelect();renderCityFilters();renderDistricts();renderPlaces();
   $('#daySlots').innerHTML='<div class="slot"><div class="when">🌅 Утро</div><p>Завтрак + прогулка.</p></div><div class="slot"><div class="when">☀️ День</div><p>Кофейня + активность.</p></div><div class="slot"><div class="when">🌇 Вечер</div><p>Ужин + вечернее место.</p></div>';
 }
-
-const randomPick=arr=>arr.length?arr[Math.floor(Math.random()*arr.length)]:null;
-
+const randomPick=function(a){return a.length?a[Math.floor(Math.random()*a.length)]:null};
 const foodKindsBySlot={morning:['breakfast'],day:['cafe','breakfast'],evening:['dinner','rooftop','beachclub']};
-const activityKindsBySlot={
-  morning:['park','temple','photo','beach','viewpoint','museum','tour','shopping','pool'],
-  day:['museum','beach','animals','entertainment','shopping','viewpoint','tour','temple','park','spa','photo','pool','beachclub'],
-  evening:['nightmarket','rooftop','beachclub','viewpoint','entertainment','photo','beach','shopping','spa','pool']
-};
-const dayTypePrefs={
-  any:[],calm:['pool','park','temple','spa','photo','beach','museum','viewpoint'],
-  active:['entertainment','tour','beach','animals','park','viewpoint','beachclub'],
-  culture:['temple','museum','photo','viewpoint','shopping'],
-  foodie:['nightmarket','shopping','beachclub','photo'],
-  scenic:['viewpoint','beach','park','photo','rooftop','beachclub'],
-  shopping:['shopping','nightmarket'],
-  beach:['beach','beachclub','tour','viewpoint'],
-  relax:['spa','pool','park','beachclub','beach','viewpoint'],
-  nature:['animals','park','beach','tour','photo']
-};
-
+const activityKindsBySlot={morning:['park','temple','photo','beach','viewpoint','museum','tour','shopping','pool'],day:['museum','beach','animals','entertainment','shopping','viewpoint','tour','temple','park','spa','photo','pool','beachclub'],evening:['nightmarket','rooftop','beachclub','viewpoint','entertainment','photo','beach','shopping','spa','pool']};
+const dayTypePrefs={any:[],calm:['pool','park','temple','spa','photo','beach','museum','viewpoint'],active:['entertainment','tour','beach','animals','park','viewpoint','beachclub'],culture:['temple','museum','photo','viewpoint','shopping'],foodie:['nightmarket','shopping','beachclub','photo'],scenic:['viewpoint','beach','park','photo','rooftop','beachclub'],shopping:['shopping','nightmarket'],beach:['beach','beachclub','tour','viewpoint'],relax:['spa','pool','park','beachclub','beach','viewpoint'],nature:['animals','park','beach','tour','photo']};
 function pickActivityForSlot(pool,slot,type,used){
   const allowed=activityKindsBySlot[slot];
-  let candidates=pool.filter(p=>allowed.includes(p.kind)&&!used.has(p.id));
+  const candidates=pool.filter(function(p){return allowed.indexOf(p.kind)!==-1&&!used.has(p.id)});
   if(!candidates.length)return null;
   const prefs=dayTypePrefs[type]||[];
-  const scored=candidates.map(p=>({p,score:(prefs.includes(p.kind)?3:0)+(p.love?1:0)}));
-  scored.sort((a,b)=>b.score-a.score);
-  const topScore=scored[0].score;
-  const top=scored.filter(x=>x.score===topScore).map(x=>x.p);
+  const scored=candidates.map(function(p){return{p:p,score:(prefs.indexOf(p.kind)!==-1?3:0)+(p.love?1:0)}});
+  scored.sort(function(a,b){return b.score-a.score});
+  const top=scored.filter(function(x){return x.score===scored[0].score}).map(function(x){return x.p});
   const pick=randomPick(top);
   if(pick)used.add(pick.id);
   return pick;
 }
-
 function pickFood(pool,slot,used){
-  let kinds=foodKindsBySlot[slot];
-  let candidates=pool.filter(p=>kinds.includes(p.kind)&&!used.has(p.id));
+  const kinds=foodKindsBySlot[slot];
+  const candidates=pool.filter(function(p){return kinds.indexOf(p.kind)!==-1&&!used.has(p.id)});
   if(!candidates.length)return null;
   const pick=randomPick(candidates);
   if(pick)used.add(pick.id);
   return pick;
 }
-
 function slotPartHTML(label,p,partIndex,slotIndex){
-  if(!p)return `<div class="slot-part"><div class="part-label">${label}</div><p>В этой зоне пока нет подходящей точки — выбери другой район.</p></div>`;
+  if(!p)return '<div class="slot-part"><div class="part-label">'+label+'</div><p>В этой зоне нет подходящей точки.</p></div>';
   const q=mapsQuery(p);
-  return `<div class="slot-part"><div class="part-label">${label}</div><h5>${p.name} ${p.love?'❤️':''}</h5><div class="price">${price(p.price)}</div>${p.rating?`<div class="rating-line">${ratingLabel(p)}</div>`:''}<p>${p.desc}</p><p>📍 ${p.address}</p><div class="actions"><a class="btn" href="${mapsUrl(q)}" target="_blank" rel="noopener">📍 Google Maps</a><a class="btn primary" href="${grabUrl(p)}" target="_blank" rel="noopener">🚕 Grab</a></div><button class="replace-btn" onclick="replacePart(${slotIndex},${partIndex})">↻ Заменить ${partIndex===0?'заведение':'активность'}</button></div>`;
+  return '<div class="slot-part"><div class="part-label">'+label+'</div><h5>'+p.name+' '+(p.love?'❤️':'')+'</h5><div class="price">'+price(p.price)+'</div>'+(p.rating?'<div class="rating-line">'+ratingLabel(p)+'</div>':'')+'<p>'+p.desc+'</p><p>📍 '+p.address+'</p><div class="actions"><a class="btn" href="'+mapsUrl(q)+'" target="_blank" rel="noopener">📍 Google Maps</a><a class="btn primary" href="'+grabUrl(p)+'" target="_blank" rel="noopener">🚕 Grab</a></div><button class="replace-btn" onclick="replacePart('+slotIndex+','+partIndex+')">↻ Заменить</button></div>';
 }
-
 function renderPlan(){
-  const labels=[
-    ['🌅 УТРО · 08:00–11:30','Завтрак','Прогулка / парк / храм / фотолокация'],
-    ['☀️ ДЕНЬ · 12:00–16:30','Кофейня','Музей / пляж / животные / шопинг / активность'],
-    ['🌇 ВЕЧЕР · 17:00–21:00','Ужин','Ночной рынок / rooftop / смотровая / прогулка']
-  ];
-  $('#daySlots').innerHTML=dayPlan.map((s,i)=>`<div class="slot"><div class="when">${labels[i][0]}</div>${slotPartHTML(labels[i][1],s.food,0,i)}${slotPartHTML(labels[i][2],s.activity,1,i)}</div>`).join('');
+  const labels=[['🌅 УТРО · 08:00–11:30','Завтрак','Прогулка'],['☀️ ДЕНЬ · 12:00–16:30','Кофейня','Активность'],['🌇 ВЕЧЕР · 17:00–21:00','Ужин','Вечернее место']];
+  $('#daySlots').innerHTML=dayPlan.map(function(s,i){return '<div class="slot"><div class="when">'+labels[i][0]+'</div>'+slotPartHTML(labels[i][1],s.food,0,i)+slotPartHTML(labels[i][2],s.activity,1,i)+'</div>'}).join('');
 }
-
 function replacePart(slotIndex,partIndex){
   if(!dayPlan[slotIndex])return;
   const area=dayPlan[slotIndex].area;
   const slotName=['morning','day','evening'][slotIndex];
   const favoritesOnly=$('#replaceCat').value==='favorites';
   const used=new Set();
-  dayPlan.forEach((s,i)=>{if(i!==slotIndex){s.food&&used.add(s.food.id);s.activity&&used.add(s.activity.id)}});
+  dayPlan.forEach(function(s,i){if(i!==slotIndex){if(s.food)used.add(s.food.id);if(s.activity)used.add(s.activity.id)}});
   const current=partIndex===0?dayPlan[slotIndex].food:dayPlan[slotIndex].activity;
   if(current)used.add(current.id);
   let pool;
   if(partIndex===0){
     const kinds=foodKindsBySlot[slotName];
-    pool=P.filter(p=>p.area===area&&kinds.includes(p.kind)&&!used.has(p.id)&&(!favoritesOnly||p.love));
-    if(!pool.length)pool=P.filter(p=>{const a=AREAS.find(x=>x.id===p.area);return a&&a.city===selectedCity&&kinds.includes(p.kind)&&!used.has(p.id)&&(!favoritesOnly||p.love)});
+    pool=P.filter(function(p){return p.area===area&&kinds.indexOf(p.kind)!==-1&&!used.has(p.id)&&(!favoritesOnly||p.love)});
+    if(!pool.length)pool=P.filter(function(p){const a=AREAS.find(function(x){return x.id===p.area});return a&&a.city===selectedCity&&kinds.indexOf(p.kind)!==-1&&!used.has(p.id)&&(!favoritesOnly||p.love)});
     const alt=randomPick(pool);
-    if(!alt){toast(favoritesOnly?'Среди любимых мест пока нет подходящей замены.':'В этой зоне больше нет подходящих вариантов.');return}
+    if(!alt){toast('Нет подходящей замены');return}
     dayPlan[slotIndex].food=alt;
   }else{
     const allowed=activityKindsBySlot[slotName];
-    pool=P.filter(p=>p.area===area&&allowed.includes(p.kind)&&!used.has(p.id)&&(!favoritesOnly||p.love));
-    if(!pool.length)pool=P.filter(p=>{const a=AREAS.find(x=>x.id===p.area);return a&&a.city===selectedCity&&allowed.includes(p.kind)&&!used.has(p.id)&&(!favoritesOnly||p.love)});
+    pool=P.filter(function(p){return p.area===area&&allowed.indexOf(p.kind)!==-1&&!used.has(p.id)&&(!favoritesOnly||p.love)});
+    if(!pool.length)pool=P.filter(function(p){const a=AREAS.find(function(x){return x.id===p.area});return a&&a.city===selectedCity&&allowed.indexOf(p.kind)!==-1&&!used.has(p.id)&&(!favoritesOnly||p.love)});
     const alt=randomPick(pool);
-    if(!alt){toast(favoritesOnly?'Среди любимых мест нет подходящей замены для этого блока.':'Нет подходящих вариантов в этом городе.');return}
+    if(!alt){toast('Нет подходящей замены');return}
     dayPlan[slotIndex].activity=alt;
   }
   renderPlan();
 }
-
 function makeDay(){
   const city=$('#citySelect').value,area=$('#districtSelect').value,type=$('#dayType').value;
-  if(!city){alert('Сначала выбери город.');return}
-  let candidateAreas=AREAS.filter(a=>a.city===city&&(area==='all'||a.id===area));
-  candidateAreas=candidateAreas.filter(a=>{
-    const inArea=P.filter(p=>p.area===a.id&&true);
-    return inArea.some(p=>foodKindsBySlot.morning.includes(p.kind))
-      &&inArea.some(p=>foodKindsBySlot.day.includes(p.kind))
-      &&inArea.some(p=>foodKindsBySlot.evening.includes(p.kind))
-      &&inArea.some(p=>activityKindsBySlot.morning.includes(p.kind))
-      &&inArea.some(p=>activityKindsBySlot.day.includes(p.kind))
-      &&inArea.some(p=>activityKindsBySlot.evening.includes(p.kind));
+  if(!city){alert('Выбери город');return}
+  let candidateAreas=AREAS.filter(function(a){return a.city===city&&(area==='all'||a.id===area)});
+  candidateAreas=candidateAreas.filter(function(a){
+    const inArea=P.filter(function(p){return p.area===a.id});
+    return inArea.some(function(p){return foodKindsBySlot.morning.indexOf(p.kind)!==-1})
+      &&inArea.some(function(p){return foodKindsBySlot.day.indexOf(p.kind)!==-1})
+      &&inArea.some(function(p){return foodKindsBySlot.evening.indexOf(p.kind)!==-1})
+      &&inArea.some(function(p){return activityKindsBySlot.morning.indexOf(p.kind)!==-1})
+      &&inArea.some(function(p){return activityKindsBySlot.day.indexOf(p.kind)!==-1})
+      &&inArea.some(function(p){return activityKindsBySlot.evening.indexOf(p.kind)!==-1});
   });
-  let chosen=randomPick(candidateAreas);
-  if(!chosen){
-    $('#dayNote').style.display='block';
-    $('#dayNote').textContent='В выбранной зоне недостаточно мест для полного маршрута. Выбери другой район или «Все районы города». ';
-    $('#daySlots').innerHTML='<div class="notice">Не хватает мест для полного дня в этой зоне.</div>';
-    return;
-  }
-  const pool=P.filter(p=>p.area===chosen.id&&true);
+  const chosen=randomPick(candidateAreas);
+  if(!chosen){$('#dayNote').style.display='block';$('#dayNote').textContent='В этой зоне недостаточно мест. Выбери другой район.';$('#daySlots').innerHTML='<div class="notice">Не хватает мест.</div>';return}
+  const pool=P.filter(function(p){return p.area===chosen.id});
   const used=new Set();
   const morning={area:chosen.id,food:pickFood(pool,'morning',used),activity:pickActivityForSlot(pool,'morning',type,used)};
   const day={area:chosen.id,food:pickFood(pool,'day',used),activity:pickActivityForSlot(pool,'day',type,used)};
   const evening={area:chosen.id,food:pickFood(pool,'evening',used),activity:pickActivityForSlot(pool,'evening',type,used)};
-  if(!morning.food||!morning.activity||!day.food||!day.activity||!evening.food||!evening.activity){
-    $('#dayNote').style.display='block';
-    $('#dayNote').textContent='В этой зоне не хватает подходящих мест. Выбери другой район.';
-    return;
-  }
-  dayPlan=[morning,day,evening];
-  renderPlan();
-  $('#dayNote').style.display='none';
+  if(!morning.food||!morning.activity||!day.food||!day.activity||!evening.food||!evening.activity){$('#dayNote').style.display='block';$('#dayNote').textContent='В этой зоне не хватает подходящих мест.';return}
+  dayPlan=[morning,day,evening];renderPlan();$('#dayNote').style.display='none';
 }
-
 $('#makeDay').addEventListener('click',makeDay);
-$('#citySelect').addEventListener('change',e=>setCity(e.target.value));
-$('#districtSelect').addEventListener('change',e=>{selectedArea=e.target.value;renderDistricts();renderPlaces()});
-
+$('#citySelect').addEventListener('change',function(e){setCity(e.target.value)});
+$('#districtSelect').addEventListener('change',function(e){selectedArea=e.target.value;renderDistricts();renderPlaces()});
 function renderPhrases(){
   const list=PHRASES[phraseCategory]||[];
-  $('#phraseList').innerHTML=list.map(p=>`<article class="phrase"><div class="tag">ТАЙСКИЙ</div><div class="thai">${p[0]}</div><div class="phonetic">🔊 ${p[1]}</div><div class="english">${p[2]}</div><div class="meaning">${p[3]}</div><button class="btn copyline" onclick="copyText('${p[0].replace(/'/g,"\\'")}')">Скопировать тайскую фразу</button></article>`).join('');
+  $('#phraseList').innerHTML=list.map(function(p){return '<article class="phrase"><div class="tag">ТАЙСКИЙ</div><div class="thai">'+p[0]+'</div><div class="phonetic">🔊 '+p[1]+'</div><div class="english">'+p[2]+'</div><div class="meaning">'+p[3]+'</div><button class="btn copyline" onclick="copyText(\''+p[0].replace(/'/g,"\\'")+'\')">Скопировать</button></article>'}).join('');
 }
-document.querySelectorAll('[data-phrase]').forEach(b=>b.addEventListener('click',()=>{
-  phraseCategory=b.dataset.phrase;
-  document.querySelectorAll('[data-phrase]').forEach(x=>x.classList.toggle('active',x===b));
-  renderPhrases();
-}));
-
-/* ===== ПЕРЕВОДЧИК ===== */
+document.querySelectorAll('[data-phrase]').forEach(function(b){b.addEventListener('click',function(){phraseCategory=b.dataset.phrase;document.querySelectorAll('[data-phrase]').forEach(function(x){x.classList.toggle('active',x===b)});renderPhrases()})});
 async function tr(text,tl){
-  const url=`https://translate.googleapis.com/translate_a/single?client=gtx&sl=ru&tl=${tl}&dt=t&q=${encodeURIComponent(text)}`;
-  const r=await fetch(url);
-  if(!r.ok)throw new Error('bad');
-  const d=await r.json();
-  return d[0].map(x=>x[0]).join('');
+  const url='https://translate.googleapis.com/translate_a/single?client=gtx&sl=ru&tl='+tl+'&dt=t&q='+encodeURIComponent(text);
+  const r=await fetch(url);if(!r.ok)throw new Error('bad');const d=await r.json();return d[0].map(function(x){return x[0]}).join('');
 }
 function makeTrCard(label,text){
-  const card=document.createElement('div');card.className='tr-card';
-  const tag=document.createElement('div');tag.className='tag';tag.textContent=label;
-  const val=document.createElement('div');val.className='tr-text';val.textContent=text;
-  const btn=document.createElement('button');btn.className='btn';btn.textContent='Скопировать';
-  btn.addEventListener('click',()=>copyText(text));
-  card.appendChild(tag);card.appendChild(val);card.appendChild(btn);
-  return card;
+  const c=document.createElement('div');c.className='tr-card';
+  const t=document.createElement('div');t.className='tag';t.textContent=label;
+  const v=document.createElement('div');v.className='tr-text';v.textContent=text;
+  const b=document.createElement('button');b.className='btn';b.textContent='Скопировать';b.addEventListener('click',function(){copyText(text)});
+  c.appendChild(t);c.appendChild(v);c.appendChild(b);return c;
 }
 async function doTranslate(){
-  const text=$('#trInput').value.trim();
-  const out=$('#trResult');
+  const text=$('#trInput').value.trim();const out=$('#trResult');
   if(!text){out.innerHTML='';return}
   out.innerHTML='<p style="font-size:13px;color:#68736d;margin-top:10px">Переводим…</p>';
   try{
-    const [en,th]=await Promise.all([tr(text,'en'),tr(text,'th')]);
-    out.innerHTML='';
-    out.appendChild(makeTrCard('ENGLISH',en));
-    out.appendChild(makeTrCard('ไทย · ТАЙСКИЙ',th));
+    const en=await tr(text,'en');const th=await tr(text,'th');
+    out.innerHTML='';out.appendChild(makeTrCard('ENGLISH',en));out.appendChild(makeTrCard('ไทย · ТАЙСКИЙ',th));
   }catch(e){
-    out.innerHTML='';
-    const p=document.createElement('p');p.style.fontSize='13px';p.style.marginTop='10px';
-    p.innerHTML='Не удалось перевести автоматически. <a href="https://translate.google.com/?sl=ru&tl=th&text='+encodeURIComponent(text)+'" target="_blank" rel="noopener" style="text-decoration:underline">Открыть Google Переводчик</a>';
-    out.appendChild(p);
+    out.innerHTML='<p style="font-size:13px;margin-top:10px">Не удалось перевести. <a href="https://translate.google.com/?sl=ru&tl=th&text='+encodeURIComponent(text)+'" target="_blank" rel="noopener" style="text-decoration:underline">Открыть Google Переводчик</a></p>';
   }
 }
 $('#trBtn').addEventListener('click',doTranslate);
-$('#trInput').addEventListener('keydown',e=>{if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)){doTranslate()}});
-
-/* ===== СТАРТ ===== */
-renderPhrases();
-renderCityFilters();
-renderCatFilters();
-setCity('pattaya');
-</script></body></html>
+renderPhrases();renderCityFilters();renderCatFilters();setCity('pattaya');
+</script>
+</body>
+</html>
