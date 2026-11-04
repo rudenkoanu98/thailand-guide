@@ -8,18 +8,19 @@
 <style>
 :root{--ink:#202a27;--muted:#68736d;--bg:#f6f5f0;--paper:#fffefa;--green:#23685d;--green2:#174d45;--sage:#eaf1eb;--sand:#f2e7d5;--line:#e4e4dc;--gold:#b9823b;--shadow:0 8px 28px #253c2b0c;--r:18px}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1160px,100% - 32px);margin:auto}
-.hero{padding:44px 0 30px;background:radial-gradient(circle at 85% 10%,#dce9dc 0,transparent 30%),linear-gradient(135deg,#f0eee5,#fbfaf6 65%)}.eyebrow{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;color:var(--green)}h1{font-size:clamp(24px,7vw,54px);line-height:1.05;letter-spacing:-.035em;margin:10px 0 0}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.chip{border:1px solid #dce3da;background:#ffffffc9;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:750}
+.hero{padding:44px 0 30px;background:radial-gradient(circle at 85% 10%,#dce9dc 0,transparent 30%),linear-gradient(135deg,#f0eee5,#fbfaf6 65%)}.eyebrow{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;color:var(--green)}h1{font-size:clamp(24px,7vw,54px);line-height:1.05;letter-spacing:-.035em;margin:10px 0 0}
 nav{position:sticky;top:0;z-index:20;background:#fffefaed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav .wrap{display:flex;gap:4px;overflow:auto;padding:9px 0;scrollbar-width:none}nav a{white-space:nowrap;padding:8px 11px;border-radius:9px;font-size:11px;font-weight:800;color:#42524a}nav a:hover{background:var(--sage)}
 section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-size:clamp(24px,4vw,32px);letter-spacing:-.03em;margin:0}.district-slider{display:flex;gap:13px;overflow:auto;padding:3px 3px 14px;scroll-snap-type:x mandatory}.district-card{position:relative;flex:0 0 260px;min-height:168px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#dce8df;scroll-snap-align:start;cursor:pointer;box-shadow:var(--shadow);text-align:left;padding:0}.district-card .dtext{position:absolute;left:16px;right:12px;bottom:14px;color:white}.district-card strong{display:block;font-size:20px;line-height:1.15}.district-card span{font-size:11px;opacity:.92}.district-card.active{outline:3px solid var(--green);outline-offset:2px}
-.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.filter{border:1px solid var(--line);background:white;border-radius:99px;padding:8px 13px;font-size:12px;font-weight:800;cursor:pointer}.filter.active{background:var(--green);border-color:var(--green);color:white}.area-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:26px 0 12px}.area-title h3{margin:0;font-size:21px}.area-title small{color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.place{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.place-body{padding:13px;display:flex;flex-direction:column;flex:1}.tag{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);font-weight:850}.place h4{font-size:16px;line-height:1.25;margin:5px 0}.place p{font-size:12px;color:#536058;margin:4px 0}.place .address{color:#657168;font-size:11px;margin-top:6px}.price{font-weight:800;letter-spacing:1px;color:#a36d27;margin:2px 0}.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:10px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #dce2da;background:white;color:#294d40;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:850;cursor:pointer}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn:hover{filter:brightness(.96)}
-.constructor{background:#fffefa;border:1px solid var(--line);border-radius:24px;padding:clamp(16px,3vw,28px);box-shadow:var(--shadow)}.constructor-top{display:flex;justify-content:space-between;align-items:start;gap:20px;flex-wrap:wrap}.constructor h3{font-size:22px;margin:0}.day-controls{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0;align-items:center}.day-controls select{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;font-weight:750;color:var(--ink)}.make{border:0;background:var(--green);color:white;border-radius:11px;padding:12px 17px;font-weight:850;cursor:pointer}.slots{display:flex;flex-direction:column;gap:14px}.slot{background:var(--sage);border:1px solid #d8e5da;border-radius:15px;padding:16px;width:100%}.slot .when{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}.slot-part{padding:12px 0;border-top:1px solid #d6e2d8;margin-top:10px}.slot-part:first-of-type{border-top:0;margin-top:0}.slot-part .part-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:900}.slot-part h5{font-size:15px;margin:4px 0}.slot-part p{font-size:12px;margin:4px 0;color:#526057}.replace-btn{border:1px solid #cad8ce;background:white;border-radius:8px;padding:6px 9px;font-size:11px;font-weight:800;color:#294d40;cursor:pointer;margin-top:5px}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.filter{border:1px solid var(--line);background:white;border-radius:99px;padding:8px 13px;font-size:12px;font-weight:800;cursor:pointer}.filter.active{background:var(--green);border-color:var(--green);color:white}.filter.fav{border-color:#e5b8b8;color:#b33}
+.area-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:26px 0 12px}.area-title h3{margin:0;font-size:21px}.area-title small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.place{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.place.love{border-color:#f0c8c8;background:linear-gradient(180deg,#fff9f9,#fffefa)}.place-body{padding:13px;display:flex;flex-direction:column;flex:1}.tag{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--green);font-weight:850}.place h4{font-size:16px;line-height:1.25;margin:5px 0}.place.love h4{color:#a83232}.place p{font-size:12px;color:#536058;margin:4px 0}.place .address{color:#657168;font-size:11px;margin-top:6px}.price{font-weight:800;letter-spacing:1px;color:#a36d27;margin:2px 0}.actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:10px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #dce2da;background:white;color:#294d40;border-radius:9px;padding:8px 10px;font-size:11px;font-weight:850;cursor:pointer}.btn.primary{background:var(--green);border-color:var(--green);color:white}.btn:hover{filter:brightness(.96)}
+.constructor{background:#fffefa;border:1px solid var(--line);border-radius:24px;padding:clamp(16px,3vw,28px);box-shadow:var(--shadow)}.constructor-top{display:flex;justify-content:space-between;align-items:start;gap:20px;flex-wrap:wrap}.constructor h3{font-size:22px;margin:0}.day-controls{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0;align-items:center}.day-controls select{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 12px;font-weight:750;color:var(--ink)}.make{border:0;background:var(--green);color:white;border-radius:11px;padding:12px 17px;font-weight:850;cursor:pointer}.slots{display:flex;flex-direction:column;gap:14px}.slot{background:var(--sage);border:1px solid #d8e5da;border-radius:15px;padding:16px;width:100%}.slot .when{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--green);font-weight:900}.slot-part{padding:12px 0;border-top:1px solid #d6e2d8;margin-top:10px}.slot-part:first-of-type{border-top:0;margin-top:0}.slot-part .part-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:900}.slot-part h5{font-size:15px;margin:4px 0}.slot-part h5.love{color:#a83232}.slot-part p{font-size:12px;margin:4px 0;color:#526057}.replace-btn{border:1px solid #cad8ce;background:white;border-radius:8px;padding:6px 9px;font-size:11px;font-weight:800;color:#294d40;cursor:pointer;margin-top:5px}
 .practical-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.info{padding:16px;background:white;border:1px solid var(--line);border-radius:15px}.info h3{font-size:15px;margin:0 0 5px}.info p{font-size:12px;color:#58645c;margin:0 0 4px}.info a{text-decoration:underline}.notice{background:var(--sand);border-radius:13px;padding:13px 15px;font-size:12px;color:#66543a;margin-top:14px}footer{background:#1e302b;color:#e8eee8;padding:34px 0;margin-top:60px}footer p{font-size:12px;color:#c1cdc3;margin:4px 0}footer a{text-decoration:underline}
 @media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.practical-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.wrap{width:min(100% - 24px,1160px)}.hero{padding:30px 0 24px}.grid,.slots,.practical-grid{grid-template-columns:1fr}.district-card{flex-basis:78%;min-height:160px}.area-title{align-items:start;flex-direction:column}}
-.phrase-tools{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}.phrase-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.phrase{background:white;border:1px solid var(--line);border-radius:14px;padding:14px}.phrase .thai{font-size:19px;font-weight:800;color:var(--green);margin:4px 0}.phrase .phonetic{font-size:13px;color:#795a2b;font-weight:750}.phrase .english{font-size:13px;color:#536058}.phrase .meaning{font-size:13px;margin-top:5px}@media(max-width:560px){.phrase-list{grid-template-columns:1fr}}
+.phrase-tools{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0}.phrase-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.phrase{background:white;border:1px solid var(--line);border-radius:14px;padding:14px}.phrase .thai{font-size:19px;font-weight:800;color:var(--green);margin:4px 0}.phrase .phonetic{font-size:13px;color:#795a2b;font-weight:750}.phrase .meaning{font-size:13px;margin-top:5px}@media(max-width:560px){.phrase-list{grid-template-columns:1fr}}
 .tr-input{width:100%;min-height:90px;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;resize:vertical;background:white}.tr-card{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:10px}.tr-text{font-size:17px;font-weight:700;margin:6px 0;line-height:1.4}
-.tour-slider{display:flex;gap:14px;overflow-x:auto;padding:3px 3px 15px;scroll-snap-type:x mandatory;align-items:stretch}.tour-card{flex:0 0 320px;max-width:86vw;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);scroll-snap-align:start;display:flex;flex-direction:column}.tour-body{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1}.tour-body h3{font-size:19px;line-height:1.2;margin:0}.tour-body p{font-size:12px;color:#536058;margin:0}.tour-meta{display:flex;flex-direction:column;gap:3px;font-size:12px;color:#536058}.tour-meta b{font-size:15px;color:var(--green)}.tour-body .btn{margin-top:auto;align-self:flex-start}
-.event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.event{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow)}.event h3{font-size:18px;line-height:1.25;margin:7px 0}.event p{font-size:13px;color:#536058}@media(max-width:850px){.event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.event-grid{grid-template-columns:1fr}}
+.tour-slider{display:flex;gap:14px;overflow-x:auto;padding:3px 3px 15px;scroll-snap-type:x mandatory;align-items:stretch}.tour-card{flex:0 0 320px;max-width:86vw;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);scroll-snap-align:start;display:flex;flex-direction:column}.tour-body{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1}.tour-body h3{font-size:19px;line-height:1.2;margin:0}.tour-meta{display:flex;flex-direction:column;gap:3px;font-size:12px;color:#536058}.tour-meta b{font-size:15px;color:var(--green)}.tour-body .btn{margin-top:auto;align-self:flex-start}
+.event-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.event{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--shadow)}.event h3{font-size:18px;margin:7px 0}.event p{font-size:13px;color:#536058}@media(max-width:850px){.event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.event-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -33,10 +34,10 @@ section{margin:42px 0}.section-head{margin-bottom:16px}.section-head h2{font-siz
 <div class="day-controls">
 <select id="citySelect"><option value="bangkok">Бангкок</option><option value="pattaya" selected>Паттайя</option><option value="koh-larn">Ко Лан</option></select>
 <select id="districtSelect"><option value="all">Все районы города</option></select>
-<select id="dayType"><option value="any">Любой день</option><option value="calm">🌿 Спокойный</option><option value="active">⚡ Активный</option><option value="culture">🏛 Культурный</option><option value="foodie">🍜 Вкусный</option><option value="scenic">🌅 Красивые виды</option><option value="shopping">🛍 Шопинг</option><option value="beach">🏖 Пляжный</option><option value="relax">🧘 Релакс и SPA</option><option value="nature">🐘 Животные и природа</option></select>
+<select id="replaceCat"><option value="day">Замена из: как в дне</option><option value="favorites">Замена из: только ❤️ любимые</option></select>
 </div>
 <div class="slots" id="daySlots"><div class="slot"><div class="when">🌅 Утро</div><p>Завтрак + прогулка.</p></div><div class="slot"><div class="when">☀️ День</div><p>Кофейня + активность.</p></div><div class="slot"><div class="when">🌇 Вечер</div><p>Ужин + вечернее место.</p></div></div>
-<div class="notice" id="dayNote">Выбери город, район и настроение — и нажми «Собрать день».</div>
+<div class="notice" id="dayNote">Выбери город, район — и нажми «Собрать день».</div>
 </div></section>
 <section id="districts">
 <div class="section-head"><h2>Районы</h2></div>
@@ -131,6 +132,19 @@ const KIND_GROUPS=[
 ];
 const KL={breakfast:'🥐 Завтрак',cafe:'☕ Кофейня',dinner:'🍜 Ресторан',rooftop:'🌅 Rooftop',beachclub:'🌊 Beach Club',temple:'🛕 Храм',park:'🌳 Парк',beach:'🏖 Пляж',viewpoint:'🔭 Смотровая',museum:'🏛 Музей',animals:'🐘 Животные',entertainment:'🎡 Развлечения',spa:'💆 SPA',shopping:'🛍 Шопинг',nightmarket:'🌃 Ночной рынок',photo:'📸 Фото',tour:'🚤 Экскурсия',pool:'🏊 Бассейн'};
 
+// ❤️ ИЗБРАННЫЕ — список имён
+const LOVED_NAMES = new Set([
+'Wat Weluwanaram','Sumeru Mountain (Ancient City)','Wat Sam Phran','The Erawan Museum','Rajadamnern Stadium',
+'Lumphini Park','MahaNakhon SkyWalk','ICONSIAM','Silom Complex',
+'Benjakitti Forest Park','Suan Luang Rama IX','Safari World',
+'City Coffee Pattaya','COPPER SPOON',
+'Big Buddha / Wat Phra Yai','Khao Pattaya Viewpoint','The Sky Gallery',
+'Nong Nooch Tropical Garden','Wat Khao Chi Chan','Wat Khao Tabaek','Elephant Jungle Sanctuary','Khao Kheow Open Zoo','Tiger Park',
+'Papa Beach Pattaya','Over the Moon Ana Anan',
+'FROST Ice of Siam','cheR massage',
+'Dream World'
+]);
+
 // [area, kind, name, address, lat, lng, price, desc]
 const RAW=[
 ["bkk-old","temple","Grand Palace & Wat Phra Kaew","Na Phra Lan Road, Bangkok",13.7509399,100.4901572,3,"Королевский дворец и Храм Изумрудного Будды"],
@@ -152,7 +166,7 @@ const RAW=[
 ["bkk-old","dinner","Nusara","336 Maha Rat, Bangkok",13.7457026,100.4915282,4,"Fine dining"],
 ["bkk-old","dinner","Thipsamai Pad Thai","313 Maha Chai, Bangkok",13.7527976,100.504823,1,"Историческая пад-тай"],
 ["bkk-old","breakfast","Jok Prince","1391 Charoen Krung, Bangkok",13.7208579,100.516151,1,"Рисовый суп-конджи"],
-["bkk-old","temple","Wat Weluwanaram","Don Mueang, Bangkok",13.75,100.5,0,"Необычная архитектура"],
+["bkk-old","temple","Wat Weluwanaram","Don Mueang, Bangkok",13.75,100.5,0,"Храм с необычной архитектурой"],
 ["bkk-old","temple","Sumeru Mountain (Ancient City)","Samut Prakan",13.759968,100.5017534,2,"Гора Сумеру"],
 ["bkk-old","temple","Wat Sam Phran","Sam Phran, Nakhon Pathom",13.7656799,100.499338,0,"Храм с драконом"],
 ["bkk-old","museum","The Erawan Museum","Samut Prakan",13.75,100.5,2,"Музей со слоном"],
@@ -176,7 +190,7 @@ const RAW=[
 ["bkk-china","cafe","Chata Specialty Coffee","Talat Noi, Bangkok",13.7391461,100.5107265,2,"Авторские напитки"],
 ["bkk-china","dinner","T&K Seafood","Phadung Dao, Bangkok",13.7400778,100.510636,2,"Морская еда"],
 ["bkk-china","dinner","Nai Ek Roll Noodle","Yaowarat 9, Bangkok",13.7401053,100.5099369,1,"Рулеты из лапши"],
-["bkk-china","dinner","Kuay Jab Mr Joe","313 Yaowarat, Bangkok",13.7410604,100.5091486,1,"Суп с рулетиками"],
+["bkk-china","dinner","Kuay Jab Mr Joe","313 Yaowarat, Bangkok",13.74364,100.5053594,1,"Суп с рулетиками"],
 ["bkk-china","dinner","Jeh O Chula","Soi Charat Mueang, Bangkok",13.7424996,100.5225179,2,"Том-ям с лапшой"],
 ["bkk-china","photo","Talat Noi & Song Wat walk","Talat Noi, Bangkok",13.7373132,100.5089791,0,"Шопхаусы и стрит-арт"],
 ["bkk-china","temple","Holy Rosary Church","1318 Soi Wanit 2, Bangkok",13.7312207,100.5132944,0,"Неоготическая церковь"],
@@ -519,7 +533,12 @@ const RAW=[
 ["lan-nual","tour","Glass-bottom boat","Koh Larn",12.9155374,100.785204,3,"Лодка со стеклянным дном"],
 ["lan-nual","beach","Monkey Beach","Nual, Koh Larn",12.8984141,100.774895,0,"Пляж обезьян"]
 ];
-const P=RAW.map((d,i)=>({id:'p'+i,area:d[0],kind:d[1],name:d[2],address:d[3],lat:d[4],lng:d[5],price:d[6]||0,desc:d[7]||''}));
+
+const P=RAW.map((d,i)=>{
+  const obj={id:'p'+i,area:d[0],kind:d[1],name:d[2],address:d[3],lat:d[4],lng:d[5],price:d[6]||0,desc:d[7]||''};
+  if(LOVED_NAMES.has(obj.name)) obj.love=true;
+  return obj;
+});
 
 const PHRASES={
 restaurant:[["ขอเมนูหน่อยค่ะ","кхо мэ-ну ной кха","Меню, пожалуйста"],["ไม่เผ็ดค่ะ","май пхет кха","Не остро"],["คิดเงินด้วยค่ะ","кхит нгэн дуай кха","Счёт, пожалуйста"],["ขอน้ำเปล่าหนึ่งขวดค่ะ","кхо нам-плао нынг куат кха","Бутылку воды"]],
@@ -549,9 +568,16 @@ function toast(m){let el=document.getElementById('toast');if(!el){el=document.cr
 function card(p){
   const g=grabUrl(p);
   const grabBtn=g?'<a class="btn primary" href="'+g+'" target="_blank" rel="noopener">🚕 Grab</a>':'';
-  return '<article class="place"><div class="place-body"><div class="tag">'+(KL[p.kind]||'✨')+' · '+areaShort(p.area)+'</div><h4>'+p.name+'</h4><div class="price">'+price(p.price)+'</div><p>'+p.desc+'</p><div class="address">📍 '+p.address+'</div><div class="actions"><a class="btn" href="'+mapsQ(p.name+' '+areaName(p.area)+' Thailand')+'" target="_blank" rel="noopener">📍 Google Maps</a>'+grabBtn+'<button class="btn" onclick="copy(\''+(p.name+', '+p.address).replace(/'/g,"\\'")+'\')">Копировать</button></div></div></article>';
+  const heart=p.love?' ❤️':'';
+  const loveClass=p.love?' love':'';
+  return '<article class="place'+loveClass+'"><div class="place-body"><div class="tag">'+(KL[p.kind]||'✨')+' · '+areaShort(p.area)+(p.love?' · ❤️':'')+'</div><h4>'+p.name+heart+'</h4><div class="price">'+price(p.price)+'</div><p>'+p.desc+'</p><div class="address">📍 '+p.address+'</div><div class="actions"><a class="btn" href="'+mapsQ(p.name+' '+areaName(p.area)+' Thailand')+'" target="_blank" rel="noopener">📍 Google Maps</a>'+grabBtn+'<button class="btn" onclick="copy(\''+(p.name+', '+p.address).replace(/'/g,"\\'")+'\')">Копировать</button></div></div></article>';
 }
-function matchCat(p,c){if(c==='all')return true;const g=KIND_GROUPS.find(x=>x.id===c);return g&&g.kinds.indexOf(p.kind)!==-1}
+function matchCat(p,c){
+  if(c==='all')return true;
+  if(c==='fav')return !!p.love;
+  const g=KIND_GROUPS.find(x=>x.id===c);
+  return g&&g.kinds.indexOf(p.kind)!==-1;
+}
 
 function renderCityFilters(){
   const cities=[['bangkok','Бангкок'],['pattaya','Паттайя'],['koh-larn','Ко Лан']];
@@ -559,7 +585,11 @@ function renderCityFilters(){
   $('#cityFilters').querySelectorAll('[data-city]').forEach(b=>b.addEventListener('click',()=>setCity(b.dataset.city)));
 }
 function renderCatFilters(){
-  const chips=['<button class="filter '+(selCat==='all'?'active':'')+'" data-cat="all">Все</button>'].concat(KIND_GROUPS.map(g=>'<button class="filter '+(selCat===g.id?'active':'')+'" data-cat="'+g.id+'">'+g.label+'</button>'));
+  const totalFav=P.filter(p=>p.love).length;
+  const chips=[
+    '<button class="filter '+(selCat==='all'?'active':'')+'" data-cat="all">Все</button>',
+    '<button class="filter fav '+(selCat==='fav'?'active':'')+'" data-cat="fav">❤️ Избранное ('+totalFav+')</button>'
+  ].concat(KIND_GROUPS.map(g=>'<button class="filter '+(selCat===g.id?'active':'')+'" data-cat="'+g.id+'">'+g.label+'</button>'));
   $('#catFilters').innerHTML=chips.join('');
   $('#catFilters').querySelectorAll('[data-cat]').forEach(b=>b.addEventListener('click',()=>{selCat=b.dataset.cat;renderCatFilters();renderPlaces()}));
 }
@@ -578,7 +608,8 @@ function renderPlaces(){
   });
   $('#placesByArea').innerHTML=out.join('')||'<p>В этой комбинации пока нет мест.</p>';
   const total=P.filter(p=>AREAS.find(a=>a.id===p.area&&a.city===selCity)).length;
-  $('#totalCount').textContent=total+' мест в базе';
+  const fav=selCat==='fav'?' · ❤️ избранное':'';
+  $('#totalCount').textContent=total+' мест в базе'+fav;
 }
 function updateDistrictSelect(){
   const opts=AREAS.filter(a=>a.city===selCity);
@@ -605,7 +636,9 @@ function slotHTML(label,p,pi,si){
   if(!p)return '<div class="slot-part"><div class="part-label">'+label+'</div><p>Нет подходящего места.</p></div>';
   const g=grabUrl(p);
   const grabBtn=g?'<a class="btn primary" href="'+g+'" target="_blank" rel="noopener">🚕 Grab</a>':'';
-  return '<div class="slot-part"><div class="part-label">'+label+'</div><h5>'+p.name+'</h5><div class="price">'+price(p.price)+'</div><p>'+p.desc+'</p><p>📍 '+p.address+'</p><div class="actions"><a class="btn" href="'+mapsQ(p.name+' '+areaName(p.area)+' Thailand')+'" target="_blank" rel="noopener">📍 Карты</a>'+grabBtn+'</div><button class="replace-btn" onclick="repl('+si+','+pi+')">↻ Заменить</button></div>';
+  const heart=p.love?' ❤️':'';
+  const loveClass=p.love?' class="love"':'';
+  return '<div class="slot-part"><div class="part-label">'+label+'</div><h5'+loveClass+'>'+p.name+heart+'</h5><div class="price">'+price(p.price)+'</div><p>'+p.desc+'</p><p>📍 '+p.address+'</p><div class="actions"><a class="btn" href="'+mapsQ(p.name+' '+areaName(p.area)+' Thailand')+'" target="_blank" rel="noopener">📍 Карты</a>'+grabBtn+'</div><button class="replace-btn" onclick="repl('+si+','+pi+')">↻ Заменить</button></div>';
 }
 function renderPlan(){
   const labels=[['🌅 УТРО','Завтрак','Прогулка'],['☀️ ДЕНЬ','Кофейня','Активность'],['🌇 ВЕЧЕР','Ужин','Вечернее место']];
@@ -614,11 +647,19 @@ function renderPlan(){
 function repl(si,pi){
   if(!plan[si])return;
   const s=plan[si];const slotName=['morning','day','evening'][si];
+  const favOnly=$('#replaceCat').value==='favorites';
   const used=new Set();plan.forEach((x,i)=>{if(i!==si){if(x.food)used.add(x.food.id);if(x.activity)used.add(x.activity.id)}});
   const cur=pi===0?s.food:s.activity;if(cur)used.add(cur.id);
-  const pool=P.filter(p=>p.area===s.area&&!used.has(p.id));
-  if(pi===0){const alt=pickFood(pool,slotName,new Set());if(alt)s.food=alt}
-  else{const alt=pickAct(pool,slotName,new Set());if(alt)s.activity=alt}
+  const pool=P.filter(p=>p.area===s.area&&!used.has(p.id)&&(!favOnly||p.love));
+  if(pi===0){
+    const alt=pickFood(pool,slotName,new Set());
+    if(!alt){toast(favOnly?'Среди любимых нет подходящей замены':'Нет подходящей замены');return}
+    s.food=alt;
+  }else{
+    const alt=pickAct(pool,slotName,new Set());
+    if(!alt){toast(favOnly?'Среди любимых нет подходящей замены':'Нет подходящей замены');return}
+    s.activity=alt;
+  }
   renderPlan();
 }
 function makeDay(){
